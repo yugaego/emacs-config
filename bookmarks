@@ -2,12 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("(emacs) Registers"
- (front-context-string . "13 Registers\n***")
- (rear-context-string . "ling,  Up: Top\n\n")
- (position . 238282)
+(("i-read"
+ (front-context-string . "A “word search” ")
+ (rear-context-string . "==============\n\n")
+ (position . 350152)
  (filename . "/Applications/Emacs.app/Contents/Resources/info/emacs")
- (info-node . "Registers")
+ (info-node . "Word Search")
  (handler . Info-bookmark-jump))
 ("(emacs) Marking Objects"
  (front-context-string . "11.2 Commands to")

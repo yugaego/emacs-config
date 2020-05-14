@@ -1,9 +1,15 @@
 ;; ===================================
 ;; Basic Customization
 ;; ===================================
- 
-(load-theme 'tango-dark t)
 
+;;; Workarounds
+;; Emacs 26 TLS connection problem
+;; https://lists.gnu.org/archive/html/help-gnu-emacs/2019-02/msg00144.html
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
+
+;;; Appearance
+(load-theme 'tango-dark t)
 ;(setq inhibit-startup-message t)
 
 ;;; Minibuffer
@@ -28,6 +34,9 @@
 
 ;;; Edit
 (setq kill-whole-line t) ; C-k kills newline character too
+
+;;; Scrolling
+(setq scroll-step 1)
 
 ;;; Mac Dictionary
 ;; from https://gist.github.com/Superbil/5113974
