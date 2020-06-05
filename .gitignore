@@ -3,7 +3,7 @@ url/
 bookmarks
 history
 
-edited-backups/
+.backups/
 
 .DS_Store
 

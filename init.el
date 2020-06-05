@@ -13,19 +13,40 @@
 (setq inhibit-startup-message t)
 
 ;;; Minibuffer
-(setq minibuffer-eldef-shorten-default t)
-(setq insert-default-directory nil) ; minibuffer default path
+(setq
+ minibuffer-eldef-shorten-default t
+ insert-default-directory "~/" ; minibuffer default path
+ resize-mini-windows t ; decrease size when lines are removed
+ suggest-key-bindings 5 ; show shortcut of the command for n seconds
+ extended-command-suggest-shorter t)
 ;(setq initial-buffer-choice "~/Programs/file.c")
-(setq resize-mini-windows t) ; decrease size when lines are removed
-(setq suggest-key-bindings 5) ; show shortcut of the command for n seconds
-(setq extended-command-suggest-shorter t)
 
 ;;; Session
 (setq-default history-length 1000) ; size of command history
 (savehist-mode t) ; save command history between sessions
 (global-linum-mode t) ; M-x -linu
-(setq backup-directory-alist `(("." . "~/.emacs.d/edited-backups")))
-(setq backup-by-copying t)
+
+;;; Backups
+(setq
+ backup-directory-alist `(("." . "~/.emacs.d/.backups/"))
+ backup-by-copying t ; don't clobber symlinks
+ version-control t ; save numbered files
+ delete-old-versions t ; delete files silently
+ kept-new-versions 20
+ kept-old-versions 2
+ vc-make-backup-files t) ; backup version controlled files
+;; Backup on each save
+;; https://www.emacswiki.org/emacs/ForceBackups
+(defun force-buffer-backup ()
+  (let ((buffer-backed-up nil))
+    (backup-buffer)))
+(add-hook 'before-save-hook 'force-buffer-backup)
+(add-hook 'auto-save-hook 'force-buffer-backup)
+
+;;; Auto-saving
+(setq
+ auto-save-interval 200 ; characters
+ delete-auto-save-files nil) ; do not delete on buffer saving
 
 ;;; Mark region
 (setq highlight-nonselected-windows t)
@@ -36,9 +57,10 @@
 
 ;;; Edit
 (setq kill-whole-line t) ; C-k kills newline character too
-(setq undo-limit 8000000) ; 8 MB
-(setq undo-strong-limit 12000000) ; 12 MB
-(setq undo-outer-limit 20000000) ; 20 MB
+(setq
+ undo-limit 8000000 ; 8 MB
+ undo-strong-limit 12000000 ; 12 MB
+ undo-outer-limit 20000000) ; 20 MB
 
 ;;; Scrolling
 (setq scroll-step 1)
