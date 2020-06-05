@@ -1,6 +1,9 @@
 auto-save-list/
 url/
+bookmarks
 history
+
+edited-backups/
 
 .DS_Store
 

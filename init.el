@@ -10,7 +10,7 @@
 
 ;;; Appearance
 (load-theme 'tango-dark t)
-;(setq inhibit-startup-message t)
+(setq inhibit-startup-message t)
 
 ;;; Minibuffer
 (setq minibuffer-eldef-shorten-default t)
@@ -24,6 +24,8 @@
 (setq-default history-length 1000) ; size of command history
 (savehist-mode t) ; save command history between sessions
 (global-linum-mode t) ; M-x -linu
+(setq backup-directory-alist `(("." . "~/.emacs.d/edited-backups")))
+(setq backup-by-copying t)
 
 ;;; Mark region
 (setq highlight-nonselected-windows t)
@@ -34,6 +36,9 @@
 
 ;;; Edit
 (setq kill-whole-line t) ; C-k kills newline character too
+(setq undo-limit 8000000) ; 8 MB
+(setq undo-strong-limit 12000000) ; 12 MB
+(setq undo-outer-limit 20000000) ; 20 MB
 
 ;;; Scrolling
 (setq scroll-step 1)
