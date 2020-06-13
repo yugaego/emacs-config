@@ -7,7 +7,6 @@
 ;; https://lists.gnu.org/archive/html/help-gnu-emacs/2019-02/msg00144.html
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
-
 ;;; Appearance
 (load-theme 'tango-dark t)
 (setq inhibit-startup-message t)
@@ -25,6 +24,7 @@
 (setq-default history-length 1000) ; size of command history
 (savehist-mode t) ; save command history between sessions
 (global-linum-mode t) ; M-x -linu
+;(filesets-init)
 
 ;;; Backups
 (setq
@@ -65,6 +65,15 @@
 ;;; Scrolling
 (setq scroll-step 1)
 
+;;; Files
+(setq delete-by-moving-to-trash t) ; use Trash on deletion
+
+;;; Directory Listing
+(setq
+ directory-free-space-args "-kh" ; df options
+ list-directory-brief-switches "-aFh" ; ls options
+ list-directory-verbose-switches "-ahl") ; ls options
+ 
 ;;; Mac Dictionary
 ;; from https://gist.github.com/Superbil/5113974
 (defun mac-open-dictionary (the-word)

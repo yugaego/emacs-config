@@ -2,7 +2,10 @@ auto-save-list/
 url/
 bookmarks
 history
+tramp
+filesets-cache.el
 
+*#
 .backups/
 
 .DS_Store
