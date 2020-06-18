@@ -9,7 +9,9 @@
 
 ;;; Appearance
 (load-theme 'tango-dark t)
-(setq inhibit-startup-message t)
+(setq
+ inhibit-startup-message t
+ uniquify-buffer-name-style 'forward) ; prepend dirs to identically-named files
 
 ;;; Minibuffer
 (setq
@@ -18,9 +20,9 @@
  resize-mini-windows t ; decrease size when lines are removed
  suggest-key-bindings 5 ; show shortcut of the command for n seconds
  extended-command-suggest-shorter t)
-;(setq initial-buffer-choice "~/Programs/file.c")
 
 ;;; Session
+;(setq initial-buffer-choice "~/Documents/TODO.md")
 (setq-default history-length 1000) ; size of command history
 (savehist-mode t) ; save command history between sessions
 (global-linum-mode t) ; M-x -linu
