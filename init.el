@@ -12,6 +12,14 @@
 (setq
  inhibit-startup-message t
  uniquify-buffer-name-style 'forward) ; prepend dirs to identically-named files
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+;(setq use-dialog-box nil)
+(add-to-list 'default-frame-alist '(width  . 120))
+(add-to-list 'default-frame-alist '(height  . 70))
+(set-face-font 'default "Menlo-16")
+(add-to-list 'default-frame-alist '(font . "Menlo-16"))
 
 ;;; Minibuffer
 (setq
@@ -22,11 +30,12 @@
  extended-command-suggest-shorter t)
 
 ;;; Session
-;(setq initial-buffer-choice "~/Documents/TODO.md")
 (setq-default history-length 1000) ; size of command history
 (savehist-mode t) ; save command history between sessions
 (global-linum-mode t) ; M-x -linu
 ;(filesets-init)
+(setq default-directory "~/")
+;(setq initial-buffer-choice "~/Documents/TODO.md")
 
 ;;; Backups
 (setq
