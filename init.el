@@ -13,13 +13,19 @@
  inhibit-startup-message t
  uniquify-buffer-name-style 'forward) ; prepend dirs to identically-named files
 (scroll-bar-mode -1)
-(menu-bar-mode -1)
+;(menu-bar-mode -1)
 (tool-bar-mode -1)
 ;(setq use-dialog-box nil)
-(add-to-list 'default-frame-alist '(width  . 120))
-(add-to-list 'default-frame-alist '(height  . 70))
+(add-to-list 'default-frame-alist '(width  . 110))
+(add-to-list 'default-frame-alist '(height  . 65))
 (set-face-font 'default "Menlo-16")
 (add-to-list 'default-frame-alist '(font . "Menlo-16"))
+
+;;; Modes
+(add-hook 'find-file-hook
+          (lambda ()
+            (when (string= (file-name-extension buffer-file-name) "rkt")
+              (whitespace-mode +1))))
 
 ;;; Minibuffer
 (setq
@@ -72,6 +78,9 @@
  undo-limit 8000000 ; 8 MB
  undo-strong-limit 12000000 ; 12 MB
  undo-outer-limit 20000000) ; 20 MB
+
+;;; Formatting
+(setq-default major-mode 'text-mode)
 
 ;;; Scrolling
 (setq scroll-step 1)
