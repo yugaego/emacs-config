@@ -22,6 +22,9 @@
 (add-to-list 'default-frame-alist '(font . "Menlo-16"))
 
 ;;; Modes
+(setq-default major-mode 'text-mode)
+;; https://www.emacswiki.org/emacs/AutoModeAlist
+(add-to-list 'auto-mode-alist '("\\.rkt\\'" . scheme-mode))
 (add-hook 'find-file-hook
           (lambda ()
             (when (string= (file-name-extension buffer-file-name) "rkt")
@@ -79,8 +82,7 @@
  undo-strong-limit 12000000 ; 12 MB
  undo-outer-limit 20000000) ; 20 MB
 
-;;; Formatting
-(setq-default major-mode 'text-mode)
+
 
 ;;; Scrolling
 (setq scroll-step 1)
