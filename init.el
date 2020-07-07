@@ -13,9 +13,7 @@
  inhibit-startup-message t
  uniquify-buffer-name-style 'forward) ; prepend dirs to identically-named files
 (scroll-bar-mode -1)
-;(menu-bar-mode -1)
 (tool-bar-mode -1)
-;(setq use-dialog-box nil)
 (setq
  initial-frame-alist
       '((top . 1) (left . 1) (width . 95) (height . 65))
@@ -44,13 +42,11 @@
 (setq-default history-length 1000) ; size of command history
 (savehist-mode t) ; save command history between sessions
 (global-linum-mode t) ; M-x -linu
-;(filesets-init)
 (setq default-directory "~/")
-;(setq initial-buffer-choice "~/Documents/TODO.md")
 
 ;;; Backups
 (setq
- backup-directory-alist `(("." . "~/.emacs.d/.backups/"))
+ backup-directory-alist `(("." . ,(concat user-emacs-directory ".backups")))
  backup-by-copying t ; don't clobber symlinks
  version-control t ; save numbered files
  delete-old-versions t ; delete files silently
@@ -67,8 +63,11 @@
 
 ;;; Auto-saving
 (setq
- auto-save-interval 200 ; characters
- delete-auto-save-files nil) ; do not delete on buffer saving
+ auto-save-visited-mode t ; save file-visiting buffers after 5 seconds of idle time
+ auto-save-interval 100 ; characters
+ auto-save-timeout 20) ; seconds
+; delete-auto-save-files nil) ; do not delete on buffer saving
+
 
 ;;; Mark region
 (setq highlight-nonselected-windows t)
@@ -78,6 +77,7 @@
 (put 'upcase-region 'disabled nil)
 
 ;;; Edit
+;(setq create-lockfiles nil)
 (setq kill-whole-line t) ; C-k kills newline character too
 (setq
  undo-limit 8000000 ; 8 MB
@@ -85,8 +85,8 @@
  undo-outer-limit 20000000) ; 20 MB
 
 ;;; Navigation
-(setq sentence-end-double-space nil) ; affects M-e behavior
-(global-set-key (kbd "M-e") 'forward-sentence)
+;(setq sentence-end-double-space nil) ; affects M-e behavior
+;(global-set-key (kbd "M-e") 'forward-sentence)
 
 ;;; Scrolling
 (setq scroll-step 1)
