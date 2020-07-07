@@ -16,10 +16,12 @@
 ;(menu-bar-mode -1)
 (tool-bar-mode -1)
 ;(setq use-dialog-box nil)
-(add-to-list 'default-frame-alist '(width  . 110))
-(add-to-list 'default-frame-alist '(height  . 65))
+(setq
+ initial-frame-alist
+      '((top . 1) (left . 1) (width . 95) (height . 65))
+ default-frame-alist
+       '((top . 1) (left . 980) (width . 90) (height . 65) (font . "Menlo-16")))
 (set-face-font 'default "Menlo-16")
-(add-to-list 'default-frame-alist '(font . "Menlo-16"))
 
 ;;; Modes
 (setq-default major-mode 'text-mode)
