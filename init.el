@@ -82,7 +82,9 @@
  undo-strong-limit 12000000 ; 12 MB
  undo-outer-limit 20000000) ; 20 MB
 
-
+;;; Navigation
+(setq sentence-end-double-space nil) ; affects M-e behavior
+(global-set-key (kbd "M-e") 'forward-sentence)
 
 ;;; Scrolling
 (setq scroll-step 1)
