@@ -23,6 +23,8 @@
 
 ;;; Modes
 (setq-default major-mode 'text-mode)
+(setq auto-save-visited-mode t) ; save file-visiting buffers in 5 seconds
+(auto-save-visited-mode +1)
 ;; https://www.emacswiki.org/emacs/AutoModeAlist
 (add-to-list 'auto-mode-alist '("\\.rkt\\'" . scheme-mode))
 (add-hook 'find-file-hook
@@ -63,7 +65,6 @@
 
 ;;; Auto-saving
 (setq
- auto-save-visited-mode t ; save file-visiting buffers after 5 seconds of idle time
  auto-save-interval 100 ; characters
  auto-save-timeout 20) ; seconds
 ; delete-auto-save-files nil) ; do not delete on buffer saving
