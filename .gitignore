@@ -4,6 +4,7 @@ bookmarks
 history
 tramp
 filesets-cache.el
+semanticdb/
 
 *#
 .backups/
