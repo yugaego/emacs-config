@@ -31,6 +31,9 @@
           (lambda ()
             (when (string= (file-name-extension buffer-file-name) "rkt")
               (whitespace-mode +1))))
+;; Paretheses
+(setq show-paren-delay 0)
+(show-paren-mode 1)
 
 ;;; Minibuffer
 (setq
