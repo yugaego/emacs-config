@@ -49,6 +49,13 @@
 (global-linum-mode t) ; M-x -linu
 (setq default-directory "~/")
 
+;;; Version Control
+(setq
+ vc-handled-backends '(Git) ; disables other VC systems
+ vc-make-backup-files 1 ; backup files under VC system
+ vc-command-messages 1) ; output shell commands vc executes
+ ;vc-suppress-confirm 1)
+
 ;;; Backups
 (setq
  backup-directory-alist `(("." . ,(concat user-emacs-directory ".backups")))
@@ -56,8 +63,7 @@
  version-control t ; save numbered files
  delete-old-versions t ; delete files silently
  kept-new-versions 20
- kept-old-versions 2
- vc-make-backup-files t) ; backup version controlled files
+ kept-old-versions 2)
 ;; Backup on each save
 ;; https://www.emacswiki.org/emacs/ForceBackups
 (defun force-buffer-backup ()
@@ -71,7 +77,6 @@
  auto-save-interval 100 ; characters
  auto-save-timeout 20) ; seconds
 ; delete-auto-save-files nil) ; do not delete on buffer saving
-
 
 ;;; Mark region
 (setq highlight-nonselected-windows t)
