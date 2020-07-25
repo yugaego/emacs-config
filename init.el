@@ -108,7 +108,10 @@
  directory-free-space-args "-kh" ; df options
  list-directory-brief-switches "-aFh" ; ls options
  list-directory-verbose-switches "-ahl") ; ls options
- 
+
+;;; Dired
+(setq dired-auto-revert-buffer t) ; keep the buffer up-to-date
+
 ;;; Mac Dictionary
 ;; from https://gist.github.com/Superbil/5113974
 (defun mac-open-dictionary (the-word)
