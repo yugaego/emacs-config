@@ -21,6 +21,17 @@
        '((top . 1) (left . 980) (width . 90) (height . 65) (font . "Menlo-16")))
 (set-face-font 'default "Menlo-16")
 
+;;; Ediff
+(setq ediff-split-window-function 'split-window-horizontally)
+;; https://www.emacswiki.org/emacs/EdiffMode
+;; Usage: emacs -diff file1 file2
+;; TODO: ADD RELATIVE PATHS SUPPORT
+(defun command-line-diff (switch)
+      (let ((file1 (pop command-line-args-left))
+            (file2 (pop command-line-args-left)))
+        (ediff file1 file2)))
+(add-to-list 'command-switch-alist '("diff" . command-line-diff))
+
 ;;; Modes
 (setq-default major-mode 'text-mode)
 (setq auto-save-visited-mode t) ; save file-visiting buffers in 5 seconds
@@ -31,7 +42,8 @@
           (lambda ()
             (when (string= (file-name-extension buffer-file-name) "rkt")
               (whitespace-mode +1))))
-;; Paretheses
+
+;;; Paretheses
 (setq show-paren-delay 0)
 (show-paren-mode 1)
 
