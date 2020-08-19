@@ -124,6 +124,12 @@
 ;;; Dired
 (setq dired-auto-revert-buffer t) ; keep the buffer up-to-date
 
+;;; Calendar
+(setq calendar-week-start-day 1 ; on Monday
+      calendar-date-style "iso"
+      calendar-time-display-form '(24-hours ":" minutes
+               (if time-zone " (") time-zone (if time-zone ")")))
+
 ;;; Mac Dictionary
 ;; from https://gist.github.com/Superbil/5113974
 (defun mac-open-dictionary (the-word)
@@ -142,21 +148,3 @@
 ;; User-Defined init.el ends here
 
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-;(package-initialize)
-
-;(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- ;'(custom-enabled-themes (quote (tango-dark))))
-;(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- ;)
