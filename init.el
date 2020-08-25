@@ -43,7 +43,7 @@
             (when (string= (file-name-extension buffer-file-name) "rkt")
               (whitespace-mode +1))))
 
-;;; Paretheses
+;;; Parentheses
 (setq show-paren-delay 0)
 (show-paren-mode 1)
 
@@ -60,6 +60,8 @@
 (savehist-mode t) ; save command history between sessions
 (global-linum-mode t) ; M-x -linu
 (setq default-directory "~/")
+(desktop-save-mode 1)
+(setq desktop-save t) ; always save
 
 ;;; Version Control
 (setq

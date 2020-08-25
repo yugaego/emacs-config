@@ -5,6 +5,8 @@ history
 tramp
 filesets-cache.el
 semanticdb/
+.emacs.desktop
+*.lock
 
 *#
 .backups/
