@@ -7,6 +7,9 @@ filesets-cache.el
 semanticdb/
 .emacs.desktop
 *.lock
+games/
+elpa/
+notes
 
 *#
 .backups/
