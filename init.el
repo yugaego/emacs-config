@@ -60,8 +60,8 @@
 (savehist-mode t) ; save command history between sessions
 (global-linum-mode t) ; M-x -linu
 (setq default-directory "~/")
-(desktop-save-mode 1)
-(setq desktop-save t) ; always save
+;(desktop-save-mode 1)
+;(setq desktop-save t) ; always save
 
 ;;; Version Control
 (setq
