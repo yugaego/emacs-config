@@ -60,7 +60,8 @@
  insert-default-directory "~/" ; minibuffer default path
  resize-mini-windows t ; decrease size when lines are removed
  suggest-key-bindings 5 ; show shortcut of the command for n seconds
- extended-command-suggest-shorter t)
+ extended-command-suggest-shorter t
+ read-answer t) ; accepts short answers to the questions (y vs yes)
 
 ;;; Session
 (setq-default history-length 1000) ; size of command history
