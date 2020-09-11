@@ -16,12 +16,12 @@
 
 ;;; Appearance
 (load-theme 'tango-dark t)
-(setq
- inhibit-startup-message t
- uniquify-buffer-name-style 'forward) ; prepend dirs to identically-named files
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (setq
+ inhibit-startup-message t
+ uniquify-buffer-name-style 'forward ; prepend dirs to identically-named files
+ initial-scratch-message nil
  initial-frame-alist
       '((top . 1) (left . 1) (width . 95) (height . 65))
  default-frame-alist
@@ -84,8 +84,8 @@
  backup-by-copying t ; don't clobber symlinks
  version-control t ; save numbered files
  delete-old-versions t ; delete files silently
- kept-new-versions 20
- kept-old-versions 2)
+  kept-new-versions 6
+ kept-old-versions 9)
 ;; Backup on each save
 ;; https://www.emacswiki.org/emacs/ForceBackups
 (defun force-buffer-backup ()
@@ -96,9 +96,10 @@
 
 ;;; Auto-saving
 (setq
- auto-save-interval 100 ; characters
- auto-save-timeout 20) ; seconds
-; delete-auto-save-files nil) ; do not delete on buffer saving
+ auto-save-default t
+ auto-save-interval 200 ; characters between auto-saves
+ auto-save-timeout 20 ; save after N seconds of idleness
+ delete-auto-save-files nil) ; do not delete on buffer saving
 
 ;;; Mark region
 (setq highlight-nonselected-windows t)
