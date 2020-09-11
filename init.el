@@ -78,14 +78,14 @@
  vc-command-messages 1) ; output shell commands vc executes
  ;vc-suppress-confirm 1)
 
-;;; Backups
+;;; Backups and Auto-saving
 (setq
  backup-directory-alist `(("." . ,(concat user-emacs-directory ".backups")))
  backup-by-copying t ; don't clobber symlinks
  version-control t ; save numbered files
  delete-old-versions t ; delete files silently
-  kept-new-versions 6
- kept-old-versions 9)
+ kept-new-versions 20
+ kept-old-versions 10)
 ;; Backup on each save
 ;; https://www.emacswiki.org/emacs/ForceBackups
 (defun force-buffer-backup ()
@@ -93,12 +93,10 @@
     (backup-buffer)))
 (add-hook 'before-save-hook 'force-buffer-backup)
 (add-hook 'auto-save-hook 'force-buffer-backup)
-
-;;; Auto-saving
 (setq
  auto-save-default t
- auto-save-interval 200 ; characters between auto-saves
- auto-save-timeout 20 ; save after N seconds of idleness
+ auto-save-interval 100 ; characters between auto-saves
+ auto-save-timeout 600 ; save after N seconds of idleness
  delete-auto-save-files nil) ; do not delete on buffer saving
 
 ;;; Mark region
