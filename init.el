@@ -84,18 +84,18 @@
  backup-by-copying t ; don't clobber symlinks
  version-control t ; save numbered files
  delete-old-versions t ; delete files silently
- kept-new-versions 20
- kept-old-versions 10)
+ kept-new-versions 10
+ kept-old-versions 4)
 ;; Backup on each save
 ;; https://www.emacswiki.org/emacs/ForceBackups
 (defun force-buffer-backup ()
   (let ((buffer-backed-up nil))
     (backup-buffer)))
-(add-hook 'before-save-hook 'force-buffer-backup)
+(add-hook 'after-save-hook 'force-buffer-backup)
 (add-hook 'auto-save-hook 'force-buffer-backup)
 (setq
  auto-save-default t
- auto-save-interval 100 ; characters between auto-saves
+ auto-save-interval 200 ; characters between auto-saves
  auto-save-timeout 600 ; save after N seconds of idleness
  delete-auto-save-files nil) ; do not delete on buffer saving
 
