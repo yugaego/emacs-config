@@ -1,23 +1,20 @@
 ;; ===================================
-;; Basic Customization
+;; Backward Compatibility
 ;; ===================================
 
-;;; Workarounds
-;; Emacs 26 TLS connection problem
-;; https://lists.gnu.org/archive/html/help-gnu-emacs/2019-02/msg00144.html
+(when (< emacs-major-version 27)
+  (package-initialize))
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
 
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+;; ===================================
+;; Basics
+;; ===================================
 
 ;;; Appearance
 (load-theme 'tango-dark t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
+(global-linum-mode t) ; M-x -linu
 (setq
  inhibit-startup-message t
  uniquify-buffer-name-style 'forward ; prepend dirs to identically-named files
@@ -27,32 +24,13 @@
  default-frame-alist
        '((top . 1) (left . 980) (width . 90) (height . 65) (font . "Menlo-16")))
 (set-face-font 'default "Menlo-16")
-
-;;; Ediff
-(setq ediff-split-window-function 'split-window-horizontally)
-;; https://www.emacswiki.org/emacs/EdiffMode
-;; Usage: emacs -diff file1 file2
-;; TODO: ADD RELATIVE PATHS SUPPORT
-(defun command-line-diff (switch)
-      (let ((file1 (pop command-line-args-left))
-            (file2 (pop command-line-args-left)))
-        (ediff file1 file2)))
-(add-to-list 'command-switch-alist '("diff" . command-line-diff))
+(show-paren-mode 1)
+(setq show-paren-delay 0)
 
 ;;; Modes
 (setq-default major-mode 'text-mode)
+(global-auto-revert-mode 1)
 (setq auto-save-visited-mode t) ; save file-visiting buffers in 5 seconds
-(auto-save-visited-mode +1)
-;; https://www.emacswiki.org/emacs/AutoModeAlist
-(add-to-list 'auto-mode-alist '("\\.rkt\\'" . scheme-mode))
-(add-hook 'find-file-hook
-          (lambda ()
-            (when (string= (file-name-extension buffer-file-name) "rkt")
-              (whitespace-mode +1))))
-
-;;; Parentheses
-(setq show-paren-delay 0)
-(show-paren-mode 1)
 
 ;;; Minibuffer
 (setq
@@ -66,17 +44,15 @@
 ;;; Session
 (setq-default history-length 1000) ; size of command history
 (savehist-mode t) ; save command history between sessions
-(global-linum-mode t) ; M-x -linu
 (setq default-directory "~/")
-;(desktop-save-mode 1)
-;(setq desktop-save t) ; always save
+(desktop-save-mode 1) ; save session automatically
+(setq desktop-save t) ; do not ask, always save
 
 ;;; Version Control
 (setq
- vc-handled-backends '(Git) ; disables other VC systems
+ vc-handled-backends '(Git) ; disables other VC systems to improve performance
  vc-make-backup-files 1 ; backup files under VC system
  vc-command-messages 1) ; output shell commands vc executes
- ;vc-suppress-confirm 1)
 
 ;;; Backups and Auto-saving
 (setq
@@ -86,6 +62,11 @@
  delete-old-versions t ; delete files silently
  kept-new-versions 10
  kept-old-versions 4)
+(setq
+ auto-save-default t
+ auto-save-interval 200 ; characters between auto-saves
+ auto-save-timeout 600 ; save after N seconds of idleness
+ delete-auto-save-files nil) ; do not delete on buffer saving
 ;; Backup on each save
 ;; https://www.emacswiki.org/emacs/ForceBackups
 (defun force-buffer-backup ()
@@ -93,11 +74,6 @@
     (backup-buffer)))
 (add-hook 'after-save-hook 'force-buffer-backup)
 (add-hook 'auto-save-hook 'force-buffer-backup)
-(setq
- auto-save-default t
- auto-save-interval 200 ; characters between auto-saves
- auto-save-timeout 600 ; save after N seconds of idleness
- delete-auto-save-files nil) ; do not delete on buffer saving
 
 ;;; Mark region
 (setq highlight-nonselected-windows t)
@@ -107,16 +83,11 @@
 (put 'upcase-region 'disabled nil)
 
 ;;; Edit
-;(setq create-lockfiles nil)
 (setq kill-whole-line t) ; C-k kills newline character too
 (setq
  undo-limit 8000000 ; 8 MB
  undo-strong-limit 12000000 ; 12 MB
  undo-outer-limit 20000000) ; 20 MB
-
-;;; Navigation
-;(setq sentence-end-double-space nil) ; affects M-e behavior
-;(global-set-key (kbd "M-e") 'forward-sentence)
 
 ;;; Scrolling
 (setq scroll-step 1)
@@ -132,12 +103,21 @@
 
 ;;; Dired
 (setq dired-auto-revert-buffer t) ; keep the buffer up-to-date
+(add-hook 'dired-mode-hook 'auto-revert-mode) ; auto refresh dired when file changes
+
+;;; Ediff
+(setq ediff-split-window-function 'split-window-horizontally)
 
 ;;; Calendar
 (setq calendar-week-start-day 1 ; on Monday
       calendar-date-style "iso"
       calendar-time-display-form '(24-hours ":" minutes
                (if time-zone " (") time-zone (if time-zone ")")))
+
+
+;; ===================================
+;; Key Bindings
+;; ===================================
 
 ;;; Mac Dictionary
 ;; from https://gist.github.com/Superbil/5113974
@@ -153,7 +133,15 @@
                      (mac-open-dictionary (current-word))))
 
 
+;; ===================================
+;; Language Specific
+;; ===================================
 
-;; User-Defined init.el ends here
+;; https://www.emacswiki.org/emacs/AutoModeAlist
+(add-to-list 'auto-mode-alist '("\\.rkt\\'" . scheme-mode))
+(add-hook 'find-file-hook
+          (lambda ()
+            (when (string= (file-name-extension buffer-file-name) "rkt")
+              (whitespace-mode +1))))
 
 
