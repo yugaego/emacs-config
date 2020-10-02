@@ -5,7 +5,8 @@ Emacs Cheat Sheet
 Based on Emacs 26.3 and Emacs 27.1 available at https://emacsformacosx.com.
 
 
-### Install
+Install
+---
 
 - `$ brew cask install emacs`
 
@@ -19,20 +20,25 @@ Based on Emacs 26.3 and Emacs 27.1 available at https://emacsformacosx.com.
 
 With such install, Emacs works basically the same way other applications work, responding to key presses most of the users are used to (for example, quitting *Cmd-q* or hiding *Cmd-h* Emacs, basic text navigation with the *arrows*, editing  with *Cmd-c*, *Cmd-v*, *Cmd-a*).
 
-And by the way, Emacs usage is smooth with *Dvorak* and a split keyboard (I use [Kinesis Advantage](https://kinesis-ergo.com/shop/advantage2/) and have a set of modifier keys [under each of my hands](https://gitlab.com/-/snippets/1744636)).
+And by the way, Emacs usage is smooth with *Dvorak* and a split keyboard. I use [Kinesis Advantage](https://kinesis-ergo.com/shop/advantage2/) and have a set of modifier keys [under each of my hands](https://gitlab.com/-/snippets/1744636).
 
 
-### Legend
+Legend
+---
 
 - **C** Control key
 - **M** Meta/Option/Alt/Esc key
 - **s** Super/Command key
 - **S** Shift key
 
-Example:
-**C-g**
-Press and hold *Control* key, press key *g*, release.
-(This is a useful combination that cancels the current command input.)
+**Example:**   
+**C-g**  
+Press and hold **Control** key, press key **g**, release.  
+This is a useful combination that cancels the current command input.
+
+
+Key Bindings
+---
 
 
 ### Manual / Help
