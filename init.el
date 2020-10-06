@@ -63,6 +63,7 @@
  kept-new-versions 10
  kept-old-versions 4)
 (setq
+ auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
  auto-save-default t
  auto-save-interval 200 ; characters between auto-saves
  auto-save-timeout 600 ; save after N seconds of idleness
