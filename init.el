@@ -133,6 +133,13 @@
 		   (interactive)
                      (mac-open-dictionary (current-word))))
 
+;; Scroll half page keeping cursor position (without moving the point)
+(global-set-key (kbd "M-<down>") 'View-scroll-half-page-forward)
+(global-set-key (kbd "M-<up>") 'View-scroll-half-page-backward)
+
+;; Alternative to M-d
+(global-set-key (kbd "M-<delete>") 'kill-word)
+
 
 ;; ===================================
 ;; Language Specific
