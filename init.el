@@ -115,6 +115,9 @@
       calendar-time-display-form '(24-hours ":" minutes
                (if time-zone " (") time-zone (if time-zone ")")))
 
+;;; Spell Checking
+(setq ispell-program-name "/usr/local/bin/aspell")
+
 
 ;; ===================================
 ;; Key Bindings
