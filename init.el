@@ -14,7 +14,7 @@
 (load-theme 'tango-dark t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
-(global-linum-mode t) ; M-x -linu
+(global-linum-mode t) ; on huge files use display-line-numbers-mode instead
 (setq
  inhibit-startup-message t
  uniquify-buffer-name-style 'forward ; prepend dirs to identically-named files
@@ -23,6 +23,8 @@
       '((top . 1) (left . 1) (width . 95) (height . 65))
  default-frame-alist
        '((top . 1) (left . 980) (width . 90) (height . 65) (font . "Menlo-16")))
+
+;;; Text
 (set-face-font 'default "Menlo-16")
 (show-paren-mode 1)
 (setq show-paren-delay 0)
