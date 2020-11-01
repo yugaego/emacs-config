@@ -1,6 +1,7 @@
 Emacs Cheat Sheet
 ===
 
+> All I needed to get me started.
 
 Based on Emacs 26.3 and Emacs 27.1 available at https://emacsformacosx.com.
 
