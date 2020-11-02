@@ -9,6 +9,8 @@ Based on Emacs 26.3 and Emacs 27.1 available at https://emacsformacosx.com.
 Install
 ---
 
+- Emacs 27: `$ brew install jansson`
+
 - `$ brew cask install emacs`
 
 - `$ brew upgrade homebrew/cask/emacs`
