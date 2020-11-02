@@ -10,6 +10,8 @@
 ;; Basics
 ;; ===================================
 
+(add-to-list 'exec-path "/usr/local/bin")
+
 ;;; Appearance
 (load-theme 'tango-dark t)
 (scroll-bar-mode -1)
@@ -118,7 +120,7 @@
                (if time-zone " (") time-zone (if time-zone ")")))
 
 ;;; Spell Checking
-(setq ispell-program-name "/usr/local/bin/aspell")
+(setq ispell-program-name "aspell")
 
 
 ;; ===================================
@@ -166,6 +168,15 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/"))
 
+;; markdown-mode
+(custom-set-variables
+ '(markdown-command "pandoc"))
+
+
+
+;; ===================================
+;; Custom
+;; ===================================
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
