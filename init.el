@@ -22,9 +22,9 @@
  uniquify-buffer-name-style 'forward ; prepend dirs to identically-named files
  initial-scratch-message nil
  initial-frame-alist
-      '((top . 1) (left . 1) (width . 95) (height . 65))
+ '((top . 1) (left . 1) (width . 95) (height . 65))
  default-frame-alist
-       '((top . 1) (left . 980) (width . 90) (height . 65) (font . "Menlo-16")))
+ '((top . 1) (left . 980) (width . 90) (height . 65) (font . "Menlo-16")))
 
 ;;; Text
 (set-face-font 'default "Menlo-16")
@@ -116,8 +116,11 @@
 ;;; Calendar
 (setq calendar-week-start-day 1 ; on Monday
       calendar-date-style "iso"
-      calendar-time-display-form '(24-hours ":" minutes
-               (if time-zone " (") time-zone (if time-zone ")")))
+      calendar-time-display-form
+      '(24-hours ":" minutes
+                 (if time-zone " (")
+                 time-zone
+                 (if time-zone ")")))
 
 ;;; Spell Checking
 (setq ispell-program-name "aspell")
@@ -130,15 +133,18 @@
 ;;; Mac Dictionary
 ;; from https://gist.github.com/Superbil/5113974
 (defun mac-open-dictionary (the-word)
-    "Open Dictionary.app for the-word"
-    (interactive "Dictionary Lookup: ")
-    (shell-command
-             (concat "open \"dict:///" (replace-regexp-in-string "\"" "\\\\\"" the-word) "\"")))
+  "Open Dictionary.app for the-word"
+  (interactive "Dictionary Lookup: ")
+  (shell-command
+   (concat
+    "open \"dict:///"
+    (replace-regexp-in-string "\"" "\\\\\"" the-word)
+    "\"")))
 
 (global-set-key (kbd "C-c d")
-		'(lambda ()
-		   (interactive)
-                     (mac-open-dictionary (current-word))))
+                '(lambda ()
+                   (interactive)
+                   (mac-open-dictionary (current-word))))
 
 ;; Scroll half page keeping cursor position (without moving the point)
 (global-set-key (kbd "M-<down>") 'View-scroll-half-page-forward)
