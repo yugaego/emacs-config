@@ -30,6 +30,7 @@
 (set-face-font 'default "Menlo-16")
 (show-paren-mode 1)
 (setq show-paren-delay 0)
+(setq blink-cursor-blinks -1) ; blink forever
 
 ;;; Modes
 (setq-default major-mode 'text-mode)
