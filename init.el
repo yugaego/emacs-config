@@ -99,7 +99,9 @@
 (setq scroll-step 1)
 
 ;;; Files
-(setq delete-by-moving-to-trash t) ; use Trash on deletion
+(when (eq system-type 'darwin)
+  (osx-trash-setup)) ; use package osx-trash
+(setq delete-by-moving-to-trash t)
 
 ;;; Directory Listing
 (setq
