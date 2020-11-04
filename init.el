@@ -1,4 +1,13 @@
 ;; ===================================
+;; Installed Mac OS packages
+;; ===================================
+;;
+;; `$ brew install pandoc` for markdown-mode
+;; `$ brew install aspell` for ispell and flyspell
+;; `$ brew install trash` for osx-trash
+
+
+;; ===================================
 ;; Backward Compatibility
 ;; ===================================
 
