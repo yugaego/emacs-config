@@ -1,18 +1,20 @@
-auto-save-list/
-url/
-bookmarks
-history
-tramp
-filesets-cache.el
-semanticdb/
-.emacs.desktop
-*.lock
-games/
-elpa/
-notes
-
-*#
+/auto-save-list/
+/url/
+/bookmarks
+/history
+/tramp
+/filesets-cache.el
+/semanticdb/
+/.emacs.desktop
+.*.lock
+/games/
+/elpa/
+/notes
+/ido.last
+/smex-items
+\#*
 .backups/
+/eshell/
 
 .DS_Store
 
