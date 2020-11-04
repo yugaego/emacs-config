@@ -158,11 +158,11 @@
                    (interactive)
                    (mac-open-dictionary (current-word))))
 
-;; Scroll half page keeping cursor position (without moving the point)
+;;; Scroll half page keeping cursor position (without moving the point)
 (global-set-key (kbd "M-<down>") 'View-scroll-half-page-forward)
 (global-set-key (kbd "M-<up>") 'View-scroll-half-page-backward)
 
-;; Alternative to M-d
+;;; Alternative to M-d
 (global-set-key (kbd "M-<delete>") 'kill-word)
 
 
@@ -184,6 +184,11 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+
+(require 'smex)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ; fallback to M-x
 
 
 ;; ===================================
