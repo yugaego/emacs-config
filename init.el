@@ -108,8 +108,6 @@
 (setq scroll-step 1)
 
 ;;; Files
-(when (eq system-type 'darwin)
-  (osx-trash-setup)) ; use package osx-trash
 (setq delete-by-moving-to-trash t)
 
 ;;; Directory Listing
@@ -189,6 +187,10 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ; fallback to M-x
+
+(require 'osx-trash)
+(when (eq system-type 'darwin)
+  (osx-trash-setup))
 
 
 ;; ===================================
