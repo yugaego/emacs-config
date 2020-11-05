@@ -3,7 +3,7 @@ Key Bindings
 
 ### Text Navigation
 
- Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms                      
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms 
 -------------|----------------|---------------------|--------------------------------------------
 C-f          | RIGHT          | forward-char (right-char)| Move forward one character
 C-b          | LEFT           | backward-char (left-char)| Move backward one character
@@ -22,4 +22,12 @@ M-g TAB      |                | move-to-column      | Move to column N in the cu
 M-r          |                | move-to-window-line-top-bottom| Move to top / center / bottom of window
 M-}          |                | forward-paragraph   | Move forward to end of paragraph
 M-{          |                | backward-paragraph  | Move backward to start of paragraph
+
+
+### Text Editing
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|--------------------------------------------
+C-d
+C-S-BACKSPACE|                | kill-whole-line     | Delete (remove) current line
 

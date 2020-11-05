@@ -188,6 +188,9 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ; fallback to M-x
 
+(require 'ido)
+(ido-mode t)
+
 (require 'osx-trash)
 (when (eq system-type 'darwin)
   (osx-trash-setup))
