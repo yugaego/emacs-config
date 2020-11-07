@@ -20,6 +20,9 @@
 ;; ===================================
 
 (add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+
+(require 'init-windows)
 
 ;;; Appearance
 (load-theme 'tango-dark t)
