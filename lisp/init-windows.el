@@ -1,4 +1,4 @@
-;;; init-windows.el
+;;; init-windows.el --- Configure Emacs windows   -*- lexical-binding: t -*-
 
 ;; Based on https://github.com/banister/window-rotate-for-emacs
 (defun rotate-windows-buffers-helper (wl buf1)
