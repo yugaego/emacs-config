@@ -22,7 +22,7 @@ M-e          |                | forward-sentence    | Move forward to end of sen
 M-<          | HOME           | beginning-of-buffer | Move to the top
 M->          | END            | end-of-buffer       | Move to the end
 M-v          | PageUP         | scroll-down-command | Scroll one screen backward
-M-g g (M-g-g)| M-g M-g        | goto-line           | Move to line number N
+M-g g (M-g-g)| s-l, M-g M-g   | goto-line           | Move to line number N
 M-g TAB      |                | move-to-column      | Move to column N in the current line
 M-r          |                | move-to-window-line-top-bottom| Move to top / center / bottom of window
 M-}          |                | forward-paragraph   | Move forward to end of paragraph
@@ -66,3 +66,33 @@ M-u          |                | upcase-word         | Convert to upper case forw
 M-l          |                | downcase-word       | Convert to lower case forward
 M-c          |                | capitalize-word     | Capitalize forward
 
+
+### Editor
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+C-x C-0      | s-0, s-+, s--  | text-scale-adjust   | Change height of the face (font)
+             |                | highlight-changes-mode| Toggle highlighting of changes
+             |                | semantic-mode       | Toggle semantic mode: completion etc
+
+
+### Select / Mark Region
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+C-@          |                | set-mark-command    | Set and activate mark / selection
+C-x C-x      | s-j            | exchange-point-and-mark| Swap positions of the cursor and mark
+C-@ C-@      |                |                     | Remember position (set and unset mark) (see C-u C-@)
+C-u C-@      |                |                     | Return to marked position (see C-@ C-@)
+M-h          |                | mark-paragraph      | Select current paragraph
+C-x h        | s-a            | mark-whole-buffer   | Select current buffer contents
+S-NAVIGATION-KEYS | | | Shift selection: hold down shift key and type cursor motion commands
+
+
+### Region (Selection) Edit
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+Apply text manipulation commands| | |
+C-x C-u      |                | upcase-region       | Convert selection to upper case
+C-x C-l      |                | downcase-region     | Convert selection to lower case
