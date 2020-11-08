@@ -72,8 +72,8 @@ M-c          |                | capitalize-word     | Capitalize forward
  Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
 -------------|----------------|---------------------|------------------------------------
 C-x C-0      | s-0, s-+, s--  | text-scale-adjust   | Change height of the face (font)
-             |                | highlight-changes-mode| Toggle highlighting of changes
-             |                | semantic-mode       | Toggle semantic mode: completion etc
+M-x highlight-changes-mode | | highlight-changes-mode| Toggle highlighting of changes
+M-x semantic-mode |           | semantic-mode       | Toggle semantic mode: completion etc
 
 
 ### Select / Mark Region
