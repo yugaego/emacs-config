@@ -1,7 +1,10 @@
+;;; init.el --- Main configuration file   -*- lexical-binding: t -*-
+
 ;; ===================================
 ;; Installed Mac OS packages
 ;; ===================================
 ;;
+;; Pre-installed `$ brew install jansson` for better performance
 ;; `$ brew install pandoc` for markdown-mode
 ;; `$ brew install aspell` for ispell and flyspell
 ;; `$ brew install trash` for osx-trash
@@ -20,13 +23,14 @@
 ;; ===================================
 
 (add-to-list 'exec-path "/usr/local/bin")
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'init-windows)
 
 ;;; Appearance
-(load-theme 'tango-dark t)
 (global-linum-mode t) ; on huge files use display-line-numbers-mode instead
+(setq uniquify-buffer-name-style 'forward) ; prepend dirs to identically-named files
 
 ;;; Text
 (show-paren-mode 1)
