@@ -96,3 +96,8 @@ S-NAVIGATION-KEYS | | | Shift selection: hold down shift key and type cursor mot
 Apply text manipulation commands| | |
 C-x C-u      |                | upcase-region       | Convert selection to upper case
 C-x C-l      |                | downcase-region     | Convert selection to lower case
+C-M-\        |                | indent-region       | Indent non-blank lines in the selection
+C-x TAB      | | indent-rigidly      | Indent all selected lines, using LEFT/RIGHT and SHIFT or `C-u NUMBER`
+M-;          | C-x C-;  | comment-dwim, comment-line| Toggle commenting out the selection
+M-s M-w      |                | eww-search-words    | Search the web for the selected text
+
