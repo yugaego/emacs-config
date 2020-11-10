@@ -23,8 +23,11 @@ And by the way, Emacs usage is smooth with *Dvorak* layout and a split keyboard.
 What's Next
 ---
 
-As the next step, I highly recommend following the Emacs tutorial, then reading the Emacs manual. Experiment while reading documentation.  
-Be patient! It took me two months to read the manual and get used to Emacs. After those two months, I got the simplest possible configuration file that matched my tastes. It is tagged as `bare-bones` release.  
+As the next step, I highly recommend following the **Emacs tutorial**, then reading the **Emacs manual**.  
+I also found [EmacsWiki](https://www.emacswiki.org/emacs/EmacsNewbie) to be the most helpful resource online.
+
+Experiment while reading documentation. Be patient!  
+For example, it took me two months to read the manual and get used to Emacs. To that moment I wrote the simplest possible configuration file that matched my tastes. You can see it tagged as `bare-bones`.  
 Some may say it took too much time, but that was a time full of joy. I'm still in the mid of the process of configuring Emacs for my needs, so I realize it's really a long time journey. If you're like me and many other people that like what Emacs has to suggest, that's going to be a very pleasant journey, despite being not the easiest one sometimes. So good luck!
 
 **Several key bindings listed below helped me the most while getting into Emacs.** The file *KeyBindings.md* contains the extended list of such key bindings.
