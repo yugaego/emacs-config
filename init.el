@@ -160,6 +160,8 @@
 ;;; Alternative to M-d
 (global-set-key (kbd "M-<delete>") 'kill-word)
 
+;; Use more advanced ibuffer in place of default buffers list
+(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 
 ;; ===================================
 ;; Language Specific
