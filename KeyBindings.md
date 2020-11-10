@@ -3,6 +3,8 @@ Key Bindings
 
 Use `C-u NUMBER` or `M-NUMBER` as a command prefix to send a numeric argument to the command.
 
+In an attempt to be useful for newbies, this page uses mixed terms, not only [Emacs Jargon](https://www.emacswiki.org/emacs/EmacsJargon) usual ones.
+
 
 ### Text: Navigate
 
@@ -151,4 +153,25 @@ q            | RETURN         |                     | Exit replace
 y            | SPACE          |                     | Do replace this match
 n            | BACKSPACE (DEL)|                     | Skip this match
 !            |                |                     | Replace all remaining matches in this buffer
+
+
+### Buffers
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+C-x C-b      || list-buffers, ibuffer, buffer-menu| Show a list of all existing buffers
+C-u C-x C-b  || list-buffers, buffer-menu| List buffers that are visiting files
+?            | h              |                     | Show available buffers list/menu commands
+C-x b        |                | switch-to-buffer    | Show another buffer (by name)
+C-x LEFT     |                | previous-buffer     | Show previous buffer
+C-x RIGHT    |                | next-buffer         | Show next buffer
+C-x 4 b      |                | switch-to-buffer-other-window| Show buffer in another window
+C-x 5 b      |                | switch-to-buffer-other-frame| Show buffer in another frame
+C-x k        |                | kill-buffer         | Close/kill buffer (by name), optionally save
+M-x kill-some-buffers|        | kill-some-buffers   | Close/kill (or not) buffers one by one, optionally save
+M-x kill-matching-buffers|    | kill-matching-buffers| Close/kill buffers with matching names
+M-x clone-buffer|| clone-buffer| Clone buffer using a new name. View different \*info\* or \*Help\* pages simultaneously
+M-x bs-show  |                | bs-show             | Open menu of buffers for immediate manipulations
+C-x C-q      |                | read-only-mode      | Toggle buffer read only mode
+M-x bs-show  |                | bs-show             | Open menu of buffers for immediate manipulatins
 
