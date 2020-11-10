@@ -102,20 +102,53 @@ M-;          | C-x C-;  | comment-dwim, comment-line| Toggle commenting out the 
 M-s M-w      |                | eww-search-words    | Search the web for the selected text
 
 
-### Search
+### Search: Start / Stop
 
  Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
 -------------|----------------|---------------------|------------------------------------
-| | |
-C-x C-u      |                | upcase-region       | Convert selection to upper case
-C-x C-l      |                | downcase-region     | Convert selection to lower case
+C-s          | s-f            | isearch-forward     | Search text forward, C-u for regexp
+C-M-s        |                | isearch-forward-regexp| Search regular expression forward
+C-r          |                | isearch-backward    | Search text backward, C-u for regexp
+M-C-r        |                | isearch-backward-regexp| Search regular expression backward
+RETURN       |                |                     | Stop searching, stay at the found location
+C-g          |                |                     | Stop searching, move to the initial position
+M-s h r      |                | highlight-regexp    | Stop searching, highlight all matches
+M-s h l | | highlight-lines-matching-regexp    | Stop searching, highlight lines with the matches
+M-s h u | |     | Disable highlighting
 
 
-### Replace
+### Search: Use
 
  Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
 -------------|----------------|---------------------|------------------------------------
-| | |
-C-x C-u      |                | upcase-region       | Convert selection to upper case
-C-x C-l      |                | downcase-region     | Convert selection to lower case
+C-h C-h      |                |                     | Enable search help mode
+M-p          |                |                     | Insert previous search string
+M-n          |                |                     | Insert next search string
+M-TAB        |                |                     | Show completion list
+M-s e        | M-e            |                     | Edit search string
+M-s c        | M-c            |                     | Toggle search case-sensitivity
+M-s r        | M-r            |                     | Toggle regular-expression mode
+M-s w        |                |                     | Toggle word mode
+M-%          |                | query-replace       | Switch to replace
+C-M-%        |                | query-replace-regexp| Switch to regexp replace
+
+
+### Replace: Start / Stop
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+M-%          |                | query-replace       | Replace string occurrences
+C-M-%        |                | query-replace-regexp| Replace regular expression occurrences
+q            | RETURN         |                     | Exit replace
+.            |                |                     | Replace this match and exit
+
+
+### Replace: Use
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+?            | C-h            |                     | Show replace help
+y            | SPACE          |                     | Do replace this match
+n            | BACKSPACE (DEL)|                     | Skip this match
+!            |                |                     | Replace all remaining matches in this buffer
 
