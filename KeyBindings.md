@@ -175,3 +175,19 @@ M-x bs-show  |                | bs-show             | Open menu of buffers for i
 C-x C-q      |                | read-only-mode      | Toggle buffer read only mode
 M-x bs-show  |                | bs-show             | Open menu of buffers for immediate manipulatins
 
+
+### Files
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+C-x C-f      |                | find-file           | Open a file or switch to buffer if already opened
+C-x C-w      |                | write-file          | Save as
+C-x C-r      |                | find-file-read-only | Open a file in a read only mode (see `C-x C-q`)
+C-x C-v || find-alternate-file | Open a file instead of previously opened one (or refresh/reload/revert by using the same file name)
+C-x 4 C-f    | C-x 4 f        | find-file-other-window| Open a file in another window
+C-x 5 C-f    | C-x 5 f        | find-file-other-frame | Open a file in another frame
+C-x C-s      | s-s            | save-buffer         | Save file shown in the current buffer (`C-u` to backup)
+C-x s        | | save-some-buffers | Save interactively file-visiting buffers (`C-h` for help). Called on Emacs exit
+s-u          |                | revert-buffer       | Reload file from disk (undo all unsaved changes)
+M-x diff-buffer-with-file | | diff-buffer-with-file | View the differences between buffer and disk contents
+
