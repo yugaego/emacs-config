@@ -191,3 +191,16 @@ C-x s        | | save-some-buffers | Save interactively file-visiting buffers (`
 s-u          |                | revert-buffer       | Reload file from disk (undo all unsaved changes)
 M-x diff-buffer-with-file | | diff-buffer-with-file | View the differences between buffer and disk contents
 
+
+### Directories
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+C-x C-d      |                | list-directory      | Brief listing
+C-x d        | s-D            | dired               | Directory browing and editing major mode
+C-x 4 d      |                | dired-other-window  | Enter dired mode in another window
+C-x 5 d      |                | dired-other-frame   | Enter dired mode in another frame
+h            |                |                     | When in **Dired** mode, show help (list available commands)
+M-x find-name-dired |         | find-name-dired     | List files with names matching a pattern
+M-x find-grep-dired |         | find-grep-dired     | List files with content matching a regexp
+
