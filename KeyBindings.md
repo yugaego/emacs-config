@@ -223,3 +223,16 @@ C-x +        |                | balance-windows     | Make windows to be of equa
 C-x }        |                | enlarge-window-horizontally| Make current window N columns wider
 C-x {        |                | shrink-window-horizontally| Make current window N columns narrower
 
+
+### Frames
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+C-x C-c | | save-buffers-kill-terminal| Closes all frames on current display, then ends Emacs session if has no frames open on other displays
+C-x 5 0      | s-w            | delete-frame        | Delete current frame
+C-x 5 1      |                | delete-other-frames | Delete all frames except current
+M-F10        | ESC F10        | toggle-frame-maximized| Toggle maximization state of current frame
+C-x 5 o      | s-`            | other-frame         | Switch to another frame
+C-x 5 2      |                | make-frame-command  | Create a new frame
+M-x speedbar |                | speedbar            | Toggle speedbar frame mode (quick access to files)
+
