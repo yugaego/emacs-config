@@ -84,8 +84,8 @@ M-x semantic-mode |           | semantic-mode       | Toggle semantic mode: comp
 -------------|----------------|---------------------|------------------------------------
 C-@          |                | set-mark-command    | Set and activate mark / selection
 C-x C-x      | s-j            | exchange-point-and-mark| Swap positions of the cursor and mark
-C-@ C-@      |                |                     | Remember position (set and unset mark) (see C-u C-@)
-C-u C-@      |                |                     | Return to marked position (see C-@ C-@)
+C-@ C-@      |                |                     | Remember position (set and unset mark) (see `C-u C-@`)
+C-u C-@      |                |                     | Return to marked position (see `C-@ C-@`)
 M-h          |                | mark-paragraph      | Select current paragraph
 C-x h        | s-a            | mark-whole-buffer   | Select current buffer contents
 S-NAVIGATION-KEYS | | | Shift selection: hold down shift key and type cursor motion commands
@@ -108,9 +108,9 @@ M-s M-w      |                | eww-search-words    | Search the web for the sel
 
  Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
 -------------|----------------|---------------------|------------------------------------
-C-s          | s-f            | isearch-forward     | Search text forward, C-u for regexp
+C-s          | s-f            | isearch-forward     | Search text forward, `C-u` for regexp
 C-M-s        |                | isearch-forward-regexp| Search regular expression forward
-C-r          |                | isearch-backward    | Search text backward, C-u for regexp
+C-r          |                | isearch-backward    | Search text backward, `C-u` for regexp
 M-C-r        |                | isearch-backward-regexp| Search regular expression backward
 RETURN       |                |                     | Stop searching, stay at the found location
 C-g          |                |                     | Stop searching, move to the initial position
