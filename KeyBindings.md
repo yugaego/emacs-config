@@ -204,3 +204,22 @@ h            |                |                     | When in **Dired** mode, sh
 M-x find-name-dired |         | find-name-dired     | List files with names matching a pattern
 M-x find-grep-dired |         | find-grep-dired     | List files with content matching a regexp
 
+
+### Windows
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+C-x 2        |                | split-window-below  | Create window with the same buffer below the current window
+C-x 3        |                | split-window-right  | Split current window into two side-by-side windows
+C-x o        |                | other-window        | Switch to another (next) window in cyclic order
+C-M-v        |                | scroll-other-window | Scroll next (another) window forward
+C-M-S-v      |                | scroll-other-window-down| Scroll next (another) window backward
+C-x 1        |                | delete-other-windows| Expand current window, close other windows in this frame
+C-x 0        |                | delete-window       | Close current window
+C-x 4 0      |                | kill-buffer-and-window| Close current window and kill current buffer
+C-x ^        |                | enlarge-window      | Make current window N lines taller
+C-x -        || shrink-window-if-larger-than-buffer | Make current window smaller if buffer doesn't need so many lines
+C-x +        |                | balance-windows     | Make windows to be of equal height
+C-x }        |                | enlarge-window-horizontally| Make current window N columns wider
+C-x {        |                | shrink-window-horizontally| Make current window N columns narrower
+
