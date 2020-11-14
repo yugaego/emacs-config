@@ -246,3 +246,13 @@ C-u M-=      | | count-words         | Count the number of lines, words, charact
 C-x =        | | what-cursor-position| Print cursor position and character information
 C-u C-x =    | | what-cursor-position| Print cursor position and character detailed information
 
+
+### Command Related
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+C-x z, then z|                |                     | Repeat previous command
+M-x list-command-history|     | list-command-history| Show list of commands that used the minibuffer
+C-u NUMBER   | M-NUMBER | universal-argument  | Begin a numeric argument for the following command. `C-u` equals 4, `C-u C-u` equals `2 * 4`, etc
+`C--`        | `M--`, `C-M--` | negative-argument   | Begin a negative numeric argument for the next command
+
