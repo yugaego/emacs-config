@@ -236,3 +236,13 @@ C-x 5 o      | s-`            | other-frame         | Switch to another frame
 C-x 5 2      |                | make-frame-command  | Create a new frame
 M-x speedbar |                | speedbar            | Toggle speedbar frame mode (quick access to files)
 
+
+### Info
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+M-=          | | count-words-region  | Count the number of lines, words, characters in the selection
+C-u M-=-words| | count-words         | Count the number of lines, words, characters the in buffer
+C-x =        | | what-cursor-position| Print cursor position and character information
+C-u C-x =    | | what-cursor-position| Print cursor position and character detailed information
+
