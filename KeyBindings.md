@@ -260,3 +260,22 @@ C-u NUMBER   | M-NUMBER | universal-argument  | Begin a numeric argument for the
 M-!          | s-L            | shell-command       | Execute shell command
 M-:          |                | eval-expression     | Evaluate expression
 
+
+### Version Control (basic Git operations)
+
+ Key Binding | Alternate Keys | M-x Command         | Notes and Search Terms
+-------------|----------------|---------------------|------------------------------------
+C-x v d      |                | vc-dir              | Show current VC status in directory
+h            | ?              |                     | Show vc-dir-mode help
+C-x v =      |                | vc-diff             | Display diff between file revisions
+C-x v v      |                | vc-next-action      | Do the next logical VC operation (add, commit)
+C-c C-c (log only) |          | log-edit-done       | Finish editing log message, commit the files
+C-x v P      |                | vc-push             | Push the current branch
+C-x v +      |                | vc-update           | Pull to update the current branch
+C-x v u      |                | vc-revert           | Discard changes
+C-x v i      |                | vc-register         | Register file(s) into a VC system (add)
+C-x v l      |                | vc-print-log        | List current file(set) change log
+C-x v L      |                | vc-print-root-log   | Show commits history (`d` when on commit to diff, or `m` to mark)
+C-x v O      |                | vc-log-outgoing     | Show a log of changes before push
+C-x v G      |                | vc-ignore           | Ignore a file
+
