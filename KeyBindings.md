@@ -67,6 +67,7 @@ C-x C-t      |                | transpose-lines     | Interchange / swap lines
 M-u          |                | upcase-word         | Convert to upper case forward
 M-l          |                | downcase-word       | Convert to lower case forward
 M-c          |                | capitalize-word     | Capitalize forward
+C-q          |                | quoted-insert       | Read next input and insert it. `C-j` inserts newline
 
 
 ### Editor
@@ -190,6 +191,7 @@ C-x C-s      | s-s            | save-buffer         | Save file shown in the cur
 C-x s        | | save-some-buffers | Save interactively file-visiting buffers (`C-h` for help). Called on Emacs exit
 s-u          |                | revert-buffer       | Reload file from disk (undo all unsaved changes)
 M-x diff-buffer-with-file | | diff-buffer-with-file | View the differences between buffer and disk contents
+M-x find-file-at-point |      | find-file-at-point  | Open file guessing default from text around point
 
 
 ### Directories
@@ -255,4 +257,6 @@ C-x z, then z|                |                     | Repeat previous command
 M-x list-command-history|     | list-command-history| Show list of commands that used the minibuffer
 C-u NUMBER   | M-NUMBER | universal-argument  | Begin a numeric argument for the following command. `C-u` equals 4, `C-u C-u` equals `2 * 4`, etc
 `C--`        | `M--`, `C-M--` | negative-argument   | Begin a negative numeric argument for the next command
+M-!          | s-L            | shell-command       | Execute shell command
+M-:          |                | eval-expression     | Evaluate expression
 
