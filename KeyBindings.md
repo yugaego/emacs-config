@@ -60,7 +60,8 @@ M-w          |                | kill-ring-save      | Copy selected text
 C-y          | s-v            | yank                | Paste text
 M-y          |                | yank-pop            | Replace just-yanked text
 C-o          |                | open-line           | Insert a new line after cursor
-C-x u        | s-z, C-_, C-/  | undo                | Undo previous changes
+C-x u        | s-z, C-_, C-/  | undo                | Undo (redo) previous changes
+C-g C-x u | C-g s-z, C-g C-_, C-g C-/ |             | Toggle undo (redo)
 C-t          |                | transpose-chars     | Interchange / swap chars
 M-t          |                | transpose-words     | Interchange / swap words
 C-x C-t      |                | transpose-lines     | Interchange / swap lines
