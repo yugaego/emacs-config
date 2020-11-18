@@ -190,6 +190,9 @@
 (when (eq system-type 'darwin)
   (osx-trash-setup))
 
+;; Org Mode
+(setq org-startup-folded nil) ; open org file with the items expanded
+
 
 ;; ===================================
 ;; Custom
