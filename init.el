@@ -55,7 +55,7 @@
 ;;; Session
 (setq-default history-length 1000) ; size of command history
 (savehist-mode t) ; save command history between sessions
-(setq default-directory "~/")
+(setq-default default-directory "~/")
 (desktop-save-mode 1) ; save session automatically
 (setq desktop-save t) ; do not ask, always save
 
