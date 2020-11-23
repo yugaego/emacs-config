@@ -54,6 +54,7 @@
  suggest-key-bindings 5 ; show shortcut of the command for n seconds
  extended-command-suggest-shorter t
  read-answer t) ; accepts short answers to the questions (y vs yes)
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;;; Session
 (setq-default history-length 1000) ; size of command history
