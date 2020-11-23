@@ -29,7 +29,7 @@ M-g TAB      |                | move-to-column      | Move to column N in the cu
 M-r          |                | move-to-window-line-top-bottom| Move to top / center / bottom of window
 M-}          |                | forward-paragraph   | Move forward to end of paragraph
 M-{          |                | backward-paragraph  | Move backward to start of paragraph
-
+M-s o        |                | occur               | Show all regexp matches in new buffer
 
 ### Text: Delete
 
