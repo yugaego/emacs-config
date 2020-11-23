@@ -37,7 +37,10 @@
 (setq show-paren-delay 0)
 (setq blink-cursor-blinks -1) ; blink forever
 (setq sentence-end-double-space nil)
-
+;; Optionally use visual-line-mode, in which
+;; line commands apply on visual, not logical, lines.
+(setq-default word-wrap t) ; makes soft wrapping to respect words boundaries.
+ 
 ;;; Modes
 (setq-default major-mode 'text-mode)
 (global-auto-revert-mode 1)
