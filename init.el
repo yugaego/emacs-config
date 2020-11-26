@@ -195,7 +195,9 @@
   (osx-trash-setup))
 
 ;; Org Mode
-(setq org-startup-folded nil) ; open org file with the items expanded
+(setq
+ org-startup-folded nil ; open org file with the items expanded
+ org-support-shift-select 'always) ; force enable shift-selection 
 
 
 ;; ===================================
