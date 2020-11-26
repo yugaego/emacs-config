@@ -196,8 +196,9 @@
 
 ;; Org Mode
 (setq
+ org-startup-truncated nil
  org-startup-folded nil ; open org file with the items expanded
- org-support-shift-select 'always) ; force enable shift-selection 
+ org-support-shift-select 'always) ; force enable shift-selection
 
 
 ;; ===================================
