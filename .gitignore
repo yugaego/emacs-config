@@ -4,7 +4,6 @@
 !custom.el
 !.dir-locals.el
 !/lisp
-!README.md
-!KeyBindings.md
+!README.org
 !.gitignore
 
