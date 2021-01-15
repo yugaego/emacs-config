@@ -8,7 +8,7 @@
 ;; `$ brew install pandoc` for markdown-mode
 ;; `$ brew install aspell` for ispell and flyspell
 ;; `$ brew install trash` for osx-trash
-
+;; `$ brew install mit-scheme` for MIT/GNU Scheme REPL by geiser
 
 ;; ===================================
 ;; Backward Compatibility
