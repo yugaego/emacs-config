@@ -169,18 +169,6 @@
 
 
 ;; ===================================
-;; Language Specific
-;; ===================================
-
-;; https://www.emacswiki.org/emacs/AutoModeAlist
-(add-to-list 'auto-mode-alist '("\\.rkt\\'" . scheme-mode))
-(add-hook 'find-file-hook
-          (lambda ()
-            (when (string= (file-name-extension buffer-file-name) "rkt")
-              (whitespace-mode +1))))
-
-
-;; ===================================
 ;; Packages
 ;; ===================================
 
@@ -199,6 +187,10 @@
 (when (eq system-type 'darwin)
   (osx-trash-setup))
 
+(require 'geiser)
+(setq geiser-active-implementations '(mit))
+(setq geiser-repl-query-on-kill-p nil)
+      
 ;; Org Mode
 (setq
  org-startup-truncated nil
