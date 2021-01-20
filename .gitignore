@@ -3,7 +3,7 @@
 !early-init.el
 !custom.el
 !.dir-locals.el
-!/lisp
+!/inits
 !README.org
 !.gitignore
 

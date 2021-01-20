@@ -24,7 +24,7 @@
 
 (add-to-list 'exec-path "/usr/local/bin")
 
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "inits" user-emacs-directory))
 
 (require 'init-windows)
 
