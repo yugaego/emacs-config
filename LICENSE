@@ -1,7 +1,12 @@
 Preamble
 ---
 
-This Emacs configuration is written based on Emacs (and packages) documentation and fellow programmers' work. The links to the sources of the significant pieces of other programmers' work are provided whenever possible to provide fair attribution to the authors. Other than that, these configuration files are dedicated to the public domain, to be freely used by anyone.
+This Emacs configuration is written based on Emacs (and packages)
+documentation and fellow programmers' work. The links to the sources
+of the significant pieces of other programmers' work are provided
+whenever possible to provide fair attribution to the authors. Other
+than that, these configuration files are dedicated to the public
+domain, to be freely used by anyone.
 
 
 Unlicense
