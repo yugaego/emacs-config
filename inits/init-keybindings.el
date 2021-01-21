@@ -1,5 +1,8 @@
 ;;; init-keybindings.el --- Custom keymap   -*- lexical-binding: t -*-
 
+;; Alternative to C-x o.
+(global-set-key (kbd "C-<tab>") 'other-window)
+
 ;; Alternative to M-d.
 (global-set-key (kbd "M-<delete>") 'kill-word)
 
