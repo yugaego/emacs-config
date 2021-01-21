@@ -27,6 +27,7 @@
 (add-to-list 'load-path (expand-file-name "inits" user-emacs-directory))
 
 (require 'init-windows)
+(require 'init-keybindings)
 
 ;;; Appearance
 (global-linum-mode t) ; on huge files use display-line-numbers-mode instead
@@ -135,37 +136,6 @@
 
 ;;; Spell Checking
 (setq ispell-program-name "aspell")
-
-
-;; ===================================
-;; Key Bindings
-;; ===================================
-
-;;; Mac Dictionary
-;; from https://gist.github.com/Superbil/5113974
-(defun mac-open-dictionary (the-word)
-  "Open Dictionary.app for the-word"
-  (interactive "Dictionary Lookup: ")
-  (shell-command
-   (concat
-    "open \"dict:///"
-    (replace-regexp-in-string "\"" "\\\\\"" the-word)
-    "\"")))
-
-(global-set-key (kbd "C-c d")
-                '(lambda ()
-                   (interactive)
-                   (mac-open-dictionary (current-word))))
-
-;;; Alternative to M-d
-(global-set-key (kbd "M-<delete>") 'kill-word)
-
-;; Use more advanced ibuffer in place of default buffers list
-(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
-
-;; Dvorak / Kinesis usability.
-(global-set-key (kbd "C-z") ctl-x-map) ; alternative to C-x prefix key.
-(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
 
 ;; ===================================
