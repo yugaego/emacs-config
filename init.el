@@ -17,7 +17,7 @@
 (when (< emacs-major-version 27)
   (package-initialize))
 
-
+      
 ;; ===================================
 ;; Basics
 ;; ===================================
@@ -28,6 +28,7 @@
 
 (require 'init-windows)
 (require 'init-keybindings)
+(require 'init-ibuffer)
 
 ;;; Appearance
 (global-linum-mode t) ; on huge files use display-line-numbers-mode instead
