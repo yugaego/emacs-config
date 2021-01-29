@@ -24,11 +24,7 @@
 
 (add-to-list 'exec-path "/usr/local/bin")
 
-(add-to-list 'load-path (expand-file-name "inits" user-emacs-directory))
-
-(require 'init-windows)
-(require 'init-keybindings)
-(require 'init-ibuffer)
+(mapc 'load (file-expand-wildcards (concat user-emacs-directory "inits/*.el")))
 
 ;;; Appearance
 (global-linum-mode t) ; on huge files use display-line-numbers-mode instead
