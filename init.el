@@ -24,7 +24,7 @@
 
 (add-to-list 'exec-path "/usr/local/bin")
 
-(mapc 'load (file-expand-wildcards (concat user-emacs-directory "inits/*.el")))
+(mapc 'load (file-expand-wildcards (concat user-emacs-directory "inits/init-*.el")))
 
 ;;; Appearance
 (global-linum-mode t) ; on huge files use display-line-numbers-mode instead
