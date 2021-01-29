@@ -17,4 +17,3 @@
 
 (global-set-key (kbd "s-r") 'rotate-windows-buffers)
 
-(provide 'init-windows)

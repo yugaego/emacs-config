@@ -3,4 +3,3 @@
 (setq ibuffer-default-shrink-to-minimum-size t)
 (setq ibuffer-expert t)
 
-(provide 'init-ibuffer)

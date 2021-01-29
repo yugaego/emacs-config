@@ -29,4 +29,3 @@
                    (interactive)
                    (mac-open-dictionary (current-word))))
 
-(provide 'init-keybindings)
