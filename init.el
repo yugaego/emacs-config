@@ -22,8 +22,11 @@
 ;; Basics
 ;; ===================================
 
+;; Make more executables available to Emacs.
 (add-to-list 'exec-path "/usr/local/bin")
 
+;; Load additional configuration files matching the name pattern.
+;; If needed, rename a file to disable (enable) its load on Emacs startup.
 (mapc 'load (file-expand-wildcards (concat user-emacs-directory "configs/init-*.el")))
 
 ;;; Appearance
