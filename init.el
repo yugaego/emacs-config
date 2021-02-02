@@ -46,6 +46,7 @@
 (setq-default major-mode 'text-mode)
 (global-auto-revert-mode 1)
 (setq auto-save-visited-mode t) ; save file-visiting buffers in 5 seconds
+(global-hi-lock-mode t) ; highlight search term matches.
 
 ;;; Minibuffer
 (setq
