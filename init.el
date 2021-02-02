@@ -17,7 +17,7 @@
 (when (< emacs-major-version 27)
   (package-initialize))
 
-      
+
 ;; ===================================
 ;; Basics
 ;; ===================================
@@ -41,7 +41,7 @@
 ;; Optionally use visual-line-mode, in which
 ;; line commands apply on visual, not logical, lines.
 (setq-default word-wrap t) ; makes soft wrapping to respect words boundaries.
- 
+
 ;;; Modes
 (setq-default major-mode 'text-mode)
 (global-auto-revert-mode 1)
@@ -161,7 +161,7 @@
 (require 'geiser)
 (setq geiser-active-implementations '(mit))
 (setq geiser-repl-query-on-kill-p nil)
-      
+
 ;; Org Mode
 (setq
  org-startup-truncated nil
@@ -176,3 +176,4 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
+
