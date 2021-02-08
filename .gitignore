@@ -4,6 +4,7 @@
 !custom.el
 !.dir-locals.el
 !/configs
+!install-packages.el
 !README.org
 !.gitignore
 !LICENSE
