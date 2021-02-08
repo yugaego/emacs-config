@@ -1,6 +1,9 @@
 * Intro
 
-This is a collection of files that I use to configure Emacs according to my needs and tastes. I strive to keep it as minimalistic and well-documented as possible, so it may bring some insight to a fresh Emacs user. See also [[https://github.com/caisah/emacs.dz][this list of other configurations and starter-kits]] for a source of inspiration.
+This is a collection of files that I use to configure Emacs according to my
+needs and tastes. I strive to keep it as minimalistic and well-documented as
+possible, so it may bring some insight to a fresh Emacs user. See also [[https://github.com/caisah/emacs.dz][this
+list of other configurations and starter-kits]] for a source of inspiration.
 
 * Getting Started on Mac
 
@@ -11,7 +14,11 @@ Based on Emacs 26.3 and Emacs 27.1 available at [[https://emacsformacosx.com][Em
 
 ~$ brew cask install emacs~
 
-This command is sufficient to get a working Emacs application. With such install, Emacs works basically the same way as other applications work, responding to key presses most of the users are used to (for example, quitting Emacs with =Cmd-q= or hiding with =Cmd-h=, making basic text navigation with the =arrows=, editing  with =Cmd-c=, =Cmd-v=, =Cmd-a=, =Cmd-x=, etc).
+This command is sufficient to get a working Emacs application. With such
+install, Emacs works basically the same way as other applications work,
+responding to key presses most of the users are used to (for example, quitting
+Emacs with =Cmd-q= or hiding with =Cmd-h=, making basic text navigation with
+the =arrows=, editing with =Cmd-c=, =Cmd-v=, =Cmd-a=, =Cmd-x=, etc).
 
 [[https://www.emacswiki.org/emacs/EmacsForMacOS][More on Mac OS installers]].
 
@@ -19,15 +26,43 @@ This command is sufficient to get a working Emacs application. With such install
 
 - Info: ~$ brew cask info homebrew/cask/emacs~
 
-And by the way, Emacs usage is smooth with /Dvorak/ layout and a /split keyboard/. I use [[https://kinesis-ergo.com/shop/advantage2/][Kinesis Advantage]] and have a set of modifier keys [[https://gitlab.com/-/snippets/1744636][under each of my hands]].
+And by the way, Emacs usage is smooth with /Dvorak/ layout and a /split
+keyboard/. I use [[https://kinesis-ergo.com/shop/advantage2/][Kinesis Advantage]] and have a set of modifier keys [[https://gitlab.com/-/snippets/1744636][under each
+of my hands]].
 
 
 ** What's Next
 
-As the next step, I highly recommend following the /Emacs tutorial/ (~Ctrl-h t~), then reading the /Emacs manual/ (~Ctrl-h r~). I also found [[https://www.emacswiki.org/emacs/EmacsNewbie][EmacsWiki]] to be the most helpful resource online.
+As the next step, I highly recommend following the /Emacs tutorial/ (~Ctrl-h
+t~), then reading the /Emacs manual/ (~Ctrl-h r~). I also found [[https://www.emacswiki.org/emacs/EmacsNewbie][EmacsWiki]] to be
+the most helpful resource online.
 
-Experiment while reading documentation. Be patient!\\
-For example, it took me two months to read the manual and get comfortable with Emacs. To that moment I wrote the simplest possible [[https://github.com/yugaego/emacs-config/blob/bare-bones/init.el][configuration file]] that matched my tastes and built [[https://github.com/yugaego/cheat-sheets/blob/main/Emacs.org][this key bindings cheat sheet]].
+Experiment while reading documentation. Be patient!\\ For example, it took me
+two months to read the manual and get comfortable with Emacs. To that moment I
+wrote the simplest possible [[https://github.com/yugaego/emacs-config/blob/bare-bones/init.el][configuration file]] that matched my tastes and built
+[[https://github.com/yugaego/cheat-sheets/blob/main/Emacs.org][this key bindings cheat sheet]].
 
-Some may say it took too much time, but that was a time full of joy. I'm still in the mid of the process of configuring Emacs for my needs, so I realize it's really a long time journey. If you're like me and many other people that like what Emacs has to suggest, that's going to be a very pleasant journey, despite being not the easiest one sometimes. So good luck!
+
+* Playing With This Repo
+
+** Install
+
+- One, clone this configuration:
+  - ~$ git clone git@gitlab.com:yugaego/emacs-config.git ~/.emacs.d~
+  - or ~$ git clone git@github.com:yugaego/emacs-config.git ~/.emacs.d~
+
+- Two, install configured packages:
+  - Open =install-packages.el= in Emacs.
+  - Execute command ~M-x eval-buffer~.
+  - Optionally restart Emacs.
+
+** What's included
+
+- init.el :: Main configuration file.
+- early-init.el :: Configurations loaded very early in the startup process.
+- custom.el :: Emacs Customization writes to this file. Read-only.
+- configs/init-*.el :: Auto-loaded configuration files extracted from init.el
+  for better readability.
+- Rest of configs/*.el :: Example configuration files, not loaded automatically.
+- install-packages.el :: Install configured packages after cloning (on new devices).
 
