@@ -1,8 +1,8 @@
 * Intro
 
 This is a collection of files that I use to configure Emacs according to my needs and tastes.\\
-I strive to keep it as *minimalistic* and *well-documented* as
-possible, so it may bring some insight to a fresh Emacs user.\\
+I strive to keep it as *minimalistic* and *well-documented* as possible, so it may bring some insight to a fresh Emacs user.
+
 See also [[https://github.com/caisah/emacs.dz][this list of other configurations and starter-kits]] for a source of inspiration.
 
 * Getting Started on Mac
@@ -10,12 +10,13 @@ See also [[https://github.com/caisah/emacs.dz][this list of other configurations
 Based on Emacs 26.3 and Emacs 27.1 available at [[https://emacsformacosx.com][EmacsForMacOSX]].
 
 
-** Install
+*** Install
 
 ~$ brew cask install emacs~
 
 This command is sufficient to get a working Emacs application.\\
-With such install, Emacs works basically the same way as other applications work, responding to key presses most of the users are used to.\\
+With such install, Emacs works basically the same way as other applications work, responding to key presses most of the users are used to.
+
 For example:
   - quitting Emacs with =Cmd-q= or hiding with =Cmd-h=,
   - making basic text navigation with the =arrows=,
@@ -31,21 +32,20 @@ And by the way, Emacs usage is smooth with /Dvorak/ layout and a /split keyboard
 I use [[https://kinesis-ergo.com/shop/advantage2/][Kinesis Advantage]] and have a set of modifier keys [[https://gitlab.com/-/snippets/1744636][under each of my hands]].
 
 
-** What's Next
+*** What's Next
 
-As the next step, I highly recommend:
+As the next steps, I highly recommend:
   - following the /Emacs tutorial/ (~Ctrl-h t~),
   - then reading the /Emacs manual/ (~Ctrl-h r~).
 I also found [[https://www.emacswiki.org/emacs/EmacsNewbie][EmacsWiki]] to be the most helpful resource online.
 
-Experiment while reading documentation. Be patient!\\
-For example, it took me two months to read the manual and get comfortable with Emacs.\\
-To that moment I wrote the simplest possible [[https://github.com/yugaego/emacs-config/blob/bare-bones/init.el][configuration file]] that matched my tastes and built [[https://github.com/yugaego/cheat-sheets/blob/main/Emacs.org][this key bindings cheat sheet]].
+Experiment while reading documentation. In my case, it took two months to read the manual and get comfortable with Emacs.\\
+To that moment I wrote the simplest possible [[https://github.com/yugaego/emacs-config/blob/bare-bones/init.el][configuration file]] and compiled [[https://github.com/yugaego/cheat-sheets/blob/main/Emacs.org][this key bindings cheat sheet]].
 
 
 * Playing With This Repo
 
-** Install
+*** Install
 
 - One, clone this configuration:
   - Backup contents of the directory =~/.emacs.d=, if you have the one.
@@ -57,7 +57,7 @@ To that moment I wrote the simplest possible [[https://github.com/yugaego/emacs-
   - Execute command ~M-x eval-buffer~.
   - Optionally restart Emacs.
 
-** Structure
+*** Structure
 
 - init.el :: Main configuration file.
 - early-init.el :: Configurations loaded very early in the startup process.
