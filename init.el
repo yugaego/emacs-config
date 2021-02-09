@@ -34,10 +34,6 @@
 ;; If needed, rename a file to disable (enable) its load on Emacs startup.
 (mapc 'load (file-expand-wildcards (concat user-emacs-directory "configs/init-*.el")))
 
-;;; Appearance
-(global-linum-mode t) ; on huge files use display-line-numbers-mode instead
-(setq uniquify-buffer-name-style 'forward) ; prepend dirs to identically-named files
-
 ;;; Text
 (show-paren-mode 1)
 (setq show-paren-delay 0)
@@ -52,16 +48,6 @@
 (global-auto-revert-mode 1)
 (setq auto-save-visited-mode t) ; save file-visiting buffers in 5 seconds
 (global-hi-lock-mode t) ; highlight search term matches.
-
-;;; Minibuffer
-(setq
- minibuffer-eldef-shorten-default t
- insert-default-directory "~/" ; minibuffer default path
- resize-mini-windows t ; decrease size when lines are removed
- suggest-key-bindings 5 ; show shortcut of the command for n seconds
- extended-command-suggest-shorter t
- read-answer t) ; accepts short answers to the questions (y vs yes)
-(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;;; Session
 (setq-default history-length 1000) ; size of command history
@@ -112,33 +98,12 @@
  undo-strong-limit 12000000 ; 12 MB
  undo-outer-limit 20000000) ; 20 MB
 
-;;; Scrolling
-(setq scroll-step 1)
-
 ;;; Files
 (setq delete-by-moving-to-trash t)
-
-;;; Directory Listing
-(setq
- directory-free-space-args "-kh" ; df options
- list-directory-brief-switches "-aFh" ; ls options
- list-directory-verbose-switches "-ahl") ; ls options
 
 ;;; Dired
 (setq dired-auto-revert-buffer t) ; keep the buffer up-to-date
 (add-hook 'dired-mode-hook 'auto-revert-mode) ; auto refresh dired when file changes
-
-;;; Ediff
-(setq ediff-split-window-function 'split-window-horizontally)
-
-;;; Calendar
-(setq calendar-week-start-day 1 ; on Monday
-      calendar-date-style "iso"
-      calendar-time-display-form
-      '(24-hours ":" minutes
-                 (if time-zone " (")
-                 time-zone
-                 (if time-zone ")")))
 
 ;;; Spell Checking
 (setq ispell-program-name "aspell")
