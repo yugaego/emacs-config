@@ -43,20 +43,6 @@
 (desktop-save-mode 1) ; save session automatically
 (setq desktop-save t) ; do not ask, always save
 
-;;; Mark region
-(setq highlight-nonselected-windows t)
-(setq mark-even-if-inactive nil) ; inactive region accepts commands
-(delete-selection-mode 1) ; active region removed on typing
-(put 'downcase-region 'disabled nil)
-(put 'upcase-region 'disabled nil)
-
-;;; Edit
-(setq kill-whole-line t) ; C-k kills newline character too
-(setq
- undo-limit 8000000 ; 8 MB
- undo-strong-limit 12000000 ; 12 MB
- undo-outer-limit 20000000) ; 20 MB
-
 ;;; Dired
 (setq dired-auto-revert-buffer t) ; keep the buffer up-to-date
 (add-hook 'dired-mode-hook 'auto-revert-mode) ; auto refresh dired when file changes
