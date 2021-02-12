@@ -43,11 +43,6 @@
 (desktop-save-mode 1) ; save session automatically
 (setq desktop-save t) ; do not ask, always save
 
-(setq dired-auto-revert-buffer t        ; Keep Dired buffers up-to-date.
-      dired-listing-switches "-alh")    ; Output human-readable sizes.
-
-(add-hook 'dired-mode-hook 'auto-revert-mode) ; Auto-refresh Dired when file changes.
-
 ;;; Spell Checking
 (setq ispell-program-name "aspell")
 
