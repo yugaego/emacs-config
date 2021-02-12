@@ -13,9 +13,8 @@
         (vertical-scroll-bars)
         (font . "Monaco-15")))
 
-(setq
- inhibit-startup-message t
- initial-scratch-message nil)
+(setq inhibit-startup-message t
+      initial-scratch-message nil)
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
