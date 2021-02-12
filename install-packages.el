@@ -18,3 +18,14 @@
 ;; Install packages listed in the variable package-selected-packages.
 (package-install-selected-packages)
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Installed Mac OS packages ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Pre-installed `$ brew install jansson` to use faster json parser.
+;; `$ brew install pandoc` for markdown-mode.
+;; `$ brew install aspell` for ispell and flyspell.
+;; `$ brew install trash` to improve performance of osx-trash.
+;; `$ brew install mit-scheme` for MIT/GNU Scheme REPL by geiser.
+

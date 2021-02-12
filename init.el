@@ -1,16 +1,6 @@
 ;;; init.el --- Main configuration file   -*- lexical-binding: t -*-
 
 ;; ===================================
-;; Installed Mac OS packages
-;; ===================================
-;;
-;; Pre-installed `$ brew install jansson` for better performance.
-;; `$ brew install pandoc` for markdown-mode.
-;; `$ brew install aspell` for ispell and flyspell.
-;; `$ brew install trash` to improve performance of osx-trash.
-;; `$ brew install mit-scheme` for MIT/GNU Scheme REPL by geiser.
-
-;; ===================================
 ;; Backward Compatibility
 ;; ===================================
 
