@@ -1,16 +1,7 @@
 ;;; init.el --- Main configuration file   -*- lexical-binding: t -*-
 
-;; ===================================
-;; Backward Compatibility
-;; ===================================
-
 (when (< emacs-major-version 27)
   (package-initialize))
-
-
-;; ===================================
-;; Basics
-;; ===================================
 
 ;; Make more executables available to Emacs.
 (add-to-list 'exec-path "/usr/local/bin")
@@ -36,11 +27,6 @@
 ;;; Spell Checking
 (setq ispell-program-name "aspell")
 
-
-;; ===================================
-;; Packages
-;; ===================================
-
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -58,11 +44,6 @@
  org-startup-truncated nil
  org-startup-folded nil ; open org file with the items expanded
  org-support-shift-select 'always) ; force enable shift-selection
-
-
-;; ===================================
-;; Custom
-;; ===================================
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
