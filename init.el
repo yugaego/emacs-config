@@ -32,10 +32,6 @@
 (require 'ido)
 (ido-mode t)
 
-(require 'geiser)
-(setq geiser-active-implementations '(mit))
-(setq geiser-repl-query-on-kill-p nil)
-
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
