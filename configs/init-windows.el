@@ -1,5 +1,6 @@
 ;;; init-windows.el --- Configure Emacs windows   -*- lexical-binding: t -*-
 
+;;; Rotate (switch) buffers shown in the windows.
 ;; Based on https://github.com/banister/window-rotate-for-emacs
 (defun rotate-windows-buffers-helper (wl buf1)
   (if (equal (cdr wl) nil)
