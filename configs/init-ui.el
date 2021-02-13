@@ -24,16 +24,6 @@
 (setq desktop-save t)
 
 
-;;; Minibuffer.
-(setq minibuffer-eldef-shorten-default t ; Shorten prompt.
-      insert-default-directory "~/"      ; Default path.
-      resize-mini-windows t              ; Resize to fit the text.
-      extended-command-suggest-shorter t ; Show a shorter M-x command.
-      suggest-key-bindings 5)            ; Show key binding for N sec.
-
-(defalias 'yes-or-no-p 'y-or-n-p)       ; Accept one-letter answers.
-
-
 ;;; Calendar.
 (setq calendar-week-start-day 1         ; Start week on Monday.
       calendar-date-style "iso"

@@ -17,16 +17,7 @@
 ;; If needed, rename a file to disable (enable) its load on Emacs startup.
 (mapc 'load (file-expand-wildcards (concat user-emacs-directory "configs/init-*.el")))
 
-(setq-default history-length 1000) ; size of command history
-
-(require 'smex)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ; fallback to M-x
-
-(require 'ido)
-(ido-mode t)
-
+;;; Load configuration file handled by Emacs Customization.
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
