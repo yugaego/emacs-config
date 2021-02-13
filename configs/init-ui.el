@@ -16,6 +16,13 @@
 ;; Place diff windows side by side.
 (setq ediff-split-window-function 'split-window-horizontally)
 
+;; Save state of Emacs between sessions.
+(desktop-save-mode 1)
+
+;; Save state of Emacs without asking.
+;; ~$ rm ~/.emacs.d/.emacs.desktop~ to force refresh.
+(setq desktop-save t)
+
 
 ;;; Minibuffer.
 (setq minibuffer-eldef-shorten-default t ; Shorten prompt.
