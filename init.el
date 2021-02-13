@@ -36,12 +36,6 @@
 (setq geiser-active-implementations '(mit))
 (setq geiser-repl-query-on-kill-p nil)
 
-;; Org Mode
-(setq
- org-startup-truncated nil
- org-startup-folded nil ; open org file with the items expanded
- org-support-shift-select 'always) ; force enable shift-selection
-
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
