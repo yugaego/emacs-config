@@ -24,9 +24,6 @@
 (desktop-save-mode 1) ; save session automatically
 (setq desktop-save t) ; do not ask, always save
 
-;;; Spell Checking
-(setq ispell-program-name "aspell")
-
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
