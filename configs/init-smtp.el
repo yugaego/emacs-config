@@ -11,6 +11,11 @@
 ;;
 ;; Error: "gpg problem with the agent: Inappropriate ioctl for device:".
 ;; Fix: https://d.sb/B5N.
+;; 1. $ printf "use-agent\npinentry-mode loopback\n" >> ~/.gnupg/gpg.conf
+;; 2. $ printf "allow-loopback-pinentry\n" >> ~/.gnupg/gpg-agent.conf
+;; 3. Restart the agent:
+;;    - $ echo RELOADAGENT | gpg-connect-agent
+
 
 ;; Usage: M-x compose-mail or C-x m.
 (setq send-mail-function 'smtpmail-send-it
