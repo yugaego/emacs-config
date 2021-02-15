@@ -21,13 +21,13 @@
     "Open Mac OS Dictionary.app for a given word."
     (interactive "sEnter a word: ")
     (shell-command
-     (concat
-      "open \"dict:///"
-      (replace-regexp-in-string "\"" "\\\\\"" word)
-      "\"")))
+     (format "%s \"%s%s\""
+             (executable-find "open")
+             "dict:///"
+             (replace-regexp-in-string "\"" "'" word))))
 
   ;; Call Dictionary for the current word.
-  (global-set-key (kbd "C-c d")
+  (global-set-key (kbd "C-c s-d")
                   (lambda ()
                     (interactive)
                     (mac-open-dictionary (current-word)))))
