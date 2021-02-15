@@ -18,9 +18,12 @@
 ;; Save minibuffer history between sessions.
 (savehist-mode t)
 
+;; File and buffer name auto-complete.
+;; Switch to default M-x find-file and M-x switch-buffer with C-f and C-b.
 (require 'ido)
 (ido-mode t)
 
+;; M-x command name auto-complete based on ido.
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
