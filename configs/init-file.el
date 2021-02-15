@@ -53,20 +53,22 @@
 
   ;; Open Finder for a directory.
   (defun mac-open-finder (dir)
-    "Open Mac Finder.app for a given directory."
+    "Open Mac Finder for a given directory."
     (interactive "DEnter directory name: ")
     (shell-command
      (format "%s %s"
              (executable-find "open")
              dir)))
-  
-  ;; Open Finder for the current file.
-  (global-set-key
-   (kbd "C-c s-f")
-   (lambda()
-     (interactive)
+
+  ;; Open Finder for the current file directory.
+  (defun mac-open-finder-current-file ()
+    "Open Mac Finder for the current file-visiting buffer."
+    (interactive)
      (let ((file (buffer-file-name)))
        (if file
            (mac-open-finder (file-name-directory (buffer-file-name)))
-         (error "This buffer is not visiting a file."))))))
+         (error "This buffer is not visiting a file."))))
+    
+  ;; Open Finder for the current file.
+  (global-set-key (kbd "C-c s-f") 'mac-open-finder-current-file))
 
