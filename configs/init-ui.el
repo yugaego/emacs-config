@@ -9,9 +9,9 @@
 
 ;; Scroll up to this number of lines.
 ;; >100 scrolls without recentering the point.
-(setq scroll-conservatively 101)
+;(setq scroll-conservatively 101)
 
-(setq scroll-margin 4)
+;(setq scroll-margin 4)
 
 ;; Place diff windows side by side.
 (setq ediff-split-window-function 'split-window-horizontally)
