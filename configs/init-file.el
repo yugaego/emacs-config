@@ -46,3 +46,27 @@
       vc-make-backup-files t     ; Backup files under VC system.
       vc-command-messages t)     ; Output shell commands vc package executes.
 
+
+;;; Use Mac Finder.
+;; Inspired by https://github.com/rejeep/emacs/blob/master/osx.el
+(when *is-a-mac*
+
+  ;; Open Finder for a directory.
+  (defun mac-open-finder (dir)
+    "Open Mac Finder.app for a given directory."
+    (interactive "DEnter directory name: ")
+    (shell-command
+     (format "%s %s"
+             (executable-find "open")
+             dir)))
+  
+  ;; Open Finder for the current file.
+  (global-set-key
+   (kbd "C-c s-f")
+   (lambda()
+     (interactive)
+     (let ((file (buffer-file-name)))
+       (if file
+           (mac-open-finder (file-name-directory (buffer-file-name)))
+         (error "This buffer is not visiting a file."))))))
+
