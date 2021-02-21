@@ -1,6 +1,8 @@
 ;;; early-init.el --- Loaded before init.el (Emacs 27+)   -*- lexical-binding: t -*-
 
-(load-theme 'tango-dark t)
+;; Use one of the default themes.
+;; Remember to M-x disable-theme after M-x load-theme to get a cleaner UI.
+(load-theme 'misterioso t)
 
 (setq initial-frame-alist
       '((top . 0) (left . 0)
