@@ -17,7 +17,7 @@
 (when *is-a-mac*
 
   ;; Open Dictionary.
-  (defun mac-open-dictionary (word)
+  (defun yet/mac-open-dictionary (word)
     "Open Mac OS Dictionary for a given word."
     (interactive "sEnter a word: ")
     (shell-command
@@ -27,11 +27,11 @@
              (replace-regexp-in-string "\"" "'" word))))
 
   ;; Open Dictionary for the word at a point.
-  (defun mac-open-dictionary-current-word ()
+  (defun yet/mac-open-dictionary-current-word ()
     "Open Mac Dictionary for the word at a point."
     (interactive)
-    (mac-open-dictionary (current-word)))
-  
+    (yet/mac-open-dictionary (current-word)))
+
   ;; Call Dictionary for the current word.
-  (global-set-key (kbd "C-c s-d") 'mac-open-dictionary-current-word))
+  (global-set-key (kbd "C-c s-d") 'yet/mac-open-dictionary-current-word))
 

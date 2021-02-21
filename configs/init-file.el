@@ -34,11 +34,11 @@
 
 ;;; Force backup on each auto-save.
 ;; https://www.emacswiki.org/emacs/ForceBackups
-(defun force-buffer-backup ()
+(defun yet/force-buffer-backup ()
   (let ((buffer-backed-up nil))
     (backup-buffer)))
-(add-hook 'after-save-hook 'force-buffer-backup)
-(add-hook 'auto-save-hook 'force-buffer-backup)
+(add-hook 'after-save-hook 'yet/force-buffer-backup)
+(add-hook 'auto-save-hook 'yet/force-buffer-backup)
 
 
 ;;; Built-in vc (version control) package configuration.
@@ -52,7 +52,7 @@
 (when *is-a-mac*
 
   ;; Open Finder for a directory.
-  (defun mac-open-finder (dir)
+  (defun yet/mac-open-finder (dir)
     "Open Mac Finder for a given directory."
     (interactive "DEnter directory name: ")
     (shell-command
@@ -61,14 +61,14 @@
              dir)))
 
   ;; Open Finder for the current file directory.
-  (defun mac-open-finder-current-file ()
+  (defun yet/mac-open-finder-current-file ()
     "Open Mac Finder for the current file-visiting buffer."
     (interactive)
      (let ((file (buffer-file-name)))
        (if file
-           (mac-open-finder (file-name-directory (buffer-file-name)))
+           (yet/mac-open-finder (file-name-directory (buffer-file-name)))
          (error "This buffer is not visiting a file."))))
     
   ;; Open Finder for the current file.
-  (global-set-key (kbd "C-c s-f") 'mac-open-finder-current-file))
+  (global-set-key (kbd "C-c s-f") 'yet/mac-open-finder-current-file))
 

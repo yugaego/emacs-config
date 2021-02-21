@@ -33,7 +33,7 @@
 
 ;;; Duplicate line or region N times.
 ;; https://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
-(defun duplicate-current-line-or-region (&optional arg)
+(defun yet/duplicate-current-line-or-region (&optional arg)
   "Duplicates the current line or region ARG times.
 If there's no region, the current line will be duplicated. However, if
 there's a region, all lines that region covers will be duplicated."
@@ -53,7 +53,7 @@ there's a region, all lines that region covers will be duplicated."
         (setq end (point)))
       (goto-char (+ origin (* (length region) arg) arg)))))
 
-(global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
+(global-set-key (kbd "C-c d") 'yet/duplicate-current-line-or-region)
 
 
 ;;; Marked region (selection).
