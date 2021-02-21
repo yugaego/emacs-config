@@ -12,11 +12,9 @@
   (add-hook 'prog-mode-hook 'flyspell-prog-mode))
 
 
-;;; Use Mac Dictionary.
-;; Based on https://gist.github.com/Superbil/5113974.
 (when *is-a-mac*
 
-  ;; Open Dictionary.
+  ;; Based on https://gist.github.com/Superbil/5113974.
   (defun yet/mac-open-dictionary (word)
     "Open Mac OS Dictionary for a given word."
     (interactive "sEnter a word: ")
@@ -26,12 +24,30 @@
              "dict:///"
              (replace-regexp-in-string "\"" "'" word))))
 
-  ;; Open Dictionary for the word at a point.
   (defun yet/mac-open-dictionary-current-word ()
     "Open Mac Dictionary for the word at a point."
     (interactive)
     (yet/mac-open-dictionary (current-word)))
 
   ;; Call Dictionary for the current word.
-  (global-set-key (kbd "C-c s-d") 'yet/mac-open-dictionary-current-word))
+  (global-set-key (kbd "C-c s-d") 'yet/mac-open-dictionary-current-word)
+
+
+  (defun yet/browse-grammarly ()
+    "Open Grammarly document in a default browser.
+
+Configure variable `yet/browse-grammarly-doc-id` to use this function.
+For example, you may add `(defconst yet/browse-grammarly-doc-id \"URL-DOCUMENT-ID\")`
+to your `private-init.el`.
+
+Before opening a browser, if the buffer has an active region, its content is copied.
+Otherwise, the content of the whole buffer is copied."
+    (interactive)
+    (if mark-active
+        (kill-new (buffer-substring-no-properties (region-beginning) (region-end)))
+      (kill-new (buffer-string)))
+    (browse-url (concat "https://app.grammarly.com/ddocs/" yet/browse-grammarly-doc-id)))
+
+  ;; Open Grammarly, copying the region or buffer before-hand.
+  (global-set-key (kbd "C-c s-g") 'yet/browse-grammarly))
 
