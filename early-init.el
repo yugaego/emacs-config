@@ -22,9 +22,10 @@
         (height . 1.0)
         (font . "Monaco-15")))
 
-(setq inhibit-startup-message t
-      initial-scratch-message nil)
+(setq inhibit-startup-message t         ; Do not display startup message.
+      initial-scratch-message nil)      ; Start with empty *scratch* buffer.
 
+;; Disable UI elements.
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 
