@@ -1,7 +1,9 @@
 * Intro
 
-This is a collection of files that I use to configure Emacs according to my needs and tastes.\\
+This is a collection of files that I use to configure Emacs according to my needs and tastes on Mac OS X.\\
 I strive to keep it as *minimalistic* and *well-documented* as possible, so it may bring some insight to a fresh Emacs user.
+
+[[file:./images/Emacs-screenshot.png]]
 
 See also [[https://github.com/caisah/emacs.dz][this list of other configurations and starter-kits]] for a source of inspiration.
 
