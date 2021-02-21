@@ -1,8 +1,5 @@
 ;;; init.el --- Main configuration file   -*- lexical-binding: t -*-
 
-(when (< emacs-major-version 27)
-  (package-initialize))
-
 ;; Make more executables available to Emacs.
 (add-to-list 'exec-path "/usr/local/bin")
 
