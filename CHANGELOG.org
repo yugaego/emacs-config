@@ -1,0 +1,58 @@
+* Changelog
+
+
+** v1.0.0 - 2021-02-21
+
+Configuration improved for text manipulation tasks.
+
+Compatible with Emacs 27.
+
+Tested on Mac OS X only, so may need minor changes on other OSes.
+(Known issue: early-init.el sets Mac OS specific font).
+
+Added:
+  - Script to auto-install required packages.
+  - More documentation and comments.
+  - private-init.el support.
+  - Improved integration with Mac OS X:
+    - Fixed deletion of files to Trash.
+    - Added functions/key binding to open Finder.
+  - Markdown-mode.
+  - Better Org-mode preview.
+  - Editing convenience tools.
+  - Spell checking support.
+    - On request and on-the-fly spell checking.
+    - Command to facilitate Grammarly website opening.
+  - Example basic configurations of different mail clients.
+  - Command to rotate windows buffers of an active frame.
+  - Enable built-in minibuffer completion (ido-mode, fido-mode).
+  - Enable a better built-in package to manage open buffers: ibuffer.
+
+Changed:
+  - Split configuration into separate files.
+  - By default use theme 'misterioso, instead of 'tango-dark.
+  - Use ratio to set frames size, instead of pixels.
+
+Removed:
+  - Emacs 26 compatibility.
+  - Line by line scrolling.
+  - Racket files syntax auto-highlighting.
+
+Fixed:
+  - Improved Mac OS Dictionary integration.
+
+
+** bare-bones - 2020-10-14
+
+Basic configuration written while reading Emacs 26 manual.
+
+Main features:
+  - Improved interface.
+  - Configured auto-backups and auto-saving.
+  - Configured to auto-save Emacs sessions.
+  - Configured to auto-revert (keep up-to-date) files and buffers.
+  - Minibuffer minor improvements.
+  - Line by line scrolling (easier for a newbie).
+  - Added function/hot keys to open Mac Dictionary for a word.
+  - Enabled syntax highlighting for Racket files.
+
