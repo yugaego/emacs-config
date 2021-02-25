@@ -34,13 +34,15 @@
 
 
   (defun yet/browse-grammarly ()
-    "Open Grammarly document in a default browser.
+    "Open predefined Grammarly document in a default browser.
 
-Configure variable `yet/browse-grammarly-doc-id` to use this function.
-For example, you may add `(defconst yet/browse-grammarly-doc-id \"URL-DOCUMENT-ID\")`
-to your `private-init.el`.
+Configure variable ’yet/browse-grammarly-doc-id’ to use this function.
+For example, add
+’(defconst yet/browse-grammarly-doc-id \"URL-DOCUMENT-ID\")’
+to your ’private-init.el’.
 
-Before opening a browser, if the buffer has an active region, its content is copied.
+Before opening a browser, if the buffer has an active region,
+its content is copied.
 Otherwise, the content of the whole buffer is copied."
     (interactive)
     (if mark-active
