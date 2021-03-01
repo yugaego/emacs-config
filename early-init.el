@@ -9,7 +9,7 @@
 (setq initial-frame-alist
       '((top . 0.0)
         (left . 0.0)
-        (width . 0.6)
+        (width . 0.52)
         (height . 1.0)
         (font . "Monaco-15")))          ; or Menlo (DejaVu Sans Mono on Linux, Consolas on Windows).
 
@@ -18,7 +18,7 @@
 (setq default-frame-alist
       '((top . 0.0)
         (left . 1.0)
-        (width . 0.4)
+        (width . 0.48)
         (height . 1.0)
         (font . "Monaco-15")))
 
