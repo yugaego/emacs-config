@@ -2,6 +2,9 @@
 
 ** Unreleased
 
+Added:
+  - Configured to use four spaces for indentation.
+
 Changed:
   - Frames default width slightly balanced.
 

@@ -31,6 +31,16 @@
 ;; use visual-line-mode.
 (setq-default word-wrap t)
 
+
+;;; Indentation
+
+;; Do not insert tabs.
+(setq-default indent-tabs-mode nil)
+
+;; Use 4 spaces for indentation.
+(setq-default tab-width 4)
+
+
 ;;; Duplicate line or region N times.
 ;; https://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
 (defun yet/duplicate-current-line-or-region (&optional arg)
