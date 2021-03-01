@@ -23,6 +23,9 @@
 ;; ~$ rm ~/.emacs.d/.emacs.desktop~ to force refresh.
 (setq desktop-save t)
 
+;; Show column number in the mode line.
+(column-number-mode)
+
 
 ;;; Calendar.
 (setq calendar-week-start-day 1         ; Start week on Monday.

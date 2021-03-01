@@ -4,6 +4,7 @@
 
 Added:
   - Configured to use four spaces for indentation.
+  - Show column number in the mode line.
 
 Changed:
   - Frames default width slightly balanced.
