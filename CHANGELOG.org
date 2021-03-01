@@ -2,6 +2,9 @@
 
 ** Unreleased
 
+Changed:
+  - Frames default width slightly balanced.
+
 Fixed:
   - Minor modes enabling.
 
