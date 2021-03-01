@@ -23,13 +23,17 @@
 
 
 ;;; Auto-saving.
-;; Configured to be used for it 'auto-save-hook.
+;; Configured to be used for its 'auto-save-hook.
 ;; To force auto-save at a given moment, use M-x do-auto-save.
 (setq auto-save-default t          ; Turn on auto-saving.
-      auto-save-visited-mode t     ; Auto-save current file-visiting buffer, after 5 sec by default.
-      auto-save-file-name-transforms `((".*" ,temporary-file-directory t)) ; Save to a temporary directory.
       auto-save-interval 200       ; Save after N characters typed.
       auto-save-timeout 600)       ; Save after N seconds of idleness.
+
+;; Auto-save current file-visiting buffer, after 5 sec by default.
+(auto-save-visited-mode)
+
+;; Save to a temporary directory.
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
 
 ;;; Force backup on each auto-save.

@@ -17,7 +17,7 @@
 (setq ediff-split-window-function 'split-window-horizontally)
 
 ;; Save state of Emacs between sessions.
-(desktop-save-mode 1)
+(desktop-save-mode)
 
 ;; Save state of Emacs without asking.
 ;; ~$ rm ~/.emacs.d/.emacs.desktop~ to force refresh.

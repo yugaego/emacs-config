@@ -8,13 +8,13 @@
 (setq-default major-mode 'text-mode)
 
 ;; Auto-refresh file-visiting buffers contents.
-(global-auto-revert-mode 1)
+(global-auto-revert-mode)
 
 ;; Highlight search term matches.
-(global-hi-lock-mode t)
+(global-hi-lock-mode)
 
 ;; Highlight matching parenthesis.
-(show-paren-mode 1)
+(show-paren-mode)
 (setq show-paren-delay 0)
 
 ;; How many times cursor blinks.
@@ -60,7 +60,7 @@ there's a region, all lines that region covers will be duplicated."
 (setq highlight-nonselected-windows t   ; Always highlight selection.
       mark-even-if-inactive nil) ; Do not perform actions on inactive regions.
 
-(delete-selection-mode t)               ; Delete marked region on typing.
+(delete-selection-mode)                 ; Delete marked region on typing.
 
 (put 'downcase-region 'disabled nil)    ; Enable this command.
 (put 'upcase-region 'disabled nil)      ; Enable this command.

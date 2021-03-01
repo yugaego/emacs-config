@@ -16,12 +16,12 @@
 (setq-default history-length 1000)
 
 ;; Save minibuffer history between sessions.
-(savehist-mode t)
+(savehist-mode)
 
 ;; File and buffer name completion.
 ;; Switch to default M-x find-file and M-x switch-buffer with C-f and C-b.
-(ido-mode t)
+(ido-mode)
 
 ;; M-x command name completion.
-(fido-mode t)
+(fido-mode)
 
