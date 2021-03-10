@@ -1,7 +1,8 @@
 ;;; init.el --- Main configuration file   -*- lexical-binding: t -*-
 
 ;; Make more executables available to Emacs.
-(add-to-list 'exec-path "/usr/local/bin")
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 (defconst *is-a-mac* (eq system-type 'darwin))
 
