@@ -7,28 +7,55 @@ I strive to keep it as *minimalistic* and *well-documented* as possible, so it m
 
 See also [[https://github.com/caisah/emacs.dz][this list of other configurations and starter-kits]] for a source of inspiration.
 
+
 * Getting Started on Mac
 
-Based on Emacs 26.3 and Emacs 27.1 available at [[https://emacsformacosx.com][EmacsForMacOSX]].
+With the listed types of installation you get a "pure" Emacs that behaves similarly to other OS applications.
+
+For example, on Mac OS you may:
+  - quit Emacs with =Cmd-q= or hide Emacs with =Cmd-h=,
+  - perform well-known operations with =Cmd-c=, =Cmd-v=, =Cmd-a=, =Cmd-x=,
+  - navigate text with the =arrows=.
 
 
 *** Install
 
+Tested with the Emacs versions 26.3, 27.1, 28.0.50.
+
+**** Pre-compiled
+
+In both cases Emacs.app installed to =/Applications/=.
+
+****** From dmg file
+
+Download from [[https://emacsformacosx.com][EmacsForMacOSX]], install as any other application.
+
+****** From brew
+
 ~$ brew cask install emacs~
-
-This command is sufficient to get a working Emacs application.\\
-With such install, Emacs works basically the same way as other applications work, responding to key presses most of the users are used to.
-
-For example:
-  - quitting Emacs with =Cmd-q= or hiding with =Cmd-h=,
-  - making basic text navigation with the =arrows=,
-  - editing with =Cmd-c=, =Cmd-v=, =Cmd-a=, =Cmd-x=.
-
-[[https://www.emacswiki.org/emacs/EmacsForMacOS][More on Mac OS installers]].
 
 - Upgrade: ~$ brew upgrade homebrew/cask/emacs~
 
 - Info: ~$ brew cask info homebrew/cask/emacs~
+
+
+**** From source
+
+- ~$ git clone git://git.savannah.gnu.org/emacs.git YOUR-DIR~
+
+- ~$ cd YOUR-DIR~
+
+- ~$ ./configure~
+
+- ~$ make~
+
+- ~$ make install~
+
+installs Emacs.app to =YOUR-DIR/nextstep/=. Feel free to change its location.\\
+For more details consult the files =YOUR-DIR/INSTALL=, =YOUR-DIR/nextstep/INSTALL=, and =YOUR-DIR/README=.
+
+
+[[https://www.emacswiki.org/emacs/EmacsForMacOS][More on Mac OS installers]].
 
 And by the way, Emacs usage is smooth with /Dvorak/ layout and a /split keyboard/.\\
 I use [[https://kinesis-ergo.com/shop/advantage2/][Kinesis Advantage]] and have a set of modifier keys [[https://gitlab.com/-/snippets/1744636][under each of my hands]].
