@@ -12,20 +12,27 @@
 ;; Use configured package archives.
 (load-file "configs/init-package.el")
 
-;; Refresh descriptions of the packages. 
+;; Refresh descriptions of the packages.
 (package-refresh-contents)
 
 ;; Install packages listed in the variable package-selected-packages.
 (package-install-selected-packages)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Installed Mac OS packages ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Recommended Mac OS packages ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; Pre-installed `$ brew install jansson` to use faster json parser.
-;; `$ brew install pandoc` for markdown-mode.
-;; `$ brew install aspell` for ispell and flyspell.
-;; `$ brew install trash` to improve performance of osx-trash.
-;; `$ brew install mit-scheme` for MIT/GNU Scheme REPL by geiser.
+;; - $ brew install jansson
+;;      - pre-install to use faster json parser.
+;;
+;; - $ brew install aspell
+;;      - spell checker called by ispell and flyspell.
+;;
+;; - $ brew install trash
+;;      - improves performance of osx-trash.
+;;
+;; - $ brew install multimarkdown
+;;      - a Markdown parser better matching Github and Gitlab styles.
+;;      - alternatively, use M-x gfm-mode included into the markdown-mode package.
 
