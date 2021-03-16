@@ -51,7 +51,7 @@
   (setq-local show-trailing-whitespace t))
 
 ;; Highlight trailing whitespaces only in these modes.
-(dolist (hook '(prog-mode-hook text-mode-hook))
+(dolist (hook '(prog-mode-hook text-mode-hook conf-mode-hook))
   (add-hook hook 'yet/show-trailing-whitespace))
 
 
