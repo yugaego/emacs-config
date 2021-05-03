@@ -8,6 +8,7 @@ Added:
   - Highlight trailing whitespaces in prog-mode, conf-mode and text-mode.
   - Support optional local file loaded in the end of the initialization.
   - Highlight Rust and PHP programming languages syntax.
+  - Add rust-mode key bindings.
 
 Changed:
   - Frames default width slightly balanced.
