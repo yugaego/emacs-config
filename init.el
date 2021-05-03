@@ -15,6 +15,11 @@
 ;; If needed, rename a file to disable (enable) its load on Emacs startup.
 (mapc 'load (file-expand-wildcards (concat user-emacs-directory "configs/init-*.el")))
 
+;; Post-load optional local settings.
+(let ((local-post-init (expand-file-name "local-post-init.el" user-emacs-directory)))
+  (when (file-exists-p local-post-init)
+    (load local-post-init)))
+
 ;;; Load configuration file handled by Emacs Customization.
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
