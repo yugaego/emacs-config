@@ -6,10 +6,10 @@
 
 (defconst *is-a-mac* (eq system-type 'darwin))
 
-;; Load private settings.
-(let ((private-init (expand-file-name "private-init.el" user-emacs-directory)))
-  (when (file-exists-p private-init)
-    (load private-init)))
+;; Pre-load optional local settings.
+(let ((local-pre-init (expand-file-name "local-pre-init.el" user-emacs-directory)))
+  (when (file-exists-p local-pre-init)
+    (load local-pre-init)))
 
 ;; Load additional configuration files matching the name pattern.
 ;; If needed, rename a file to disable (enable) its load on Emacs startup.
