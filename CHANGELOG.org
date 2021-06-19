@@ -9,6 +9,7 @@ Added:
   - Support optional local file loaded in the end of the initialization.
   - Highlight Rust and PHP programming languages syntax.
   - Add rust-mode key bindings.
+  - Add rainbow-mode package for color names colorization.
 
 Changed:
   - Frames default width slightly balanced.
