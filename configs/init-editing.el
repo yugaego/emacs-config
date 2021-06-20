@@ -8,7 +8,9 @@
 (setq-default major-mode 'text-mode)
 
 ;; Auto-refresh file-visiting buffers contents.
+(require 'autorevert)
 (global-auto-revert-mode)
+(setq auto-revert-verbose nil)
 
 ;; Highlight search term matches.
 (global-hi-lock-mode)
