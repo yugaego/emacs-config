@@ -96,9 +96,7 @@ To that moment I wrote the simplest possible [[https://github.com/yugaego/emacs-
 - Rest of configs/*.el :: Example configuration files, not loaded automatically.
 - install-packages.el :: Install configured packages after cloning (on new devices).
 - local-pre-init.el :: Private information can be stored in this file.\\
-  Naturally, this file is excluded from the repo and loaded only if present in your file system.\\
-  For example, =/configs/init-smtp.el= mentions which variables has to be set in
-  this file.
+  This file is excluded from the repo and loaded only if present in the file system.
 - local-post-init.el :: One more git-ignored file, loaded after
   ~configs/init-*.el~ files load.
 
