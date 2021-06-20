@@ -16,6 +16,7 @@ Changed:
   - Use package exec-path-from-shell to load user's shell environment variables.
   - markdown-mode: use multimarkdown parser (if available).
   - Rename private-init.el to local-pre-init.el to reflect order of loading.
+  - Improve minibuffer usability.
 
 Fixed:
   - Minor modes enabling.

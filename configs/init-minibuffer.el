@@ -1,10 +1,13 @@
 ;;; init-minibuffer.el --- Configure minibuffer   -*- lexical-binding: t -*-
 
-(setq minibuffer-eldef-shorten-default t ; Shorten prompt.
-      insert-default-directory "~/"      ; Default path.
+(require 'minibuf-eldef)
+(setq minibuffer-eldef-shorten-default t) ; Shorten prompt.
+
+(setq insert-default-directory "~/"      ; Default path.
       resize-mini-windows t              ; Resize to fit the text.
       extended-command-suggest-shorter t ; Show a shorter M-x command.
-      suggest-key-bindings 5)            ; Show key binding for N sec.
+      suggest-key-bindings 5             ; Show key binding for N sec.
+      minibuffer-message-timeout 5)      ; Show echo-ed messages for N sec.
 
 (setq-default default-directory "~/")
 
@@ -20,7 +23,11 @@
 
 ;; File and buffer name completion.
 ;; Switch to default M-x find-file and M-x switch-buffer with C-f and C-b.
+(require 'ido)
+
 (ido-mode)
+(setq ido-default-file-method 'selected-window ; Where to show a file.
+      ido-default-buffer-method 'selected-window) ; Where to show a buffer.
 
 ;; M-x command name completion.
 (fido-mode)
