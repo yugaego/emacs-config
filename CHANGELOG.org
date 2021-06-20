@@ -10,6 +10,7 @@ Added:
   - Highlight Rust and PHP programming languages syntax.
   - Add rust-mode key bindings.
   - Add rainbow-mode package for color names colorization.
+  - lisp-mode: on TAB hit show possible completions (or indent line).
 
 Changed:
   - Frames default width slightly balanced.

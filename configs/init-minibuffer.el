@@ -32,7 +32,3 @@
 ;; M-x command name completion.
 (fido-mode)
 
-;; Also complete in minibuffer by initials
-;; of commands, files, and buffers names.
-(add-to-list 'completion-styles 'initials t)
-
