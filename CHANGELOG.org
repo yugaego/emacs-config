@@ -17,6 +17,7 @@ Changed:
   - markdown-mode: use multimarkdown parser (if available).
   - Rename private-init.el to local-pre-init.el to reflect order of loading.
   - Improve minibuffer usability.
+  - Improve misterioso-theme colors for better usability.
 
 Fixed:
   - Minor modes enabling.
