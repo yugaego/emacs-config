@@ -2,7 +2,7 @@
 
 ** Unreleased
 
-Added:
+*** Added:
   - Load OS specific font.
   - Configured to use four spaces for indentation.
   - Show column number in the mode line.
@@ -13,7 +13,7 @@ Added:
   - Add rainbow-mode package for color names colorization.
   - lisp-mode: on TAB hit show possible completions (or indent line).
 
-Changed:
+*** Changed:
   - Increase default font size.
   - Disable beginner-friendly scrolling settings.
   - Frames default width slightly balanced.
@@ -23,7 +23,7 @@ Changed:
   - Improve minibuffer usability.
   - Improve misterioso-theme colors for better usability.
 
-Fixed:
+*** Fixed:
   - Minor modes enabling.
 
 
@@ -36,7 +36,7 @@ Compatible with Emacs 27.
 Tested on Mac OS X only, so may need minor changes on other OSes.
 (Known issue: early-init.el sets Mac OS specific font).
 
-Added:
+*** Added:
   - Script to auto-install required packages.
   - More documentation and comments.
   - private-init.el support.
@@ -54,17 +54,17 @@ Added:
   - Enable built-in minibuffer completion (ido-mode, fido-mode).
   - Enable a better built-in package to manage open buffers: ibuffer.
 
-Changed:
+*** Changed:
   - Split configuration into separate files.
   - By default use theme 'misterioso, instead of 'tango-dark.
   - Use ratio to set frames size, instead of pixels.
 
-Removed:
+*** Removed:
   - Emacs 26 compatibility.
   - Line by line scrolling.
   - Racket files syntax auto-highlighting.
 
-Fixed:
+*** Fixed:
   - Improved Mac OS Dictionary integration.
 
 
@@ -72,7 +72,7 @@ Fixed:
 
 Basic configuration written while reading Emacs 26 manual.
 
-Main features:
+*** Main features:
   - Improved interface.
   - Configured auto-backups and auto-saving.
   - Configured to auto-save Emacs sessions.
