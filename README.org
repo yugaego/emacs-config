@@ -8,6 +8,36 @@ I strive to keep it as *minimalistic* and *well-documented* as possible, so it m
 See also [[https://github.com/caisah/emacs.dz][this list of other configurations and starter-kits]] for a source of inspiration.
 
 
+* Playing With This Repo
+
+*** Install
+
+- One, clone this configuration:
+  - Backup contents of the directory =~/.emacs.d=, if you have the one.
+  - ~$ git clone git@gitlab.com:yugaego/emacs-config.git ~/.emacs.d~
+  - or ~$ git clone git@github.com:yugaego/emacs-config.git ~/.emacs.d~
+
+- Two, install configured packages:
+  - Open =install-packages.el= in Emacs.
+  - Execute command ~M-x eval-buffer~.
+  - Optionally restart Emacs.
+
+
+*** Structure
+
+- init.el :: Main configuration file.
+- early-init.el :: Configurations loaded very early in the startup process.
+- custom.el :: Emacs Customization writes to this file. Read-only.
+- configs/init-*.el :: Auto-loaded configuration files extracted from init.el
+  for better readability.
+- Rest of configs/*.el :: Example configuration files, not loaded automatically.
+- install-packages.el :: Install configured packages after cloning (on new devices).
+- local-pre-init.el :: Private information can be stored in this file.\\
+  This file is excluded from the repo and loaded only if present in the file system.
+- local-post-init.el :: One more git-ignored file, loaded after
+  ~configs/init-*.el~ files load.
+
+
 * Getting Started on Mac
 
 With the listed types of installation you get a "pure" Emacs that behaves similarly to other OS applications.
@@ -70,33 +100,4 @@ I also found [[https://www.emacswiki.org/emacs/EmacsNewbie][EmacsWiki]] to be th
 
 Experiment while reading documentation. In my case, it took two months to read the manual and get comfortable with Emacs.\\
 To that moment I wrote the simplest possible [[https://github.com/yugaego/emacs-config/blob/bare-bones/init.el][configuration file]] and compiled [[https://github.com/yugaego/cheat-sheets/blob/main/Emacs.org][this key bindings cheat sheet]].
-
-
-* Playing With This Repo
-
-*** Install
-
-- One, clone this configuration:
-  - Backup contents of the directory =~/.emacs.d=, if you have the one.
-  - ~$ git clone git@gitlab.com:yugaego/emacs-config.git ~/.emacs.d~
-  - or ~$ git clone git@github.com:yugaego/emacs-config.git ~/.emacs.d~
-
-- Two, install configured packages:
-  - Open =install-packages.el= in Emacs.
-  - Execute command ~M-x eval-buffer~.
-  - Optionally restart Emacs.
-
-*** Structure
-
-- init.el :: Main configuration file.
-- early-init.el :: Configurations loaded very early in the startup process.
-- custom.el :: Emacs Customization writes to this file. Read-only.
-- configs/init-*.el :: Auto-loaded configuration files extracted from init.el
-  for better readability.
-- Rest of configs/*.el :: Example configuration files, not loaded automatically.
-- install-packages.el :: Install configured packages after cloning (on new devices).
-- local-pre-init.el :: Private information can be stored in this file.\\
-  This file is excluded from the repo and loaded only if present in the file system.
-- local-post-init.el :: One more git-ignored file, loaded after
-  ~configs/init-*.el~ files load.
 
