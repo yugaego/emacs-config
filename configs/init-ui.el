@@ -7,11 +7,16 @@
 ;; 'forward prepends directory name.
 (setq uniquify-buffer-name-style 'forward)
 
+;;; Scrolling
+
+;; Beginner friendly.
 ;; Scroll up to this number of lines.
 ;; >100 scrolls without recentering the point.
-;(setq scroll-conservatively 101)
+;; (setq scroll-conservatively 101)
 
-;(setq scroll-margin 4)
+;; Beginner friendly.
+;; (setq scroll-margin 4)
+
 
 ;; Place diff windows side by side.
 (setq ediff-split-window-function 'split-window-horizontally)
