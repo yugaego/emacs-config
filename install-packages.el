@@ -24,16 +24,19 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; - $ brew install jansson
-;;      - pre-install to use faster json parser.
+;;      - Pre-install to use faster json parser.
 ;;
 ;; - $ brew install aspell
-;;      - spell checker called by ispell and flyspell.
+;;      - Spell-checker called by ispell and flyspell.
 ;;
 ;; - $ brew install multimarkdown
-;;      - a Markdown parser better matching Github and Gitlab styles.
-;;      - alternatively, use M-x gfm-mode included into the markdown-mode package.
+;;      - A Markdown parser better matching Github and Gitlab styles.
+;;      - Alternatively, use M-x gfm-mode included into the markdown-mode package.
 ;;
 ;; - $ brew install mailutils
-;;     - allows to use secure IMAP connection (f.i. by Rmail email client).
+;;     - Allows to use secure IMAP connection (f.i. by Rmail email client).
 ;;     - Emacs automatically compiles with mailutils support if it is installed.
+;;
+;; - $ brew install gpg
+;;     - OpenGPG encryption and signing tool
 
