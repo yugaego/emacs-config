@@ -31,7 +31,6 @@ See also [[https://github.com/caisah/emacs.dz][this list of other configurations
 - custom.el :: Emacs Customization writes to this file. Read-only.
 - configs/init-*.el :: Auto-loaded configuration files extracted from init.el
   for better readability.
-- Rest of configs/*.el :: Example configuration files, not loaded automatically.
 - install-packages.el :: Install configured packages after cloning (on new devices).
 - local-pre-init.el :: Private information can be stored in this file.\\
   This file is excluded from the repo and loaded only if present in the file system.

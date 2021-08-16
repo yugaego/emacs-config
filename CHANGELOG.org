@@ -24,6 +24,9 @@
   - Improve minibuffer usability.
   - Improve misterioso-theme colors for better usability.
 
+*** Removed:
+  - Example configuration of mu4e email client.
+
 *** Fixed:
   - Minor modes enabling.
 
