@@ -3,31 +3,31 @@
 ** Unreleased
 
 *** Added:
-  - /Mac OS/: files removed by =Finder=, hence with *Put Back* feature enabled.
-  - Enable Rmail email client.
-  - Load OS specific font.
-  - Configured to use four spaces for indentation.
-  - Show column number in the mode line.
-  - Highlight trailing whitespaces in prog-mode, conf-mode and text-mode.
-  - Support optional local file loaded in the end of the initialization.
-  - Highlight Rust and PHP programming languages syntax.
-  - Add rust-mode key bindings.
-  - Add rainbow-mode package for color names colorization.
-  - lisp-mode: on TAB hit show possible completions (or indent line).
+  - Mac OS: files removed by =Finder=, hence with "Put Back" feature enabled.
+  - Enable =Rmail= email client.
+  - Load OS specific /font/.
+  - Configured to use four spaces for /indentation/.
+  - Show column number in the /mode line/.
+  - Highlight trailing whitespaces in =prog-mode=, =conf-mode= and =text-mode=.
+  - Support /optional local file/ loaded in the end of the initialization.
+  - Highlight =Rust= and =PHP= programming languages syntax.
+  - Add =rust-mode= key bindings.
+  - Add =rainbow-mode= package for color names colorization.
+  - =lisp-mode=: on =TAB= hit show possible completions (or indent line).
 
 *** Changed:
-  - Increase default font size.
-  - Disable beginner-friendly scrolling settings.
-  - Frames default width slightly balanced.
-  - Use package exec-path-from-shell to load user's shell environment variables.
-  - markdown-mode: use multimarkdown parser (if available).
-  - Rename private-init.el to local-pre-init.el to reflect order of loading.
-  - Improve minibuffer usability.
-  - Improve misterioso-theme colors for better usability.
+  - Increase default /font size/.
+  - Disable beginner-friendly /scrolling/ settings.
+  - /Frames/ default width slightly balanced.
+  - Use package =exec-path-from-shell= to load user's shell environment variables.
+  - =markdown-mode=: use ~multimarkdown~ parser (if available).
+  - Rename ~private-init.el~ to ~local-pre-init.el~ to reflect order of loading.
+  - Improve =minibuffer= usability.
+  - Improve =misterioso-theme= colors for better usability.
 
 *** Removed:
   - Dependency on =osx-trash= package.
-  - Example configuration of mu4e email client.
+  - Example configuration of =mu4e= email client.
 
 *** Fixed:
   - Minor modes enabling.
