@@ -12,7 +12,7 @@
   (add-hook 'prog-mode-hook 'flyspell-prog-mode))
 
 
-(when *is-a-mac*
+(when (eq system-type 'darwin)
 
   ;; Based on https://gist.github.com/Superbil/5113974.
   (defun yet/mac-open-dictionary (word)
