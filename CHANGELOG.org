@@ -3,6 +3,7 @@
 ** Unreleased
 
 *** Added:
+  - Enable =GNU-devel ELPA= packages repository.
   - Query =GnuPG Pinentry= passphrase through the Emacs minibuffer.
   - Install =debbugs= package.
   - Mac OS: files removed by =Finder=, hence with "Put Back" feature enabled.
