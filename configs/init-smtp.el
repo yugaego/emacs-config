@@ -5,7 +5,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; 1. For a quick start, use file ~/.authinfo with this line:
-;; machine smtp.domain.com login *** password *** port 587
+;; machine smtp.domain.tld login *** password *** port 465
 ;; 2. Then encrypt ~/.authinfo as ~/.authinfo.gpg
 ;;    - For example, in Dired encrypt ~/.authinfo by pressing :e
 ;;
@@ -16,17 +16,33 @@
 ;; 3. Restart the agent:
 ;;    - $ echo RELOADAGENT | gpg-connect-agent
 
+;;; Configure in ./local-pre-init.el or another pre-loaded file.
+;; (defconst yet/smtpmail-default-smtp-server "smtp.domain.tld")
+;; (defconst yet/smtpmail-smtp-user "user@domain.tld")
+;; (defconst yet/user-mail-address "user@domain.tld")
+;; (defconst yet/user-full-name "Your Name")
+
+(require 'smtpmail)
 
 ;; Usage: M-x compose-mail or C-x m.
-(setq send-mail-function 'smtpmail-send-it
-      smtpmail-stream-type 'ssl
-      smtpmail-debug-info t
-      ;;; Configured in private-init.el
-      ;; smtpmail-smtp-server "smtp.domain.com"
-      ;; smtpmail-default-smtp-server "smtp.domain.com"
-      ;; smtpmail-smtp-service 587 ; 465 legacy
-      ;; smtpmail-smtp-user "user"
-      ;; user-mail-address "user@domain.com"
-      ;; user-full-name "Your Name"
-      )
+(setq smtpmail-stream-type 'ssl            ; Resolves to TLS connection.
+      smtpmail-smtp-service 465            ; or 587 for 'starttls.
+      ;; smtpmail-debug-info t
+      send-mail-function 'smtpmail-send-it)
+
+;; SMTP server name.
+(if (boundp 'yet/smtpmail-default-smtp-server)
+  (setq smtpmail-default-smtp-server yet/smtpmail-default-smtp-server))
+
+;; SMTP server login.
+(if (boundp 'yet/smtpmail-smtp-user)
+  (setq smtpmail-smtp-user yet/smtpmail-smtp-user))
+
+;; Email From address.
+(if (boundp 'yet/user-mail-address)
+  (setq user-mail-address yet/user-mail-address))
+
+;; Email From name.
+(if (boundp 'yet/user-full-name)
+  (setq user-full-name yet/user-full-name))
 
