@@ -38,8 +38,8 @@
 
 ;;; Built-in vc (version control) package configuration.
 (setq vc-handled-backends '(Git) ; Disable other VC systems to improve performance.
-      vc-make-backup-files t     ; Backup files under VC system.
-      vc-command-messages t)     ; Output shell commands vc package executes.
+      vc-make-backup-files t)    ; Backup files under VC system.
+
 
 ;; Move deleted files to trash.
 (setq delete-by-moving-to-trash t)
