@@ -1,15 +1,5 @@
 ;;; init-file.el --- Configure files handling   -*- lexical-binding: t -*-
 
-;; Move deleted files to trash.
-(setq delete-by-moving-to-trash t)
-
-;; Fix Mac trashing.
-(when *is-a-mac*
-  ;; To improve performance, ~$ brew install trash~.
-  (require 'osx-trash)
-  (osx-trash-setup))
-
-
 ;;; Backups.
 ;; Emacs saves one one backup by default,
 ;; so we use 'auto-save-hook to force backups.
@@ -50,11 +40,33 @@
       vc-make-backup-files t     ; Backup files under VC system.
       vc-command-messages t)     ; Output shell commands vc package executes.
 
+;; Move deleted files to trash.
+(setq delete-by-moving-to-trash t)
 
-;;; Use Mac Finder.
-;; Inspired by https://github.com/rejeep/emacs/blob/master/osx.el
-(when *is-a-mac*
+(when (eq system-type 'darwin)
 
+  ;;; Better integration with Mac OS Trash
+
+  ;;; https://github.com/emacsorphanage/osx-trash/issues/4
+  (defun yet/ns-move-file-to-trash (path)
+    (ns-do-applescript
+     (format
+      "tell application \"Finder\" to move {the POSIX file \"%s\"} to trash"
+      (replace-regexp-in-string (rx (group (any ?\\ ?\")))
+                                "\\\\\\1"
+                                (expand-file-name path)))))
+
+  (if (not (fboundp 'system-move-file-to-trash))
+      (defalias 'system-move-file-to-trash #'yet/ns-move-file-to-trash))
+
+  ;; Or alternatively, if `Place Back' feature by Finder is not needed,
+  ;; comment-out the lines above and un-comment the following one:
+  ;; (setq trash-directory "~/.Trash"))
+
+
+  ;;; Open Finder from Emacs
+
+  ;; Inspired by https://github.com/rejeep/emacs/blob/master/osx.el
   ;; Open Finder for a directory.
   (defun yet/mac-open-finder (dir)
     "Open Mac Finder for a given directory."
@@ -68,11 +80,11 @@
   (defun yet/mac-open-finder-current-file ()
     "Open Mac Finder for the current file-visiting buffer."
     (interactive)
-     (let ((file (buffer-file-name)))
-       (if file
-           (yet/mac-open-finder (file-name-directory (buffer-file-name)))
-         (error "This buffer is not visiting a file."))))
-    
+    (let ((file (buffer-file-name)))
+      (if file
+          (yet/mac-open-finder (file-name-directory (buffer-file-name)))
+        (error "This buffer is not visiting a file."))))
+
   ;; Open Finder for the current file.
   (global-set-key (kbd "C-c s-f") 'yet/mac-open-finder-current-file))
 

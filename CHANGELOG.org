@@ -3,6 +3,7 @@
 ** Unreleased
 
 *** Added:
+  - /Mac OS/: files removed by =Finder=, hence with *Put Back* feature enabled.
   - Enable Rmail email client.
   - Load OS specific font.
   - Configured to use four spaces for indentation.
@@ -25,6 +26,7 @@
   - Improve misterioso-theme colors for better usability.
 
 *** Removed:
+  - Dependency on =osx-trash= package.
   - Example configuration of mu4e email client.
 
 *** Fixed:
