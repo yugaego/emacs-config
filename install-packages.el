@@ -35,4 +35,8 @@
 ;; - $ brew install multimarkdown
 ;;      - a Markdown parser better matching Github and Gitlab styles.
 ;;      - alternatively, use M-x gfm-mode included into the markdown-mode package.
+;;
+;; - $ brew install mailutils
+;;     - allows to use secure IMAP connection (f.i. by Rmail email client).
+;;     - Emacs automatically compiles with mailutils support if it is installed.
 
