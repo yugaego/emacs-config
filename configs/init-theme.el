@@ -1,5 +1,10 @@
 ;;; init-theme.el --- Configure a theme   -*- lexical-binding: t -*-
 
+;; Use one of the default themes.
+;; Note: after `M-x load-theme <new-theme>'
+;; do `M-x disable-theme <old-theme>'.
+(load-theme 'misterioso t)
+
 (custom-theme-set-faces
  'misterioso
  ;; Optional colors for misterioso theme:

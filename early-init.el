@@ -1,9 +1,5 @@
 ;;; early-init.el --- Loaded before init.el (Emacs 27+)   -*- lexical-binding: t -*-
 
-;; Use one of the default themes.
-;; Remember to M-x disable-theme after M-x load-theme to get a cleaner UI.
-(load-theme 'misterioso t)
-
 ;; Initial frame configuration.
 ;; Uses 0.0 to 1.0 ratio.
 (setq initial-frame-alist
