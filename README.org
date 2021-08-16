@@ -1,6 +1,7 @@
 * Intro
 
-This is a collection of files that I use to configure Emacs (versions >=27.1) according to my needs and tastes on Mac OS X.\\
+This is a collection of files that I use to configure Emacs (versions >=27.1) according to my needs and tastes.
+
 I strive to keep it as *minimalistic* and *well-documented* as possible, so it may bring some insight to a fresh Emacs user.
 
 [[file:./images/Emacs-screenshot.png]]
@@ -20,7 +21,7 @@ See also [[https://github.com/caisah/emacs.dz][this list of other configurations
 - Two, install configured packages:
   - Open =install-packages.el= in Emacs.
   - Execute command ~M-x eval-buffer~.
-  - Optionally restart Emacs.
+  - Optionally, restart Emacs.
 
 
 *** Structure
@@ -38,7 +39,7 @@ See also [[https://github.com/caisah/emacs.dz][this list of other configurations
   ~configs/init-*.el~ files load.
 
 
-* Getting Started on Mac
+* Getting Started with Emacs on Mac OS
 
 With the listed types of installation you get a "pure" Emacs that behaves similarly to other OS applications.
 
@@ -51,6 +52,27 @@ For example, on Mac OS you may:
 *** Install
 
 Tested with the Emacs versions 26.3, 27.1, 28.0.50.
+
+Compiling from source is simple enough, so try starting with it.
+
+Fallback to the pre-compiled binaries if you find it easier or are interested in a specific distribution with extras.
+
+
+**** From source
+
+- ~$ git clone git://git.savannah.gnu.org/emacs.git YOUR-DIR~
+- ~$ cd YOUR-DIR~
+- ~$ ./configure~
+- ~$ make~
+  - Compiles emacs into =YOUR-DIR/src/=.
+  - Launch install [[https://stackoverflow.com/a/68289258/1319821][emacs from CLI]].
+- ~$ make install~
+  - This is an optional step.
+  - Adds Emacs.app to =YOUR-DIR/nextstep/=.
+  - Feel free to move or symlink the created app.
+
+For more details consult the files =YOUR-DIR/INSTALL=, =YOUR-DIR/nextstep/INSTALL=, and =YOUR-DIR/README=.
+
 
 **** Pre-compiled
 
@@ -69,26 +91,10 @@ Download from [[https://emacsformacosx.com][EmacsForMacOSX]], install as any oth
 - Info: ~$ brew cask info homebrew/cask/emacs~
 
 
-**** From source
-
-- ~$ git clone git://git.savannah.gnu.org/emacs.git YOUR-DIR~
-
-- ~$ cd YOUR-DIR~
-
-- ~$ ./configure~
-
-- ~$ make~
-
-- ~$ make install~
-
-installs Emacs.app to =YOUR-DIR/nextstep/=. Feel free to change its location.\\
-For more details consult the files =YOUR-DIR/INSTALL=, =YOUR-DIR/nextstep/INSTALL=, and =YOUR-DIR/README=.
-
-
 [[https://www.emacswiki.org/emacs/EmacsForMacOS][More on Mac OS installers]].
 
 And by the way, Emacs usage is smooth with /Dvorak/ layout and a /split keyboard/.\\
-I use [[https://kinesis-ergo.com/shop/advantage2/][Kinesis Advantage]] and have a set of modifier keys [[https://gitlab.com/-/snippets/1744636][under each of my hands]].
+I personally use [[https://kinesis-ergo.com/shop/advantage2/][Kinesis Advantage]] and feel comfortable having a set of modifier keys [[https://gitlab.com/-/snippets/1744636][under each of my hands]].
 
 
 *** What's Next
@@ -99,5 +105,5 @@ As the next steps, I highly recommend:
 I also found [[https://www.emacswiki.org/emacs/EmacsNewbie][EmacsWiki]] to be the most helpful resource online.
 
 Experiment while reading documentation. In my case, it took two months to read the manual and get comfortable with Emacs.\\
-To that moment I wrote the simplest possible [[https://github.com/yugaego/emacs-config/blob/bare-bones/init.el][configuration file]] and compiled [[https://github.com/yugaego/cheat-sheets/blob/main/Emacs.org][this key bindings cheat sheet]].
+To that moment I wrote the simplest possible [[https://github.com/yugaego/emacs-config/blob/bare-bones/init.el][configuration file]] and wrote [[https://github.com/yugaego/cheat-sheets/blob/main/Emacs.org][this key bindings cheat sheet]].
 
