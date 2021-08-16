@@ -29,9 +29,6 @@
 ;; - $ brew install aspell
 ;;      - spell checker called by ispell and flyspell.
 ;;
-;; - $ brew install trash
-;;      - improves performance of osx-trash.
-;;
 ;; - $ brew install multimarkdown
 ;;      - a Markdown parser better matching Github and Gitlab styles.
 ;;      - alternatively, use M-x gfm-mode included into the markdown-mode package.
