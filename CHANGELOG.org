@@ -26,6 +26,7 @@
   - Improve =misterioso-theme= colors for better usability.
 
 *** Removed:
+  - Dependency on =exec-path-from-shell= package.
   - Dependency on =osx-trash= package.
   - Example configuration of =mu4e= email client.
 
