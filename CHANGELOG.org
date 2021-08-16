@@ -3,6 +3,7 @@
 ** Unreleased
 
 Added:
+  - Load OS specific font.
   - Configured to use four spaces for indentation.
   - Show column number in the mode line.
   - Highlight trailing whitespaces in prog-mode, conf-mode and text-mode.
@@ -13,6 +14,7 @@ Added:
   - lisp-mode: on TAB hit show possible completions (or indent line).
 
 Changed:
+  - Increase default font size.
   - Disable beginner-friendly scrolling settings.
   - Frames default width slightly balanced.
   - Use package exec-path-from-shell to load user's shell environment variables.
