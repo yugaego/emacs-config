@@ -21,7 +21,7 @@
 
 ;; How many times cursor blinks.
 ;; <1 means blink forever.
-(setq blink-cursor-blinks 0)
+(setq blink-cursor-blinks 1)
 
 ;; Identify sentences ended by one of [.?!]
 ;; with the following *one* space.
