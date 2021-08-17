@@ -33,7 +33,9 @@
   (defun yet/mac-open-dictionary-current-word ()
     "Open Mac Dictionary for the word at a point."
     (interactive)
-    (yet/mac-open-dictionary (current-word)))
+    (if (fboundp 'yet/mac-open-dictionary)
+        (yet/mac-open-dictionary (current-word))
+      (error "Function `yet/mac-open-dictionary' is not defined")))
 
   ;; Call Dictionary for the current word.
   (global-set-key (kbd "C-c s-d") 'yet/mac-open-dictionary-current-word)
