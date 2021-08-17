@@ -55,7 +55,11 @@ is copied."
         (kill-new
          (buffer-substring-no-properties (region-beginning) (region-end)))
       (kill-new (buffer-string)))
-    (browse-url (concat "https://app.grammarly.com/ddocs/" yet/browse-grammarly-doc-id)))
+    (browse-url
+     (concat "https://app.grammarly.com/ddocs/"
+             (if (boundp 'yet/browse-grammarly-doc-id)
+                 yet/browse-grammarly-doc-id
+               (error "Variable `yet/browse-grammarly-doc-id' is not defined")))))
 
   ;; Open Grammarly, copying the region or buffer before-hand.
   (global-set-key (kbd "C-c s-g") 'yet/browse-grammarly))
