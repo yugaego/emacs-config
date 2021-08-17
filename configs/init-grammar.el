@@ -1,13 +1,19 @@
 ;;; init-grammar.el --- Natural languages utilities   -*- lexical-binding: t -*-
 
-;;; Spell checking.
-;; On Mac, install program with ~$ brew install aspell~.
-;; Use M-x ispell- to request a spell checking.
-(setq ispell-program-name "aspell")
+;;; Spell checking
 
-(when (executable-find "aspell")
+;; Emacs uses available CLI spell-checker by default.
+;; (setq ispell-program-name "aspell")
+
+(require 'ispell)
+
+;; Use `M-x ispell-...' to call spell checking manually.
+;; The following lines enable automatic spell checking.
+(when (executable-find ispell-program-name)
+
   ;; Spell check on-the-fly in text modes.
   (add-hook 'text-mode-hook 'flyspell-mode)
+
   ;; Spell check comments on-the-fly in programming modes.
   (add-hook 'prog-mode-hook 'flyspell-prog-mode))
 
