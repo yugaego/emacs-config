@@ -3,6 +3,7 @@
 ** Unreleased
 
 *** Added:
+  - Configure =Gnus= as a mailing lists reader.
   - Enable =GNU-devel ELPA= packages repository.
   - Query =GnuPG Pinentry= passphrase through the Emacs minibuffer.
   - Install =debbugs= package.

@@ -1,18 +1,26 @@
-;;; init-gnus.el --- Configure Gnus - mail and news reader   -*- lexical-binding: t -*-
+;;; init-gnus.el --- Gnus: news (mailing lists) reader   -*- lexical-binding: t -*-
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; IMAP Server authentication ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; 1. For a quick start, use file ~/.authinfo with this line:
-;; machine imap.domain.com login ***  password *** port 993
-;; 2. Then encrypt ~/.authinfo as ~/.authinfo.gpg
-;;    - For example, in Dired encrypt ~/.authinfo by pressing :e
+(with-eval-after-load 'gnus
 
-;; Basic configuration to fetch emails.
-(setq gnus-select-method
- '(nnimap "gmail"
-          (nnimap-address "imap.gmail.com")
-          (nnimap-server-port 993)
-          (nnimap-stream ssl)))
+   ;;; Gnus
+  (setq gnus-select-method '(nntp "news.gmane.io")
+        gnus-inhibit-startup-message t
+        gnus-always-read-dribble-file t
+        gnus-interactive-exit nil)
+
+  ;;; Servers
+  (setq gnus-check-new-newsgroups nil     ; Do not look for new groups.
+        gnus-save-killed-list nil)        ; Do not save list of killed groups.
+
+  ;;; Groups
+  (setq gnus-group-buffer "*Gnus Groups*"
+        gnus-use-scoring nil
+        gnus-group-line-format "%M%S%p%P%5y:%B%(%-16,16c%) %9,9~(cut 4)d\n"
+        gnus-interactive-catchup nil      ; Catchup groups automatically.
+        gnus-summary-next-group-on-exit nil)
+
+  ;;; Articles
+  (setq gnus-auto-select-next nil
+        ;; gnus-add-to-list t
+        gnus-summary-line-format "%U%R%z%I%[: %-8,8f %] %s\n"))
 
