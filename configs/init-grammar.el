@@ -52,7 +52,8 @@ Before opening a browser, an active region or the whole buffer contents
 is copied."
     (interactive)
     (if mark-active
-        (kill-new (buffer-substring-no-properties (region-beginning) (region-end)))
+        (kill-new
+         (buffer-substring-no-properties (region-beginning) (region-end)))
       (kill-new (buffer-string)))
     (browse-url (concat "https://app.grammarly.com/ddocs/" yet/browse-grammarly-doc-id)))
 
