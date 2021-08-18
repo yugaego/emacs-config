@@ -1,13 +1,23 @@
 ;;; init-rmail.el --- Configure Rmail email client   -*- lexical-binding: t -*-
 
 (require 'rmail)
+(require 'rmailsum)
+(require 'rmailmm)
+(require 'rmailout)
 
-(setq rmail-display-summary t
-      rmail-summary-line-count-flag nil
-      rmail-movemail-variant-in-use 'mailutils ; See ../install-packages.el
-      rmail-mime-prefer-html nil               ; Show text version of email.
-      rmail-preserve-inbox nil          ; WARNING: use 't to keep server emails.
+;;; *WARNING*
+;; Set this value to 't
+;; to keep emails on the server.
+(setq rmail-preserve-inbox nil)
+
+(setq rmail-movemail-program nil        ; See ../install-packages.el
       rmail-delete-after-output t       ; See `M-x rmail-output'.
+      rmail-confirm-expunge nil
+      rmail-display-summary t
+      rmail-redisplay-summary t
+      rmail-summary-line-count-flag nil        ; Show number of lines in email.
+      rmail-mime-show-images 2097152           ; Show images smaller than N.
+      rmail-mime-prefer-html nil               ; Show text version of email.
       rmail-output-reset-deleted-flag t)
 
 ;; Store inbox in this file.

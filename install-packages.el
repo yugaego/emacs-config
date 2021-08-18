@@ -34,9 +34,10 @@
 ;;      - Alternatively, use M-x gfm-mode included into the markdown-mode package.
 ;;
 ;; - $ brew install mailutils
-;;     - Allows to use secure IMAP connection (f.i. by Rmail email client).
-;;     - Emacs automatically compiles with mailutils support if it is installed.
+;;     - Allows to use POP3 via TLS channel by Rmail email client.
+;;     - Emacs automatically compiles with `mailutils' support if it is installed.
+;;     - See more details in Info node `Movemail'.
 ;;
 ;; - $ brew install gpg
-;;     - OpenGPG encryption and signing tool
+;;     - OpenGPG encryption and signing tool.
 
