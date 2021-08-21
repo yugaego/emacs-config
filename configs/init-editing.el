@@ -20,6 +20,11 @@
 (show-paren-mode)
 (setq show-paren-delay 0)
 
+;; Auto-insert closing parenthesis.
+(require 'elec-pair)
+(electric-pair-mode)
+(setq electric-pair-skip-self t)
+
 ;; How many times cursor blinks.
 ;; <1 means blink forever.
 (setq blink-cursor-blinks 1)
