@@ -16,6 +16,7 @@
 (global-hi-lock-mode)
 
 ;; Highlight matching parenthesis.
+(require 'paren)
 (show-paren-mode)
 (setq show-paren-delay 0)
 
