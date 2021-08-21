@@ -12,9 +12,6 @@
 (global-auto-revert-mode)
 (setq auto-revert-verbose nil)
 
-;; Highlight search term matches.
-(global-hi-lock-mode)
-
 ;; Highlight matching parenthesis.
 (require 'paren)
 (show-paren-mode)
@@ -38,6 +35,15 @@
 ;; To apply line commands to visual (not logical) lines,
 ;; use visual-line-mode.
 (setq-default word-wrap t)
+
+
+;;; Search
+
+;; Highlight matches.
+(global-hi-lock-mode)
+
+(setq isearch-allow-scroll t            ; Continue on scrolling.
+      isearch-lazy-count t)             ; Since Emacs 27.1
 
 
 ;;; Indentation

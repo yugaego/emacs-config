@@ -21,6 +21,7 @@
   - =lisp-mode=: on =TAB= hit show possible completions (or indent line).
 
 *** Changed:
+  - Improve /search/ experience.
   - Increase default /font size/.
   - Disable beginner-friendly /scrolling/ settings.
   - /Frames/ default width slightly balanced.
