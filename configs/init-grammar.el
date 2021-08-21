@@ -7,7 +7,11 @@
 
 (require 'ispell)
 
-;; Use `M-x ispell-...' to call spell checking manually.
+;; Several convenient spell-checker commands:
+;; - `C-.' corrects the word under cursor.
+;; - `M-$' suggests spelling variants.
+;; - `M-x ispell-buffer' calls spell checking manually.
+
 ;; The following lines enable automatic spell checking.
 (when (executable-find ispell-program-name)
 
