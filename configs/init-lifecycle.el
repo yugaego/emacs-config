@@ -47,3 +47,13 @@ With prefix ARG, saves all file-visiting buffers without asking."
   (desktop-remove)
   (save-buffers-kill-emacs arg))
 
+;; Open files on Emacs load without desktop state file.
+(defun yet/open-files ()
+  "Open files listed in the variable `yet/open-files-list'."
+  (when (and (boundp 'yet/open-files-list)
+             yet/open-files-list)
+    (dolist (file yet/open-files-list)
+      (find-file file))))
+
+(add-hook 'desktop-no-desktop-file-hook #'yet/open-files)
+
