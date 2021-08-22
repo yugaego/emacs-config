@@ -29,3 +29,21 @@ If *scratch* buffer is empty, returns true without prompting."
 (add-to-list 'kill-buffer-query-functions
              #'yet/verify-emtpy-scratch-on-buffer-kill)
 
+
+;;; Save state of Emacs between sessions.
+
+(require 'desktop)
+
+(desktop-save-mode 1)
+
+;; Save state without asking.
+(setq desktop-save t)
+
+(defun yet/kill-emacs-reset-desktop-state (&optional arg)
+  "Save buffers and kill Emacs without saving the state to the desktop file.
+With prefix ARG, saves all file-visiting buffers without asking."
+  (interactive "P")
+  (desktop-save-mode -1)
+  (desktop-remove)
+  (save-buffers-kill-emacs arg))
+

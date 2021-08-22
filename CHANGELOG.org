@@ -3,6 +3,7 @@
 ** Unreleased
 
 *** Added:
+  - Command to exit =Emacs= and reset =desktop-save-mode= state.
   - Confirm before killing non-empty =*scratch*= buffer.
   - Keybinding to toggle =scroll-lock-mode=.
   - Auto-insert closing /parenthesis/.
@@ -23,6 +24,7 @@
   - =lisp-mode=: on =TAB= hit show possible completions (or indent line).
 
 *** Changed:
+  - Move =desktop-save-mode= settings to ~init-lifecycle.el~.
   - Improve /search/ experience.
   - Increase default /font size/.
   - Disable beginner-friendly /scrolling/ settings.
