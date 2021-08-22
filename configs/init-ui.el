@@ -7,6 +7,16 @@
 ;; 'forward prepends directory name.
 (setq uniquify-buffer-name-style 'forward)
 
+;; Place diff windows side by side.
+(setq ediff-split-window-function 'split-window-horizontally)
+
+;; Show column number in the mode line.
+(column-number-mode)
+
+;; Show typed command right away.
+(setq echo-keystrokes 0.01)
+
+
 ;;; Scrolling
 
 ;; Beginner friendly.
@@ -18,15 +28,7 @@
 ;; (setq scroll-margin 4)
 
 
-;; Place diff windows side by side.
-(setq ediff-split-window-function 'split-window-horizontally)
-
-
-;; Show column number in the mode line.
-(column-number-mode)
-
-
-;;; Calendar.
+;;; Calendar
 (setq calendar-week-start-day 1         ; Start week on Monday.
       calendar-date-style "iso"
       calendar-time-display-form
