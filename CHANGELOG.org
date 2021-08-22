@@ -3,6 +3,7 @@
 ** Unreleased
 
 *** Added:
+  - Confirm before killing non-empty =*scratch*= buffer.
   - Keybinding to toggle =scroll-lock-mode=.
   - Auto-insert closing /parenthesis/.
   - Configure =Gnus= as a mailing lists reader.
