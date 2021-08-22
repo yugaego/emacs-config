@@ -21,12 +21,6 @@
 ;; Place diff windows side by side.
 (setq ediff-split-window-function 'split-window-horizontally)
 
-;; Save state of Emacs between sessions.
-(desktop-save-mode)
-
-;; Save state of Emacs without asking.
-;; ~$ rm ~/.emacs.d/.emacs.desktop~ to force refresh.
-(setq desktop-save t)
 
 ;; Show column number in the mode line.
 (column-number-mode)
