@@ -31,8 +31,8 @@
       send-mail-function 'smtpmail-send-it)
 
 ;; SMTP server name.
-(if (boundp 'yet/smtpmail-default-smtp-server)
-  (setq smtpmail-default-smtp-server yet/smtpmail-default-smtp-server))
+(if (boundp 'yet/smtpmail-smtp-server)
+  (setq smtpmail-smtp-server yet/smtpmail-smtp-server))
 
 ;; SMTP server login.
 (if (boundp 'yet/smtpmail-smtp-user)
