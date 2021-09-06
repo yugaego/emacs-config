@@ -16,12 +16,6 @@
 ;; 3. Restart the agent:
 ;;    - $ echo RELOADAGENT | gpg-connect-agent
 
-;;; Configure in ./local-pre-init.el or another pre-loaded file.
-;; (defconst yet/smtpmail-default-smtp-server "smtp.domain.tld")
-;; (defconst yet/smtpmail-smtp-user "user@domain.tld")
-;; (defconst yet/user-mail-address "user@domain.tld")
-;; (defconst yet/user-full-name "Your Name")
-
 (require 'smtpmail)
 
 ;; Usage: M-x compose-mail or C-x m.

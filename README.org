@@ -44,8 +44,10 @@ Emacs is - what *you* want it to be.
   for better readability.
 - install-packages.el :: Install configured packages after cloning (on new devices).
 - local-pre-init.el :: Private information can be stored in this file.\\
-  This file is excluded from the repo and loaded only if present in the file system.
-- local-post-init.el :: One more git-ignored file, loaded after
+  This optional file is excluded from the repository
+  and loaded only if present in the file system.
+- examples/local-pre-init.el :: Example local configurations.
+- local-post-init.el :: One more git-ignored optional file, loaded after
   ~configs/init-*.el~ files load.
 
 
