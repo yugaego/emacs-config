@@ -3,6 +3,7 @@
 ;; Consistent look right from the start.
 (load-theme 'misterioso t)
 
+;; Choose a font by an operating system.
 (defconst yet/font
   (cond ((eq system-type 'darwin) "Monaco-17")
         ((memq system-type '(ms-dos windows-nt)) "Consolas-17")
