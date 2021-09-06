@@ -1,12 +1,19 @@
 * Intro
 
-This is a collection of files that I use to configure Emacs (versions >=27.1) according to my needs and tastes.
+This is a collection of files that I use to configure Emacs (versions >=27.1)
+in accordance with my current needs and tastes.
 
-I strive to keep it as *minimalistic* and *well-documented* as possible, so it may bring some insight to a fresh Emacs user.
+This `Emacs' flavor is intended to be *well-organized*, *-documented*,
+*-behaved*, and *-looking*. A priority is given to the usage of the *built-in packages*,
+but without usability sacrifice.
+
+This configuration was mostly tested as a GUI application on Mac OS,
+but it is expected to behave well on other operating systems too.
 
 [[file:./images/Emacs-screenshot.png]]
 
-See also [[https://github.com/caisah/emacs.dz][this list of other configurations and starter-kits]] for a source of inspiration.
+See also [[https://github.com/caisah/emacs.dz][this list of other configurations and starter-kits]] for a source of inspiration
+to configure your *own* Emacs.
 
 
 * Playing With This Repo
