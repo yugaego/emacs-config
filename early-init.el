@@ -1,5 +1,8 @@
 ;;; early-init.el --- Loaded before init.el (Emacs 27+)   -*- lexical-binding: t -*-
 
+;; Consistent look right from the start.
+(load-theme 'misterioso t)
+
 (defconst yet/font
   (cond ((eq system-type 'darwin) "Monaco-17")
         ((memq system-type '(ms-dos windows-nt)) "Consolas-17")
