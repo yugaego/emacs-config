@@ -3,8 +3,8 @@
 This is a collection of files that I use to configure Emacs (versions >=27.1)
 in accordance with my current needs and tastes.
 
-This `Emacs' flavor is intended to be *well-organized*, *-documented*,
-*-behaved*, and *-looking*. A priority is given to the usage of the *built-in packages*,
+This Emacs flavor is intended to be *well-organized*, *-documented*,
+*-behaved*, and *good-looking*. A priority is given to the usage of the *built-in packages*,
 but without usability sacrifice.
 
 This configuration was mostly tested as a GUI application on Mac OS,
@@ -13,8 +13,12 @@ but it is expected to behave well on other operating systems too.
 [[file:./images/Emacs-screenshot.png]]
 
 See also [[https://github.com/caisah/emacs.dz][this list of other configurations and starter-kits]] for a source of inspiration
-to configure your *own* Emacs.
+to configure your own Emacs.\\
+As I like to say:
 
+#+BEGIN_QUOTE
+Emacs is - what *you* want it to be.
+#+END_QUOTE
 
 * Playing With This Repo
 
