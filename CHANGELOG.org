@@ -26,6 +26,7 @@
   - =lisp-mode=: on =TAB= hit show possible completions (or indent line).
 
 *** Changed:
+  - Switch from public domain to =AGPL= license.
   - Switch from the namespace =yet/= to =yet-=.
   - Move =desktop-save-mode= settings to ~init-lifecycle.el~.
   - Improve /search/ experience.
