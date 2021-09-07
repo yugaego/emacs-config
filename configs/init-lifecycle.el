@@ -20,8 +20,6 @@ If *scratch* buffer is empty, returns true without prompting."
 (add-to-list 'kill-emacs-query-functions
              #'yet-verify-emtpy-scratch-on-emacs-kill)
 
-(delete #'yet-verify-emtpy-scratch-on-emacs-kill kill-emacs-query-functions)
-
 (defun yet-verify-emtpy-scratch-on-buffer-kill ()
   "Require confirmation to kill *scratch* buffer if it is not empty."
   (if (equal "*scratch*" (buffer-name))
