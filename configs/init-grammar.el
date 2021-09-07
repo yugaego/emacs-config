@@ -25,7 +25,7 @@
 (when (eq system-type 'darwin)
 
   ;; Based on https://gist.github.com/Superbil/5113974.
-  (defun yet/mac-open-dictionary (word)
+  (defun yet-mac-open-dictionary (word)
     "Open Mac OS Dictionary for a given word."
     (interactive "sEnter a word: ")
     (shell-command
@@ -34,23 +34,23 @@
              "dict:///"
              (replace-regexp-in-string "\"" "'" word))))
 
-  (defun yet/mac-open-dictionary-current-word ()
+  (defun yet-mac-open-dictionary-current-word ()
     "Open Mac Dictionary for the word at a point."
     (interactive)
-    (if (fboundp 'yet/mac-open-dictionary)
-        (yet/mac-open-dictionary (current-word))
-      (error "Function `yet/mac-open-dictionary' is not defined")))
+    (if (fboundp 'yet-mac-open-dictionary)
+        (yet-mac-open-dictionary (current-word))
+      (error "Function `yet-mac-open-dictionary' is not defined")))
 
   ;; Call Dictionary for the current word.
-  (global-set-key (kbd "C-c s-d") 'yet/mac-open-dictionary-current-word)
+  (global-set-key (kbd "C-c s-d") 'yet-mac-open-dictionary-current-word)
 
 
-  (defun yet/browse-grammarly ()
+  (defun yet-browse-grammarly ()
     "Open predefined Grammarly document in a default browser.
 
-Configure variable `yet/browse-grammarly-doc-id' to use this function.
+Configure variable `yet-browse-grammarly-doc-id' to use this function.
 For example, configure with:
-(defconst yet/browse-grammarly-doc-id \"URL-DOCUMENT-ID\")
+(defconst yet-browse-grammarly-doc-id \"URL-DOCUMENT-ID\")
 
 Before opening a browser, an active region or the whole buffer contents
 is copied."
@@ -61,10 +61,10 @@ is copied."
       (kill-new (buffer-string)))
     (browse-url
      (concat "https://app.grammarly.com/ddocs/"
-             (if (boundp 'yet/browse-grammarly-doc-id)
-                 yet/browse-grammarly-doc-id
-               (error "Variable `yet/browse-grammarly-doc-id' is not defined")))))
+             (if (boundp 'yet-browse-grammarly-doc-id)
+                 yet-browse-grammarly-doc-id
+               (error "Variable `yet-browse-grammarly-doc-id' is not defined")))))
 
   ;; Open Grammarly, copying the region or buffer before-hand.
-  (global-set-key (kbd "C-c s-g") 'yet/browse-grammarly))
+  (global-set-key (kbd "C-c s-g") 'yet-browse-grammarly))
 

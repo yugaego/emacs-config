@@ -26,6 +26,7 @@
   - =lisp-mode=: on =TAB= hit show possible completions (or indent line).
 
 *** Changed:
+  - Switch from the namespace =yet/= to =yet-=.
   - Move =desktop-save-mode= settings to ~init-lifecycle.el~.
   - Improve /search/ experience.
   - Increase default /font size/.

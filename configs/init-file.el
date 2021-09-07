@@ -29,11 +29,11 @@
 
 ;;; Force backup on each auto-save.
 ;; https://www.emacswiki.org/emacs/ForceBackups
-(defun yet/force-buffer-backup ()
+(defun yet-force-buffer-backup ()
   (let ((buffer-backed-up nil))
     (backup-buffer)))
-(add-hook 'after-save-hook 'yet/force-buffer-backup)
-(add-hook 'auto-save-hook 'yet/force-buffer-backup)
+(add-hook 'after-save-hook 'yet-force-buffer-backup)
+(add-hook 'auto-save-hook 'yet-force-buffer-backup)
 
 
 ;;; Built-in vc (version control) package configuration.
@@ -49,7 +49,7 @@
   ;;; Better integration with Mac OS Trash
 
   ;;; https://github.com/emacsorphanage/osx-trash/issues/4
-  (defun yet/ns-move-file-to-trash (path)
+  (defun yet-ns-move-file-to-trash (path)
     (ns-do-applescript
      (format
       "tell application \"Finder\" to move {the POSIX file \"%s\"} to trash"
@@ -58,7 +58,7 @@
                                 (expand-file-name path)))))
 
   (if (not (fboundp 'system-move-file-to-trash))
-      (defalias 'system-move-file-to-trash #'yet/ns-move-file-to-trash))
+      (defalias 'system-move-file-to-trash #'yet-ns-move-file-to-trash))
 
   ;; Or alternatively, if `Place Back' feature by Finder is not needed,
   ;; comment-out the lines above and un-comment the following one:
@@ -69,7 +69,7 @@
 
   ;; Inspired by https://github.com/rejeep/emacs/blob/master/osx.el
   ;; Open Finder for a directory.
-  (defun yet/mac-open-finder (dir)
+  (defun yet-mac-open-finder (dir)
     "Open Mac Finder for a given directory."
     (interactive "DEnter directory name: ")
     (shell-command
@@ -78,14 +78,14 @@
              dir)))
 
   ;; Open Finder for the current file directory.
-  (defun yet/mac-open-finder-current-file ()
+  (defun yet-mac-open-finder-current-file ()
     "Open Mac Finder for the current file-visiting buffer."
     (interactive)
     (let ((file (buffer-file-name)))
       (if file
-          (yet/mac-open-finder (file-name-directory (buffer-file-name)))
+          (yet-mac-open-finder (file-name-directory (buffer-file-name)))
         (error "This buffer is not visiting a file."))))
 
   ;; Open Finder for the current file.
-  (global-set-key (kbd "C-c s-f") 'yet/mac-open-finder-current-file))
+  (global-set-key (kbd "C-c s-f") 'yet-mac-open-finder-current-file))
 

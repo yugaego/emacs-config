@@ -60,18 +60,18 @@
 ;; Make sure highlighting disabled by default.
 (setq-default show-trailing-whitespace nil)
 
-(defun yet/show-trailing-whitespace ()
+(defun yet-show-trailing-whitespace ()
   "Highlight trailing whitespaces in the buffer."
   (setq-local show-trailing-whitespace t))
 
 ;; Highlight trailing whitespaces only in these modes.
 (dolist (hook '(prog-mode-hook text-mode-hook conf-mode-hook))
-  (add-hook hook 'yet/show-trailing-whitespace))
+  (add-hook hook 'yet-show-trailing-whitespace))
 
 
 ;;; Duplicate line or region N times.
 ;; https://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
-(defun yet/duplicate-current-line-or-region (&optional arg)
+(defun yet-duplicate-current-line-or-region (&optional arg)
   "Duplicates the current line or region ARG times.
 If there's no region, the current line will be duplicated. However, if
 there's a region, all lines that region covers will be duplicated."
@@ -91,7 +91,7 @@ there's a region, all lines that region covers will be duplicated."
         (setq end (point)))
       (goto-char (+ origin (* (length region) arg) arg)))))
 
-(global-set-key (kbd "C-c d") 'yet/duplicate-current-line-or-region)
+(global-set-key (kbd "C-c d") 'yet-duplicate-current-line-or-region)
 
 
 ;;; Marked region (selection).

@@ -21,14 +21,14 @@
       rmail-output-reset-deleted-flag t)
 
 ;; Store inbox in this file.
-(if (boundp 'yet/rmail-file-name)
-    (setq rmail-file-name yet/rmail-file-name))
+(if (boundp 'yet-rmail-file-name)
+    (setq rmail-file-name yet-rmail-file-name))
 
 ;; '("imaps://some%40domain.tld:pwd@imap.domain.tld:993"))
-(if (boundp 'yet/rmail-primary-inbox-list)
-    (setq rmail-primary-inbox-list yet/rmail-primary-inbox-list))
+(if (boundp 'yet-rmail-primary-inbox-list)
+    (setq rmail-primary-inbox-list yet-rmail-primary-inbox-list))
 
 ;; Default path for `M-x rmail-output'.
-(if (boundp 'yet/rmail-default-file)
-    (setq rmail-default-file yet/rmail-default-file))
+(if (boundp 'yet-rmail-default-file)
+    (setq rmail-default-file yet-rmail-default-file))
 

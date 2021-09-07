@@ -6,10 +6,8 @@
     (load local-pre-init)))
 
 ;; Make OS installed executables available to Emacs.
-;; Add `(defconst yet/exec-path '("/usr/local/bin" "/any/other/path"))'
-;; to `local-pre-init.el' file.
-(when (boundp 'yet/exec-path)
-  (dolist (path yet/exec-path)
+(when (boundp 'yet-exec-path)
+  (dolist (path yet-exec-path)
     (add-to-list 'exec-path path)))
 
 ;; Load additional configuration files matching the name pattern.

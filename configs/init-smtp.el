@@ -25,18 +25,18 @@
       send-mail-function 'smtpmail-send-it)
 
 ;; SMTP server name.
-(if (boundp 'yet/smtpmail-smtp-server)
-  (setq smtpmail-smtp-server yet/smtpmail-smtp-server))
+(if (boundp 'yet-smtpmail-smtp-server)
+  (setq smtpmail-smtp-server yet-smtpmail-smtp-server))
 
 ;; SMTP server login.
-(if (boundp 'yet/smtpmail-smtp-user)
-  (setq smtpmail-smtp-user yet/smtpmail-smtp-user))
+(if (boundp 'yet-smtpmail-smtp-user)
+  (setq smtpmail-smtp-user yet-smtpmail-smtp-user))
 
 ;; Email From address.
-(if (boundp 'yet/user-mail-address)
-  (setq user-mail-address yet/user-mail-address))
+(if (boundp 'yet-user-mail-address)
+  (setq user-mail-address yet-user-mail-address))
 
 ;; Email From name.
-(if (boundp 'yet/user-full-name)
-  (setq user-full-name yet/user-full-name))
+(if (boundp 'yet-user-full-name)
+  (setq user-full-name yet-user-full-name))
 

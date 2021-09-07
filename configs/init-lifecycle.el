@@ -2,7 +2,7 @@
 
 ;;; Prevent loss of the *scratch* buffer contents accidentally.
 
-(defun yet/prompt-on-not-empty-scratch-buffer (question)
+(defun yet-prompt-on-not-empty-scratch-buffer (question)
   "Prompt if *scratch* buffer is not empty.
 Appends a confirmation QUESTION to the prompt message.
 If *scratch* buffer is empty, returns true without prompting."
@@ -13,21 +13,23 @@ If *scratch* buffer is empty, returns true without prompting."
                            question)))
       t)))
 
-(defun yet/verify-emtpy-scratch-on-emacs-kill ()
+(defun yet-verify-emtpy-scratch-on-emacs-kill ()
   "Require confirmation to kill Emacs if *scratch* buffer is not empty."
-  (yet/prompt-on-not-empty-scratch-buffer "Really kill Emacs?"))
+  (yet-prompt-on-not-empty-scratch-buffer "Really kill Emacs?"))
 
 (add-to-list 'kill-emacs-query-functions
-             #'yet/verify-emtpy-scratch-on-emacs-kill)
+             #'yet-verify-emtpy-scratch-on-emacs-kill)
 
-(defun yet/verify-emtpy-scratch-on-buffer-kill ()
+(delete #'yet-verify-emtpy-scratch-on-emacs-kill kill-emacs-query-functions)
+
+(defun yet-verify-emtpy-scratch-on-buffer-kill ()
   "Require confirmation to kill *scratch* buffer if it is not empty."
   (if (equal "*scratch*" (buffer-name))
-      (yet/prompt-on-not-empty-scratch-buffer "Really kill *scratch* buffer?")
+      (yet-prompt-on-not-empty-scratch-buffer "Really kill *scratch* buffer?")
     t))
 
 (add-to-list 'kill-buffer-query-functions
-             #'yet/verify-emtpy-scratch-on-buffer-kill)
+             #'yet-verify-emtpy-scratch-on-buffer-kill)
 
 
 ;;; Save state of Emacs between sessions.
@@ -39,7 +41,7 @@ If *scratch* buffer is empty, returns true without prompting."
 ;; Save state without asking.
 (setq desktop-save t)
 
-(defun yet/kill-emacs-reset-desktop-state (&optional arg)
+(defun yet-kill-emacs-reset-desktop-state (&optional arg)
   "Save buffers and kill Emacs without saving the state to the desktop file.
 With prefix ARG, saves all file-visiting buffers without asking."
   (interactive "P")
@@ -48,12 +50,12 @@ With prefix ARG, saves all file-visiting buffers without asking."
   (save-buffers-kill-emacs arg))
 
 ;; Open files on Emacs load without desktop state file.
-(defun yet/open-files ()
-  "Open files listed in the variable `yet/open-files-list'."
-  (when (and (boundp 'yet/open-files-list)
-             yet/open-files-list)
-    (dolist (file yet/open-files-list)
+(defun yet-open-files ()
+  "Open files listed in the variable `yet-open-files-list'."
+  (when (and (boundp 'yet-open-files-list)
+             yet-open-files-list)
+    (dolist (file yet-open-files-list)
       (find-file file))))
 
-(add-hook 'desktop-no-desktop-file-hook #'yet/open-files)
+(add-hook 'desktop-no-desktop-file-hook #'yet-open-files)
 
