@@ -24,5 +24,10 @@
  '(show-paren-match ((t (:background "SkyBlue4"))) t)
  '(line-number-current-line ((t (:background "#405060"))) t))
 
+(when (version<= "28.0.50" emacs-version)
+  (custom-theme-set-faces
+   'misterioso
+   '(bookmark-face ((t (:background "#2d3743" :foreground "#ffad29"))))))
+
 (enable-theme 'misterioso)
 
