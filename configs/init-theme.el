@@ -18,8 +18,12 @@
    `(mode-line-inactive ((,class (:background "#212933"))) t)
    `(diff-added ((,class (:background "#334433"))) t)
    `(diff-removed ((,class (:background "#443333"))) t)
+   `(diff-changed ((,class (:background "#444433"))) t)
    `(diff-refine-added ((,class (:background "#336633"))) t)
    `(diff-refine-removed ((,class (:background "#663333"))) t)
+   `(diff-refine-changed ((,class (:background "#666633"))) t)
+   `(diff-hl-change ((,class (:foreground "#666633" :background "#444433"))) t)
+   `(diff-hl-dired-change ((,class (:foreground "#666633" :background "#2d3743"))) t)
    `(show-paren-match ((,class (:background "SkyBlue4"))) t)
    `(line-number-current-line ((,class (:background "#405060"))) t))
 
