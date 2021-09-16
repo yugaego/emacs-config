@@ -14,15 +14,13 @@
      ((,class (:foreground "LightSteelBlue" :background "#354555"))) t)
    `(mode-line
      ((,class
-       (:foreground "#354558" :background "LightSkyBlue4" :font "Monospace")
-       )) t)
+       (:foreground "SkyBlue2" :background "#455565" :font "Monospace"))) t)
    `(mode-line-buffer-id
-     ((,class (:weight bold :slant italic :font ,yet-font))) t)
-   `(mode-line-highlight ((,class (:foreground "LightSkyBlue"))) t)
+     ((,class (:weight bold :slant italic))) t)
+   `(mode-line-highlight ((,class (:foreground "SkyBlue3"))) t)
    `(mode-line-inactive
      ((,class
-       (:foreground "LightSkyBlue4" :background "#304050" :font "Monospace")
-       )) t)
+       (:foreground "SkyBlue4" :background "#304050" :font "Monospace"))) t)
    `(mode-line-emphasis ((,class (:foreground "#74af68"))) t)
 
    `(diff-added ((,class (:background "#334433"))) t)
@@ -68,9 +66,13 @@
 
 ;; LightSkyBlue4 LightSkyBlue3 LightSkyBlue2 LightSkyBlue1 LightSkyBlue
 
+;; SkyBlue4 SkyBlue3 SkyBlue2 SkyBlue1 SkyBlue
+
 ;; SteelBlue4 SteelBlue3 SteelBlue2 SteelBlue1 SteelBlue
 
-;; #212933 #2d3743 #304050 #354555 #3a4a5a #405060 #e1e1e0
+;; #212933 #203040 #2d3743 #304050 #354555 #3a4a5a #405060 #455565
+
+;; #e1e1e0
 
 ;; #334433 #336633
 
