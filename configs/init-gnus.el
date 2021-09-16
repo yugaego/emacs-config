@@ -20,8 +20,11 @@
 
   ;;; Articles
   (setq gnus-auto-select-next nil
-        ;; gnus-add-to-list t
+        gnus-add-to-list t
         gnus-summary-line-format "%U%R%z%I%[: %-16,16f %] %s\n")
+
+  ;;
+  (setq gnus-mailing-list-groups "^gmane")
 
   (gnus-add-configuration
    '(article (vertical 1.0 (summary .35 point) (article 1.0)))))
