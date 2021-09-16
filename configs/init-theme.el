@@ -12,7 +12,7 @@
    `(cursor ((,class (:background "SteelBlue3"))) t)
    `(header-line ((,class (:background "#3a4a5a"))) t)
    `(mode-line ((,class (:background "SlateGray"))) t)
-   `(mode-line-buffer-id ((,class (:background "SkyBlue4"))) t)
+   `(mode-line-buffer-id ((,class (:weight bold :slant italic))) t)
    `(mode-line-emphasis ((,class (:foreground "green4"))) t)
    `(mode-line-highlight ((,class (:background "SteelBlue4"))) t)
    `(mode-line-inactive ((,class (:background "#212933"))) t)
