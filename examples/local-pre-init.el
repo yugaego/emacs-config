@@ -26,4 +26,6 @@
 (defconst yet-smtpmail-smtp-user "user@domain.tld")
 (defconst yet-user-mail-address "user@domain.tld")
 (defconst yet-user-full-name "Your Name")
+(defconst yet-message-default-mail-headers
+  "From: Name <name@xmpl.tld>\nReply-To: Name <name@xmpl.tld>\nFcc: ~/Mail/sent\n")
 

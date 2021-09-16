@@ -17,6 +17,7 @@
 ;;    - $ echo RELOADAGENT | gpg-connect-agent
 
 (require 'smtpmail)
+(require 'message)
 
 ;; Usage: M-x compose-mail or C-x m.
 (setq smtpmail-stream-type 'ssl            ; Resolves to TLS connection.
@@ -39,4 +40,9 @@
 ;; Email From name.
 (if (boundp 'yet-user-full-name)
   (setq user-full-name yet-user-full-name))
+
+;; Additional default headers.
+(if (boundp 'yet-message-default-mail-headers)
+    (setq message-default-mail-headers
+          yet-message-default-mail-headers))
 
