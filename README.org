@@ -1,5 +1,9 @@
 * Intro
 
+#+BEGIN_QUOTE
+Emacs is... what *you* want it to be.
+#+END_QUOTE
+
 This is a collection of files that I use to configure Emacs (versions >=27.1)
 in accordance with my current needs and tastes.
 
@@ -13,12 +17,8 @@ but it is expected to behave well on other operating systems too.
 [[file:./images/Emacs-screenshot.png]]
 
 See also [[https://github.com/caisah/emacs.dz][this list of other configurations and starter-kits]] for a source of inspiration
-to configure your own Emacs.\\
-As I like to say:
+to configure your own Emacs.
 
-#+BEGIN_QUOTE
-Emacs is - what *you* want it to be.
-#+END_QUOTE
 
 * Playing With This Repo
 
