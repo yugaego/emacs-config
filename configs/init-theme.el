@@ -13,12 +13,16 @@
    `(header-line
      ((,class (:foreground "LightSteelBlue" :background "#354555"))) t)
    `(mode-line
-     ((,class (:foreground "LightSteelBlue2" :background "#455565"))) t)
+     ((,class
+       (:foreground "#354558" :background "LightSkyBlue4" :font "Monospace")
+       )) t)
    `(mode-line-buffer-id
-     ((,class (:weight bold :slant italic))) t)
+     ((,class (:weight bold :slant italic :font ,yet-font))) t)
    `(mode-line-highlight ((,class (:foreground "LightSkyBlue"))) t)
    `(mode-line-inactive
-     ((,class (:foreground "LightSteelBlue4":background "#304050"))) t)
+     ((,class
+       (:foreground "LightSkyBlue4" :background "#304050" :font "Monospace")
+       )) t)
    `(mode-line-emphasis ((,class (:foreground "#74af68"))) t)
 
    `(diff-added ((,class (:background "#334433"))) t)
