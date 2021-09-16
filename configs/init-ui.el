@@ -1,5 +1,8 @@
 ;;; init-ui.el --- Configure user interface   -*- lexical-binding: t -*-
 
+(setq inhibit-startup-message t         ; Do not display startup message.
+      initial-scratch-message nil)      ; Start with empty *scratch* buffer.
+
 ;; Show line numbers.
 (setq-default display-line-numbers t)
 

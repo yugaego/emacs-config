@@ -1,9 +1,11 @@
 ;;; early-init.el --- Loaded before init.el (Emacs 27+)   -*- lexical-binding: t -*-
 
-;; Consistent look right from the start.
-(load-theme 'misterioso t)
+;;; The following settings are not really "recommended"
+;;; to be put in here, but I'd like to take the "risks"
+;;; in favor of getting a nice-looking Emacs on startup.
+;;; http://debbugs.gnu.org/cgi/bugreport.cgi?bug=50491
 
-;; Choose a font by an operating system.
+;; Choose font by an operating system.
 (defconst yet-font
   (cond ((eq system-type 'darwin) "Monaco-17")
         ((memq system-type '(ms-dos windows-nt)) "Consolas-17")
@@ -26,9 +28,6 @@
         (width . 0.52)
         (height . 1.0)
         (font . ,yet-font)))
-
-(setq inhibit-startup-message t         ; Do not display startup message.
-      initial-scratch-message nil)      ; Start with empty *scratch* buffer.
 
 ;; Disable UI elements.
 (scroll-bar-mode -1)
