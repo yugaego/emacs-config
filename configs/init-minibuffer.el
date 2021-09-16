@@ -25,10 +25,10 @@
 ;; Switch to default M-x find-file and M-x switch-buffer with C-f and C-b.
 (require 'ido)
 
-(ido-mode)
+(ido-mode 1)
 (setq ido-default-file-method 'selected-window ; Where to show a file.
       ido-default-buffer-method 'selected-window) ; Where to show a buffer.
 
 ;; M-x command name completion.
-(fido-mode)
+(fido-mode 1)
 
