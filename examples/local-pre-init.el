@@ -29,3 +29,7 @@
 (defconst yet-message-default-mail-headers
   "From: Name <name@xmpl.tld>\nReply-To: Name <name@xmpl.tld>\nFcc: ~/Mail/sent\n")
 
+;;; Pre-load Emacs package for development.
+;; git clone package DIR
+;; (require 'package "DIR/package.el")
+
