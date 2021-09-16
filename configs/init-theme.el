@@ -31,3 +31,27 @@
 
 (enable-theme 'misterioso)
 
+;;; *Palette*
+
+;; See also `$emacsSourceDir/etc/themes/misterioso-theme.el'.
+
+;; SlateGray4 SlateGray3 SlateGray2 SlateGray1 SlateGray
+
+;; LightSlateGray
+
+;; LightSteelBlue4 LightSteelBlue3 LightSteelBlue2 LightSteelBlue1 LightSteelBlue
+
+;; LightBlue4 LightBlue3 LightBlue2 LightBlue1 LightBlue
+
+;; LightSkyBlue4 LightSkyBlue3 LightSkyBlue2 LightSkyBlue1 LightSkyBlue
+
+;; SteelBlue4 SteelBlue3 SteelBlue2 SteelBlue1 SteelBlue
+
+;; #212933 #2d3743 #3a4a5a #405060
+
+;; #334433 #336633
+
+;; #443333 #663333
+
+;; #ffad29
+
