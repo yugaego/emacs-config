@@ -10,12 +10,17 @@
   (custom-theme-set-faces
    'misterioso
    `(cursor ((,class (:background "SteelBlue3"))) t)
-   `(header-line ((,class (:background "#3a4a5a"))) t)
-   `(mode-line ((,class (:background "SlateGray"))) t)
-   `(mode-line-buffer-id ((,class (:weight bold :slant italic))) t)
-   `(mode-line-emphasis ((,class (:foreground "green4"))) t)
-   `(mode-line-highlight ((,class (:background "SteelBlue4"))) t)
-   `(mode-line-inactive ((,class (:background "#212933"))) t)
+   `(header-line
+     ((,class (:foreground "LightSteelBlue" :background "#354555"))) t)
+   `(mode-line
+     ((,class (:foreground "LightSteelBlue2" :background "#455565"))) t)
+   `(mode-line-buffer-id
+     ((,class (:weight bold :slant italic))) t)
+   `(mode-line-highlight ((,class (:foreground "LightSkyBlue"))) t)
+   `(mode-line-inactive
+     ((,class (:foreground "LightSteelBlue4":background "#304050"))) t)
+   `(mode-line-emphasis ((,class (:foreground "#74af68"))) t)
+
    `(diff-added ((,class (:background "#334433"))) t)
    `(diff-removed ((,class (:background "#443333"))) t)
    `(diff-changed ((,class (:background "#444433"))) t)
@@ -23,18 +28,25 @@
    `(diff-refine-removed ((,class (:background "#663333"))) t)
    `(diff-refine-changed ((,class (:background "#666633"))) t)
    `(diff-hl-change ((,class (:foreground "#666633" :background "#444433"))) t)
-   `(diff-hl-dired-change ((,class (:foreground "#666633" :background "#2d3743"))) t)
+   `(diff-hl-dired-change
+     ((,class (:foreground "#666633" :background "#2d3743"))) t)
+
    `(show-paren-match ((,class (:background "SkyBlue4"))) t)
    `(show-paren-mismatch ((,class (:background "#ff4242"))) t)
+
    `(compilation-error ((,class (:foreground "#ff4242"))) t)
    `(compilation-info ((,class (:foreground "#74af68"))) t)
    `(compilation-warning ((,class (:foreground "#ffad29"))) t)
-   `(line-number-current-line ((,class (:background "#405060"))) t))
+
+   `(line-number ((,class (:foreground "LightSteelBlue4"))) t)
+   `(line-number-current-line
+     ((,class (:foreground "LightSteelBlue1" :background "#405060"))) t))
 
   (when (version<= "28.0.50" emacs-version)
     (custom-theme-set-faces
      'misterioso
-     `(bookmark-face ((,class (:background "#2d3743" :foreground "#ffad29")))))))
+     `(bookmark-face
+       ((,class (:background "#2d3743" :foreground "#ffad29")))))))
 
 (enable-theme 'misterioso)
 
@@ -54,7 +66,7 @@
 
 ;; SteelBlue4 SteelBlue3 SteelBlue2 SteelBlue1 SteelBlue
 
-;; #212933 #2d3743 #3a4a5a #405060
+;; #212933 #2d3743 #304050 #354555 #3a4a5a #405060 #e1e1e0
 
 ;; #334433 #336633
 
