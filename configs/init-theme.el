@@ -25,6 +25,10 @@
    `(diff-hl-change ((,class (:foreground "#666633" :background "#444433"))) t)
    `(diff-hl-dired-change ((,class (:foreground "#666633" :background "#2d3743"))) t)
    `(show-paren-match ((,class (:background "SkyBlue4"))) t)
+   `(show-paren-mismatch ((,class (:background "#ff4242"))) t)
+   `(compilation-error ((,class (:foreground "#ff4242"))) t)
+   `(compilation-info ((,class (:foreground "#74af68"))) t)
+   `(compilation-warning ((,class (:foreground "#ffad29"))) t)
    `(line-number-current-line ((,class (:background "#405060"))) t))
 
   (when (version<= "28.0.50" emacs-version)
