@@ -23,7 +23,7 @@
         gnus-add-to-list t
         gnus-summary-line-format "%U%R%z%I%[: %-16,16f %] %s\n")
 
-  ;;
+  ;; Initiate responding by hitting `f' or `F'.
   (setq gnus-mailing-list-groups "^gmane")
 
   (gnus-add-configuration
