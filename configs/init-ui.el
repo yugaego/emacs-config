@@ -3,9 +3,10 @@
 ;; Show line numbers.
 (setq-default display-line-numbers t)
 
-;; Construct unique buffer name for identically named files.
-;; 'forward prepends directory name.
-(setq uniquify-buffer-name-style 'forward)
+;; Construct unique buffer names.
+;; https://emacs.stackexchange.com/a/68501/28451
+(setq uniquify-buffer-name-style 'forward
+      uniquify-min-dir-content 1)
 
 ;; Place diff windows side by side.
 (setq ediff-split-window-function 'split-window-horizontally)
