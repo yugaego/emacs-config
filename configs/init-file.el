@@ -1,7 +1,7 @@
 ;;; init-file.el --- Configure files handling   -*- lexical-binding: t -*-
 
 ;;; Backups.
-;; Emacs saves one one backup by default,
+;; Emacs saves only one backup by default,
 ;; so we use 'auto-save-hook to force backups.
 (setq make-backup-files t         ; Backup a file the first time it is saved.
       backup-by-copying t         ; Preserve file owner and group.
