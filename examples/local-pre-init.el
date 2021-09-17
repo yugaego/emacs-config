@@ -7,6 +7,7 @@
 
 ;;; init-file
 (defconst yet-backup-directory-alist '(("." . "~/.backups-emacs")))
+(defconst yet-bookmark-default-file "~/path/to/emacs-bookmarks")
 
 ;;; init-grammar
 (defconst yet-browse-grammarly-doc-id "11111111")
