@@ -1,4 +1,3 @@
-#+ATTR_HTML: :alt GNU Emacs badge :align right
 [[https://www.gnu.org/software/emacs][file:./images/badge.png]]
 
 * Intro
@@ -17,7 +16,6 @@ but without usability sacrifice.
 This configuration was mostly tested as a GUI application on Mac OS,
 but it is expected to behave well on other operating systems too.
 
-#+ATTR_HTML: :alt Yet Emacs screenshot :width 1024
 [[file:./images/Emacs-screenshot.png]]
 
 See also [[https://github.com/caisah/emacs.dz][this list of other configurations and starter-kits]] for a source of inspiration
