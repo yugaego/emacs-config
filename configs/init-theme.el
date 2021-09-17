@@ -23,6 +23,9 @@
        (:foreground "SkyBlue4" :background "#304050" :font "Monospace"))) t)
    `(mode-line-emphasis ((,class (:foreground "#74af68"))) t)
 
+   `(diff-file-header ((,class (:background "#455565"))) t)
+   `(diff-header ((,class (:background "#304050"))) t)
+   `(diff-hunk-header ((,class (:background "#3a4a5a"))) t)
    `(diff-added ((,class (:background "#334433"))) t)
    `(diff-removed ((,class (:background "#443333"))) t)
    `(diff-changed ((,class (:background "#444433"))) t)
