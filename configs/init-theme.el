@@ -9,43 +9,43 @@
 
   (custom-theme-set-faces
    'misterioso
-   `(cursor ((,class (:background "SteelBlue3"))) t)
+   `(cursor ((,class (:background "SteelBlue3"))))
    `(header-line
-     ((,class (:foreground "LightSteelBlue" :background "#354555"))) t)
+     ((,class (:foreground "LightSteelBlue" :background "#354555"))))
    `(mode-line
      ((,class
-       (:foreground "SkyBlue2" :background "#455565" :font "Monospace"))) t)
+       (:foreground "SkyBlue2" :background "#455565" :font "Monospace"))))
    `(mode-line-buffer-id
-     ((,class (:weight bold :slant italic))) t)
-   `(mode-line-highlight ((,class (:foreground "SkyBlue3"))) t)
+     ((,class (:weight bold :slant italic))))
+   `(mode-line-highlight ((,class (:foreground "SkyBlue3"))))
    `(mode-line-inactive
      ((,class
-       (:foreground "SkyBlue4" :background "#304050" :font "Monospace"))) t)
-   `(mode-line-emphasis ((,class (:foreground "#74af68"))) t)
+       (:foreground "SkyBlue4" :background "#304050" :font "Monospace"))))
+   `(mode-line-emphasis ((,class (:foreground "#74af68"))))
 
-   `(diff-file-header ((,class (:background "#455565"))) t)
-   `(diff-header ((,class (:background "#304050"))) t)
-   `(diff-hunk-header ((,class (:background "#3a4a5a"))) t)
-   `(diff-added ((,class (:background "#334433"))) t)
-   `(diff-removed ((,class (:background "#443333"))) t)
-   `(diff-changed ((,class (:background "#444433"))) t)
-   `(diff-refine-added ((,class (:background "#336633"))) t)
-   `(diff-refine-removed ((,class (:background "#663333"))) t)
-   `(diff-refine-changed ((,class (:background "#666633"))) t)
-   `(diff-hl-change ((,class (:foreground "#666633" :background "#444433"))) t)
+   `(diff-file-header ((,class (:background "#455565"))))
+   `(diff-header ((,class (:background "#304050"))))
+   `(diff-hunk-header ((,class (:background "#3a4a5a"))))
+   `(diff-added ((,class (:background "#334433"))))
+   `(diff-removed ((,class (:background "#443333"))))
+   `(diff-changed ((,class (:background "#444433"))))
+   `(diff-refine-added ((,class (:background "#336633"))))
+   `(diff-refine-removed ((,class (:background "#663333"))))
+   `(diff-refine-changed ((,class (:background "#666633"))))
+   `(diff-hl-change ((,class (:foreground "#666633" :background "#444433"))))
    `(diff-hl-dired-change
-     ((,class (:foreground "#666633" :background "#2d3743"))) t)
+     ((,class (:foreground "#666633" :background "#2d3743"))))
 
-   `(show-paren-match ((,class (:background "SkyBlue4"))) t)
-   `(show-paren-mismatch ((,class (:background "#ff4242"))) t)
+   `(show-paren-match ((,class (:background "SkyBlue4"))))
+   `(show-paren-mismatch ((,class (:background "#ff4242"))))
 
-   `(compilation-error ((,class (:foreground "#ff4242"))) t)
-   `(compilation-info ((,class (:foreground "#74af68"))) t)
-   `(compilation-warning ((,class (:foreground "#ffad29"))) t)
+   `(compilation-error ((,class (:foreground "#ff4242"))))
+   `(compilation-info ((,class (:foreground "#74af68"))))
+   `(compilation-warning ((,class (:foreground "#ffad29"))))
 
-   `(line-number ((,class (:foreground "LightSteelBlue4"))) t)
+   `(line-number ((,class (:foreground "LightSteelBlue4"))))
    `(line-number-current-line
-     ((,class (:foreground "LightSteelBlue1" :background "#405060"))) t))
+     ((,class (:foreground "LightSteelBlue1" :background "#405060")))))
 
   (when (version<= "28.0.50" emacs-version)
     (custom-theme-set-faces
