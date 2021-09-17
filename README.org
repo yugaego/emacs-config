@@ -1,4 +1,4 @@
-[[https://www.gnu.org/software/emacs][./images/badge.png]]
+[[https://www.gnu.org/software/emacs][file:./images/badge.png]]
 
 * Intro
 
