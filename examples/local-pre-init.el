@@ -5,6 +5,9 @@
 ;;; init
 (defconst yet-exec-path '("/usr/local/bin"))
 
+;;; init-file
+(defconst yet-backup-directory-alist '(("." . "~/.backups-emacs")))
+
 ;;; init-grammar
 (defconst yet-browse-grammarly-doc-id "11111111")
 
@@ -15,10 +18,8 @@
 
 ;;; init-rmail
 (defconst yet-rmail-file-name "~/path/to/file")
-
 (defconst yet-rmail-primary-inbox-list
   "imaps://some%40domain.tld:pwd@imap.domain.tld:993")
-
 (defconst yet-rmail-default-file "~/path/to/file")
 
 ;;; init-smtp

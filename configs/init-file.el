@@ -4,14 +4,17 @@
 ;; Emacs saves one one backup by default,
 ;; so we use 'auto-save-hook to force backups.
 (setq make-backup-files t         ; Backup a file the first time it is saved.
-      backup-directory-alist
-      `(("." . ,(concat user-emacs-directory ".backups"))) ; Save to this directory.
       backup-by-copying t         ; Preserve file owner and group.
       version-control t           ; Save numbered files.
       delete-old-versions t       ; Delete old versions silently.
       kept-new-versions 20        ; Number of newest versions to keep.
       kept-old-versions 10)       ; Number of oldest versions to keep.
 
+;; Save backups to this folder(s).
+(setq backup-directory-alist
+      (if (boundp 'yet-backup-directory-alist)
+          yet-backup-directory-alist
+        `(("." . ,(concat user-emacs-directory ".backups")))))
 
 ;;; Auto-saving.
 ;; Configured to be used for its 'auto-save-hook.
