@@ -1,4 +1,4 @@
-[[https://www.gnu.org/software/emacs][https://img.shields.io/static/v1?logo=gnuemacs&logoColor=fafafa&label=Made%20for&message=GNU%20Emacs&color=7F5AB6&style=flat&cacheSeconds=3600]]
+[[https://www.gnu.org/software/emacs][./images/badge.png]]
 
 * Intro
 
