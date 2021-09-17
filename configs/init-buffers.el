@@ -1,5 +1,13 @@
 ;;; init-buffers.el --- Configure Emacs buffers/windows   -*- lexical-binding: t -*-
 
+;;; Ibuffer: operate on buffers like Dired.
+;; Use more advanced ibuffer in place of default buffers list.
+(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+
+(setq ibuffer-default-shrink-to-minimum-size t
+      ibuffer-expert t)
+
+
 ;;; Rotate (switch) buffers shown in the windows.
 ;; Based on https://github.com/banister/window-rotate-for-emacs
 (defun yet-rotate-windows-buffers--helper (wl buf1)
