@@ -17,21 +17,25 @@
 (setq help-window-select t)
 
 
-;;; Rotate (switch) buffers shown in the windows.
-;; Based on https://github.com/banister/window-rotate-for-emacs
-(defun yet-rotate-windows-buffers--helper (wl buf1)
-  (if (equal (cdr wl) nil)
-      (set-window-buffer (car wl) buf1)
+;;; Rotate (exchange) buffers shown in the windows.
+;;; Based on https://github.com/banister/window-rotate-for-emacs.
+
+(defun yet-rotate-windows-buffers--helper (windows initial-buffer)
+  "Recursively change buffers displayed in the WINDOWS list.
+After the change, the last window on the list displays the INITIAL-BUFFER."
+  (if (equal (cdr windows) nil)
+      (set-window-buffer (car windows) initial-buffer)
     (progn
-      (set-window-buffer (car wl) (window-buffer (cadr wl)))
-      (yet-rotate-windows-buffers--helper (cdr wl) buf1))))
+      (set-window-buffer (car windows) (window-buffer (cadr windows)))
+      (yet-rotate-windows-buffers--helper (cdr windows) initial-buffer))))
 
 (defun yet-rotate-windows-buffers ()
   "Rotate the buffers of the active frame windows."
   (interactive)
   (if (> (count-windows) 1)
-      (let ((wl (window-list)))
-        (yet-rotate-windows-buffers--helper wl (window-buffer (car wl))))))
+      (let ((windows (window-list)))
+        (yet-rotate-windows-buffers--helper windows
+                                            (window-buffer (car windows))))))
 
-(global-set-key (kbd "s-r") 'yet-rotate-windows-buffers)
+(global-set-key (kbd "C-c r") 'yet-rotate-windows-buffers)
 
