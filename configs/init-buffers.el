@@ -12,6 +12,11 @@
       ibuffer-expert t)
 
 
+;;; Help
+
+(setq help-window-select t)
+
+
 ;;; Rotate (switch) buffers shown in the windows.
 ;; Based on https://github.com/banister/window-rotate-for-emacs
 (defun yet-rotate-windows-buffers--helper (wl buf1)
