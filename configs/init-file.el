@@ -39,11 +39,6 @@
 (add-hook 'auto-save-hook 'yet-force-buffer-backup)
 
 
-;;; Built-in vc (version control) package configuration.
-(setq vc-handled-backends '(Git) ; Disable other VC systems to improve performance.
-      vc-make-backup-files t)    ; Backup files under VC system.
-
-
 ;; Move deleted files to trash.
 (setq delete-by-moving-to-trash t)
 
