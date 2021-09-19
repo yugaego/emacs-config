@@ -1,7 +1,11 @@
 ;;; init-buffers.el --- Configure Emacs buffers/windows   -*- lexical-binding: t -*-
 
-;;; Ibuffer: operate on buffers like Dired.
-;; Use more advanced ibuffer in place of default buffers list.
+;;; Ibuffer
+;;; List and operate on buffers.
+
+(require 'ibuffer)
+
+;; Rebind to ibuffer instead of using older list-buffers command.
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 
 (setq ibuffer-default-shrink-to-minimum-size t
