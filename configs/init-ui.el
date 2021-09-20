@@ -24,6 +24,9 @@
 (setq visible-bell nil
       ring-bell-function #'ignore)
 
+(when (version<= "28.0.50" emacs-version)
+  (global-set-key (kbd "C-c i") #'display-fill-column-indicator-mode))
+
 
 ;;; Scrolling
 
