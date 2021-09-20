@@ -42,6 +42,9 @@
 ;; use visual-line-mode.
 (setq-default word-wrap t)
 
+;; Alternative to M-d.
+(global-set-key (kbd "M-<delete>") 'kill-word)
+
 
 ;;; Search
 
