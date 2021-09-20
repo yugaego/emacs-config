@@ -29,6 +29,7 @@
   - =lisp-mode=: on =TAB= hit show possible completions (or indent line).
 
 *** Changed:
+  - Improved =Org-mode= settings.
   - Move =Markdown= settings to =init-markup.el=
   - Binding for buffers rotation changed from =s-r= to =C-c r=.
   - Switch from public domain to =AGPL= license.
