@@ -3,6 +3,7 @@
 ** Unreleased
 
 *** Added:
+  - Auto-mode for =XML= and =YAML=.
   - =diff-hl= package to mark changed hunks (under =git=) on the fringe.
   - ~examples/local-pre-init.el~ file.
   - Open configured files on Emacs load without =desktop-save-mode= state.
@@ -27,6 +28,7 @@
   - =lisp-mode=: on =TAB= hit show possible completions (or indent line).
 
 *** Changed:
+  - Move =Markdown= settings to =init-markup.el=
   - Binding for buffers rotation changed from =s-r= to =C-c r=.
   - Switch from public domain to =AGPL= license.
   - Switch from the namespace =yet/= to =yet-=.
