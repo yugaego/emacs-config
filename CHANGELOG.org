@@ -20,7 +20,7 @@
   - Load OS specific /font/.
   - Configured to use four spaces for /indentation/.
   - Show column number in the /mode line/.
-  - Highlight trailing whitespaces in =prog-mode=, =conf-mode= and =text-mode=.
+  - Advanced whitespaces visualization.
   - Support /optional local file/ loaded in the end of the initialization.
   - Highlight =Rust= and =PHP= programming languages syntax.
   - Add =rust-mode= key bindings.
