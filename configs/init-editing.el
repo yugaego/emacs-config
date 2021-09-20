@@ -3,6 +3,12 @@
 ;; Kill newline character at the end of line.
 (setq kill-whole-line t)
 
+;; Set default width to 80 columns.
+(setq-default fill-column 80)
+
+;; Handle EOL (end of lines).
+(setq-default require-final-newline 'ask)
+
 ;; Use this major-mode when not specified by a file
 ;; and for new buffers created with C-x b.
 (setq-default major-mode 'text-mode)
