@@ -127,6 +127,7 @@ there's a region, all lines that region covers will be duplicated."
 
 (put 'downcase-region 'disabled nil)    ; Enable this command.
 (put 'upcase-region 'disabled nil)      ; Enable this command.
+(put 'narrow-to-region 'disabled nil)   ; Enable narrowing.
 
 
 ;;; Undo.
