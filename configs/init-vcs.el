@@ -12,6 +12,15 @@
   (setq vc-git-revision-complete-only-branches t)) ; f.i. on `B s'.
 
 
+;; With vc-git, we write a commit message
+;; in *vc-log* buffer.
+(defun yet-log-edit-mode ()
+  (setq-local fill-column 72)
+  (auto-fill-mode 1))
+
+(add-hook 'log-edit-mode-hook #'yet-log-edit-mode)
+
+
 (require 'diff-hl)
 
 (with-eval-after-load 'diff-hl
