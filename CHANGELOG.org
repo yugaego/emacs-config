@@ -3,6 +3,7 @@
 ** Unreleased
 
 *** Added:
+  - =ELisp= configuration file.
   - Auto-mode for =XML= and =YAML=.
   - =diff-hl= package to mark changed hunks (under =git=) on the fringe.
   - ~examples/local-pre-init.el~ file.
