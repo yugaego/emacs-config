@@ -16,6 +16,10 @@
     (setq use-short-answers t)
   (defalias 'yes-or-no-p 'y-or-n-p))
 
+;; Stick minibuffer to its frame.
+(when (version<= "28.0.50" emacs-version)
+  (setq minibuffer-follows-selected-frame nil))
+
 ;; Maximum length of a minibuffer history lists:
 ;; file, buffer, command, and argument names.
 (setq-default history-length 1000)
