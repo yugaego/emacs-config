@@ -20,6 +20,10 @@
 ;; Show typed command right away.
 (setq echo-keystrokes 0.01)
 
+;; Disable screen flashing on any events.
+(setq visible-bell nil
+      ring-bell-function #'ignore)
+
 
 ;;; Scrolling
 
