@@ -31,6 +31,10 @@
 ;; Beginner friendly.
 ;; (setq scroll-margin 4)
 
+;; Toggle scroll-lock-mode.
+;; `l' mnemonic: Lock Line and scroLL.
+(global-set-key (kbd "C-c l") #'scroll-lock-mode)
+
 
 ;;; Calendar
 (setq calendar-week-start-day 1         ; Start week on Monday.
