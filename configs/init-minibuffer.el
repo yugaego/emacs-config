@@ -27,7 +27,10 @@
 
 (ido-mode 1)
 (setq ido-default-file-method 'selected-window ; Where to show a file.
-      ido-default-buffer-method 'selected-window) ; Where to show a buffer.
+      ido-default-buffer-method 'selected-window ; Where to show a buffer.
+      ido-enable-flex-matching t
+      ido-all-frames t
+      ido-auto-merge-delay-time 2)      ; Seconds before looking in other paths.
 
 ;; M-x command name completion.
 (fido-mode 1)
