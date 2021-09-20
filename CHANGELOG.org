@@ -3,6 +3,7 @@
 ** Unreleased
 
 *** Added:
+  - =diff-hl= package to mark changed hunks (under =git=) on the fringe.
   - ~examples/local-pre-init.el~ file.
   - Open configured files on Emacs load without =desktop-save-mode= state.
   - Command to exit =Emacs= and reset =desktop-save-mode= state.
