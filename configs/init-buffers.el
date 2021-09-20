@@ -17,6 +17,11 @@
 (setq help-window-select t)
 
 
+;; Default Nextstep binding `s-^' didn't work in my setup.
+;; {emacs-dir}/lisp/term/ns-win.el
+(global-set-key (kbd "s-6") #'kill-some-buffers)
+
+
 ;;; Rotate (exchange) buffers shown in the windows.
 ;;; Based on https://github.com/banister/window-rotate-for-emacs.
 
