@@ -12,7 +12,9 @@
 (setq-default default-directory "~/")
 
 ;; Accept one-letter answers.
-(defalias 'yes-or-no-p 'y-or-n-p)
+(if (version<= "28.0.50" emacs-version)
+    (setq use-short-answers t)
+  (defalias 'yes-or-no-p 'y-or-n-p))
 
 ;; Maximum length of a minibuffer history lists:
 ;; file, buffer, command, and argument names.
