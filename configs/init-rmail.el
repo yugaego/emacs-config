@@ -32,3 +32,11 @@
 (if (boundp 'yet-rmail-default-file)
     (setq rmail-default-file yet-rmail-default-file))
 
+
+(defun yet-message-mode ()
+  (when (version<= "28.0.50" emacs-version)
+    (display-fill-column-indicator-mode 1))
+  (auto-fill-mode -1))
+
+(add-hook 'message-mode-hook #'yet-message-mode)
+
