@@ -61,7 +61,15 @@
 (setq-default tab-width 4)
 
 
-;;; Highlight Trailing Whitespaces
+;;; Whitespaces
+
+(require 'whitespace)
+(setq whitespace-style '(face tabs spaces trailing lines-tail space-before-tab
+                              newline indentation empty space-after-tab
+                              space-mark tab-mark newline-mark
+                              missing-newline-at-eof))
+
+;; Highlight Trailing Whitespaces
 
 ;; Make sure highlighting disabled by default.
 (setq-default show-trailing-whitespace nil)
