@@ -1,8 +1,5 @@
 ;;; init-keybindings.el --- Custom keymap   -*- lexical-binding: t -*-
 
-;; Alternative to M-d.
-(global-set-key (kbd "M-<delete>") 'kill-word)
-
 ;; Dvorak / Kinesis usability.
 (global-set-key (kbd "C-z") ctl-x-map) ; alternative to C-x prefix key.
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
