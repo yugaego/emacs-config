@@ -11,3 +11,7 @@
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings 'super))
 
+
+;; Load URL at point.
+(goto-address-mode 1)
+
