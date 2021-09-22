@@ -17,6 +17,20 @@
 (setq help-window-select t)
 
 
+;;; Specifically configured buffers
+
+(customize-set-variable
+ 'display-buffer-alist
+ '(("\\*Ido Completions\\*"
+    (display-buffer-reuse-window display-buffer-at-bottom)
+    (window-height . fit-window-to-buffer))
+   ("\\*Help\\*"
+    (display-buffer-reuse-window display-buffer-below-selected)
+    (window-height . fit-window-to-buffer))))
+
+
+;;; Keybindings
+
 ;; Default Nextstep binding `s-^' didn't work in my setup.
 ;; {emacs-dir}/lisp/term/ns-win.el
 (global-set-key (kbd "s-6") #'kill-some-buffers)
