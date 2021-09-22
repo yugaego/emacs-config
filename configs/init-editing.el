@@ -15,17 +15,17 @@
 
 ;; Auto-refresh file-visiting buffers contents.
 (require 'autorevert)
-(global-auto-revert-mode)
+(global-auto-revert-mode 1)
 (setq auto-revert-verbose nil)
 
 ;; Highlight matching parenthesis.
 (require 'paren)
-(show-paren-mode)
+(show-paren-mode 1)
 (setq show-paren-delay 0)
 
 ;; Auto-insert closing parenthesis.
 (require 'elec-pair)
-(electric-pair-mode)
+(electric-pair-mode 1)
 (setq electric-pair-skip-self t)
 
 ;; How many times cursor blinks.
@@ -49,7 +49,7 @@
 ;;; Search
 
 ;; Highlight matches.
-(global-hi-lock-mode)
+(global-hi-lock-mode 1)
 
 (setq isearch-allow-scroll t            ; Continue on scrolling.
       isearch-lazy-count t)             ; Since Emacs 27.1
@@ -123,7 +123,7 @@ there's a region, all lines that region covers will be duplicated."
 (setq highlight-nonselected-windows t   ; Always highlight selection.
       mark-even-if-inactive nil) ; Do not perform actions on inactive regions.
 
-(delete-selection-mode)                 ; Delete marked region on typing.
+(delete-selection-mode 1)                 ; Delete marked region on typing.
 
 (put 'downcase-region 'disabled nil)    ; Enable this command.
 (put 'upcase-region 'disabled nil)      ; Enable this command.

@@ -15,7 +15,7 @@
 (setq ediff-split-window-function 'split-window-horizontally)
 
 ;; Show column number in the mode line.
-(column-number-mode)
+(column-number-mode 1)
 
 ;; Show typed command right away.
 (setq echo-keystrokes 0.01)

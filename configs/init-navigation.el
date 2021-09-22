@@ -13,5 +13,5 @@
 
 
 ;; Load URL at point.
-(goto-address-mode 1)
+(global-goto-address-mode 1)
 
