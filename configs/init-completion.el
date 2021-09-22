@@ -12,7 +12,7 @@
 
   (setq company-minimum-prefix-length 1
         company-idle-delay 0
-        company-tooltip-idle-delay 10        ; Enable tooltip manually
+        company-tooltip-idle-delay 10   ; Raise tooltip manually `C-c c'
         company-frontends
         '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
           company-preview-frontend
