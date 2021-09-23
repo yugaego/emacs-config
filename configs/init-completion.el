@@ -37,17 +37,22 @@
   (define-key company-active-map (kbd "C-n") nil)
   (define-key company-active-map (kbd "C-p") nil)
 
-  (global-set-key (kbd "C-c c")
-                  (lambda ()
-                    (interactive)
-                    (let ((company-tooltip-idle-delay 0.0))
-                      ;; Workaround to lookup completions from inside a word.
-                      (if (looking-at "\\S-")
-                          (save-excursion (insert " ")))
-                      (company-complete)
-                      (and company-candidates
-                           (company-call-frontends 'post-command)))))
+  (defun yet-company-complete-common-or-raise-tooltip ()
+    "Either insert the common part of all the candidates or pop-up a tooltip."
+    (interactive)
+    ;; Workaround to lookup completions from inside a word.
+    (when (looking-at "\\S-")
+      (save-excursion (insert " ")))
+    (when (company-manual-begin)
+      (let ((tick (buffer-chars-modified-tick)))
+        (call-interactively 'company-complete-common)
+        (when (eq tick (buffer-chars-modified-tick))
+          (let ((company-tooltip-idle-delay 0.0))
+            (company-complete)
+            (and company-candidates
+                 (company-call-frontends 'post-command)))))))
 
+  (global-set-key (kbd "C-c c") #'yet-company-complete-common-or-raise-tooltip)
 
   (defun yet-prog-mode-company ()
     (company-mode 1))
