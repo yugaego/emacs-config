@@ -8,3 +8,9 @@
         ("nongnu" . "https://elpa.nongnu.org/nongnu/")
         ("melpa" . "https://melpa.org/packages/")))
 
+(setq package-archive-priorities
+      '(("gnu-devel" . 10)
+        ("gnu" . 8)
+        ("nongnu" . 6)
+        ("melpa" . 4)))
+
