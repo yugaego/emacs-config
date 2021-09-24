@@ -15,3 +15,10 @@
 ;; Load URL at point.
 (global-goto-address-mode 1)
 
+
+;; Do not require repeated `C-u' hit
+;; when moving back in mark-ring.
+;; Example: `C-u C-SPC ... C-SPC'
+;; instead of `C-u C-SPC ... C-u C-SPC'.
+(setq set-mark-command-repeat-pop t)
+
