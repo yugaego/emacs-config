@@ -11,7 +11,7 @@
    'misterioso
    `(cursor ((,class (:background "SteelBlue3"))))
    `(header-line
-     ((,class (:foreground "LightSteelBlue" :background "#354555"))))
+     ((,class (:foreground "SlateGray3" :background "#354555"))))
    `(mode-line
      ((,class
        (:foreground "SkyBlue2" :background "#455565" :font "Monospace"))))
