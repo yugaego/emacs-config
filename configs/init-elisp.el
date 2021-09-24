@@ -26,7 +26,7 @@
 
 (require 'rainbow-mode)
 
-(with-eval-after-load 'rainbow
+(with-eval-after-load 'rainbow-mode
 
   (defun yet-emacs-lisp-rainbow ()
     (let ((buffer-name (buffer-file-name)))
