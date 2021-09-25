@@ -52,6 +52,5 @@
             (and company-candidates
                  (company-call-frontends 'post-command)))))))
 
-  (global-set-key (kbd "C-c c") #'yet-company-complete-common-or-raise-tooltip)
-
+  (global-set-key (kbd "C-c c") #'yet-company-complete-common-or-raise-tooltip))
 
