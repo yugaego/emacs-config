@@ -14,3 +14,9 @@
         ("nongnu" . 6)
         ("melpa" . 4)))
 
+;; Modify 'M-x list-packages' user interface.
+(when (version<= "28.0.50" emacs-version)
+  (setq package-name-column-width 24
+        package-version-column-width 20
+        package-status-column-width 10))
+
