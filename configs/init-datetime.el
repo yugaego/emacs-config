@@ -1,7 +1,20 @@
 ;;; init-datetime.el --- Date and time   -*- lexical-binding: t -*-
 
+;;; World Clock
+
+(require 'time)
+
+(when (version<= "28.0.50" emacs-version)
+  (setq world-clock-list '(("Asia/Bangkok" "Bangkok")
+                           ("Europe/Sofia" "Sofia")
+                           ("Europe/London" "London")
+                           ("America/New_York" "New York")
+                           ("America/Los_Angeles" "Los Angeles"))
+        world-clock-time-format "%R %z %Z [ %a %d %b ] [ %FT%T%z ]"))
+
 
 ;;; Calendar
+
 (require 'calendar)
 (require 'solar)
 
