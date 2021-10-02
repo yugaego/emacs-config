@@ -5,6 +5,9 @@
 (setq vc-handled-backends '(Git) ; Disable other VCS to improve performance.
       vc-make-backup-files t)    ; Still backup files under VCS.
 
+(when (version<= "28.0.50" emacs-version)
+  (setq vc-revert-show-diff 'kill))
+
 
 (require 'vc-git)
 
