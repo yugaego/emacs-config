@@ -54,6 +54,9 @@
 (setq isearch-allow-scroll t            ; Continue on scrolling.
       isearch-lazy-count t)             ; Since Emacs 27.1
 
+(when (version<= "28.0.50" emacs-version)
+  (setq isearch-allow-motion t)) ; Move between matches with M-<, M->, C-v, M-v.
+
 
 ;;; Indentation
 
@@ -75,7 +78,7 @@
 (defun yet-diff-mode ()
   (setq-local whitespace-style
               '(face tabs tab-mark spaces space-mark trailing lines-tail
-                     newline newline-mark))
+                     newline newline-mark missing-newline-at-eof))
   (whitespace-mode 1))
 
 (add-hook 'diff-mode-hook #'yet-diff-mode)
