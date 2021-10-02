@@ -27,5 +27,8 @@
   (setq gnus-mailing-list-groups "^gmane")
 
   (gnus-add-configuration
-   '(article (vertical 1.0 (summary .35 point) (article 1.0)))))
+   '(article (vertical 1.0 (summary .35 point) (article 1.0))))
+
+   (when (version<= "28.0.50" emacs-version)
+     (custom-set-variables '(smiley-style 'emoji))))
 
