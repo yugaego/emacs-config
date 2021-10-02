@@ -26,3 +26,6 @@
                  time-zone
                  (if time-zone ")")))
 
+(when (version<= "28.0.50" emacs-version)
+  (setq calendar-time-zone-style 'numeric))
+
