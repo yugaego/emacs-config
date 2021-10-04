@@ -5,6 +5,8 @@
 ;;; in favor of getting a nice-looking Emacs on startup.
 ;;; http://debbugs.gnu.org/cgi/bugreport.cgi?bug=50491
 
+(load-theme 'misterioso t)
+
 ;; Choose font by an operating system.
 (defconst yet-font
   (cond ((eq system-type 'darwin) "Monaco-17")
