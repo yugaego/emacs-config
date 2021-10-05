@@ -32,13 +32,31 @@
         company-dabbrev-code-modes t
         company-dabbrev-code-everywhere t)
 
-  (define-key company-active-map (kbd "M-n") #'company-select-next)
-  (define-key company-active-map (kbd "M-p") #'company-select-previous)
-  (define-key company-active-map (kbd "C-n") nil)
-  (define-key company-active-map (kbd "C-p") nil)
 
-  (defun yet-company-complete-common-or-raise-tooltip ()
-    "Either insert the common part of all the candidates or pop-up a tooltip."
+
+  ;;; Enable C-n/C-p navigation bindings only for tooltip.
+
+  (defun yet-company-keymap--filter-by-tooltip (command)
+    "Return a COMMAND if a tooltip is shown; otherwise return nil."
+    (when (and (boundp 'company-pseudo-tooltip-overlay)
+               (overlayp company-pseudo-tooltip-overlay))
+      command))
+
+  (define-key company-active-map (kbd "C-n")
+    '(menu-item ""
+                company-select-next-or-abort
+                :filter yet-company-keymap--filter-by-tooltip))
+
+  (define-key company-active-map (kbd "C-p")
+    '(menu-item ""
+                company-select-previous-or-abort
+                :filter yet-company-keymap--filter-by-tooltip))
+
+
+  ;;; Force show delayed tooltip.
+
+  (defun yet-company-complete-common-or-show-delayed-tooltip ()
+    "Either insert the common part of all the candidates or show a tooltip."
     (interactive)
     ;; Workaround to lookup completions from inside a word.
     (when (looking-at "\\S-")
@@ -52,5 +70,5 @@
             (and company-candidates
                  (company-call-frontends 'post-command)))))))
 
-  (global-set-key (kbd "C-c c") #'yet-company-complete-common-or-raise-tooltip))
+  (global-set-key (kbd "C-c c") #'yet-company-complete-common-or-show-delayed-tooltip))
 
