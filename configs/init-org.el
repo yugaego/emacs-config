@@ -28,17 +28,3 @@
 ;; Disable electric indent.
 ;; (add-hook 'org-mode-hook (lambda () (electric-indent-local-mode -1)))
 
-
-;;; Completion
-
-(with-eval-after-load 'company
-
-  (defun yet-org-mode-company ()
-    (setq-local company-backends '(company-dabbrev)
-                company-frontends
-                '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
-                  company-preview-frontend))
-    (company-mode 1))
-
-  (add-hook 'org-mode-hook #'yet-org-mode-company))
-

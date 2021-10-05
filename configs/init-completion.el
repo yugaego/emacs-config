@@ -10,6 +10,8 @@
 ;; https://github.com/company-mode/company-mode/discussions/1214
 (with-eval-after-load 'company
 
+  ;;; Configure standard settings.
+
   (setq company-minimum-prefix-length 1
         company-idle-delay 0
         company-tooltip-idle-delay 10   ; Raise tooltip manually `C-c c'
@@ -32,6 +34,38 @@
         company-dabbrev-code-modes t
         company-dabbrev-code-everywhere t)
 
+
+  ;;; Configure per major mode.
+
+  (defun yet-org-mode-company ()
+    (setq-local company-backends '(company-dabbrev)
+                company-frontends
+                '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
+                  company-preview-frontend))
+    (company-mode 1))
+
+  (add-hook 'org-mode-hook #'yet-org-mode-company)
+
+
+  (defun yet-prog-mode-company ()
+    (company-mode 1))
+
+  (add-hook 'prog-mode-hook #'yet-prog-mode-company)
+
+
+  (defun yet-c-mode-company ()
+    (setq-local company-backends
+                '((company-clang company-dabbrev-code company-files)
+                  company-dabbrev)))
+
+  (add-hook 'c-mode-common-hook #'yet-c-mode-company)
+
+
+  (defun yet-texinfo-mode-company ()
+    (setq-local company-backends '(company-dabbrev))
+    (company-mode 1))
+
+  (add-hook 'texinfo-mode-hook #'yet-texinfo-mode-company)
 
 
   ;;; Enable C-n/C-p navigation bindings only for tooltip.

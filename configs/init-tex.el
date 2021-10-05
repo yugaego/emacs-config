@@ -10,11 +10,3 @@
 
 (add-hook 'texinfo-mode-hook #'yet-texinfo-mode)
 
-(with-eval-after-load 'company
-
-  (defun yet-texinfo-company ()
-    (setq-local company-backends '(company-dabbrev))
-    (company-mode 1))
-
-  (add-hook 'texinfo-mode-hook #'yet-texinfo-company))
-
