@@ -1,5 +1,7 @@
 ;;; init-file.el --- Configure files handling   -*- lexical-binding: t -*-
 
+(setq safe-local-variable-values '((project-vc-merge-submodules . nil)))
+
 ;;; Backups.
 ;; Emacs saves only one backup by default,
 ;; so we use 'auto-save-hook to force backups.
