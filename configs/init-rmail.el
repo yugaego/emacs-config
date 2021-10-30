@@ -40,3 +40,9 @@
 
 (add-hook 'message-mode-hook #'yet-message-mode)
 
+
+(defun yet-rmail-mode ()
+  (rmail-sort-by-subject nil))
+
+(add-hook 'rmail-mode-hook #'yet-rmail-mode)
+
