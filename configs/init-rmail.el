@@ -47,3 +47,9 @@
 
 (add-hook 'rmail-mode-hook #'yet-rmail-mode)
 
+
+(defun yet-rmail-quit ()
+  (if rmail-buffer (kill-buffer rmail-buffer)))
+
+(add-hook 'rmail-quit-hook #'yet-rmail-quit)
+
