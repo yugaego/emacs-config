@@ -27,8 +27,9 @@
 (require 'diff-hl)
 
 (with-eval-after-load 'diff-hl
-  (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
-  (add-hook 'prog-mode-hook 'diff-hl-flydiff-mode)
+  (dolist (hook '(prog-mode-hook conf-mode-hook text-mode-hook))
+    (add-hook hook 'turn-on-diff-hl-mode)
+    (add-hook hook 'diff-hl-flydiff-mode))
   (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
   (add-hook 'dired-mode-hook 'diff-hl-dired-mode-unless-remote)
 
