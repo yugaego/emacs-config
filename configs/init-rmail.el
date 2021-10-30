@@ -13,7 +13,7 @@
 (setq rmail-movemail-program nil        ; See ../install-packages.el
       rmail-delete-after-output t       ; See `M-x rmail-output'.
       rmail-confirm-expunge nil
-      rmail-display-summary t
+      rmail-display-summary nil
       rmail-redisplay-summary t
       rmail-summary-line-count-flag nil        ; Show number of lines in email.
       rmail-mime-show-images 2097152           ; Show images smaller than N.
