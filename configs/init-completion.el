@@ -2,7 +2,7 @@
 
 (setq tab-always-indent 'complete)      ; Suggest completions on indented lines.
 
-(add-to-list 'completion-styles 'initials t) ; Suggest completions by initials too.
+(setq completion-styles '(basic substring))
 
 
 (require 'company)
