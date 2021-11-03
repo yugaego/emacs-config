@@ -63,6 +63,15 @@
   (add-hook 'c-mode-common-hook #'yet-c-mode-company)
 
 
+  (defun yet-php-mode-company ()
+    (setq-local
+     company-backends
+     '((company-capf company-keywords company-dabbrev-code company-files)
+       company-dabbrev)))
+
+  (add-hook 'php-mode-hook #'yet-php-mode-company)
+
+
   (defun yet-texinfo-mode-company ()
     (setq-local company-backends '(company-dabbrev))
     (company-mode 1))
