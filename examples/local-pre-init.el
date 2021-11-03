@@ -17,6 +17,14 @@
   '("~/path/to/file.org"
     "~/path/to/file.el"))
 
+;;; init-lsp
+(defconst yet-eglot-php-server
+  '("php"
+    "-d"
+    "memory_limit=1024M"
+    "/Users/path/to/phpactor/bin/phpactor"
+    "language-server"))
+
 ;;; init-rmail
 (defconst yet-rmail-file-name "~/path/to/file")
 (defconst yet-rmail-primary-inbox-list
