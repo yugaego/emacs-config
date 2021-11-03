@@ -11,7 +11,6 @@
 (setq ibuffer-default-shrink-to-minimum-size t
       ibuffer-expert t)
 
-
 ;;; Help
 
 (setq help-window-select t)
@@ -24,7 +23,7 @@
  '(("\\*Ido Completions\\*"
     (display-buffer-reuse-window display-buffer-at-bottom)
     (window-height . fit-window-to-buffer))
-   ("\\*Help\\*"
+   ("\\*Help\\|eldoc\\*"
     (display-buffer-reuse-window display-buffer-below-selected)
     (window-height . fit-window-to-buffer))))
 

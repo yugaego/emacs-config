@@ -1,5 +1,8 @@
 ;;; init.el --- Main configuration file   -*- lexical-binding: t -*-
 
+;; Identify if Emacs 28 features are available.
+(defconst yet-is-emacs-28 (version<= "28.0.50" emacs-version))
+
 ;; Pre-load optional local settings.
 (let ((local-pre-init (expand-file-name "local-pre-init.el" user-emacs-directory)))
   (when (file-exists-p local-pre-init)
