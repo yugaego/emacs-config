@@ -39,7 +39,18 @@
 (defconst yet-message-default-mail-headers
   "From: Name <name@xmpl.tld>\nReply-To: Name <name@xmpl.tld>\nFcc: ~/Mail/sent\n")
 
-;;; Pre-load Emacs package for development.
-;; git clone package DIR
-;; (require 'package "DIR/package.el")
+
+;;;; Working with a third-party package source.
+
+;;; Load source of the package.
+;; git clone some-package
+;; (defconst local-<package> "/path/to/<package>")
+
+;;; Install (with compilation) a package
+;;; to the default location ~/.emacs.d/elpa/
+;; (package-install-file local-<package>)
+
+;;; Load package from its source.
+;; (add-to-list 'load-path local-<package>)
+;; (require '<package> "<package>.el" t)
 
