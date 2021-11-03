@@ -19,8 +19,9 @@
         '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
           company-preview-frontend
           company-echo-metadata-frontend)
-        company-backends '((company-capf company-dabbrev-code company-files)
-                           company-dabbrev)
+        company-backends
+        '((company-capf company-keywords company-dabbrev-code company-files)
+          company-dabbrev)
         company-transformers '(delete-consecutive-dups
                                company-sort-by-occurrence
                                company-sort-prefer-same-case-prefix)
@@ -54,9 +55,10 @@
 
 
   (defun yet-c-mode-company ()
-    (setq-local company-backends
-                '((company-clang company-dabbrev-code company-files)
-                  company-dabbrev)))
+    (setq-local
+     company-backends
+     '((company-clang company-keywords company-dabbrev-code company-files)
+       company-dabbrev)))
 
   (add-hook 'c-mode-common-hook #'yet-c-mode-company)
 
