@@ -6,6 +6,7 @@
   (search-backward "POINT")
   (kill-word 1))
 
+;; Expand with `C-x a e'.
 (define-abbrev-table 'php-mode-abbrev-table
   '(("e" "echo \"POINT\"; exit();" yet-abbrev-cursor)
     ("p" "echo \"<pre>\";print_r(POINT);echo \"</pre>\";exit();"
