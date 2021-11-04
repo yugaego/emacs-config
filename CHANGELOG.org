@@ -3,6 +3,7 @@
 ** Unreleased
 
 *** Added:
+  - Configure several =PHP= abbreviations (templates).
   - /Language Server Protocol/ (LSP) client =eglot=.
   - Enable =company-mode= completions.
   - =ELisp= configuration file.
