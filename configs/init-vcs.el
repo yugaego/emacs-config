@@ -35,7 +35,5 @@
 
   (define-key diff-hl-command-map (kbd "/") #'diff-hl-revert-hunk)
   (define-key diff-hl-command-map (kbd "p") #'diff-hl-show-hunk-previous)
-  (define-key diff-hl-command-map (kbd "n") #'diff-hl-show-hunk-next)
-
-  (setq diff-hl-ask-before-revert-hunk nil))
+  (define-key diff-hl-command-map (kbd "n") #'diff-hl-show-hunk-next))
 
