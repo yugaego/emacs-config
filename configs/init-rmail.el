@@ -42,6 +42,7 @@
 
 
 (defun yet-rmail-mode ()
+  (rmail-sort-by-date nil)
   (rmail-sort-by-subject nil)
   (rmail-show-message 1))
 
