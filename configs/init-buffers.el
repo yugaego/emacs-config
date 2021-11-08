@@ -55,5 +55,5 @@ After the change, the last window on the list displays the INITIAL-BUFFER."
         (yet-rotate-windows-buffers--helper windows
                                             (window-buffer (car windows))))))
 
-(global-set-key (kbd "C-c r") 'yet-rotate-windows-buffers)
+(global-set-key (kbd "C-c b r") 'yet-rotate-windows-buffers)
 
