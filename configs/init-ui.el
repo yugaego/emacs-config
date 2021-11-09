@@ -9,7 +9,7 @@
 ;; Construct unique buffer names.
 ;; https://emacs.stackexchange.com/a/68501/28451
 (setq uniquify-buffer-name-style 'forward
-      uniquify-min-dir-content 1)
+      uniquify-min-dir-content 2)
 
 ;; Place diff windows side by side.
 (setq ediff-split-window-function 'split-window-horizontally)
