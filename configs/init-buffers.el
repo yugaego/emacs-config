@@ -25,7 +25,9 @@
     (window-height . fit-window-to-buffer))
    ("\\*Help\\|eldoc\\*"
     (display-buffer-reuse-window display-buffer-below-selected)
-    (window-height . fit-window-to-buffer))))
+    (window-height . fit-window-to-buffer))
+   ("\\*vc-dir\\*"
+    (display-buffer-same-window))))
 
 
 ;;; Keybindings
