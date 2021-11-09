@@ -32,9 +32,8 @@ to configure your own Emacs.
   - or ~$ git clone git@github.com:yugaego/emacs-config.git ~/.emacs.d~
 
 - Two, install configured packages:
-  - Open =install-packages.el= in Emacs.
-  - Execute command ~M-x eval-buffer~.
-  - Optionally, restart Emacs.
+  - =$ cd ~/.emacs.d=
+  - ~$ emacs --script install-packages.el~
 
 
 *** Structure
