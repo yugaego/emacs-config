@@ -13,7 +13,8 @@
     (setq eldoc-echo-area-display-truncation-message nil
           eldoc-echo-area-use-multiline-p nil))
 
-  (global-set-key (kbd "C-c e r") #'eglot-rename)
+  ;; Mnemonics `l': Language server protocol, `r' Rename.
+  (define-key eglot-mode-map (kbd "C-c l r") #'eglot-rename)
 
 
   (defun yet-php-mode-eglot ()

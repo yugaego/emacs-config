@@ -32,6 +32,7 @@
   - =lisp-mode=: on =TAB= hit show possible completions (or indent line).
 
 *** Changed:
+  - Start using custom bindings prefixes.
   - Remove =C-<tab>= in favor of =windmove= bindings.
   - Improved =Org-mode= settings.
   - Move =Markdown= settings to =init-markup.el=

@@ -25,7 +25,8 @@
       ring-bell-function #'ignore)
 
 (when (version<= "28.0.50" emacs-version)
-  (global-set-key (kbd "C-c i") #'display-fill-column-indicator-mode))
+  ;; Mnemonics: `b' Buffer, `i' Indicator (of fIll).
+  (global-set-key (kbd "C-c b i") #'display-fill-column-indicator-mode))
 
 
 ;;; Scrolling
@@ -39,6 +40,6 @@
 ;; (setq scroll-margin 4)
 
 ;; Toggle scroll-lock-mode.
-;; `l' mnemonic: Lock Line and scroLL.
-(global-set-key (kbd "C-c l") #'scroll-lock-mode)
+;; Mnemonics `b' Buffer, `l' Lock Line and scroLL.
+(global-set-key (kbd "C-c b l") #'scroll-lock-mode)
 

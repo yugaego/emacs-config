@@ -119,7 +119,8 @@ there's a region, all lines that region covers will be duplicated."
         (setq end (point)))
       (goto-char (+ origin (* (length region) arg) arg)))))
 
-(global-set-key (kbd "C-c d") 'yet-duplicate-current-line-or-region)
+;; Mnemonics: `e' Edit, `d' Duplicate.
+(global-set-key (kbd "C-c e d") 'yet-duplicate-current-line-or-region)
 
 
 ;;; Marked region (selection).
