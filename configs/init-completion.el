@@ -98,6 +98,9 @@
                 :filter yet-company-keymap--filter-by-tooltip))
 
 
+  ;;; Switch to the next backend.
+  (global-set-key (kbd "C-c /") #'company-other-backend)
+
   ;;; Force show delayed tooltip.
 
   (defun yet-company-complete-common-or-show-delayed-tooltip ()
