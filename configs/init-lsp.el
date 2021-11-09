@@ -21,7 +21,13 @@
     (when (boundp 'yet-eglot-php-server)
       (setq-local eglot-server-programs
                   `(((php-mode phps-mode) . ,yet-eglot-php-server))))
+      (setq eglot-stay-out-of '(company))
+      (setq-local company-backends
+                  '((company-abbrev company-capf company-keywords :separate)
+                    (company-dabbrev-code company-dabbrev)
+                    company-files)
+                  company-transformers '())
     (eglot-ensure))
 
-  (add-hook 'php-mode-hook #'yet-php-mode-eglot))
+  (add-hook 'php-mode-hook #'yet-php-mode-eglot 50))
 

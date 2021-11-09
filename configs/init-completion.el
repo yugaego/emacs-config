@@ -20,8 +20,9 @@
           company-preview-frontend
           company-echo-metadata-frontend)
         company-backends
-        '((company-capf company-keywords company-dabbrev-code company-files)
-          company-dabbrev)
+        '((company-capf company-keywords company-dabbrev-code)
+          company-dabbrev
+          company-files)
         company-transformers '(delete-consecutive-dups
                                company-sort-by-occurrence
                                company-sort-prefer-same-case-prefix)
@@ -39,7 +40,7 @@
   ;;; Configure per major mode.
 
   (defun yet-org-mode-company ()
-    (setq-local company-backends '(company-dabbrev)
+    (setq-local company-backends '(company-dabbrev company-files)
                 company-frontends
                 '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
                   company-preview-frontend))
@@ -57,8 +58,9 @@
   (defun yet-c-mode-company ()
     (setq-local
      company-backends
-     '((company-clang company-keywords company-dabbrev-code company-files)
-       company-dabbrev)))
+     '((company-clang company-keywords company-dabbrev-code)
+       company-dabbrev
+       company-files)))
 
   (add-hook 'c-mode-common-hook #'yet-c-mode-company)
 
@@ -66,10 +68,12 @@
   (defun yet-php-mode-company ()
     (setq-local
      company-backends
-     '((company-capf company-keywords company-dabbrev-code company-files)
-       company-dabbrev)))
+     '((company-abbrev company-capf company-keywords
+                       company-dabbrev-code :separate)
+       company-dabbrev company-files)
+     company-transformers '()))
 
-  (add-hook 'php-mode-hook #'yet-php-mode-company)
+  (add-hook 'php-mode-hook #'yet-php-mode-company -50)
 
 
   (defun yet-texinfo-mode-company ()
