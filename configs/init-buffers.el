@@ -34,7 +34,7 @@
 
 ;; Default Nextstep binding `s-^' didn't work in my setup.
 ;; {emacs-dir}/lisp/term/ns-win.el
-(global-set-key (kbd "s-6") #'kill-some-buffers)
+(global-set-key (kbd "C-c b k") #'kill-some-buffers)
 
 
 ;;; Rotate (exchange) buffers shown in the windows.
