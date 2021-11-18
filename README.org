@@ -74,7 +74,13 @@ Fallback to the pre-compiled binaries if you find it easier or are interested in
 
 - ~$ git clone git://git.savannah.gnu.org/emacs.git YOUR-DIR~
 - ~$ cd YOUR-DIR~
+- ~$ ./autogen.sh~
+  - This is an optional step.
+  - Only needed for the fresh clone of the code without the 'configure' script.
+  - On this step the 'configure' script and some related files are generated.
 - ~$ ./configure~
+  - With options: ~$ ./configure -C --with-mailutils --with-native-compilation~.
+  - ~$ ./configure --help~ lists all the available options.
 - ~$ make~
   - Compiles emacs into =YOUR-DIR/src/=.
   - Launch install [[https://stackoverflow.com/a/68289258/1319821][emacs from CLI]].
