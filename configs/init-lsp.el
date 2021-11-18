@@ -16,6 +16,12 @@
   ;; Mnemonics `l': Language server protocol, `r' Rename.
   (define-key eglot-mode-map (kbd "C-c l r") #'eglot-rename)
 
+  (defun yet-texinfo-mode-eglot ()
+    (setq eglot-stay-out-of '(company))
+    (setq-local company-backends '((company-abbrev company-capf)))
+    (eglot-ensure))
+
+  (add-hook 'texinfo-mode-hook #'yet-texinfo-mode-eglot)
 
   (defun yet-php-mode-eglot ()
     (when (boundp 'yet-eglot-php-server)
