@@ -122,5 +122,6 @@
             (and company-candidates
                  (company-call-frontends 'post-command)))))))
 
-  (global-set-key (kbd "C-c c") #'yet-company-complete-common-or-show-delayed-tooltip))
+  (define-key company-active-map (kbd "<tab>")
+              #'yet-company-complete-common-or-show-delayed-tooltip))
 
