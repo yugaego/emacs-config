@@ -134,6 +134,7 @@ there's a region, all lines that region covers will be duplicated."
 (put 'downcase-region 'disabled nil)    ; Enable this command.
 (put 'upcase-region 'disabled nil)      ; Enable this command.
 (put 'narrow-to-region 'disabled nil)   ; Enable narrowing.
+(put 'narrow-to-page 'disabled nil)     ; Enable Texinfo page narrowing.
 
 (when yet-is-emacs-28
   (setq widen-automatically nil))

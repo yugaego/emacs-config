@@ -10,5 +10,3 @@
 
 (add-hook 'texinfo-mode-hook #'yet-texinfo-mode)
 
-(put 'narrow-to-page 'disabled nil)
-
