@@ -135,6 +135,8 @@ there's a region, all lines that region covers will be duplicated."
 (put 'upcase-region 'disabled nil)      ; Enable this command.
 (put 'narrow-to-region 'disabled nil)   ; Enable narrowing.
 
+(when yet-is-emacs-28
+  (setq widen-automatically nil))
 
 ;;; Undo.
 (setq undo-limit 8000000                ; 8 MB
