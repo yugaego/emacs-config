@@ -103,7 +103,7 @@
 
 
   ;;; Switch to the next backend.
-  (global-key-binding (kbd "C-c C-/") #'company-other-backend)
+  (global-set-key (kbd "C-c C-/") #'company-other-backend)
 
   ;;; Force show delayed tooltip.
 
