@@ -2,6 +2,8 @@
 
 (require 'flymake)
 
+(setq flymake-mode-line-format '(" " flymake-mode-line-counters))
+
 (defun yet-emacs-lisp-mode ()
   (setq-local emacs-lisp-docstring-fill-column 75)
 
