@@ -102,8 +102,14 @@
                 :filter yet-company-keymap--filter-by-tooltip))
 
 
-  ;;; Switch to the next backend.
+  ;;; Custom bindings
+
+  ;; Switch to the next backend.
   (global-set-key (kbd "C-c C-/") #'company-other-backend)
+
+  ;; A more mnemonic binding (same as for xref-find-definitions)
+  ;; to pop-up buffer with the candidate's definition.
+  (define-key company-active-map (kbd "M-.") #'company-show-location)
 
   ;;; Force show delayed tooltip.
 
