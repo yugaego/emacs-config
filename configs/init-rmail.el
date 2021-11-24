@@ -16,7 +16,7 @@
       rmail-display-summary nil
       rmail-redisplay-summary t
       rmail-summary-line-count-flag nil        ; Show number of lines in email.
-      rmail-mime-show-images 2097152           ; Show images smaller than N.
+      rmail-mime-show-images 10485760          ; Show images smaller than 10 MB.
       rmail-mime-prefer-html nil               ; Show text version of email.
       rmail-output-reset-deleted-flag t)
 
