@@ -26,6 +26,7 @@
         company-transformers '(delete-consecutive-dups
                                company-sort-by-occurrence
                                company-sort-prefer-same-case-prefix)
+        company-lighter-base "C"
         company-format-margin-function nil
         company-require-match nil
         company-show-quick-access 'left
