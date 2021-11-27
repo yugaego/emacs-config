@@ -43,7 +43,7 @@
 
 (defun yet-rmail-mode ()
   (rmail-sort-by-date nil)
-  (rmail-sort-by-subject nil)
+  (rmail-sort-by-subject t)
   (rmail-show-message 1))
 
 (add-hook 'rmail-mode-hook #'yet-rmail-mode)
