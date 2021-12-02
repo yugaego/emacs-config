@@ -40,4 +40,7 @@
 ;;
 ;; - $ brew install gpg
 ;;     - OpenGPG encryption and signing tool.
+;;
+;; - $ brew install librsvg
+;;     - SVG images support.
 
