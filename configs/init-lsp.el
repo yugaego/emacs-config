@@ -13,6 +13,8 @@
     (setq eldoc-echo-area-display-truncation-message nil
           eldoc-echo-area-use-multiline-p nil))
 
+  (setq eglot-events-buffer-size 0)
+
   ;; Mnemonics `l': Language server protocol, `r' Rename.
   (define-key eglot-mode-map (kbd "C-c l r") #'eglot-rename)
 
