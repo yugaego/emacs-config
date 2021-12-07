@@ -1,8 +1,12 @@
 ;;; init-file.el --- Configure files handling   -*- lexical-binding: t -*-
 
-(setq safe-local-variable-values '((project-vc-merge-submodules . nil)))
+(setq safe-local-variable-values
+      '((project-vc-merge-submodules . nil)
+        (auto-fill-mode . 1)))
 
-;;; Backups.
+
+;;; Backups
+
 ;; Emacs saves only one backup by default,
 ;; so we use 'auto-save-hook to force backups.
 (setq make-backup-files t         ; Backup a file the first time it is saved.
@@ -18,7 +22,9 @@
           yet-backup-directory-alist
         `(("." . ,(concat user-emacs-directory ".backups")))))
 
-;;; Auto-saving.
+
+;;; Auto-saving
+
 ;; Configured to be used for its 'auto-save-hook.
 ;; To force auto-save at a given moment, use M-x do-auto-save.
 (setq auto-save-default t          ; Turn on auto-saving.
