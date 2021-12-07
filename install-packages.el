@@ -31,11 +31,11 @@
 ;;
 ;; - $ brew install multimarkdown
 ;;      - A Markdown parser better matching Github and Gitlab styles.
-;;      - Alternatively, use M-x gfm-mode included into the markdown-mode package.
+;;      - Alternatively, call command `gfm-mode' from markdown-mode package.
 ;;
 ;; - $ brew install mailutils
 ;;     - Allows to use POP3 via TLS channel by Rmail email client.
-;;     - Emacs automatically compiles with `mailutils' support if it is installed.
+;;     - Emacs auto-compiles with `mailutils' support if it is installed.
 ;;     - See more details in Info node `Movemail'.
 ;;
 ;; - $ brew install gpg
@@ -43,4 +43,9 @@
 ;;
 ;; - $ brew install librsvg
 ;;     - SVG images support.
+;;
+;; - $ brew install poppler automake
+;;     - To build server for additional PDF tools.
+;;     - See `yet-enable-pdf-tools' in ./examples/local-pre-init.el
+;;     - $ echo export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig >> ~/.bash_profile
 

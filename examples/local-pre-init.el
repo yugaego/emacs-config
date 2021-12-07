@@ -25,6 +25,11 @@
     "/Users/path/to/phpactor/bin/phpactor"
     "language-server"))
 
+;;; init-pdf
+;; Requires poppler server installation.
+;; See https://github.com/politza/pdf-tools.
+(defconst yet-enable-pdf-tools nil)
+
 ;;; init-rmail
 (defconst yet-rmail-file-name "~/path/to/file")
 (defconst yet-rmail-primary-inbox-list
