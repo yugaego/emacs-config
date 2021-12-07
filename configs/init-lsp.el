@@ -13,7 +13,8 @@
     (setq eldoc-echo-area-display-truncation-message nil
           eldoc-echo-area-use-multiline-p nil))
 
-  (setq eglot-events-buffer-size 0)
+  (setq eglot-events-buffer-size 0
+        eglot-autoreconnect 5)
 
   ;; Mnemonics `l': Language server protocol, `r' Rename.
   (define-key eglot-mode-map (kbd "C-c l r") #'eglot-rename)
@@ -29,12 +30,12 @@
     (when (boundp 'yet-eglot-php-server)
       (setq-local eglot-server-programs
                   `(((php-mode phps-mode) . ,yet-eglot-php-server))))
-      (setq eglot-stay-out-of '(company))
-      (setq-local company-backends
-                  '((company-abbrev company-capf company-keywords :separate)
-                    (company-dabbrev-code company-dabbrev)
-                    company-files)
-                  company-transformers '())
+    (setq eglot-stay-out-of '(company))
+    (setq-local company-backends
+                '((company-abbrev company-capf company-keywords :separate)
+                  (company-dabbrev-code company-dabbrev)
+                  company-files)
+                company-transformers '())
     (eglot-ensure))
 
   (add-hook 'php-mode-hook #'yet-php-mode-eglot 50))
