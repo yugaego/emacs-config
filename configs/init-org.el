@@ -20,11 +20,19 @@
 ;; Do not indent after headlines.
 (setq org-adapt-indentation nil)
 
-;; With electric indent enabled, use in the lists:
+;; With electric indent ENABLED, use in the lists:
 ;; - `C-j' to start a new line.
 ;; - `RET' to add a child item.
 ;; - `M-RET' to add a sibling.
 
-;; Disable electric indent.
-;; (add-hook 'org-mode-hook (lambda () (electric-indent-local-mode -1)))
+;; With electric indent DISABLED, use in the lists:
+;; - `RET' to start a new line.
+;; - `C-j' to add a child item.
+;; - `M-RET' to add a sibling.
+
+(defun yet-org-mode ()
+  (electric-indent-local-mode -1)
+  (auto-fill-mode 1))
+
+(add-hook 'org-mode-hook #'yet-org-mode)
 
