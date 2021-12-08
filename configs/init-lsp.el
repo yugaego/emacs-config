@@ -21,7 +21,7 @@
 
   (defun yet-texinfo-mode-eglot ()
     (setq eglot-stay-out-of '(company))
-    (setq-local company-backends '((company-abbrev company-capf)))
+    (setq-local company-backends '((company-capf :with company-dabbrev)))
     (eglot-ensure))
 
   (add-hook 'texinfo-mode-hook #'yet-texinfo-mode-eglot)
@@ -32,9 +32,9 @@
                   `(((php-mode phps-mode) . ,yet-eglot-php-server))))
     (setq eglot-stay-out-of '(company))
     (setq-local company-backends
-                '((company-abbrev company-capf company-keywords :separate)
-                  (company-dabbrev-code company-dabbrev)
-                  company-files)
+                '((:separate company-abbrev company-capf company-keywords
+                             :with company-dabbrev-code
+                  company-files))
                 company-transformers '())
     (eglot-ensure))
 
