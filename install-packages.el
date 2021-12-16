@@ -48,4 +48,6 @@
 ;;     - To build server for additional PDF tools.
 ;;     - See `yet-enable-pdf-tools' in ./examples/local-pre-init.el
 ;;     - $ echo export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig >> ~/.bash_profile
-
+;;
+;; - https://www.tug.org/mactex/
+;;     - LaTeX installation for org-mode.
