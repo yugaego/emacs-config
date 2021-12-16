@@ -6,6 +6,11 @@
       org-startup-folded nil           ; Open org files with the items expanded.
       org-support-shift-select 'always); Force enable shift-selection.
 
+(with-eval-after-load 'org
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((emacs-lisp . t)
+     (js . t))))
 
 ;;; Org Export
 
