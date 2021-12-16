@@ -4,7 +4,13 @@
 
 (require 'time)
 
-(when (version<= "28.0.50" emacs-version)
+(setq display-time-day-and-date t
+      display-time-24hr-format t
+      display-time-default-load-average nil)
+
+(display-time-mode 1)
+
+(when yet-is-emacs-28
   (setq world-clock-list '(("Asia/Bangkok" "Bangkok")
                            ("Europe/Sofia" "Sofia")
                            ("Europe/London" "London")
