@@ -35,7 +35,8 @@
         company-dabbrev-other-buffers t
         company-dabbrev-minimum-length 2
         company-dabbrev-code-modes t
-        company-dabbrev-code-everywhere t)
+        company-dabbrev-code-everywhere t
+        company-files-chop-trailing-slash nil)
 
 
   ;;; Configure per major mode.
