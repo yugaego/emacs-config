@@ -36,6 +36,7 @@
         company-dabbrev-minimum-length 2
         company-dabbrev-code-modes t
         company-dabbrev-code-everywhere t
+        company-files-exclusions '(".git/" ".DS_Store")
         company-files-chop-trailing-slash nil)
 
 
