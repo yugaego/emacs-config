@@ -9,7 +9,7 @@
 
   (custom-theme-set-faces
    'misterioso
-   `(cursor ((,class (:background "SteelBlue3"))))
+   `(cursor ((,class (:background "#fff"))))
    `(header-line
      ((,class (:foreground "SlateGray3" :background "#354555"))))
    `(mode-line
