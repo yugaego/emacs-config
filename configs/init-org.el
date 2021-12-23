@@ -12,12 +12,21 @@
    '((emacs-lisp . t)
      (js . t))))
 
+;; Enlarge LaTeX preview.
+(plist-put org-format-latex-options :scale 1.5)
+
+
 ;;; Org Export
 
 (require 'ox-html)
 
 (setq org-html-doctype "html5"
       org-html-html5-fancy t)
+
+(setq org-export-with-author nil
+      org-export-headline-levels 5
+      org-export-with-section-numbers nil
+      org-export-with-toc nil)
 
 
 ;;; Indentation
