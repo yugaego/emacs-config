@@ -10,6 +10,7 @@
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp . t)
+     (latex . t)
      (js . t))))
 
 ;; Enlarge LaTeX preview.
@@ -21,10 +22,16 @@
 (require 'ox-html)
 
 (setq org-html-doctype "html5"
-      org-html-html5-fancy t)
+      org-html-html5-fancy t
+      org-html-metadata-timestamp-format "%e %B %Y"
+      org-html-preamble nil
+      org-html-postamble t
+      org-html-postamble-format '(("en"
+                                  "<p class=\"date\">Created: %d</p>
+                                  <p class=\"date\">Last Modified: %C</p>"
+                                  )))
 
-(setq org-export-with-author nil
-      org-export-headline-levels 5
+(setq org-export-headline-levels 5
       org-export-with-section-numbers nil
       org-export-with-toc nil)
 
