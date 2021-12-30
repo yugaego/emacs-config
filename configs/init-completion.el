@@ -31,10 +31,10 @@
         company-require-match nil
         company-show-quick-access 'left
         company-tooltip-align-annotations t
+        company-dabbrev-ignore-case 'keep-prefix
         company-dabbrev-downcase nil
         company-dabbrev-other-buffers t
         company-dabbrev-minimum-length 2
-        company-dabbrev-code-modes t
         company-dabbrev-code-everywhere t
         company-files-exclusions '(".git/" ".DS_Store")
         company-files-chop-trailing-slash nil)
