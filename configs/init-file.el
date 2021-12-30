@@ -2,7 +2,8 @@
 
 (setq safe-local-variable-values
       '((project-vc-merge-submodules . nil)
-        (auto-fill-mode . 1)))
+        (auto-fill-mode . 1)
+        (company-dabbrev-other-buffers . nil)))
 
 
 ;;; Backups
