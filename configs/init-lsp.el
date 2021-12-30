@@ -16,8 +16,17 @@
   (setq eglot-events-buffer-size 0
         eglot-autoreconnect 5)
 
-  ;; Mnemonics `l': Language server protocol, `r' Rename.
+
+  ;;; Custom key bindings
+
+  ;; Mnemonic `l': Language Server Protocol.
+
+  (global-set-key (kbd "C-c l e") #'eglot)
+
+  (define-key eglot-mode-map (kbd "C-c l s") #'eglot-shutdown)
+
   (define-key eglot-mode-map (kbd "C-c l r") #'eglot-rename)
+
 
   (defun yet-texinfo-mode-eglot ()
     (setq eglot-stay-out-of '(company))
@@ -25,6 +34,7 @@
     (eglot-ensure))
 
   (add-hook 'texinfo-mode-hook #'yet-texinfo-mode-eglot)
+
 
   (defun yet-php-mode-eglot ()
     (when (boundp 'yet-eglot-php-server)
@@ -36,7 +46,9 @@
                              :with company-dabbrev-code
                   company-files))
                 company-transformers '())
-    (eglot-ensure))
+    ;; Enable manually instead.
+    ;; (eglot-ensure)
+    )
 
   (add-hook 'php-mode-hook #'yet-php-mode-eglot 50))
 
