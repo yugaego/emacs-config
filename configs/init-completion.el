@@ -114,23 +114,6 @@
   ;; to pop-up buffer with the candidate's definition.
   (define-key company-active-map (kbd "M-.") #'company-show-location)
 
-  ;;; Force show delayed tooltip.
-
-  (defun yet-company-complete-common-or-show-delayed-tooltip ()
-    "Either insert the common part of all the candidates or show a tooltip."
-    (interactive)
-    ;; Workaround to lookup completions from inside a word.
-    (when (looking-at "\\S-")
-      (save-excursion (insert " ")))
-    (when (company-manual-begin)
-      (let ((tick (buffer-chars-modified-tick)))
-        (call-interactively 'company-complete-common)
-        (when (eq tick (buffer-chars-modified-tick))
-          (let ((company-tooltip-idle-delay 0.0))
-            (company-complete)
-            (and company-candidates
-                 (company-call-frontends 'post-command)))))))
-
   (define-key company-active-map (kbd "<tab>")
-              #'yet-company-complete-common-or-show-delayed-tooltip))
+              #'company-complete-common-or-show-delayed-tooltip))
 
