@@ -14,7 +14,7 @@
 
   (setq company-minimum-prefix-length 1
         company-idle-delay 0
-        company-tooltip-idle-delay 10   ; Raise tooltip manually `C-c c'
+        company-tooltip-idle-delay 10   ; Raise tooltip manually with TAB.
         company-frontends
         '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
           company-preview-frontend
@@ -86,8 +86,10 @@
   (add-hook 'texinfo-mode-hook #'yet-texinfo-mode-company)
 
 
-  ;;; Enable C-n/C-p navigation bindings only for tooltip.
+  ;;; Custom bindings
 
+  ;; Enable C-n/C-p (select-next/previous) key bindings
+  ;; only when a tooltip is displayed.
   (defun yet-company-keymap--filter-by-tooltip (command)
     "Return a COMMAND if a tooltip is shown; otherwise return nil."
     (when (and (boundp 'company-pseudo-tooltip-overlay)
@@ -105,10 +107,11 @@
                 :filter yet-company-keymap--filter-by-tooltip))
 
 
-  ;;; Custom bindings
-
   ;; Switch to the next backend.
-  (global-set-key (kbd "C-c C-/") #'company-other-backend)
+  (global-set-key (kbd "C-c c /") #'company-other-backend)
+
+  ;; Switch to the company-files backend.
+  (global-set-key (kbd "C-c c f") #'company-files)
 
   ;; A more mnemonic binding (same as for xref-find-definitions)
   ;; to pop-up buffer with the candidate's definition.
