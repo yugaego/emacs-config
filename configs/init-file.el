@@ -32,8 +32,9 @@
       auto-save-interval 2000      ; Save after N characters typed.
       auto-save-timeout 86400)     ; Save after N seconds of idleness.
 
-;; Auto-save current file-visiting buffer, after 5 sec by default.
-(auto-save-visited-mode)
+;; Auto-save current file-visiting buffer.
+(auto-save-visited-mode 1)
+(setq auto-save-visited-interval 120)
 
 ;; Save to a temporary directory.
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
