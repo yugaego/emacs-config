@@ -26,7 +26,7 @@
 ;; Auto-insert closing parenthesis.
 (require 'elec-pair)
 (electric-pair-mode 1)
-(setq electric-pair-skip-self t)
+(setq electric-pair-skip-self nil)
 
 ;; How many times cursor blinks.
 ;; <1 means blink forever.
