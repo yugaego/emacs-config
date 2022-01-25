@@ -35,7 +35,21 @@
 
   (add-hook 'texinfo-mode-hook #'yet-texinfo-mode-eglot)
 
-
+  ;; Emacs used to freeze with auto-save-visited-mode enabled.
+  ;; If this happens again:
+  ;; 1. Consult `*EGLOT (www/php-mode) ...' buffers contents.
+  ;; - To instruct `ido' show these buffers, click `C-x b C-a'.
+  ;;
+  ;; 2. In ~/.config/phpactor:
+  ;; language_server.diagnostics_on_save: false
+  ;; logging.enabled: true
+  ;; logging.level: DEBUG
+  ;; logging.path: phpactor.log
+  ;; # use with $ phpactor rpc --replay
+  ;; rpc.store_replay: true
+  ;;
+  ;; 3. As the last resort,
+  ;; (setq-local auto-save-visited-mode nil)
   (defun yet-php-mode-eglot ()
     (when (boundp 'yet-eglot-php-server)
       (setq-local eglot-server-programs
@@ -46,9 +60,7 @@
                              :with company-dabbrev-code
                   company-files))
                 company-transformers '())
-    ;; Enable manually instead.
-    ;; (eglot-ensure)
-    )
+    (eglot-ensure))
 
   (add-hook 'php-mode-hook #'yet-php-mode-eglot 50))
 
