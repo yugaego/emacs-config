@@ -14,7 +14,7 @@
       rmail-delete-after-output t       ; See `M-x rmail-output'.
       rmail-confirm-expunge nil
       rmail-display-summary nil
-      rmail-redisplay-summary t
+      rmail-redisplay-summary nil
       rmail-summary-line-count-flag nil        ; Show number of lines in email.
       rmail-mime-show-images 10485760          ; Show images smaller than 10 MB.
       rmail-mime-prefer-html nil               ; Show text version of email.
