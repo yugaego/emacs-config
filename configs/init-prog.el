@@ -9,8 +9,8 @@
 
 ;;; PHP
 
-(defun yet-php-mode-hook ()
-  (when (fboundp 'c-toggle-electric-state)
-    (c-toggle-electric-state -1)))
+;; (defun yet-php-mode-hook ()
+;;   (when (fboundp 'c-toggle-electric-state)
+;;     (c-toggle-electric-state -1)))
 
-(add-hook 'php-mode-hook #'yet-php-mode-hook)
+;; (add-hook 'php-mode-hook #'yet-php-mode-hook)
