@@ -16,25 +16,9 @@
 ;; Enlarge LaTeX preview.
 (plist-put org-format-latex-options :scale 1.5)
 
+(require 'ox)
 
-;;; Org Export
-
-(require 'ox-html)
-
-(setq org-html-doctype "html5"
-      org-html-html5-fancy t
-      org-html-metadata-timestamp-format "%e %B %Y"
-      org-html-preamble nil
-      org-html-postamble t
-      org-html-postamble-format '(("en"
-                                  "<p class=\"date\">Created: %d</p>
-                                  <p class=\"date\">Last Modified: %C</p>"
-                                  )))
-
-(setq org-export-headline-levels 5
-      org-export-with-section-numbers nil
-      org-export-with-toc nil)
-
+(setq org-export-with-broken-links 'mark)
 
 ;;; Indentation
 
