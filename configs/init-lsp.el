@@ -9,12 +9,13 @@
   (setq eldoc-idle-delay 0.2
         eldoc-echo-area-prefer-doc-buffer 'maybe)
 
-  (when yet-is-emacs-28
+  (when (and (boundp 'yet-is-emacs-28) yet-is-emacs-28)
     (setq eldoc-echo-area-display-truncation-message nil
           eldoc-echo-area-use-multiline-p nil))
 
   (setq eglot-events-buffer-size 0
-        eglot-autoreconnect 5)
+        eglot-autoreconnect 5
+        eglot-autoshutdown t)
 
 
   ;;; Custom key bindings
