@@ -37,7 +37,7 @@
       ido-enable-flex-matching t
       ido-all-frames t
       ido-ignore-buffers '("\\` " "\\`*EGLOT")
-      ido-auto-merge-delay-time 2)      ; Seconds before looking in other paths.
+      ido-auto-merge-delay-time 3)      ; Seconds before looking in other paths.
 
 ;; M-x command name completion.
 (fido-mode 1)
