@@ -15,7 +15,7 @@
 
   (setq eglot-events-buffer-size 0
         eglot-autoreconnect 5
-        eglot-autoshutdown t)
+        eglot-autoshutdown nil)
 
 
   ;;; Custom key bindings
@@ -28,6 +28,11 @@
 
   (define-key eglot-mode-map (kbd "C-c l r") #'eglot-rename)
 
+  (advice-add 'project-kill-buffers
+              :before
+              (lambda ()
+                (ignore-errors (eglot-shutdown (eglot-current-server))))
+              '((name . "yet-project-kill-buffers")))
 
   (defun yet-texinfo-mode-eglot ()
     (setq eglot-stay-out-of '(company))
