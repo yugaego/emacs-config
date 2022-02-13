@@ -1,5 +1,7 @@
 ;;; init-shell.el --- Shell configuration   -*- lexical-binding: t -*-
 
+(require 'simple)
+
 ;; Show current dir in shell command prompt.
 (setq shell-command-prompt-show-cwd t)
 
@@ -11,4 +13,30 @@
 ;; https://stackoverflow.com/a/68634101/1319821
 ;; https://stackoverflow.com/a/903213/1319821
 (setq shell-command-switch "-ic")
+
+
+(require 'term)
+
+(setq term-completion-autolist t
+      term-completion-recexact t)
+
+(defun yet-term-mode ()
+  (term-set-escape-char ?\C-x)
+  (define-key term-raw-map "\M-y" 'yank-pop)
+  (define-key term-raw-map "\M-w" 'kill-ring-save))
+
+(add-hook 'term-mode-hook #'yet-term-mode)
+
+(defun yet-start-term ()
+  (interactive)
+  (term "bash"))
+
+(global-set-key (kbd "C-c t") #'yet-start-term)
+
+
+(require 'shell)
+
+(define-key shell-mode-map "\t" 'term-dynamic-complete)
+(define-key shell-mode-map "\M-?"
+  'term-dynamic-list-filename-completions)
 
