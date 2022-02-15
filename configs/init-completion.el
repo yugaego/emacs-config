@@ -14,7 +14,7 @@
 
   (setq company-minimum-prefix-length 1
         company-idle-delay 0
-        company-tooltip-idle-delay 10   ; Raise tooltip manually with TAB.
+        company-tooltip-idle-delay 100   ; Raise tooltip manually with TAB.
         company-frontends
         '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
           company-preview-frontend
