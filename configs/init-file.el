@@ -3,7 +3,8 @@
 (setq safe-local-variable-values
       '((project-vc-merge-submodules . nil)
         (auto-fill-mode . 1)
-        (company-dabbrev-other-buffers . nil)))
+        (company-dabbrev-other-buffers . nil)
+        (eval . (load (expand-file-name "yet-publish.el") t t t))))
 
 
 ;;; Backups
