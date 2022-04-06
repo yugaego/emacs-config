@@ -3,6 +3,7 @@
 (require 'gnus)
 (require 'gnus-start)
 (require 'gnus-sum)
+(require 'gnus-msg)
 
 (with-eval-after-load 'gnus
 
