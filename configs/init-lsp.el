@@ -61,11 +61,6 @@
       (setq-local eglot-server-programs
                   `(((php-mode phps-mode) . ,yet-eglot-php-server))))
     (setq eglot-stay-out-of '(company))
-    (setq-local company-backends
-                '((:separate company-abbrev company-capf company-keywords
-                             :with company-dabbrev-code
-                  company-files))
-                company-transformers '()))
     ;; (eglot-ensure))
 
   (add-hook 'php-mode-hook #'yet-php-mode-eglot 50))
