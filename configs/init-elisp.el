@@ -2,6 +2,8 @@
 
 (require 'flymake)
 
+(setq elisp-flymake-byte-compile-load-path (cons "./" load-path))
+
 (setq flymake-mode-line-format '(" " flymake-mode-line-counters))
 
 (defun yet-emacs-lisp-mode ()
