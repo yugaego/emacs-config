@@ -10,7 +10,7 @@
 
 (display-time-mode 1)
 
-(when yet-is-emacs-28
+(when (boundp 'world-clock-list)
   (setq world-clock-list '(("Asia/Bangkok" "Bangkok")
                            ("Europe/Sofia" "Sofia")
                            ("Europe/London" "London")

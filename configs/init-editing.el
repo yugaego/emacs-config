@@ -138,8 +138,7 @@ there's a region, all lines that region covers will be duplicated."
 (put 'narrow-to-region 'disabled nil)   ; Enable narrowing.
 (put 'narrow-to-page 'disabled nil)     ; Enable Texinfo page narrowing.
 
-(when yet-is-emacs-28
-  (setq widen-automatically nil))
+(setq widen-automatically nil)
 
 ;;; Undo.
 (setq undo-limit 8000000                ; 8 MB
