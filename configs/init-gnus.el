@@ -1,5 +1,9 @@
 ;;; init-gnus.el --- Gnus: news (mailing lists) reader   -*- lexical-binding: t -*-
 
+(require 'gnus)
+(require 'gnus-start)
+(require 'gnus-sum)
+
 (with-eval-after-load 'gnus
 
    ;;; Gnus
