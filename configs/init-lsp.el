@@ -61,6 +61,7 @@
       (setq-local eglot-server-programs
                   `(((php-mode phps-mode) . ,yet-eglot-php-server))))
     (setq eglot-stay-out-of '(company))
+    (setq-local auto-save-visited-mode 60))
     ;; (eglot-ensure))
 
   (add-hook 'php-mode-hook #'yet-php-mode-eglot 50))
