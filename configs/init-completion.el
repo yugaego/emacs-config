@@ -4,8 +4,10 @@
 
 (setq completion-styles '(basic substring partial-completion))
 
-
 (require 'company)
+(require 'company-dabbrev)
+(require 'company-dabbrev-code)
+(require 'company-files)
 
 ;; https://github.com/company-mode/company-mode/discussions/1214
 (with-eval-after-load 'company
