@@ -29,8 +29,10 @@
    ("\\*vc-dir\\*"
     (display-buffer-same-window))))
 
-(when yet-is-emacs-28
-  (with-eval-after-load 'comp
+(require 'comp)
+
+(with-eval-after-load 'comp
+  (when (boundp 'native-comp-async-report-warnings-errors)
     (setq native-comp-async-report-warnings-errors 'silent)))
 
 ;;; Keybindings
