@@ -33,7 +33,7 @@
         company-require-match nil
         company-show-quick-access 'left
         company-tooltip-align-annotations t
-        company-dabbrev-ignore-case 'keep-prefix
+        company-dabbrev-ignore-case nil
         company-dabbrev-downcase nil
         company-dabbrev-other-buffers t
         company-dabbrev-minimum-length 2
