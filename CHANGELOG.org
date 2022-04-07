@@ -2,6 +2,15 @@
 
 ** Unreleased
 
+** v2.0.0 - 2022-04-07
+
+Improved usability of everyday tasks in writing and programming, especially in
+regard to:
+- emails and mailing lists.
+- programming: ELisp, PHP, CSS, HTML, Rust.
+- text writing and reading.
+- Emacs UI and lifecycle.
+
 *** Added:
   - Additional =PDF= tools.
   - Configure several =PHP= abbreviations (templates).
