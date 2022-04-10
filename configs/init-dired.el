@@ -8,7 +8,11 @@
 ;; Auto-refresh Dired when file changes.
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
-(when (version<= "28.0.50" emacs-version)
-  (setq dired-kill-when-opening-new-dired-buffer t ; No more buffers spawned!
-        dired-switches-in-mode-line 'as-is))       ; Show all switches.
+;; No more buffers spawned!
+(when (boundp 'dired-kill-when-opening-new-dired-buffer)
+  (setq dired-kill-when-opening-new-dired-buffer t))
+
+;; Show all switches.
+(when (boundp 'dired-switches-in-mode-line)
+  (setq dired-switches-in-mode-line 'as-is))
 

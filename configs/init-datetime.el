@@ -32,6 +32,6 @@
                  time-zone
                  (if time-zone ")")))
 
-(when (version<= "28.0.50" emacs-version)
+(when (boundp 'calendar-time-zone-style)
   (setq calendar-time-zone-style 'numeric))
 

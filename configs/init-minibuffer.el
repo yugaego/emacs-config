@@ -12,12 +12,12 @@
 (setq-default default-directory "~/")
 
 ;; Accept one-letter answers.
-(if (version<= "28.0.50" emacs-version)
+(if (boundp 'use-short-answers)
     (setq use-short-answers t)
   (defalias 'yes-or-no-p 'y-or-n-p))
 
 ;; Stick minibuffer to its frame.
-(when (version<= "28.0.50" emacs-version)
+(when (boundp 'minibuffer-follows-selected-frame)
   (setq minibuffer-follows-selected-frame nil))
 
 ;; Maximum length of a minibuffer history lists:

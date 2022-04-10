@@ -41,7 +41,7 @@
 
 
 (defun yet-message-mode ()
-  (when (version<= "28.0.50" emacs-version)
+  (when (fboundp 'display-fill-column-indicator-mode)
     (display-fill-column-indicator-mode 1))
   (auto-fill-mode 1))
 

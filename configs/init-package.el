@@ -15,7 +15,9 @@
         ("melpa" . 4)))
 
 ;; Modify 'M-x list-packages' user interface.
-(when (version<= "28.0.50" emacs-version)
+(when (and (boundp 'package-name-column-width)
+           (boundp 'package-version-column-width)
+           (boundp 'package-status-column-width))
   (setq package-name-column-width 24
         package-version-column-width 20
         package-status-column-width 10))

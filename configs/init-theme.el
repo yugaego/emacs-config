@@ -47,7 +47,7 @@
    `(line-number-current-line
      ((,class (:foreground "LightSteelBlue1" :background "#405060")))))
 
-  (when (version<= "28.0.50" emacs-version)
+  (when (facep 'bookmark-face)
     (custom-theme-set-faces
      'misterioso
      `(bookmark-face

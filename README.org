@@ -64,7 +64,7 @@ For example, on Mac OS you may:
 
 *** Install
 
-Tested with the Emacs versions 26.3, 27.1, 28.0.50.
+Tested with the Emacs versions 26.3, 27.1, 28.1.
 
 Compiling from source is simple enough, so try starting with it.\\
 Fallback to the pre-compiled binaries if you find it easier or are interested in a specific distribution with extras.

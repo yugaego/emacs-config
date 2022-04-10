@@ -56,8 +56,9 @@
 (setq isearch-allow-scroll t            ; Continue on scrolling.
       isearch-lazy-count t)             ; Since Emacs 27.1
 
-(when (version<= "28.0.50" emacs-version)
-  (setq isearch-allow-motion t)) ; Move between matches with M-<, M->, C-v, M-v.
+;; Move between matches with M-<, M->, C-v, M-v.
+(when (boundp 'isearch-allow-motion)
+  (setq isearch-allow-motion t))
 
 
 ;;; Indentation

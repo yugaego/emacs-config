@@ -24,7 +24,7 @@
 (setq visible-bell nil
       ring-bell-function #'ignore)
 
-(when (version<= "28.0.50" emacs-version)
+(when (fboundp 'display-fill-column-indicator-mode)
   ;; Mnemonics: `b' Buffer, `i' Indicator (of fIll).
   (global-set-key (kbd "C-c b i") #'display-fill-column-indicator-mode))
 
