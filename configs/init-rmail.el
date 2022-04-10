@@ -1,5 +1,12 @@
 ;;; init-rmail.el --- Configure Rmail email client   -*- lexical-binding: t -*-
 
+;;; Hint: use Mailabbrev or BBDB to insert addresses.
+;; Mailabbrev is straightforward: create ~/.mailrc with, f.i.:
+;; alias me "My Name <my@example.com>"
+;; alias others "Another Name <they@example.com>" "Other <she@example.com>"
+;; Then use <RET> or <TAB> to complete "me" or "others" in message-mode.
+;; BBDB is more sophisticated and can be configured to auto-collect addresses.
+
 (require 'rmail)
 (require 'rmailsum)
 (require 'rmailmm)
