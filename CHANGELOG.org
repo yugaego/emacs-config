@@ -2,6 +2,12 @@
 
 ** Unreleased
 
+*** Added:
+  - Hint how to complete email addresses.
+
+*** Changed:
+  - Improve =rust-mode= usability.
+
 ** v2.0.0 - 2022-04-07
 
 Improved usability of everyday tasks in writing and programming, especially in
