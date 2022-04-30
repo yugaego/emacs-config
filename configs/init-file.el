@@ -35,7 +35,7 @@
 
 ;; Auto-save current file-visiting buffer.
 (auto-save-visited-mode 1)
-(setq auto-save-visited-interval 120)
+(setq auto-save-visited-interval 300)
 
 ;; Save to a temporary directory.
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
