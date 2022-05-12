@@ -2,15 +2,27 @@
 
 (setq abbrev-file-name (locate-user-emacs-file "yet-abbrev-defs"))
 
+(defconst yet-abbrev-cursor-marker "POINT")
+
 (defun yet-abbrev-cursor ()
-  (search-backward "POINT")
-  (kill-word 1))
+  (search-backward yet-abbrev-cursor-marker)
+  (delete-char (length yet-abbrev-cursor-marker)))
 
 ;; Expand with `C-x a e'.
 (define-abbrev-table 'php-mode-abbrev-table
-  '(("e" "echo \"POINT\"; exit();" yet-abbrev-cursor)
-    ("p" "echo \"<pre>\";print_r(POINT);echo \"</pre>\";exit();"
+  `(("e" ,(concat "echo \""
+                  yet-abbrev-cursor-marker
+                  "\"; exit();")
      yet-abbrev-cursor)
-    ("vd" "echo \"<pre>\";var_dump(POINT);echo \"</pre>\";exit();"
+    ("t" ,(concat "// TODO::"
+                  (upcase user-login-name))
+     yet-abbrev-cursor)
+    ("p" ,(concat "echo \"<pre>\";print_r("
+                  yet-abbrev-cursor-marker
+                  ");echo \"</pre>\";exit();")
+     yet-abbrev-cursor)
+    ("v" ,(concat "echo \"<pre>\";var_dump("
+                   yet-abbrev-cursor-marker
+                   ");echo \"</pre>\";exit();")
      yet-abbrev-cursor)))
 
