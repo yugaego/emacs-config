@@ -15,7 +15,8 @@
                   "\"; exit();")
      yet-abbrev-cursor)
     ("t" ,(concat "// TODO::"
-                  (upcase user-login-name))
+                  (upcase user-login-name)
+                  " ")
      yet-abbrev-cursor)
     ("p" ,(concat "echo \"<pre>\";print_r("
                   yet-abbrev-cursor-marker
