@@ -114,6 +114,9 @@
   ;; Switch to the company-files backend.
   (global-set-key (kbd "C-c c f") #'company-files)
 
+  ;; Switch to the company-dabbrev backend.
+  (global-set-key (kbd "C-c c d") #'company-dabbrev)
+
   ;; A more mnemonic binding (same as for xref-find-definitions)
   ;; to pop-up buffer with the candidate's definition.
   (define-key company-active-map (kbd "M-.") #'company-show-location)
