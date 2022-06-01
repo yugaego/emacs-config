@@ -6,10 +6,6 @@
 
 (with-eval-after-load 'eglot
 
-  ;; (set-face-attribute 'eglot-highlight-symbol-face nil
-  ;;                     :weight 'normal
-  ;;                     :background "#405060")
-
   (setq eldoc-idle-delay 1
         eldoc-documentation-strategy #'eldoc-documentation-default
         eldoc-echo-area-prefer-doc-buffer 'maybe
@@ -19,7 +15,7 @@
     (setq eldoc-echo-area-display-truncation-message nil))
 
   ;; TEST
-  (setq eglot-stay-out-of '(eldoc-documentation-strategy company)
+  (setq eglot-stay-out-of '(company)
         eglot-send-changes-idle-time 0.5)
 
 
@@ -43,7 +39,7 @@
   (defun yet-rust-mode-eglot ()
     (when (boundp 'yet-eglot-rust-server)
       (setq-local eglot-server-programs
-                  '((rust-mode . ,yet-eglot-rust-server))))
+                  `((rust-mode . ,yet-eglot-rust-server))))
     (eglot-ensure))
 
   (add-hook 'rust-mode-hook #'yet-rust-mode-eglot)
