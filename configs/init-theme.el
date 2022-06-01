@@ -51,7 +51,13 @@
     (custom-theme-set-faces
      'misterioso
      `(bookmark-face
-       ((,class (:background "#2d3743" :foreground "#ffad29")))))))
+       ((,class (:background "#2d3743" :foreground "#ffad29"))))))
+
+  (when (facep 'eglot-highlight-symbol-face)
+    (custom-theme-set-faces
+     'misterioso
+     `(eglot-highlight-symbol-face
+       ((,class (:background "#405060")))))))
 
 (enable-theme 'misterioso)
 
