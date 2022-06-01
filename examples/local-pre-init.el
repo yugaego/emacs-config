@@ -23,7 +23,10 @@
     "-d"
     "memory_limit=1024M"
     "/Users/path/to/phpactor/bin/phpactor"
+    ;; "-vvv"
     "language-server"))
+
+(defconst yet-eglot-rust-server '("~/.cargo/bin/rust-analyzer"))
 
 ;;; init-pdf
 ;; Requires poppler server installation.
