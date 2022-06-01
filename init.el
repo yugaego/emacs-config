@@ -2,10 +2,9 @@
 
 ;; Tweak performance.
 ;; https://emacs-lsp.github.io/lsp-mode/page/performance/
-(setq read-process-output-max (* 1024 1024 2) ; try 1-3 Mb.
-      gc-cons-threshold (* 2 800000)          ; multiply initial 800 Kb by 2.
+(setq read-process-output-max (* 1024 1024 3) ; try 1-3 Mb.
+      gc-cons-threshold (* 8 800000)          ; multiply initial 800 Kb by 2.
       garbage-collection-messages t)
-
 
 ;; Pre-load optional local settings.
 (let ((local-pre-init (expand-file-name "local-pre-init.el" user-emacs-directory)))
