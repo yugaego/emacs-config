@@ -72,8 +72,7 @@
 
   (defun yet-php-mode-company ()
    (setq-local company-backends
-                '(company-capf
-                  (company-keywords :with company-dabbrev company-files))
+                '((company-keywords company-dabbrev company-capf))
                 company-transformers '()))
 
   (add-hook 'php-mode-hook #'yet-php-mode-company -50)
@@ -115,6 +114,9 @@
 
   ;; Switch to the company-dabbrev backend.
   (global-set-key (kbd "C-c c d") #'company-dabbrev)
+
+  ;; Switch to the company-capf backend.
+  (global-set-key (kbd "C-c c c") #'company-capf)
 
   ;; A more mnemonic binding (same as for xref-find-definitions)
   ;; to pop-up buffer with the candidate's definition.
