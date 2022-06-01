@@ -60,6 +60,7 @@
 (when (boundp 'isearch-allow-motion)
   (setq isearch-allow-motion t))
 
+(global-set-key (kbd "M-s M-s") #'isearch-forward-thing-at-point)
 
 ;;; Indentation
 

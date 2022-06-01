@@ -5,6 +5,7 @@
 *** Added:
   - Hint how to complete email addresses.
   - Package =web-mode=.
+  - Keybinding =M-s M-s= for ~M-x isearch-forward-thing-at-point~.
 
 *** Changed:
   - Improve =rust-mode= usability.
