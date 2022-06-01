@@ -4,6 +4,7 @@
 
 *** Added:
   - Hint how to complete email addresses.
+  - Package =web-mode=.
 
 *** Changed:
   - Improve =rust-mode= usability.
