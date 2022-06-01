@@ -10,7 +10,6 @@
   ;;                     :weight 'normal
   ;;                     :background "#405060")
 
-  ;; TEST
   (setq eldoc-idle-delay 1
         eldoc-documentation-strategy #'eldoc-documentation-default
         eldoc-echo-area-prefer-doc-buffer 'maybe
