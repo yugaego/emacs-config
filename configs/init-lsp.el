@@ -6,16 +6,22 @@
 
 (with-eval-after-load 'eglot
 
-  (setq eldoc-idle-delay 0.2
+  ;; (set-face-attribute 'eglot-highlight-symbol-face nil
+  ;;                     :weight 'normal
+  ;;                     :background "#405060")
+
+  ;; TEST
+  (setq eldoc-idle-delay 1
+        eldoc-documentation-strategy #'eldoc-documentation-default
         eldoc-echo-area-prefer-doc-buffer 'maybe
         eldoc-echo-area-use-multiline-p nil)
 
   (when (boundp eldoc-echo-area-display-truncation-message)
     (setq eldoc-echo-area-display-truncation-message nil))
 
-  (setq eglot-events-buffer-size 0
-        eglot-autoreconnect 5
-        eglot-autoshutdown nil)
+  ;; TEST
+  (setq eglot-stay-out-of '(eldoc-documentation-strategy company)
+        eglot-send-changes-idle-time 0.5)
 
 
   ;;; Custom key bindings
@@ -34,35 +40,30 @@
                 (ignore-errors (eglot-shutdown (eglot-current-server))))
               '((name . "yet-project-kill-buffers")))
 
+
+  (defun yet-rust-mode-eglot ()
+    (when (boundp 'yet-eglot-rust-server)
+      (setq-local eglot-server-programs
+                  '((rust-mode . ,yet-eglot-rust-server))))
+    (eglot-ensure))
+
+  (add-hook 'rust-mode-hook #'yet-rust-mode-eglot)
+
+
   (defun yet-texinfo-mode-eglot ()
-    (setq eglot-stay-out-of '(company))
-    (setq-local company-backends '((company-capf :with company-dabbrev)))
+    (setq-local company-backends
+                '((company-capf :with company-dabbrev)))
     (eglot-ensure))
 
   (add-hook 'texinfo-mode-hook #'yet-texinfo-mode-eglot)
 
-  ;; Emacs used to freeze with auto-save-visited-mode enabled.
-  ;; If this happens again:
-  ;; 1. Consult `*EGLOT (www/php-mode) ...' buffers contents.
-  ;; - To instruct `ido' show these buffers, click `C-x b C-a'.
-  ;;
-  ;; 2. In ~/.config/phpactor:
-  ;; language_server.diagnostics_on_save: false
-  ;; logging.enabled: true
-  ;; logging.level: DEBUG
-  ;; logging.path: phpactor.log
-  ;; # use with $ phpactor rpc --replay
-  ;; rpc.store_replay: true
-  ;;
-  ;; 3. As the last resort,
-  ;; (setq-local auto-save-visited-mode nil)
+
   (defun yet-php-mode-eglot ()
     (when (boundp 'yet-eglot-php-server)
       (setq-local eglot-server-programs
                   `(((php-mode phps-mode) . ,yet-eglot-php-server))))
-    (setq eglot-stay-out-of '(company))
-    (setq-local auto-save-visited-mode 60))
-    ;; (eglot-ensure))
+    (eglot-ensure))
 
-  (add-hook 'php-mode-hook #'yet-php-mode-eglot 50))
+  (add-hook 'php-mode-hook #'yet-php-mode-eglot)
+  (add-hook 'web-mode-hook #'yet-php-mode-eglot))
 
