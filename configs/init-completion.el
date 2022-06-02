@@ -72,8 +72,7 @@
 
   (defun yet-php-mode-company ()
    (setq-local company-backends
-                '((company-keywords company-dabbrev company-capf))
-                company-transformers '()))
+                '((company-dabbrev-code company-keywords company-capf))))
 
   (add-hook 'php-mode-hook #'yet-php-mode-company -50)
 
