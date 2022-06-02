@@ -28,6 +28,18 @@
   ;; Mnemonics: `b' Buffer, `i' Indicator (of fIll).
   (global-set-key (kbd "C-c b i") #'display-fill-column-indicator-mode))
 
+(setq-default mode-line-format
+      '("%e" mode-line-front-space
+        mode-line-mule-info
+        mode-line-client
+        mode-line-modified
+        mode-line-remote
+        mode-line-frame-identification
+        mode-line-buffer-identification "  "
+        mode-line-position
+        mode-line-misc-info
+        (vc-mode vc-mode) "  "
+        mode-line-modes  mode-line-end-spaces))
 
 ;;; Scrolling
 
