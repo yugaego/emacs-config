@@ -8,8 +8,7 @@
   (search-backward yet-abbrev-cursor-marker)
   (delete-char (length yet-abbrev-cursor-marker)))
 
-;; Expand with `C-x a e'.
-(define-abbrev-table 'php-mode-abbrev-table
+(defconst yet-php-abbrevs
   `(("e" ,(concat "echo \""
                   yet-abbrev-cursor-marker
                   "\"; exit();")
@@ -26,4 +25,8 @@
                    yet-abbrev-cursor-marker
                    ");echo \"</pre>\";exit();")
      yet-abbrev-cursor)))
+
+;; Expand with `C-x a e'.
+(define-abbrev-table 'php-mode-abbrev-table yet-php-abbrevs)
+(define-abbrev-table 'web-mode-abbrev-table yet-php-abbrevs)
 
