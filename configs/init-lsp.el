@@ -56,7 +56,7 @@
   (defun yet-php-mode-eglot ()
     (when (boundp 'yet-eglot-php-server)
       (setq-local eglot-server-programs
-                  `(((php-mode phps-mode) . ,yet-eglot-php-server))))
+                  `(((php-mode phps-mode web-mode) . ,yet-eglot-php-server))))
     (eglot-ensure))
 
   (add-hook 'php-mode-hook #'yet-php-mode-eglot)
