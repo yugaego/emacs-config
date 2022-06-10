@@ -11,7 +11,9 @@
 
 (defun yet-php-mode-hook ()
   (abbrev-mode -1)
-  (when (boundp 'electric-pair-skip-self)
-    (setq electric-pair-skip-self 'electric-pair-default-skip-self)))
+  (setq-local mode-line-misc-info
+              '((global-mode-string ("" global-mode-string))
+                flymake-mode-line-counters)))
 
 (add-hook 'php-mode-hook #'yet-php-mode-hook)
+(add-hook 'web-mode-hook #'yet-php-mode-hook)
