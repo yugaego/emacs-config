@@ -22,9 +22,7 @@
           company-preview-frontend
           company-echo-metadata-frontend)
         company-backends
-        '((company-capf company-keywords company-dabbrev-code)
-          company-dabbrev
-          company-files)
+        '((company-dabbrev company-keywords company-capf))
         company-transformers '(delete-consecutive-dups
                                company-sort-by-occurrence
                                company-sort-prefer-same-case-prefix)
