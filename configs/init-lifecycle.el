@@ -18,7 +18,7 @@ If *scratch* buffer is empty, returns true without prompting."
   (yet-prompt-on-not-empty-scratch-buffer "Really kill Emacs?"))
 
 (add-to-list 'kill-emacs-query-functions
-             #'yet-verify-emtpy-scratch-on-emacs-kill)
+             'yet-verify-emtpy-scratch-on-emacs-kill)
 
 (defun yet-verify-emtpy-scratch-on-buffer-kill ()
   "Require confirmation to kill *scratch* buffer if it is not empty."
@@ -27,7 +27,7 @@ If *scratch* buffer is empty, returns true without prompting."
     t))
 
 (add-to-list 'kill-buffer-query-functions
-             #'yet-verify-emtpy-scratch-on-buffer-kill)
+             'yet-verify-emtpy-scratch-on-buffer-kill)
 
 
 ;;; Save state of Emacs between sessions.
@@ -55,5 +55,5 @@ With prefix ARG, saves all file-visiting buffers without asking."
     (dolist (file yet-open-files-list)
       (find-file file))))
 
-(add-hook 'desktop-no-desktop-file-hook #'yet-open-files)
+(add-hook 'desktop-no-desktop-file-hook 'yet-open-files)
 

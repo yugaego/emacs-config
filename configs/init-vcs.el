@@ -14,7 +14,7 @@
   (setq-local fill-column 72)
   (auto-fill-mode 1))
 
-(add-hook 'log-edit-mode-hook #'yet-log-edit-mode)
+(add-hook 'log-edit-mode-hook 'yet-log-edit-mode)
 
 
 (require 'diff-hl)

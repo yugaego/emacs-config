@@ -2,16 +2,15 @@
 
 (require 'flymake)
 
-(setq elisp-flymake-byte-compile-load-path (cons "./elpa" load-path))
-
-(setq flymake-mode-line-format '(" " flymake-mode-line-counters))
+(setq elisp-flymake-byte-compile-load-path
+      (cons "./elpa" load-path))
 
 (defun yet-emacs-lisp-mode ()
   (setq-local emacs-lisp-docstring-fill-column 75)
   (flymake-mode 1)
   (push '(face . nil) (get :note 'flymake-overlay-control)))
 
-(add-hook 'emacs-lisp-mode-hook #'yet-emacs-lisp-mode)
+(add-hook 'emacs-lisp-mode-hook 'yet-emacs-lisp-mode)
 
 
 (require 'rainbow-mode)
@@ -24,5 +23,5 @@
                (string-match-p "-theme.el" buffer-name))
       (rainbow-mode 1))))
 
-  (add-hook 'emacs-lisp-mode-hook #'yet-emacs-lisp-rainbow))
+  (add-hook 'emacs-lisp-mode-hook 'yet-emacs-lisp-rainbow))
 

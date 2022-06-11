@@ -49,13 +49,13 @@
                   company-preview-frontend))
     (company-mode 1))
 
-  (add-hook 'org-mode-hook #'yet-org-mode-company)
+  (add-hook 'org-mode-hook 'yet-org-mode-company)
 
 
   (defun yet-prog-mode-company ()
     (company-mode 1))
 
-  (add-hook 'prog-mode-hook #'yet-prog-mode-company)
+  (add-hook 'prog-mode-hook 'yet-prog-mode-company)
 
 
   (defun yet-c-mode-company ()
@@ -65,21 +65,21 @@
        company-dabbrev
        company-files)))
 
-  (add-hook 'c-mode-common-hook #'yet-c-mode-company)
+  (add-hook 'c-mode-common-hook 'yet-c-mode-company)
 
 
   (defun yet-php-mode-company ()
    (setq-local company-backends
                 '((company-dabbrev-code company-keywords company-capf))))
 
-  (add-hook 'php-mode-hook #'yet-php-mode-company -50)
+  (add-hook 'php-mode-hook 'yet-php-mode-company -50)
 
 
   (defun yet-texinfo-mode-company ()
     (setq-local company-backends '(company-dabbrev))
     (company-mode 1))
 
-  (add-hook 'texinfo-mode-hook #'yet-texinfo-mode-company)
+  (add-hook 'texinfo-mode-hook 'yet-texinfo-mode-company)
 
 
   ;;; Custom bindings

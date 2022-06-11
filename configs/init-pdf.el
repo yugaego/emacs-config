@@ -18,5 +18,5 @@
   (defun yet-pdf-view-mode ()
     (pdf-view-midnight-minor-mode 1))
 
-  (add-hook 'pdf-view-mode-hook #'yet-pdf-view-mode))
+  (add-hook 'pdf-view-mode-hook 'yet-pdf-view-mode))
 

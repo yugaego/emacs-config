@@ -45,7 +45,7 @@
     (display-fill-column-indicator-mode 1))
   (auto-fill-mode 1))
 
-(add-hook 'message-mode-hook #'yet-message-mode)
+(add-hook 'message-mode-hook 'yet-message-mode)
 
 
 (defun yet-rmail-mode ()
@@ -53,11 +53,11 @@
   (rmail-sort-by-subject t)
   (rmail-show-message 1))
 
-(add-hook 'rmail-mode-hook #'yet-rmail-mode)
+(add-hook 'rmail-mode-hook 'yet-rmail-mode)
 
 
 (defun yet-rmail-quit ()
   (if rmail-buffer (kill-buffer rmail-buffer)))
 
-(add-hook 'rmail-quit-hook #'yet-rmail-quit)
+(add-hook 'rmail-quit-hook 'yet-rmail-quit)
 

@@ -67,7 +67,7 @@
                                 (expand-file-name path)))))
 
   (if (not (fboundp 'system-move-file-to-trash))
-      (defalias 'system-move-file-to-trash #'yet-ns-move-file-to-trash))
+      (defalias 'system-move-file-to-trash 'yet-ns-move-file-to-trash))
 
   ;; Or alternatively, if `Place Back' feature by Finder is not needed,
   ;; comment-out the lines above and un-comment the following one:

@@ -42,7 +42,7 @@
                   `((rust-mode . ,yet-eglot-rust-server))))
     (eglot-ensure))
 
-  (add-hook 'rust-mode-hook #'yet-rust-mode-eglot)
+  (add-hook 'rust-mode-hook 'yet-rust-mode-eglot)
 
 
   (defun yet-texinfo-mode-eglot ()
@@ -50,7 +50,7 @@
                 '((company-capf :with company-dabbrev)))
     (eglot-ensure))
 
-  (add-hook 'texinfo-mode-hook #'yet-texinfo-mode-eglot)
+  (add-hook 'texinfo-mode-hook 'yet-texinfo-mode-eglot)
 
 
   (defun yet-php-mode-eglot ()
@@ -59,6 +59,6 @@
                   `(((php-mode phps-mode web-mode) . ,yet-eglot-php-server))))
     (eglot-ensure))
 
-  (add-hook 'php-mode-hook #'yet-php-mode-eglot)
-  (add-hook 'web-mode-hook #'yet-php-mode-eglot))
+  (add-hook 'php-mode-hook 'yet-php-mode-eglot)
+  (add-hook 'web-mode-hook 'yet-php-mode-eglot))
 

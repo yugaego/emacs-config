@@ -25,13 +25,13 @@
   (define-key term-raw-map "\M-y" 'yank-pop)
   (define-key term-raw-map "\M-w" 'kill-ring-save))
 
-(add-hook 'term-mode-hook #'yet-term-mode)
+(add-hook 'term-mode-hook 'yet-term-mode)
 
 (defun yet-start-term ()
   (interactive)
   (term "bash"))
 
-(global-set-key (kbd "C-c t") #'yet-start-term)
+(global-set-key (kbd "C-c t") 'yet-start-term)
 
 
 (require 'shell)

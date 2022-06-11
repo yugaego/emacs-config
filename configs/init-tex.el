@@ -8,5 +8,5 @@
   (auto-fill-mode 1)
   (display-fill-column-indicator-mode 1))
 
-(add-hook 'texinfo-mode-hook #'yet-texinfo-mode)
+(add-hook 'texinfo-mode-hook 'yet-texinfo-mode)
 

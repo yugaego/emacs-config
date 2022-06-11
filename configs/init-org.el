@@ -39,5 +39,5 @@
   (electric-indent-local-mode -1)
   (auto-fill-mode 1))
 
-(add-hook 'org-mode-hook #'yet-org-mode)
+(add-hook 'org-mode-hook 'yet-org-mode)
 
