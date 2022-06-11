@@ -8,22 +8,8 @@
 
 (defun yet-emacs-lisp-mode ()
   (setq-local emacs-lisp-docstring-fill-column 75)
-
   (flymake-mode 1)
-
-  (push '(face . nil) (get :note 'flymake-overlay-control))
-
-  (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
-
-  (define-key flymake-mode-map (kbd "M-n")
-    (lambda () (interactive)
-      (let ((current-prefix-arg 1))
-        (call-interactively #'flymake-goto-next-error))))
-
-  (define-key flymake-mode-map (kbd "M-p")
-    (lambda () (interactive)
-      (let ((current-prefix-arg 1))
-        (call-interactively #'flymake-goto-prev-error)))))
+  (push '(face . nil) (get :note 'flymake-overlay-control)))
 
 (add-hook 'emacs-lisp-mode-hook #'yet-emacs-lisp-mode)
 
