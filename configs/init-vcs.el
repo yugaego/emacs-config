@@ -17,6 +17,36 @@
 (add-hook 'log-edit-mode-hook 'yet-log-edit-mode)
 
 
+;;; diff-mode
+
+(require 'diff-mode)
+(require 'whitespace)
+
+(defun yet-diff-hunk-next ()
+  (interactive)
+  (when (fboundp 'diff-hunk-next)
+    (diff-hunk-next 1)
+    (recenter 2 t)))
+
+(defun yet-diff-hunk-prev ()
+  (interactive)
+  (when (fboundp 'diff-hunk-prev)
+    (diff-hunk-prev 1)
+    (recenter 2 t)))
+
+(defun yet-diff-mode ()
+  (setq-local whitespace-style
+              '(face tabs tab-mark spaces space-mark trailing lines-tail
+                     newline newline-mark missing-newline-at-eof))
+  (whitespace-mode 1)
+  (define-key diff-mode-map (kbd "M-n") 'yet-diff-hunk-next)
+  (define-key diff-mode-map (kbd "M-p") 'yet-diff-hunk-prev))
+
+(add-hook 'diff-mode-hook 'yet-diff-mode)
+
+
+;;; diff-hl
+
 (require 'diff-hl)
 
 (with-eval-after-load 'diff-hl

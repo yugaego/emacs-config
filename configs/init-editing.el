@@ -79,14 +79,6 @@
                               space-mark tab-mark newline-mark
                               missing-newline-at-eof))
 
-(defun yet-diff-mode ()
-  (setq-local whitespace-style
-              '(face tabs tab-mark spaces space-mark trailing lines-tail
-                     newline newline-mark missing-newline-at-eof))
-  (whitespace-mode 1))
-
-(add-hook 'diff-mode-hook 'yet-diff-mode)
-
 ;; Highlight Trailing Whitespaces
 
 ;; Make sure highlighting disabled by default.
