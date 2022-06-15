@@ -38,3 +38,7 @@
   (kbd "f")
   'yet-xref-goto-xref-same-window)
 
+(require 'pulse)
+
+(setq pulse-iterations 12
+      pulse-delay 0.1)
