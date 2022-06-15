@@ -25,6 +25,9 @@
 
 (require 'xref)
 
+(when (executable-find "rg")
+  (setq xref-search-program 'ripgrep))
+
 (defun yet-xref-goto-xref-same-window ()
   "Open definition in the current window."
   (interactive)
