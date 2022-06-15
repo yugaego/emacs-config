@@ -6,6 +6,7 @@
   - Hint how to complete email addresses.
   - Package =web-mode=.
   - Keybinding =M-s M-s= for ~M-x isearch-forward-thing-at-point~.
+  - More abbrevs to ~init-abbrevs.el~
 
 *** Changed:
   - Improve =rust-mode= usability.
