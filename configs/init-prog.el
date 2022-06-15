@@ -39,6 +39,7 @@
 ;;; PHP
 
 (defun yet-php-mode-hook ()
+  (subword-mode 1)
   (abbrev-mode -1))
 
 (add-hook 'php-mode-hook 'yet-php-mode-hook)
