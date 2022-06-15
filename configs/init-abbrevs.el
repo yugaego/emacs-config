@@ -13,10 +13,7 @@
                   yet-abbrev-cursor-marker
                   "\"; exit();")
      yet-abbrev-cursor)
-    ("t" ,(concat "// TODO::"
-                  (upcase user-login-name)
-                  " ")
-     yet-abbrev-cursor)
+    ("td" ,(concat "// TODO::" (upcase user-login-name) " "))
     ("p" ,(concat "echo \"<pre>\";print_r("
                   yet-abbrev-cursor-marker
                   ");echo \"</pre>\";exit();")
@@ -29,4 +26,6 @@
 ;; Expand with `C-x a e'.
 (define-abbrev-table 'php-mode-abbrev-table yet-php-abbrevs)
 (define-abbrev-table 'web-mode-abbrev-table yet-php-abbrevs)
+(define-abbrev-table 'emacs-lisp-mode-abbrev-table
+  `(("td" ,(concat ";; TODO::" (upcase user-login-name) " "))))
 
