@@ -22,3 +22,16 @@
 ;; instead of `C-u C-SPC ... C-u C-SPC'.
 (setq set-mark-command-repeat-pop t)
 
+
+(require 'xref)
+
+(defun yet-xref-goto-xref-same-window ()
+  "Open definition in the current window."
+  (interactive)
+  (same-window-prefix)
+  (xref-goto-xref))
+
+(define-key xref--xref-buffer-mode-map
+  (kbd "f")
+  'yet-xref-goto-xref-same-window)
+
