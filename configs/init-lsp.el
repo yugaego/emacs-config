@@ -32,7 +32,7 @@
   (advice-add 'project-kill-buffers
               :before
               (lambda ()
-                (ignore-errors (eglot-shutdown (eglot-current-server))))
+                (ignore-errors (eglot-shutdown-all)))
               '((name . "yet-project-kill-buffers")))
 
 
