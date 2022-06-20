@@ -21,7 +21,8 @@
 ;; Highlight matching parenthesis.
 (require 'paren)
 (show-paren-mode 1)
-(setq show-paren-delay 0)
+(setq show-paren-delay 0
+      show-paren-when-point-inside-paren t)
 
 ;; Auto-insert closing parenthesis.
 (require 'elec-pair)
