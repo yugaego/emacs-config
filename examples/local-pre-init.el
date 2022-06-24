@@ -3,7 +3,7 @@
 ;;; Each of the following example definitions is optional.
 
 ;;; init
-(defconst yet-exec-path '("/usr/local/bin"))
+(defconst yet-exec-path '("/usr/local/bin" "~/.cargo/bin"))
 
 ;;; init-file
 (defconst yet-backup-directory-alist '(("." . "~/.backups-emacs")))
@@ -25,8 +25,6 @@
     "/Users/path/to/phpactor/bin/phpactor"
     ;; "-vvv"
     "language-server"))
-
-(defconst yet-eglot-rust-server '("~/.cargo/bin/rust-analyzer"))
 
 ;;; init-pdf
 ;; Requires poppler server installation.
