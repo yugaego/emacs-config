@@ -38,7 +38,18 @@
   (kbd "f")
   'yet-xref-goto-xref-same-window)
 
+
 (require 'pulse)
 
 (setq pulse-iterations 12
       pulse-delay 0.1)
+
+
+(require 'recentf)
+
+(recentf-mode 1)
+
+(setq recentf-auto-cleanup 'never)
+
+;; Prioritize files that are switched to often.
+(add-hook 'buffer-list-update-hook #'recentf-track-opened-file)

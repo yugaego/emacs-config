@@ -8,6 +8,7 @@
   - Keybinding =M-s M-s= for ~M-x isearch-forward-thing-at-point~.
   - More abbrevs to ~init-abbrevs.el~
   - Keybinding =f= to open =xref= definition in the same window.
+  - Enable =recentf-mode=. Call with ~M-x recent-open*~.
 
 *** Changed:
   - Improve =rust-mode= usability.
