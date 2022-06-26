@@ -12,7 +12,7 @@
   (windmove-default-keybindings 'super))
 
 
-;; Load URL at point.
+;; Load URL at point with `C-c RET'.
 (global-goto-address-mode 1)
 
 
