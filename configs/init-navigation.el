@@ -16,6 +16,11 @@
 (global-goto-address-mode 1)
 
 
+;; Recenter displayed line.
+;; Affects occur-mode display of occurrences in source.
+(setq next-error-recenter '(4))
+
+
 ;; Do not require repeated `C-u' hit
 ;; when moving back in mark-ring.
 ;; Example: `C-u C-SPC ... C-SPC'

@@ -13,7 +13,7 @@
 *** Changed:
   - Improve =rust-mode= usability.
   - Improve =php-mode= usability.
-  - Tweak editing usability.
+  - Tweak editing and search usability.
   - Configure =xref= to use =ripgrep= when it's available.
 
 ** v2.0.0 - 2022-04-07
