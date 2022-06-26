@@ -53,6 +53,12 @@
      `(bookmark-face
        ((,class (:background "#2d3743" :foreground "#ffad29"))))))
 
+  (when (facep 'rust-ampersand-face)
+    (custom-theme-set-faces
+     'misterioso
+     `(rust-ampersand-face
+       ((,class (:foreground "#dcdcb4"))))))
+
   (when (facep 'eglot-highlight-symbol-face)
     (custom-theme-set-faces
      'misterioso
@@ -81,7 +87,7 @@
 
 ;; #212933 #203040 #2d3743 #304050 #354555 #3a4a5a #405060 #455565
 
-;; #e1e1e0
+;; #e1e1e0 #dcdcb4
 
 ;; #334433 #336633
 
@@ -90,4 +96,3 @@
 ;; #443333 #663333
 
 ;; #ff4242 #ffad29 #dbdb95 #74af68
-
