@@ -18,16 +18,19 @@
 (require 'term)
 
 (setq term-completion-autolist t
-      term-completion-recexact t)
+      term-completion-recexact t
+      term-scroll-show-maximum-output t)
 
 (defun yet-term-mode ()
   (term-set-escape-char ?\C-x)
   (define-key term-raw-map "\M-y" 'yank-pop)
-  (define-key term-raw-map "\M-w" 'kill-ring-save))
+  (define-key term-raw-map "\M-w" 'kill-ring-save)
+  (define-key term-raw-map "\M-:" 'eval-expression))
 
 (add-hook 'term-mode-hook 'yet-term-mode)
 
 (defun yet-start-term ()
+  "Start terminal emulator running 'bash'."
   (interactive)
   (term "bash"))
 
