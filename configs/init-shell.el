@@ -18,14 +18,20 @@
 (require 'term)
 
 (setq term-completion-autolist t
-      term-completion-recexact t
-      term-scroll-show-maximum-output t)
+      term-completion-recexact t)
 
 (defun yet-term-mode ()
   (term-set-escape-char ?\C-x)
-  (define-key term-raw-map "\M-y" 'yank-pop)
-  (define-key term-raw-map "\M-w" 'kill-ring-save)
-  (define-key term-raw-map "\M-:" 'eval-expression))
+  (define-key term-raw-map "\C-y" (lambda ()
+                                    (interactive)
+                                    (term-line-mode)
+                                    (yank)))
+  (define-key term-raw-map "\M-y" (lambda ()
+                                    (interactive)
+                                    (term-line-mode)
+                                    (yank-pop)))
+  (define-key term-raw-map "\M-w" #'kill-ring-save)
+  (define-key term-raw-map "\M-:" #'eval-expression))
 
 (add-hook 'term-mode-hook 'yet-term-mode)
 
