@@ -30,17 +30,17 @@
 
 ;;; Makefile
 
-(defun yet-makefile-mode-hook ()
+(defun yet-makefile-mode ()
   (setq-local indent-tabs-mode t))
 
-(add-hook 'makefile-mode-hook 'yet-makefile-mode-hook)
+(add-hook 'makefile-mode-hook 'yet-makefile-mode)
 
 
 ;;; PHP
 
-(defun yet-php-mode-hook ()
+(defun yet-php-mode ()
   (subword-mode 1)
   (abbrev-mode -1))
 
-(add-hook 'php-mode-hook 'yet-php-mode-hook)
-(add-hook 'web-mode-hook 'yet-php-mode-hook)
+(add-hook 'php-mode-hook 'yet-php-mode)
+(add-hook 'web-mode-hook 'yet-php-mode)
