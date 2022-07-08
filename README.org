@@ -50,7 +50,7 @@ to configure your own Emacs.
 - examples/local-pre-init.el :: Example local configurations.
 - local-post-init.el :: One more git-ignored optional file, loaded after
   ~configs/init-*.el~ files load.
-- CHANGELOGS.org :: Lists notable changes.
+- CHANGELOG.org :: Lists notable changes.
 
 *** Custom Keybindings (global only)
 
