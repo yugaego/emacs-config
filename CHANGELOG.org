@@ -19,6 +19,9 @@
   - Better =term-mode= usability.
   - Replaced =global-goto-address-mode= by local enabling.
 
+*** Removed:
+  - Fallback =tab-always-indent= to its default value of =t=.
+
 
 ** v2.0.0 - 2022-04-07
 

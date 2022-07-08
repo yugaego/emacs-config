@@ -1,6 +1,6 @@
 ;;; init-completion.el --- Configure auto-completions   -*- lexical-binding: t -*-
 
-(setq tab-always-indent 'complete)      ; Suggest completions on indented lines.
+;; (setq tab-always-indent t)
 
 (setq completion-styles '(basic substring partial-completion))
 
