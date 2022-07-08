@@ -1,5 +1,11 @@
 ;;; init-prog.el --- Programming languages   -*- lexical-binding: t -*-
 
+(defun yet-prog-mode ()
+  (goto-address-prog-mode 1))
+
+(add-hook 'prog-mode-hook 'yet-prog-mode)
+
+
 (require 'flymake)
 
 (defun yet-prog-mode-flymake ()

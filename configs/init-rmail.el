@@ -49,6 +49,7 @@
 
 
 (defun yet-rmail-mode ()
+  (goto-address-mode 1)
   (rmail-sort-by-date nil)
   (rmail-sort-by-subject t)
   (rmail-show-message 1))

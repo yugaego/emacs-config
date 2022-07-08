@@ -12,10 +12,6 @@
   (windmove-default-keybindings 'super))
 
 
-;; Load URL at point with `C-c RET'.
-(global-goto-address-mode 1)
-
-
 ;; Recenter displayed line.
 ;; Affects occur-mode display of occurrences in source.
 (setq next-error-recenter '(4))
