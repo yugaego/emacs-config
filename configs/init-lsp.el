@@ -60,5 +60,4 @@
     (eglot-ensure))
 
   (add-hook 'php-mode-hook 'yet-php-mode-eglot))
-  ;; (add-hook 'web-mode-hook 'yet-php-mode-eglot))
 
