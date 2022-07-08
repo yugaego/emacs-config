@@ -50,7 +50,29 @@ to configure your own Emacs.
 - examples/local-pre-init.el :: Example local configurations.
 - local-post-init.el :: One more git-ignored optional file, loaded after
   ~configs/init-*.el~ files load.
+- CHANGELOGS.org :: Lists notable changes.
 
+*** Custom Keybindings (global only)
+
+- C-x C-b :: =M-x ibuffer-other-window=
+- C-c b k :: =M-x kill-some-buffers=
+- C-c b r :: =M-x yet-rotate-windows-buffers=
+- C-c c / :: =M-x company-other-backend=
+- C-c c f :: =M-x company-files=
+- C-c c d :: =M-x company-dabbrev=
+- C-c c c :: =M-x company-capf=
+- C-z :: =ctl-x-map= (for split keyboard usability)
+- M-<delete> :: =M-x kill-word=
+- M-s M-s :: =M-x isearch-forward-thing-at-point=
+- C-c e d :: =M-x yet-duplicate-current-line-or-region=
+- C-c d :: =M-x yet-duplicate-current-line-or-region=
+- C-c s-f :: =M-x yet-mac-open-finder-current-file=
+- C-c s-d :: =M-x yet-mac-open-dictionary-current-word=
+- C-c s-g :: =M-x yet-browse-grammarly=
+- C-c l e :: =M-x eglot=
+- C-c t :: =M-x yet-start-term=
+- C-c b i :: =M-x display-fill-column-indicator-mode=
+- C-c b l :: =M-x scroll-lock-mode=
 
 * Getting Started with Emacs on Mac OS
 
