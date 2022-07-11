@@ -28,6 +28,12 @@
         gnus-add-to-list t
         gnus-summary-line-format "%U%R%z%I%[: %-16,16f %] %s\n")
 
+  (defun yet-gnus-article-mode ()
+    ;; Follow links by clicking `C-c RET'.
+    (goto-address-mode 1))
+
+  (add-hook 'gnus-article-mode-hook 'yet-gnus-article-mode)
+
   ;; Initiate responding by hitting `f' or `F'.
   (setq gnus-mailing-list-groups "^gmane")
 
