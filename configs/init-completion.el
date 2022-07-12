@@ -8,6 +8,7 @@
 (require 'company-dabbrev)
 (require 'company-dabbrev-code)
 (require 'company-files)
+(require 'company-capf)
 
 ;; https://github.com/company-mode/company-mode/discussions/1214
 (with-eval-after-load 'company
