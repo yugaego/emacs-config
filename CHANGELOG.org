@@ -17,7 +17,8 @@
   - Improve editing and search usability.
   - Configure =xref= to use =ripgrep= when it's available.
   - Better =term-mode= usability.
-  - Replaced =global-goto-address-mode= by local enabling.
+  - Replace =global-goto-address-mode= by local enabling.
+  - Swap =org-mode= default keybindings =RET= and =C-j=.
 
 *** Removed:
   - Fallback =tab-always-indent= to its default value of =t=.

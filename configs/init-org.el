@@ -16,25 +16,6 @@
 ;; Enlarge LaTeX preview.
 (plist-put org-format-latex-options :scale 1.5)
 
-(require 'ox)
-
-(setq org-export-with-broken-links 'mark)
-
-;;; Indentation
-
-;; Do not indent after headlines.
-(setq org-adapt-indentation nil)
-
-;; With electric indent ENABLED, use in the lists:
-;; - `C-j' to start a new line.
-;; - `RET' to add a child item.
-;; - `M-RET' to add a sibling.
-
-;; With electric indent DISABLED, use in the lists:
-;; - `RET' to start a new line.
-;; - `C-j' to add a child item.
-;; - `M-RET' to add a sibling.
-
 (defun yet-org-mode ()
   (electric-indent-local-mode -1)
   (goto-address-mode 1)
@@ -42,3 +23,33 @@
 
 (add-hook 'org-mode-hook 'yet-org-mode)
 
+
+(require 'ox)
+
+(setq org-export-with-broken-links 'mark)
+
+
+;;; Indentation
+
+;; Do not indent after headlines.
+(setq org-adapt-indentation nil)
+
+;; Remap to work closer to the programming modes indentation.
+;; In the lists:
+;; - `RET' adds a child item.
+;; - `C-j' starts a new line.
+;; - `M-RET' adds a sibling.
+(define-key org-mode-map (kbd "RET") #'org-return-and-maybe-indent)
+(define-key org-mode-map (kbd "C-j") #'org-return)
+
+;;; Default indentation
+
+;; With electric indent DISABLED, in the lists:
+;; - `RET' starts a new line.
+;; - `C-j' adds a child item.
+;; - `M-RET' adds a sibling.
+
+;; With electric indent ENABLED, in the lists:
+;; - `C-j' starts a new line.
+;; - `RET' adds a child item.
+;; - `M-RET' adds a sibling.
