@@ -22,6 +22,7 @@
 
 *** Removed:
   - Fallback =tab-always-indent= to its default value of =t=.
+  - Disable =org-mode= bindings =M-<left>=, =M-<right>=, =M-<up>=, =M-<down>=.
 
 
 ** v2.0.0 - 2022-04-07

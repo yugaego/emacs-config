@@ -31,6 +31,7 @@
 
 ;;; Indentation
 
+
 ;; Do not indent after headlines.
 (setq org-adapt-indentation nil)
 
@@ -53,3 +54,11 @@
 ;; - `C-j' starts a new line.
 ;; - `RET' adds a child item.
 ;; - `M-RET' adds a sibling.
+
+
+;;; Disable confusing org-mode keybindings
+
+(define-key org-mode-map (kbd "M-<left>") #'left-word)
+(define-key org-mode-map (kbd "M-<right>") #'right-word)
+(define-key org-mode-map (kbd "M-<up>") nil)
+(define-key org-mode-map (kbd "M-<down>") nil)
