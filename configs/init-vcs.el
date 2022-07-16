@@ -22,41 +22,46 @@
 (require 'diff-mode)
 (require 'whitespace)
 
+(setq diff-font-lock-prettify t)
+
 (defun yet-diff-hunk-next ()
   (interactive)
   (when (fboundp 'diff-hunk-next)
-    (diff-hunk-next 1)
-    (recenter 2 t)))
+    (diff-hunk-next)
+    (recenter 0 t)))
 
 (defun yet-diff-hunk-prev ()
   (interactive)
   (when (fboundp 'diff-hunk-prev)
-    (diff-hunk-prev 1)
-    (recenter 2 t)))
+    (diff-hunk-prev)
+    (recenter 0 t)))
 
 (defun yet-diff-file-next ()
   (interactive)
   (when (fboundp 'diff-file-next)
-    (diff-file-next 1)
-    (recenter 2 t)))
+    (diff-file-next)
+    (recenter 0 t)))
 
 (defun yet-diff-file-prev ()
   (interactive)
   (when (fboundp 'diff-file-prev)
-    (diff-file-prev 1)
-    (recenter 2 t)))
+    (diff-file-prev)
+    (recenter 0 t)))
 
-(defun yet-diff-mode ()
+(define-key diff-mode-map (kbd "M-n") 'yet-diff-hunk-next)
+(define-key diff-mode-map (kbd "M-p") 'yet-diff-hunk-prev)
+(define-key diff-mode-map (kbd "M-N") 'yet-diff-file-next)
+(define-key diff-mode-map (kbd "M-P") 'yet-diff-file-prev)
+
+(defun yet-diff-whitespace ()
+  "Toggle whitespace visualization with local `whitespace-style'."
+  (interactive)
   (setq-local whitespace-style
-              '(face tabs tab-mark spaces space-mark trailing lines-tail
-                     newline newline-mark missing-newline-at-eof))
-  (whitespace-mode 1)
-  (define-key diff-mode-map (kbd "M-n") 'yet-diff-hunk-next)
-  (define-key diff-mode-map (kbd "M-p") 'yet-diff-hunk-prev)
-  (define-key diff-mode-map (kbd "M-N") 'yet-diff-file-next)
-  (define-key diff-mode-map (kbd "M-P") 'yet-diff-file-prev))
+                '(face tabs tab-mark spaces space-mark trailing lines-tail
+                       newline newline-mark missing-newline-at-eof))
+  (whitespace-mode 'toggle))
 
-(add-hook 'diff-mode-hook 'yet-diff-mode)
+(define-key diff-mode-map (kbd "C-c b w") 'yet-diff-whitespace)
 
 
 ;;; diff-hl

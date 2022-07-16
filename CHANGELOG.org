@@ -19,6 +19,7 @@
   - Better =term-mode= usability.
   - Replace =global-goto-address-mode= by local enabling.
   - Swap =org-mode= default keybindings =RET= and =C-j=.
+  - Improve =diff-mode= usability.
 
 *** Removed:
   - Fallback =tab-always-indent= to its default value of =t=.
