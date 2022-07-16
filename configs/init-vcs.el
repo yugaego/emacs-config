@@ -62,6 +62,7 @@
 ;;; diff-hl
 
 (require 'diff-hl)
+(require 'diff-hl-show-hunk)
 
 (with-eval-after-load 'diff-hl
   (dolist (hook '(prog-mode-hook conf-mode-hook text-mode-hook))
