@@ -29,6 +29,8 @@
 
   (define-key eglot-mode-map (kbd "C-c l r") #'eglot-rename)
 
+  (define-key eglot-mode-map (kbd "C-c l a") #'eglot-code-actions)
+
   (advice-add 'project-kill-buffers
               :before
               (lambda ()
