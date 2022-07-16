@@ -25,6 +25,7 @@
 *** Removed:
   - Fallback =tab-always-indent= to its default value of =t=.
   - Disable =org-mode= bindings =M-<left>=, =M-<right>=, =M-<up>=, =M-<down>=.
+  - Keybinding =C-c e d= in favor of more concise =C-c d=.
 
 
 ** v2.0.0 - 2022-04-07

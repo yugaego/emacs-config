@@ -65,7 +65,6 @@ to configure your own Emacs.
 - M-<delete> :: =M-x kill-word=
 - M-s M-s :: =M-x isearch-forward-thing-at-point=
 - C-c b w :: =M-x whitespaces-mode= (toggle)
-- C-c e d :: =M-x yet-duplicate-current-line-or-region=
 - C-c d :: =M-x yet-duplicate-current-line-or-region=
 - C-c s-f :: =M-x yet-mac-open-finder-current-file=
 - C-c s-d :: =M-x yet-mac-open-dictionary-current-word=
