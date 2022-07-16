@@ -75,12 +75,16 @@
 ;;; Whitespaces
 
 (require 'whitespace)
+
 (setq whitespace-style '(face tabs spaces trailing lines-tail space-before-tab
                               newline indentation empty space-after-tab
                               space-mark tab-mark newline-mark
                               missing-newline-at-eof))
 
-;; Highlight Trailing Whitespaces
+(global-set-key (kbd "C-c b w") #'whitespace-mode)
+
+
+;;; Trailing whitespaces
 
 ;; Make sure highlighting disabled by default.
 (setq-default show-trailing-whitespace nil)
