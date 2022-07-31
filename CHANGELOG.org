@@ -13,6 +13,7 @@
   - Keybinding =C-c b w= to toggle =whitespace-mode=.
   - Keybinding =C-c l a= to call ~M-x eglot-code-actions~.
   - Configure ~diff-whitespace-style~ (since Emacs 29).
+  - Add =racket-mode= package for [[https://racket-lang.org][Racket language]].
 
 *** Changed:
   - Improve =rust-mode= usability.
