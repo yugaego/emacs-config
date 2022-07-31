@@ -20,7 +20,6 @@
 ;;; diff-mode
 
 (require 'diff-mode)
-(require 'whitespace)
 
 (setq diff-font-lock-prettify t)
 
@@ -53,12 +52,22 @@
 (define-key diff-mode-map (kbd "M-N") 'yet-diff-file-next)
 (define-key diff-mode-map (kbd "M-P") 'yet-diff-file-prev)
 
+
+;;; Diff mode 'whitespace-style'
+
+(defconst yet-diff-whitespace-style
+  '(face tabs tab-mark spaces space-mark trailing lines-tail
+         newline newline-mark missing-newline-at-eof))
+
+;; Since Emacs 29.
+(when (boundp 'diff-whitespace-style)
+  (setq diff-whitespace-style yet-diff-whitespace-style))
+
+;; Before Emacs 29.
 (defun yet-diff-whitespace ()
   "Toggle whitespace visualization with local `whitespace-style'."
   (interactive)
-  (setq-local whitespace-style
-                '(face tabs tab-mark spaces space-mark trailing lines-tail
-                       newline newline-mark missing-newline-at-eof))
+  (setq-local whitespace-style yet-diff-whitespace-style)
   (whitespace-mode 'toggle))
 
 (define-key diff-mode-map (kbd "C-c b w") 'yet-diff-whitespace)

@@ -12,6 +12,7 @@
   - Keybinding =C-c t= to start terminal emulator.
   - Keybinding =C-c b w= to toggle =whitespace-mode=.
   - Keybinding =C-c l a= to call ~M-x eglot-code-actions~.
+  - Configure ~diff-whitespace-style~ (since Emacs 29).
 
 *** Changed:
   - Improve =rust-mode= usability.
