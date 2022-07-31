@@ -39,7 +39,7 @@ inspiration to configure your own /Emacs/.
 
 - init.el :: Main configuration file.
 - early-init.el :: Configurations loaded very early in the startup process.
-- custom.el :: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Easy-Customization.html][/Emacs Customization/]] writes to this file. Read-only.
+- custom.el :: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Easy-Customization.html][Emacs Customization]] writes to this file. Read-only.
 - configs/init-*.el :: Auto-loaded configuration files extracted from ~init.el~
   for better readability.
 - install-packages.el :: Install configured packages after cloning (on new devices).
