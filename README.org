@@ -6,15 +6,14 @@
 Emacs is... what *you* want it to be.
 #+END_QUOTE
 
-This is a collection of files that I use to configure Emacs (versions >=27.1)
-in accordance with my current needs and tastes.
+This is a collection of files for configuration of Emacs (versions >=27.1).
 
-This Emacs flavor is intended to be *well-organized*, *-documented*,
-*-behaved*, and *good-looking*. A priority is given to the usage of the *built-in packages*,
-but without usability sacrifice.
+This /Emacs flavor/ is intended to be *well-organized*, *documented*,
+*good-looking*, and *behaving* according to modern expectations. A priority is
+given to the usage of the *built-in packages*, but without usability sacrifice.
 
-This configuration was mostly tested as a GUI application on Mac OS,
-but it is expected to behave well on other operating systems too.
+This configuration tested to work well on =MacOS=, =Linux=, and =Windows=. The
+same time, it provides =MacOS=-specific treats.
 
 [[file:./images/Emacs-screenshot.png]]
 
