@@ -8,13 +8,13 @@
 
 (require 'flymake)
 
-(defun yet-prog-mode-flymake ()
-  (setq-local flymake-mode-line-format '(""))
-  (setq-local mode-line-misc-info
+(defun yet-flymake-mode ()
+  (setq-local flymake-mode-line-format '("")
+              mode-line-misc-info
               '((global-mode-string ("" global-mode-string))
                 flymake-mode-line-counters)))
 
-(add-hook 'prog-mode-hook 'yet-prog-mode-flymake)
+(add-hook 'flymake-mode-hook 'yet-flymake-mode)
 
 (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
 
