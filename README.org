@@ -97,8 +97,8 @@ Fallback to the pre-compiled binaries if you find it easier or are interested in
 - ~$ cd YOUR-DIR~
 - ~$ ./autogen.sh~
   - This is an optional step.
-  - Only needed for the fresh clone of the code without the 'configure' script.
-  - On this step the 'configure' script and some related files are generated.
+  - Only needed for the fresh clone of the code without the ~configure~ script.
+  - On this step the ~configure~ script and some related files are generated.
 - ~$ ./configure~
   - For example, with additional options:
     - ~$ ./configure -C --with-json --with-native-compilation --with-mailutils --with-imagemagick~.
