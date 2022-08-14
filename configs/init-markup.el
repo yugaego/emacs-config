@@ -16,3 +16,9 @@
   (when (executable-find "multimarkdown")
     (setq markdown-command "multimarkdown")))
 
+(defun yet-markdown-mode ()
+  (goto-address-mode 1)
+  (auto-fill-mode 1))
+
+(add-hook 'markdown-mode-hook 'yet-markdown-mode)
+
