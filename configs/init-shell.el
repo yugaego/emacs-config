@@ -20,25 +20,13 @@
 (setq term-completion-autolist t
       term-completion-recexact t)
 
-(defun yet-term-mode ()
-  (term-set-escape-char ?\C-x)
-  (define-key term-raw-map "\C-y" (lambda ()
-                                    (interactive)
-                                    (term-line-mode)
-                                    (yank)))
-  (define-key term-raw-map "\M-y" (lambda ()
-                                    (interactive)
-                                    (term-line-mode)
-                                    (yank-pop)))
-  (define-key term-raw-map "\M-w" #'kill-ring-save)
-  (define-key term-raw-map "\M-:" #'eval-expression))
-
-(add-hook 'term-mode-hook 'yet-term-mode)
-
+;; For scrolling and more Emacs' commands,
+;; switch to `term-line-mode' with `C-x C-j'.
+;; Switch back to `term-char-mode' with `C-c C-k'.
 (defun yet-start-term ()
   "Start terminal emulator running 'bash'."
   (interactive)
-  (term "bash"))
+  (ansi-term "bash"))
 
 (global-set-key (kbd "C-c t") 'yet-start-term)
 
