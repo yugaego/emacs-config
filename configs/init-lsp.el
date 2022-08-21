@@ -41,8 +41,8 @@
   (defun yet-rust-mode-eglot ()
     (when (boundp 'yet-eglot-rust-server)
       (setq-local eglot-server-programs
-                  `((rust-mode . ,yet-eglot-rust-server))))
-    (eglot-ensure))
+                  `((rust-mode . ,yet-eglot-rust-server)))))
+    ;; (eglot-ensure))
 
   (add-hook 'rust-mode-hook 'yet-rust-mode-eglot)
 
@@ -56,7 +56,9 @@
 
 
   (defun yet-php-mode-eglot ()
-    (setq-local company-backends '(company-capf))
+    (setq-local company-backends '(company-capf
+                                   company-keywords
+                                   company-dabbrev-code))
     (when (boundp 'yet-eglot-php-server)
       (setq-local eglot-server-programs
                   `(((php-mode phps-mode) . ,yet-eglot-php-server))))
