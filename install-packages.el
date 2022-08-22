@@ -51,3 +51,8 @@
 ;;
 ;; - https://www.tug.org/mactex/
 ;;     - LaTeX installation for org-mode.
+;;
+;; - $ brew install minimal-racket
+;; - $ raco pkg install --auto drracket
+;;     - Only `racket-mode' related.
+;;     - Installs Racket language environment.
