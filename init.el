@@ -2,7 +2,7 @@
 
 ;; Tweak performance.
 ;; https://emacs-lsp.github.io/lsp-mode/page/performance/
-(setq read-process-output-max (* 1024 1024 3) ; try 1-3 Mb.
+(setq read-process-output-max (* 1024 1024) ; try 1-3 Mb.
       gc-cons-threshold (* 8 800000)          ; multiply initial 800 Kb by 2.
       garbage-collection-messages nil)
 
