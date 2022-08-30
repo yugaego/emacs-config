@@ -26,6 +26,8 @@
     ;; "-vvv"
     "language-server"))
 
+(defconst yet-eglot-rust-server '("rust-analyzer"))
+
 ;;; init-pdf
 ;; Requires poppler server installation.
 ;; See https://github.com/politza/pdf-tools.
