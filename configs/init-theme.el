@@ -69,8 +69,6 @@
 
 ;;; *Palette*
 
-;; See also `$emacsSourceDir/etc/themes/misterioso-theme.el'.
-
 ;; SlateGray4 SlateGray3 SlateGray2 SlateGray1 SlateGray
 
 ;; LightSlateGray
@@ -93,6 +91,13 @@
 
 ;; #444433 #666633
 
-;; #443333 #663333
+;; #443333 #663333 #cf5555
 
-;; #ff4242 #ffad29 #dbdb95 #74af68
+;;; misterioso font-lock colors
+
+;; #ff4242 #e67128 #ffad29 #dbdb95 #74af68
+
+;; #008b8b #23d7d7 #00ede1 #34cae2
+
+;;; See also `$emacsSourceDir/etc/themes/misterioso-theme.el'.
+
