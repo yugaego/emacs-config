@@ -28,8 +28,10 @@
   (interactive)
   (ansi-term "bash"))
 
-(global-set-key (kbd "C-c t") 'yet-start-term)
+(global-set-key (kbd "C-c t s") 'yet-start-term)
 
+(define-key term-raw-map (kbd "C-c t l") #'term-line-mode)
+(define-key term-mode-map (kbd "C-c t c") #'term-char-mode)
 
 (require 'shell)
 

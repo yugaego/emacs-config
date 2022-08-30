@@ -9,7 +9,7 @@
   - More abbrevs to ~init-abbrevs.el~
   - Keybinding =f= to open =xref= definition in the same window.
   - Enable =recentf-mode=. Call with ~M-x recent-open*~.
-  - Keybinding =C-c t= to start terminal emulator.
+  - Keybinding =C-c t s= to start terminal emulator.
   - Keybinding =C-c b w= to toggle =whitespace-mode=.
   - Keybinding =C-c l a= to call ~M-x eglot-code-actions~.
   - Configure ~diff-whitespace-style~ (since Emacs 29).
