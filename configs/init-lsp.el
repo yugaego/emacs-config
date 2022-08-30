@@ -58,7 +58,8 @@
   (defun yet-php-mode-eglot ()
     (setq-local company-backends '(company-capf
                                    company-keywords
-                                   company-dabbrev-code))
+                                   company-dabbrev-code)
+                company-transformers '())
     (when (boundp 'yet-eglot-php-server)
       (setq-local eglot-server-programs
                   `(((php-mode phps-mode) . ,yet-eglot-php-server))))
