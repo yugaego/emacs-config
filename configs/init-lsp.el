@@ -39,10 +39,14 @@
 
 
   (defun yet-rust-mode-eglot ()
+    (setq-local company-backends '(company-capf
+                                   company-keywords
+                                   company-dabbrev-code)
+                company-transformers '())
     (when (boundp 'yet-eglot-rust-server)
       (setq-local eglot-server-programs
-                  `((rust-mode . ,yet-eglot-rust-server)))))
-    ;; (eglot-ensure))
+                  `((rust-mode . ,yet-eglot-rust-server))))
+    (eglot-ensure))
 
   (add-hook 'rust-mode-hook 'yet-rust-mode-eglot)
 
