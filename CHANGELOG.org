@@ -2,6 +2,15 @@
 
 ** Unreleased
 
+TBD
+
+** v2.1.0 - 2022-11-27
+
+Usability improvements of the existing functionality, with an emphasis on:
+- PHP and Rust programming,
+- terminal emulator usage,
+- org-mode text writing.
+
 *** Added:
   - Hint how to complete email addresses.
   - Package =web-mode=.
