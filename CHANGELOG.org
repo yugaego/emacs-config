@@ -2,7 +2,9 @@
 
 ** Unreleased
 
-TBD
+*** Changed:
+  - Keybinding =C-c l s= now calls ~M-x eglot~
+  - Keybinding =C-c l d= calls ~M-x eglot-shutdown~
 
 ** v2.1.0 - 2022-11-27
 

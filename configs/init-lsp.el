@@ -23,9 +23,9 @@
 
   ;; Mnemonic `l': Language Server Protocol.
 
-  (global-set-key (kbd "C-c l e") #'eglot)
+  (global-set-key (kbd "C-c l s") #'eglot) ; Mnemonic `s': start.
 
-  (define-key eglot-mode-map (kbd "C-c l s") #'eglot-shutdown)
+  (define-key eglot-mode-map (kbd "C-c l d") #'eglot-shutdown) ; `d': disable.
 
   (define-key eglot-mode-map (kbd "C-c l r") #'eglot-rename)
 
