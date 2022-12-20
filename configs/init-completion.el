@@ -24,10 +24,10 @@
           company-echo-metadata-frontend)
         company-backends
         '((company-dabbrev company-keywords company-capf))
-        ;; Do we really need it?
-        ;; company-transformers '(delete-consecutive-dups
-        ;;                        company-sort-by-occurrence
-        ;;                        company-sort-prefer-same-case-prefix)
+        ;; Useful transformers:
+        ;; delete-consecutive-dups
+        ;; company-sort-prefer-same-case-prefix
+        ;; company-transformers '(company-sort-by-occurrence)
         company-lighter-base "C"
         company-format-margin-function nil
         company-require-match nil
