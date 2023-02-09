@@ -8,6 +8,7 @@
         rust-rustfmt-switches '("--edition" "2021"))
 
   ;; C-c C-f defined by rust-mode runs 'rust-format-buffer.
+  (define-key rust-mode-map (kbd "C-c C-l") 'rust-run-clippy)
   (define-key rust-mode-map (kbd "C-c C-c") 'rust-check)
   (define-key rust-mode-map (kbd "C-c C-b") 'rust-compile)
   (define-key rust-mode-map (kbd "C-c C-r") 'rust-run)

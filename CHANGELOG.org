@@ -2,6 +2,9 @@
 
 ** Unreleased
 
+*** Added:
+  - Keybinding =C-c C-l= to call ~M-x rust-run-clippy~.
+
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~
   - Keybinding =C-c l d= calls ~M-x eglot-shutdown~
