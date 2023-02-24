@@ -3,12 +3,16 @@
 ** Unreleased
 
 *** Added:
-  - Keybinding =C-c C-l= to call ~M-x rust-run-clippy~.
-  - Add =rust-mode= abbreviations (templates).
+  - =rust-mode= abbreviations (templates).
+  - =rust-mode-map= keybindings:
+    - =C-c C-l= for ~M-x rust-run-clippy~.
+    - =C-c C-h= for ~M-x yet-rustup-doc~.
+    - =C-c t m= for ~M-x rust-toggle-mutability~.
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~
   - Keybinding =C-c l d= calls ~M-x eglot-shutdown~
+  - =rust-mode-map= keybinding =C-c C-d= to =C-c t d=.
 
 ** v2.1.0 - 2022-11-27
 
