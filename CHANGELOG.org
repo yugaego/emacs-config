@@ -4,6 +4,7 @@
 
 *** Added:
   - Keybinding =C-c C-l= to call ~M-x rust-run-clippy~.
+  - Add =rust-mode= abbreviations (templates).
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~
