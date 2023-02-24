@@ -44,6 +44,10 @@
 
 ;;; PHP
 
+(require 'php-mode)
+
+(define-key php-mode-map (kbd "C-c C-h") #'php-search-documentation)
+
 (defun yet-php-mode ()
   (subword-mode 1)
   (abbrev-mode -1))

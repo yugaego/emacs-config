@@ -8,10 +8,11 @@
     - =C-c C-l= for ~M-x rust-run-clippy~.
     - =C-c C-h= for ~M-x yet-rustup-doc~.
     - =C-c t m= for ~M-x rust-toggle-mutability~.
+  - =php-mode-map= keybinding =C-c C-h= to call ~M-x php-search-documentation~.
 
 *** Changed:
-  - Keybinding =C-c l s= now calls ~M-x eglot~
-  - Keybinding =C-c l d= calls ~M-x eglot-shutdown~
+  - Keybinding =C-c l s= now calls ~M-x eglot~.
+  - Keybinding =C-c l d= calls ~M-x eglot-shutdown~.
   - =rust-mode-map= keybinding =C-c C-d= to =C-c t d=.
 
 ** v2.1.0 - 2022-11-27
