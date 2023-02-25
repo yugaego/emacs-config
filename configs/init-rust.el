@@ -20,9 +20,13 @@ With optional SWITCHES, opens specific pieces of documentation."
   (define-key rust-mode-map (kbd "C-c C-r") #'rust-run)
   (define-key rust-mode-map (kbd "C-c C-t") #'rust-test)
   (define-key rust-mode-map (kbd "C-c C-c") #'rust-check)
+  ;; Mnemonic `b': Binary.
   (define-key rust-mode-map (kbd "C-c C-b") #'rust-compile)
   (define-key rust-mode-map (kbd "C-c C-h") 'yet-rustup-doc)
+  ;; Mnemonic `l': Lints.
   (define-key rust-mode-map (kbd "C-c C-l") #'rust-run-clippy)
+  ;; Mnemonics: `t' Toggle, `m' mut.
   (define-key rust-mode-map (kbd "C-c t m") #'rust-toggle-mutability)
   (define-key rust-mode-map (kbd "C-c C-d") nil)
+  ;; Mnemonics: `t' Toggle, `d' dbg!.
   (define-key rust-mode-map (kbd "C-c t d") #'rust-dbg-wrap-or-unwrap))
