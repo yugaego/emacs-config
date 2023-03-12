@@ -46,6 +46,8 @@
 
 (require 'php-mode)
 
+;; (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+
 (define-key php-mode-map (kbd "C-c C-h") #'php-search-documentation)
 
 (defun yet-php-mode ()
@@ -53,4 +55,26 @@
   (abbrev-mode -1))
 
 (add-hook 'php-mode-hook 'yet-php-mode)
-(add-hook 'web-mode-hook 'yet-php-mode)
+
+
+;;; Web Mode
+
+(require 'web-mode)
+
+(with-eval-after-load 'web-mode
+
+  ;; (add-to-list 'auto-mode-alist
+  ;;              '("/\\(views\\|html\\|templates\\)/.*\\.php\\'" . web-mode))
+
+  (defun yet-web-mode ()
+    (subword-mode 1)
+    (abbrev-mode -1)
+    (setq web-mode-enable-comment-interpolation t
+          web-mode-enable-comment-annotation t
+          web-mode-enable-auto-expanding t
+          web-mode-enable-current-element-highlight t
+          ;; web-mode-enable-current-column-highlight nil
+          web-mode-enable-sql-detection t))
+
+  (add-hook 'web-mode-hook 'yet-web-mode))
+
