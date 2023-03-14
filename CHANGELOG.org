@@ -3,7 +3,7 @@
 ** Unreleased
 
 *** Added:
-  - =rust-mode= abbreviations (templates).
+  - =rust-mode= abbreviations (templates). See ~M-x list-abbrevs~.
   - =rust-mode-map= keybindings:
     - =C-c C-l= for ~M-x rust-run-clippy~.
     - =C-c C-h= for ~M-x yet-rustup-doc~.
@@ -15,6 +15,10 @@
   - Keybinding =C-c l d= calls ~M-x eglot-shutdown~.
   - =rust-mode-map= keybinding =C-c C-d= to =C-c t d=.
   - Improve =web-mode= usability.
+
+*** Removed:
+  - Do not enable =display-time-mode=.
+
 
 ** v2.1.0 - 2022-11-27
 
