@@ -14,7 +14,6 @@
   (when (boundp eldoc-echo-area-display-truncation-message)
     (setq eldoc-echo-area-display-truncation-message nil))
 
-  ;; TEST
   (setq eglot-stay-out-of '(company)
         eglot-send-changes-idle-time 0.5)
 
@@ -30,6 +29,15 @@
   (define-key eglot-mode-map (kbd "C-c l r") #'eglot-rename)
 
   (define-key eglot-mode-map (kbd "C-c l a") #'eglot-code-actions)
+
+  (when (boundp eglot-inlay-hints-mode)
+    (define-key eglot-mode-map (kbd "C-c l i") #'eglot-inlay-hints-mode)
+
+    (defun yet-eglot-mode ()
+      (eglot-inlay-hints-mode -1))
+
+    (add-hook 'eglot-managed-mode-hook 'yet-eglot-mode))
+
 
   (advice-add 'project-kill-buffers
               :before

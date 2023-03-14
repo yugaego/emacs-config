@@ -9,6 +9,8 @@
     - =C-c C-h= for ~M-x yet-rustup-doc~.
     - =C-c t m= for ~M-x rust-toggle-mutability~.
   - =php-mode-map= keybinding =C-c C-h= to call ~M-x php-search-documentation~.
+  - Disable =eglot-inlay-hints-mode= by default.
+  - Keybinding  =C-c l i= to toggle =eglot-inlay-hints-mode=.
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~.
