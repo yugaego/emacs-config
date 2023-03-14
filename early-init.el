@@ -37,9 +37,9 @@
 
 ;; Fix native compilation on MacOS.
 ;; https://lists.gnu.org/archive/html/help-gnu-emacs/2021-10/msg00419.html
-(setenv "LIBRARY_PATH"
-        (concat
-         "/usr/local/opt/gcc/lib/gcc/11:"
-         "/usr/local/opt/libgccjit/lib/gcc/11:"
-         "/usr/local/opt/gcc/lib/gcc/11/gcc/x86_64-apple-darwin21/11"))
+;; (setenv "LIBRARY_PATH"
+;;         (concat
+;;          "/usr/local/opt/gcc/lib/gcc/12:"
+;;          "/usr/local/opt/libgccjit/lib/gcc/12:"
+;;          "/usr/local/opt/gcc/lib/gcc/12/gcc/x86_64-apple-darwin22/12"))
 
