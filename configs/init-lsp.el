@@ -11,7 +11,7 @@
         eldoc-echo-area-prefer-doc-buffer 'maybe
         eldoc-echo-area-use-multiline-p nil)
 
-  (when (boundp eldoc-echo-area-display-truncation-message)
+  (when (boundp 'eldoc-echo-area-display-truncation-message)
     (setq eldoc-echo-area-display-truncation-message nil))
 
   (setq eglot-stay-out-of '(company)
@@ -30,7 +30,7 @@
 
   (define-key eglot-mode-map (kbd "C-c l a") #'eglot-code-actions)
 
-  (when (boundp eglot-inlay-hints-mode)
+  (when (boundp 'eglot-inlay-hints-mode)
     (define-key eglot-mode-map (kbd "C-c l i") #'eglot-inlay-hints-mode)
 
     (defun yet-eglot-mode ()
