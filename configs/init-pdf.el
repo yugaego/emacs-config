@@ -2,21 +2,25 @@
 
 ;;; PDF tools
 
-(when (and (boundp 'yet-enable-pdf-tools) yet-enable-pdf-tools)
+(require 'pdf-loader)
+(require 'pdf-view)
 
-  (pdf-loader-install)
+(with-eval-after-load 'pdf-loader
 
-  (setq-default pdf-view-display-size 'fit-width
-                ;; pdf-view-max-image-width 4800
-                pdf-view-resize-factor 1.05
-                pdf-view-bounding-box-margin 0
-                ;; Fixes contrast on Mac OS Retina
-                ;; by displaying 2x images.
-                pdf-view-use-scaling t
-                pdf-view-use-unicode-ligther nil)
+  (when (and (boundp 'yet-enable-pdf-tools) yet-enable-pdf-tools)
 
-  (defun yet-pdf-view-mode ()
-    (pdf-view-midnight-minor-mode 1))
+    (pdf-loader-install)
 
-  (add-hook 'pdf-view-mode-hook 'yet-pdf-view-mode))
+    (defun yet-pdf-view-mode ()
+      (setq-local display-line-numbers nil)
+      (setq-default pdf-view-display-size 'fit-width
+                    ;; pdf-view-max-image-width 4800
+                    pdf-view-resize-factor 1.05
+                    pdf-view-bounding-box-margin 0
+                    ;; Fixes contrast on Mac OS Retina
+                    ;; by displaying 2x images.
+                    pdf-view-use-scaling t
+                    pdf-view-use-unicode-ligther nil)
+      (pdf-view-midnight-minor-mode 1))
 
+    (add-hook 'pdf-view-mode-hook 'yet-pdf-view-mode)))
