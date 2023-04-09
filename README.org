@@ -116,19 +116,31 @@ For more details consult the files =YOUR-DIR/INSTALL=, =YOUR-DIR/nextstep/INSTAL
 
 **** Pre-compiled
 
-In both cases /Emacs.app/ installed to =/Applications/=.
+The first two approaches install /Emacs.app/ to =/Applications/=.
+Consult documentation of the listed providers for more information.
 
-****** From dmg file
+****** DMG file
 
 Download from [[https://emacsformacosx.com][EmacsForMacOSX]], install as any other application.
 
-****** From brew
+****** Homebrew
 
 ~$ brew cask install emacs~
 
 - Upgrade: ~$ brew upgrade homebrew/cask/emacs~
 
 - Info: ~$ brew cask info homebrew/cask/emacs~
+
+****** Macports
+
+- ~$ sudo port install emacs-app~
+  - Installs /Emacs.app/ to =/Applications/MacPorts/=
+  - Current default variants =+nativecomp= and =+rsvg= are fine choice.
+  - Pre-install ~mailutils +gnutls~ if you plan to retrieve e-mails in /Emacs/.
+
+- ~$ sudo port install emacs~
+  - Installs =/opt/local/bin/emacs=
+  - Current default variant =+nativecomp= is a fine choice.
 
 
 [[https://www.emacswiki.org/emacs/EmacsForMacOS][More on Mac OS installers]].
