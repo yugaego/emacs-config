@@ -12,6 +12,7 @@
   - Disable =eglot-inlay-hints-mode= by default.
   - Keybinding =C-c l i= to toggle =eglot-inlay-hints-mode=.
   - Package =fish-mode= for ~fish~ shell scripts editing.
+  - Local configuration =yet-source-directory=.
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~.

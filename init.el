@@ -7,7 +7,9 @@
       garbage-collection-messages nil)
 
 ;; Pre-load optional local settings.
-(let ((local-pre-init (expand-file-name "local-pre-init.el" user-emacs-directory)))
+(let ((local-pre-init (expand-file-name
+                       "local-pre-init.el"
+                       user-emacs-directory)))
   (when (file-exists-p local-pre-init)
     (load local-pre-init)))
 
@@ -16,12 +18,18 @@
   (dolist (path yet-exec-path)
     (add-to-list 'exec-path path)))
 
+(when (boundp 'yet-source-directory)
+  (setq source-directory yet-source-directory))
+
 ;; Load additional configuration files matching the name pattern.
 ;; If needed, rename a file to disable (enable) its load on Emacs startup.
-(mapc 'load (file-expand-wildcards (concat user-emacs-directory "configs/init-*.el")))
+(mapc 'load (file-expand-wildcards
+             (concat user-emacs-directory "configs/init-*.el")))
 
 ;; Post-load optional local settings.
-(let ((local-post-init (expand-file-name "local-post-init.el" user-emacs-directory)))
+(let ((local-post-init (expand-file-name
+                        "local-post-init.el"
+                        user-emacs-directory)))
   (when (file-exists-p local-post-init)
     (load local-post-init)))
 

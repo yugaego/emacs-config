@@ -5,6 +5,12 @@
 ;;; init
 (defconst yet-exec-path '("/usr/local/bin" "~/.cargo/bin"))
 
+(defconst yet-source-directory "~/Sources/emacs"
+  "Point explicitly to the directory with Emacs source code.
+This is expected to be needed only for pre-built Emacs packages,
+for getting acces to C definitions when calling such commands
+as `help-view-source' or `xref-find-definition'")
+
 ;;; init-file
 (defconst yet-backup-directory-alist '(("." . "~/.backups-emacs")))
 (defconst yet-bookmark-default-file "~/path/to/emacs-bookmarks")
