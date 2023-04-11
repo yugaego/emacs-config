@@ -41,6 +41,9 @@
         company-files-exclusions '(".git/" ".DS_Store")
         company-files-chop-trailing-slash nil)
 
+  (when (boundp 'company-tooltip-annotation-padding)
+    (setq company-tooltip-annotation-padding 1
+          company-tooltip-align-annotations nil))
 
   ;;; Configure per major mode.
 

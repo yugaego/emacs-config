@@ -13,6 +13,7 @@
   - Keybinding =C-c l i= to toggle =eglot-inlay-hints-mode=.
   - Package =fish-mode= for ~fish~ shell scripts editing.
   - Local configuration =yet-source-directory=.
+  - Experimental: utilize =company-tooltip-annotation-padding=.
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~.
