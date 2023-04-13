@@ -14,6 +14,7 @@
   - Package =fish-mode= for ~fish~ shell scripts editing.
   - Local configuration =yet-source-directory=.
   - Experimental: utilize =company-tooltip-annotation-padding=.
+  - Local configuration =yet-explicit-shell-file-name=.
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~.

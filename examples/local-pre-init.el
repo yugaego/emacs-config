@@ -1,10 +1,11 @@
 ;;; local-pre-init.el --- LOCAL EXAMPLE configurations   -*- lexical-binding: t -*-
 
-;;; Each of the following example definitions is optional.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; EACH OF THE FOLLOWING EXAMPLE DEFINITIONS IS OPTIONAL. ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; init
 (defconst yet-exec-path '("/usr/local/bin" "~/.cargo/bin"))
-
 (defconst yet-source-directory "~/Sources/emacs"
   "Point explicitly to the directory with Emacs source code.
 This is expected to be needed only for pre-built Emacs packages,
@@ -45,6 +46,10 @@ as `help-view-source' or `xref-find-definition'")
   "imaps://some%40domain.tld:pwd@imap.domain.tld:993")
 (defconst yet-rmail-default-file "~/path/to/file")
 
+;;; init-shell
+(defconst yet-explicit-shell-file-name
+  (when (executable-find "fish") "fish"))
+
 ;;; init-smtp
 (defconst yet-smtpmail-default-smtp-server "smtp.domain.tld")
 (defconst yet-smtpmail-smtp-user "user@domain.tld")
@@ -55,12 +60,13 @@ as `help-view-source' or `xref-find-definition'")
 
 
 ;;;; Working with a third-party package source.
+;;; Beware of the compiled ('.elc') and natively compiled files ('eln-cache/').
 
 ;;; Load source of the package.
 ;; git clone some-package
 ;; (defconst local-<package> "/path/to/<package>")
 
-;;; Install (with compilation) a package
+;;; Optionally: Install (with compilation) a package
 ;;; to the default location ~/.emacs.d/elpa/
 ;; (package-install-file local-<package>)
 

@@ -15,18 +15,30 @@
 (setq shell-command-switch "-ic")
 
 
+(require 'shell)
+
+(when (boundp 'yet-explicit-shell-file-name)
+  (setq explicit-shell-file-name yet-explicit-shell-file-name))
+
+
 (require 'term)
 
 (setq term-completion-autolist t
       term-completion-recexact t)
 
-;; For scrolling and more Emacs' commands,
+;;; Usability Tips
+;; To call `M-x' commands, prefix them with `C-x'.
+;; For scrolling and other Emacs's commands,
 ;; switch to `term-line-mode' with `C-x C-j'.
 ;; Switch back to `term-char-mode' with `C-c C-k'.
+;; Or use custom bindings (see below).
 (defun yet-start-term ()
-  "Start terminal emulator running 'bash'."
+  "Start terminal emulator with pre-defined user shell.
+Creates new buffer on each call."
   (interactive)
-  (ansi-term "bash"))
+  (ansi-term (or explicit-shell-file-name
+				 (getenv "ESHELL")
+				 shell-file-name)))
 
 (global-set-key (kbd "C-c t s") 'yet-start-term)
 
