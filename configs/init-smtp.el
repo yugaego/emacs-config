@@ -4,11 +4,24 @@
 ;; SMTP Server authentication ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; 1. For a quick start, use file ~/.authinfo with this line:
-;; machine smtp.domain.tld login *** password *** port 465
-;; 2. Then encrypt ~/.authinfo as ~/.authinfo.gpg
+;;; *Basic*
+;; 1. $ cp ~/.emacs.d/example/local-pre-init.el ~/.emacs.d/local-pre-init.el
+;; 2. Fill in 'init-smtp' section in '~/.emacs.d/local-pre-init.el'
+;; 3. Restart or `M-x eval-buffer' on local-pre-init.el and this file.
+;; 3. Call `C-x m' (`M-x compose-mail'), fill it, then `C-c C-c' to send it.
+;; 4. Enter password when asked and choose to save '~/.authinfo'.
+;; The following line will be written to the file:
+;; machine smtp.domain.tld login user@domain.tld password *** port 465
+;;
+;;; Troubleshooting
+;; Error: "movemail: could not create mailbox ... Requested item not found"
+;; Make sure 'mailutils' was compiled with support for TLS.
+;;
+;;; *Secure*
+;; 5. Encrypt ~/.authinfo as ~/.authinfo.gpg
 ;;    - For example, in Dired encrypt ~/.authinfo by pressing :e
 ;;
+;;; Troubleshooting
 ;; Error: "gpg problem with the agent: Inappropriate ioctl for device:".
 ;; Fix: https://d.sb/B5N.
 ;; 1. $ printf "use-agent\npinentry-mode loopback\n" >> ~/.gnupg/gpg.conf
@@ -19,7 +32,7 @@
 (require 'smtpmail)
 (require 'message)
 
-;; Usage: M-x compose-mail or C-x m.
+;; Usage: `M-x compose-mail' or `C-x m'.
 (setq smtpmail-stream-type 'ssl            ; Resolves to TLS connection.
       smtpmail-smtp-service 465            ; or 587 for 'starttls.
       ;; smtpmail-debug-info t
