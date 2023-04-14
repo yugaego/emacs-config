@@ -41,22 +41,27 @@ as `help-view-source' or `xref-find-definition'")
 (defconst yet-enable-pdf-tools nil)
 
 ;;; init-rmail
-(defconst yet-rmail-file-name "~/path/to/file")
+(defconst yet-rmail-file-name "~/Mail/Rmail/YourFile")
+
+;; Use "imaps://some%40xmpl.tld:PWD@imap.xmpl.tld:993" for tests only.
+;; Store password to one of the `auth-sources'.
 (defconst yet-rmail-primary-inbox-list
-  "imaps://some%40domain.tld:pwd@imap.domain.tld:993")
-(defconst yet-rmail-default-file "~/path/to/file")
+  "imaps://some%40xmpl.tld@imap.xmpl.tld")
+
+(defconst yet-rmail-default-file "~/Mail/Rmail/Output")
+
 
 ;;; init-shell
 (defconst yet-explicit-shell-file-name
   (when (executable-find "fish") "fish"))
 
 ;;; init-smtp
-(defconst yet-smtpmail-default-smtp-server "smtp.domain.tld")
-(defconst yet-smtpmail-smtp-user "user@domain.tld")
-(defconst yet-user-mail-address "user@domain.tld")
+(defconst yet-smtpmail-default-smtp-server "smtp.xmpl.tld")
+(defconst yet-smtpmail-smtp-user "user@xmpl.tld")
+(defconst yet-user-mail-address "user@xmpl.tld")
 (defconst yet-user-full-name "Your Name")
 (defconst yet-message-default-mail-headers
-  "From: Name <name@xmpl.tld>\nReply-To: Name <name@xmpl.tld>\nFcc: ~/Mail/sent\n")
+  "From: Your Name <name@xmpl.tld>\nReply-To: Your Name <name@xmpl.tld>\nFcc: ~/Mail/sent\n")
 
 
 ;;;; Working with a third-party package source.

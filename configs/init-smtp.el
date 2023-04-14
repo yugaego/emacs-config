@@ -1,17 +1,17 @@
 ;;; init-smtp.el --- Configure mail sending via SMTP   -*- lexical-binding: t -*-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; SMTP Server authentication ;;
+;; SMTP Server Authentication ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;;; *Basic*
-;; - $ cp ~/.emacs.d/example/local-pre-init.el ~/.emacs.d/local-pre-init.el
+;; - $ cp -n ~/.emacs.d/example/local-pre-init.el ~/.emacs.d/local-pre-init.el
 ;; - Fill in 'init-smtp' section in '~/.emacs.d/local-pre-init.el'
-;; - Restart or `M-x eval-buffer' on local-pre-init.el and this file.
+;; - Restart or `M-x eval-buffer' on 'local-pre-init.el' and this file.
 ;; - Call `C-x m' (`M-x compose-mail'), fill it, then `C-c C-c' to send it.
 ;; - Enter password when asked and choose to save '~/.authinfo'.
 ;; The following line will be written to the file:
-;; machine smtp.domain.tld login user@domain.tld password *** port 465
+;; machine smtp.xmpl.tld login user@xmpl.tld password *** port 465
 ;; - For more details, consult (info "(auth) Help for users").
 ;;
 ;;; Troubleshoot

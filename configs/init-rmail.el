@@ -1,11 +1,31 @@
 ;;; init-rmail.el --- Configure Rmail email client   -*- lexical-binding: t -*-
 
-;;; Hint: use Mailabbrev or BBDB to insert addresses.
-;; Mailabbrev is straightforward: create ~/.mailrc with, f.i.:
-;; alias me "My Name <my@example.com>"
-;; alias others "Another Name <they@example.com>" "Other <she@example.com>"
-;; Then use <RET> or <TAB> to complete "me" or "others" in message-mode.
-;; BBDB is more sophisticated and can be configured to auto-collect addresses.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; IMAP Server Authentication ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;; *Basic*
+;; - $ cp -n ~/.emacs.d/example/local-pre-init.el ~/.emacs.d/local-pre-init.el
+;; - Fill in 'init-rmail' section in '~/.emacs.d/local-pre-init.el'
+;; - Restart or `M-x eval-buffer' on 'local-pre-init.el' and this file.
+;; - Call `M-x rmail' to retrieve emails.
+;; - Enter password when asked and store it to one of the `auth-sources'.
+;; Example `~/.authinfo' contents (or one of the lines):
+;; machine imap.xmpl.tld login user%40xmpl.tld port 993 password ***
+;; For more info, consult (info "(auth) Help for users").
+
+;;; Troubleshoot
+;; - $ movemail -p imaps://user%40xmpl.tld:PWD@xmpl.tld:993 Test.mbox
+;;
+;;; *Secure*
+;; - Encrypt ~/.authinfo as ~/.authinfo.gpg
+;;   - In 'dired-mode': go to '~/.authinfo' and type `:e' (`epa-dired-do-encrypt').
+;; - Remove '~/.authinfo'.
+;;
+;;; Troubleshoot
+;; (setq auth-source-debug t)
+;; (setq auth-source-do-cache nil)
+
 
 (require 'rmail)
 (require 'rmailsum)
@@ -13,11 +33,12 @@
 (require 'rmailout)
 
 ;;; *WARNING*
-;; Set this value to 't
-;; to keep emails on the server.
+;; Set this value to `t'
+;; for keeping emails on the server.
 (setq rmail-preserve-inbox nil)
 
 (setq rmail-movemail-program nil        ; See ../install-packages.el
+      rmail-remote-password-required t
       rmail-delete-after-output t       ; See `M-x rmail-output'.
       rmail-confirm-expunge nil
       rmail-display-summary nil
@@ -31,7 +52,7 @@
 (if (boundp 'yet-rmail-file-name)
     (setq rmail-file-name yet-rmail-file-name))
 
-;; '("imaps://some%40domain.tld:pwd@imap.domain.tld:993"))
+;; See '~/.emacs.d/examples/local-pre-init.el'.
 (if (boundp 'yet-rmail-primary-inbox-list)
     (setq rmail-primary-inbox-list yet-rmail-primary-inbox-list))
 
