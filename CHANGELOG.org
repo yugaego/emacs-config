@@ -21,6 +21,7 @@
   - Keybinding =C-c l d= calls ~M-x eglot-shutdown~.
   - =rust-mode-map= keybinding =C-c C-d= to =C-c t d=.
   - Improve =web-mode= usability.
+  - Improve e-mail sending (=SMTP=) setup description.
 
 *** Removed:
   - Do not enable =display-time-mode=.
