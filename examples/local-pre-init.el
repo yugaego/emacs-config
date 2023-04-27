@@ -22,7 +22,7 @@ commands as `help-view-source' or `xref-find-definition'.")
 
 
 ;;; init-file
-(defconst yet-backup-directory-alist '(("." . "~/.emacs-backups"))
+(defconst yet-backup-directory-alist '(("." . "~/.emacs.d/backups"))
   "Configure variable 'backup-directory-alist'.")
 
 (defconst yet-bookmark-default-file "~/path/to/emacs-bookmarks"

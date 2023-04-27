@@ -39,7 +39,8 @@
 
 ;; Save to a temporary directory.
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
-
+;; Do not create '~/.emacs.d/auto-save-list/' directory.
+(setq auto-save-list-file-prefix nil)
 
 ;;; Force backup on each auto-save.
 ;; https://www.emacswiki.org/emacs/ForceBackups
