@@ -18,7 +18,7 @@ commands as `help-view-source' or `xref-find-definition'.")
 
 (defconst yet-auth-sources '(macos-keychain-generic
                              "~/.config/emacs/.authinfo.gpg")
-  "A list of authentication sources to set variable `auth-sources' to.")
+  "Configure variable `auth-sources'.")
 
 
 ;;; init-file
