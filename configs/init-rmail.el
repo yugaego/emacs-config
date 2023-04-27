@@ -10,21 +10,30 @@
 ;; - Restart or `M-x eval-buffer' on 'local-pre-init.el' and this file.
 ;; - Call `M-x rmail' to retrieve emails.
 ;; - Enter password when asked and store it to one of the `auth-sources'.
-;; Example `~/.authinfo' contents (or one of the lines):
+;; Example authentication lines:
 ;; machine imap.xmpl.tld login user%40xmpl.tld port 993 password ***
-;; For more info, consult (info "(auth) Help for users").
 
 ;;; Troubleshoot
 ;; - $ movemail -p imaps://user%40xmpl.tld:PWD@xmpl.tld:993 Test.mbox
 ;;
 ;;; *Secure*
-;; - Encrypt ~/.authinfo as ~/.authinfo.gpg
+;; Consult (info "(auth) Help for users").
+;; - Encrypt '~/.authinfo' to '~/.authinfo.gpg'
 ;;   - In 'dired-mode': go to '~/.authinfo' and type `:e' (`epa-dired-do-encrypt').
 ;; - Remove '~/.authinfo'.
+;;
+;; Optionally, configure 'yet-auth-sources' (see '../examples/local-pre-init.el').
 ;;
 ;;; Troubleshoot
 ;; (setq auth-source-debug t)
 ;; (setq auth-source-do-cache nil)
+;;
+;; Error: "gpg problem with the agent: Inappropriate ioctl for device:".
+;; Fix: https://d.sb/B5N.
+;; 1. $ printf "use-agent\npinentry-mode loopback\n" >> ~/.gnupg/gpg.conf
+;; 2. $ printf "allow-loopback-pinentry\n" >> ~/.gnupg/gpg-agent.conf
+;; 3. Restart the agent:
+;;    - $ echo RELOADAGENT | gpg-connect-agent
 
 
 (require 'rmail)

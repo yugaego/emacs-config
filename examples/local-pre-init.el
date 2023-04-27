@@ -2,6 +2,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; EACH OF THE FOLLOWING EXAMPLE DEFINITIONS IS OPTIONAL. ;;
+;; To use an option, add it to ../local-pre-init.el file  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; init
@@ -14,6 +15,10 @@ This makes OS installed executables available to Emacs.")
 Sets variable `source-directory'.  This is expected to be needed only for
 pre-built Emacs packages: to get acces to C definitions when calling such
 commands as `help-view-source' or `xref-find-definition'.")
+
+(defconst yet-auth-sources '(macos-keychain-generic
+                             "~/.config/emacs/.authinfo.gpg")
+  "A list of authentication sources to set variable `auth-sources' to.")
 
 
 ;;; init-file

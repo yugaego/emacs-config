@@ -16,6 +16,7 @@
   - Experimental: utilize =company-tooltip-annotation-padding=.
   - Local configuration =yet-explicit-shell-file-name=.
   - Docstrings to ~yet-~ namespaced constants in ~/examples/local-pre-init.el~.
+  - Local configuration =yet-auth-sources=.
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~.

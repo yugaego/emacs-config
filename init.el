@@ -21,6 +21,10 @@
 (when (boundp 'yet-source-directory)
   (setq source-directory yet-source-directory))
 
+(require 'auth-source)
+(when (boundp 'yet-auth-sources)
+  (setq auth-sources yet-auth-sources))
+
 ;; Load additional configuration files matching the name pattern.
 ;; If needed, rename a file to disable (enable) its load on Emacs startup.
 (mapc 'load (file-expand-wildcards
