@@ -17,6 +17,7 @@
   - Local configuration =yet-explicit-shell-file-name=.
   - Docstrings to ~yet-~ namespaced constants in ~/examples/local-pre-init.el~.
   - Local configuration =yet-auth-sources=.
+  - Local configuration =yet-mail-personal-alias-file=.
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~.

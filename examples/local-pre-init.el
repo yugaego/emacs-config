@@ -110,6 +110,10 @@ For more details, see `rmail-output'.")
           "Fcc: ~/Mail/sent\n")
   "Configure variable 'message-default-mail-headers'.")
 
+(defconst yet-mail-personal-alias-file "~/.config/emacs/.mailrc"
+  "Configure variable 'mail-personal-alias-file'.
+Package 'Mailabbrev' expands aliases defined in this file to email addresses.")
+
 
 ;;;; Working with a third-party package source.
 ;;; Beware of the compiled ('.elc') and natively compiled files ('eln-cache/').

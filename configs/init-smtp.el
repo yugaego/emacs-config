@@ -60,3 +60,7 @@
     (setq message-default-mail-headers
           yet-message-default-mail-headers))
 
+;; Path to the file with addresses aliases.
+(if (boundp 'yet-mail-personal-alias-file)
+  (setq mail-personal-alias-file yet-mail-personal-alias-file))
+
