@@ -42,6 +42,7 @@ commands as `help-view-source' or `xref-find-definition'.")
 
 
 ;;; init-lsp
+;; Legacy option: `Phpactor' is supported natively now.
 (defconst yet-eglot-php-server
   '("php"
     "-d"
@@ -51,6 +52,7 @@ commands as `help-view-source' or `xref-find-definition'.")
     "language-server")
   "Set value of 'eglot-server-programs' in php-mode buffers.")
 
+;; Legacy option: `rust-analyzer' is supported natively now.
 (defconst yet-eglot-rust-server '("rust-analyzer")
   "Set value of 'eglot-server-programs' in rust-mode buffers.")
 
