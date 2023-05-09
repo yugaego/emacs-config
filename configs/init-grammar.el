@@ -10,7 +10,8 @@
 ;; Several convenient spell-checker commands:
 ;; - `C-.' corrects the word under cursor.
 ;; - `M-$' suggests spelling variants.
-;; - `M-x ispell-buffer' calls spell checking manually.
+;; - `M-x ispell-buffer' triggers spell-check on a buffer.
+;; - `M-x ispell-change-dictionary' allows to choose a dictionary.
 
 ;; The following lines enable automatic spell checking.
 (when (executable-find ispell-program-name)
