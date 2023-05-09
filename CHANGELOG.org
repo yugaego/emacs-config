@@ -18,6 +18,7 @@
   - Docstrings to ~yet-~ namespaced constants in ~/examples/local-pre-init.el~.
   - Local configuration =yet-auth-sources=.
   - Local configuration =yet-mail-personal-alias-file=.
+  - Enable =Gnus= as RSS / Atom reader via 'gwene.org'.
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~.

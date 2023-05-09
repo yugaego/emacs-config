@@ -9,6 +9,7 @@
 
    ;;; Gnus
   (setq gnus-select-method '(nntp "news.gmane.io")
+        gnus-secondary-select-methods '((nntp "news.gwene.org"))
         gnus-inhibit-startup-message t
         gnus-always-read-dribble-file t
         gnus-interactive-exit nil)
@@ -19,6 +20,7 @@
 
   ;;; Groups
   (setq gnus-group-buffer "*Gnus Groups*"
+        gnus-group-line-format "%M\ %S\ %p\ %P\ %5y:%B%(%G%)\n"
         gnus-use-scoring nil
         gnus-interactive-catchup nil      ; Catchup groups automatically.
         gnus-summary-next-group-on-exit nil)
