@@ -19,40 +19,42 @@
 (package-install-selected-packages)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Recommended Mac OS packages ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; MacOS Optional Packages ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; - $ brew install jansson
+;;; Macports
+;;
+;; - mailutils +gnutls
+;; - gnupg2 [+openldap +pinentry_mac]
+;; - gmake
+;; - aspell aspell-dict-<LANG>
+;;
+;;
+;;; Homebrew
+;;
+;; - jansson
 ;;      - Pre-install to use faster json parser.
-;;
-;; - $ brew install aspell
+;; - aspell
 ;;      - Spell-checker called by ispell and flyspell.
-;;
-;; - $ brew install multimarkdown
+;; - multimarkdown
 ;;      - A Markdown parser better matching Github and Gitlab styles.
 ;;      - Alternatively, call command `gfm-mode' from markdown-mode package.
-;;
-;; - $ brew install mailutils
+;; - mailutils
 ;;     - Allows to use POP3 via TLS channel by Rmail email client.
 ;;     - Emacs auto-compiles with `mailutils' support if it is installed.
 ;;     - See more details in Info node `Movemail'.
-;;
-;; - $ brew install gpg
+;; - gpg
 ;;     - OpenGPG encryption and signing tool.
-;;
-;; - $ brew install librsvg
+;; - librsvg
 ;;     - SVG images support.
-;;
-;; - $ brew install pkg-config poppler autoconf automake
+;; - pkg-config poppler autoconf automake
 ;;     - To build server for additional PDF tools.
 ;;     - See `yet-enable-pdf-tools' in ./examples/local-pre-init.el
 ;;     - $ echo export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig >> ~/.bash_profile
-;;
 ;; - https://www.tug.org/mactex/
 ;;     - LaTeX installation for org-mode.
-;;
-;; - $ brew install minimal-racket
-;; - $ raco pkg install --auto drracket
-;;     - Only `racket-mode' related.
-;;     - Installs Racket language environment.
+;; - minimal-racket
+;;   - $ raco pkg install --auto drracket
+;;       - Only `racket-mode' related.
+;;       - Installs Racket language environment.
