@@ -29,6 +29,8 @@
 ;; - gnupg2 [+openldap +pinentry_mac]
 ;; - gmake
 ;; - aspell aspell-dict-<LANG>
+;; - auto-installed if pdf-tools enabled
+;;   - pkgconfig poppler autoconf automake libpng
 ;;
 ;;
 ;;; Homebrew

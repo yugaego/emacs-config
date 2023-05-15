@@ -58,8 +58,9 @@ commands as `help-view-source' or `xref-find-definition'.")
 
 
 ;;; init-pdf
-;; Requires poppler server installation.
-;; See https://github.com/politza/pdf-tools.
+;; May require additional OS packages installation,
+;; which will be automated in common scenarios.
+;; See https://github.com/vedang/pdf-tools.
 (defconst yet-enable-pdf-tools nil
   "Enable to initialize and configure 'pdf-tools' package.")
 
