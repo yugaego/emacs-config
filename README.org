@@ -6,7 +6,7 @@
 /Emacs/ is... what *you* want it to be.
 #+END_QUOTE
 
-This is a collection of files for configuration of /Emacs/ (versions >= 27.1).
+This is a collection of files for configuration of /Emacs/.
 
 This /Emacs flavor/ is intended to be *well-organized*, *documented*,
 *good-looking*, and *behaving* according to modern expectations. A priority is
@@ -88,35 +88,6 @@ For example, on Mac OS you may:
 
 *** Install
 
-Tested with the /Emacs/ versions 26.3, 27.1, 28.1, 29-snapshot.
-
-Compiling from source is simple enough, so try starting with it.\\
-Fallback to the pre-compiled binaries if you find it easier or are interested in a specific distribution with extras.
-
-
-**** From source
-
-- ~$ git clone git://git.savannah.gnu.org/emacs.git YOUR-DIR~
-- ~$ cd YOUR-DIR~
-- ~$ ./autogen.sh~
-  - This is an optional step.
-  - Only needed for the fresh clone of the code without the ~configure~ script.
-  - On this step the ~configure~ script and some related files are generated.
-- ~$ ./configure~
-  - For example, with additional options:
-    - ~$ ./configure -C --with-json --with-native-compilation --with-mailutils --with-imagemagick~.
-  - ~$ ./configure --help~ lists all the available options.
-- ~$ make~
-  - Compiles emacs into =YOUR-DIR/src/=.
-  - Launch install [[https://stackoverflow.com/a/68289258/1319821][emacs from CLI]].
-- ~$ make install~
-  - This is an optional step.
-  - Adds /Emacs.app/ to =YOUR-DIR/nextstep/=.
-  - Feel free to move or symlink the created app.
-
-For more details consult the files =YOUR-DIR/INSTALL=, =YOUR-DIR/nextstep/INSTALL=, and =YOUR-DIR/README=.
-
-
 **** Pre-compiled
 
 The first two approaches install /Emacs.app/ to =/Applications/=.
@@ -152,6 +123,32 @@ And by the way, /Emacs/ usage is smooth with /Dvorak/ layout and a /split keyboa
 I personally use [[https://kinesis-ergo.com/shop/advantage2/][Kinesis Advantage]] and feel comfortable having a set of modifier keys [[https://gitlab.com/-/snippets/1744636][under each of my hands]].
 
 
+
+**** From source
+
+Compiling from source is simple enough.
+
+- ~$ git clone git://git.savannah.gnu.org/emacs.git YOUR-DIR~
+- ~$ cd YOUR-DIR~
+- ~$ ./autogen.sh~
+  - This is an optional step.
+  - Only needed for the fresh clone of the code without the ~configure~ script.
+  - On this step the ~configure~ script and some related files are generated.
+- ~$ ./configure~
+  - For example, with additional options:
+    - ~$ ./configure -C --with-json --with-native-compilation --with-mailutils --with-imagemagick~.
+  - ~$ ./configure --help~ lists all the available options.
+- ~$ make~
+  - Compiles emacs into =YOUR-DIR/src/=.
+  - Launch install [[https://stackoverflow.com/a/68289258/1319821][emacs from CLI]].
+- ~$ make install~
+  - This is an optional step.
+  - Adds /Emacs.app/ to =YOUR-DIR/nextstep/=.
+  - Feel free to move or symlink the created app.
+
+For more details consult the files =YOUR-DIR/INSTALL=, =YOUR-DIR/nextstep/INSTALL=, and =YOUR-DIR/README=.
+
+
 * What's Next
 
 As the next steps, I highly recommend:
@@ -169,6 +166,6 @@ cheat sheet]].
 * Contributing
 
 I hope you find this repository helpful. If you see a way to improve it, feel
-free to contribute or let me know.
+free to submit changes or ideas.
 
 Happy Emacsing!
