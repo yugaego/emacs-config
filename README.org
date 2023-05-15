@@ -25,12 +25,15 @@ inspiration to configure your own /Emacs/.
 
 *** Install
 
-- One, clone this configuration:
+1. Download this configuration:
   - Backup contents of the directory =~/.emacs.d=, if you have the one.
-  - ~$ git clone git@gitlab.com:yugaego/emacs-config.git ~/.emacs.d~
-  - or ~$ git clone git@github.com:yugaego/emacs-config.git ~/.emacs.d~
+  - Do one of the following:
+    - Download one of the releases, unpack it, and rename to =~/.emacs.d~=.
+      - Earlier versions might become a good starting point for a newbie.
+    - ~$ git clone git@gitlab.com:yugaego/emacs-config.git ~/.emacs.d~
+    - ~$ git clone git@github.com:yugaego/emacs-config.git ~/.emacs.d~
 
-- Two, install configured packages:
+2. Install configured packages:
   - =$ cd ~/.emacs.d=
   - ~$ emacs --script install-packages.el~
 
@@ -149,15 +152,23 @@ And by the way, /Emacs/ usage is smooth with /Dvorak/ layout and a /split keyboa
 I personally use [[https://kinesis-ergo.com/shop/advantage2/][Kinesis Advantage]] and feel comfortable having a set of modifier keys [[https://gitlab.com/-/snippets/1744636][under each of my hands]].
 
 
-*** What's Next
+* What's Next
 
 As the next steps, I highly recommend:
   - following the /Emacs tutorial/ (~Ctrl-h t~),
   - then reading the /Emacs manual/ (~Ctrl-h r~).
-I also found [[https://www.emacswiki.org/emacs/EmacsNewbie][EmacsWiki]] to be the most helpful resource online.
 
-Experiment while reading documentation. In my case, it took two months to read
-the manual and get comfortable with /Emacs/.\\
-To that moment I wrote the simplest possible [[https://github.com/yugaego/emacs-config/blob/bare-bones/init.el][configuration file]] and wrote [[https://github.com/yugaego/cheat-sheets/blob/main/Emacs.org][this
-key bindings cheat sheet]].
+[[https://www.emacswiki.org/emacs/EmacsNewbie][EmacsWiki]] is one of the most helpful resource online for the beginners.
 
+Experiment while reading documentation. For example, in my case, it took two
+months to read the manual and switch to feeling comfortable with /Emacs/.
+
+The result of that period was a basic [[https://github.com/yugaego/emacs-config/blob/bare-bones/init.el][configuration file]] and [[https://github.com/yugaego/cheat-sheets/blob/main/Emacs.org][this key bindings
+cheat sheet]].
+
+* Contributing
+
+I hope you find this repository helpful. If you see a way to improve it, feel
+free to contribute or let me know.
+
+Happy Emacsing!
