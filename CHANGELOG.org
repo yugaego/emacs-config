@@ -27,6 +27,7 @@
   - Improve =web-mode= usability.
   - Improve description of emails sending via =SMTP= server.
   - Improve description of emails retrieval from =IMAP= server with =Rmail=.
+  - Disable adding a blank line before new heading/item in =org-mode=.
 
 *** Removed:
   - Do not enable =display-time-mode=.

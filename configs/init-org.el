@@ -55,6 +55,10 @@
 ;; - `RET' adds a child item.
 ;; - `M-RET' adds a sibling.
 
+;; Do not insert unexpected newlines.
+(setq org-blank-before-new-entry '(((heading . nil)
+                                    (plain-list-item . nil))))
+
 
 ;;; Disable confusing org-mode keybindings
 
