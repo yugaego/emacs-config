@@ -31,29 +31,29 @@
 
 ;;; Indentation
 
-
 ;; Do not indent after headlines.
 (setq org-adapt-indentation nil)
 
 ;; Remap to work closer to the programming modes indentation.
-;; In the lists:
-;; - `RET' adds a child item.
+;; In the lists ('electric-indent-mode' disabled by 'org-mode-hook'):
 ;; - `C-j' starts a new line.
+;; - `RET' adds a child item.
 ;; - `M-RET' adds a sibling.
 (define-key org-mode-map (kbd "RET") #'org-return-and-maybe-indent)
 (define-key org-mode-map (kbd "C-j") #'org-return)
 
 ;;; Default indentation
 
-;; With electric indent DISABLED, in the lists:
+;; With 'electric-indent-mode' DISABLED, in the lists:
 ;; - `RET' starts a new line.
 ;; - `C-j' adds a child item.
 ;; - `M-RET' adds a sibling.
 
-;; With electric indent ENABLED, in the lists:
+;; With 'electric-indent-mode' ENABLED, in the lists:
 ;; - `C-j' starts a new line.
 ;; - `RET' adds a child item.
 ;; - `M-RET' adds a sibling.
+
 
 ;; Do not insert unexpected newlines.
 (setq org-blank-before-new-entry '(((heading . nil)
