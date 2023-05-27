@@ -13,14 +13,14 @@
 
     (defun yet-pdf-view-mode ()
       (setq-local display-line-numbers nil)
-      (setq-default pdf-view-display-size 'fit-width
+      ;; (pdf-view-midnight-minor-mode 1)
+      (setq-default pdf-view-display-size 'fit-height
                     ;; pdf-view-max-image-width 4800
                     pdf-view-resize-factor 1.05
                     pdf-view-bounding-box-margin 0
                     ;; Fixes contrast on Mac OS Retina
                     ;; by displaying 2x images.
                     pdf-view-use-scaling t
-                    pdf-view-use-unicode-ligther nil)
-      (pdf-view-midnight-minor-mode 1))
+                    pdf-view-use-unicode-ligther nil))
 
     (add-hook 'pdf-view-mode-hook 'yet-pdf-view-mode)))
