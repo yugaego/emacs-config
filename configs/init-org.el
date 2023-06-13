@@ -10,8 +10,9 @@
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp . t)
+     (js . t)
      (latex . t)
-     (js . t))))
+     (shell . t))))
 
 ;; Enlarge LaTeX preview.
 (plist-put org-format-latex-options :scale 1.5)
