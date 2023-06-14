@@ -30,6 +30,7 @@
   - Improve description of emails retrieval from =IMAP= server with =Rmail=.
   - Disable adding a blank line before new heading/item in =org-mode=.
   - Adjust =pdf-view-mode= settings.
+  - Use =gnus-summary-next-group-on-exit= default value of =t=.
 
 *** Removed:
   - Do not enable =display-time-mode=.

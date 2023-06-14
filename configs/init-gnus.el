@@ -23,7 +23,7 @@
         gnus-group-line-format "%M\ %S\ %p\ %P\ %5y:%B%(%G%)\n"
         gnus-use-scoring nil
         gnus-interactive-catchup nil      ; Catchup groups automatically.
-        gnus-summary-next-group-on-exit nil)
+        gnus-summary-next-group-on-exit t)
 
   ;;; Articles
   (setq gnus-auto-select-next nil
