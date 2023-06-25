@@ -72,6 +72,7 @@ inspiration to configure your own /Emacs/.
 - C-c s-d :: =M-x yet-mac-open-dictionary-current-word=
 - C-c s-g :: =M-x yet-browse-grammarly=
 - C-c l s :: =M-x eglot=
+- C-c i s :: =M-x imenu-list-smart-toggle= (toggle)
 - C-c t s :: =M-x yet-start-term=
 - C-c b i :: =M-x display-fill-column-indicator-mode=
 - C-c b l :: =M-x scroll-lock-mode=

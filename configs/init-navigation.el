@@ -54,3 +54,13 @@
 
 ;; Prioritize files that are switched to often.
 (add-hook 'buffer-list-update-hook #'recentf-track-opened-file)
+
+
+(require 'imenu-list)
+
+;; Mnemonics: `i' Imenu, `s' Start/Stop.
+(global-set-key (kbd "C-c i s") #'imenu-list-smart-toggle)
+
+(setq imenu-list-focus-after-activation t
+      imenu-list-idle-update-delay-time 0.1
+      imenu-list-position 'below)
