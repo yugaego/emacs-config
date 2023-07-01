@@ -9,7 +9,7 @@
 
    ;;; Gnus
   (setq gnus-select-method '(nntp "news.gmane.io")
-        gnus-secondary-select-methods '((nntp "news.gwene.org"))
+        gnus-secondary-select-methods nil ; gwene lists available via gmane.
         gnus-inhibit-startup-message t
         gnus-always-read-dribble-file t
         gnus-interactive-exit nil)

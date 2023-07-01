@@ -18,7 +18,6 @@
   - Docstrings to ~yet-~ namespaced constants in ~/examples/local-pre-init.el~.
   - Local configuration =yet-auth-sources=.
   - Local configuration =yet-mail-personal-alias-file=.
-  - Enable =Gnus= as RSS / Atom reader via 'gwene.org'.
   - Enable ~shell~ evaluation in =org-mode= buffers.
   - Package =imenu-list=. Toggle =imenu-list-minor-mode= with =C-c i s=.
 
