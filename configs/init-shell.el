@@ -43,12 +43,13 @@ Creates new buffer on each call."
 (defun yet-term-mode ()
   ;; https://github.com/fish-shell/fish-shell/issues/1411#issuecomment-40859080
   (toggle-truncate-lines 1))
+  ;; (term-set-escape-char ?\C-x))
 
 (add-hook 'term-mode-hook 'yet-term-mode)
 
 (global-set-key (kbd "C-c t s") 'yet-start-term)
 
-(define-key term-raw-map (kbd "C-c t l") #'term-line-mode)
+(define-key term-raw-escape-map (kbd "t l") #'term-line-mode)
 (define-key term-mode-map (kbd "C-c t c") #'term-char-mode)
 
 (require 'shell)
