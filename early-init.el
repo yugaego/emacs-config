@@ -32,8 +32,9 @@
         (font . ,yet-font)))
 
 ;; Disable UI elements.
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
+(when (display-graphic-p)
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1))
 
 ;; Fix native compilation on MacOS.
 ;; https://lists.gnu.org/archive/html/help-gnu-emacs/2021-10/msg00419.html
