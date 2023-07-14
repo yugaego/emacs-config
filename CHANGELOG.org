@@ -31,6 +31,7 @@
   - Disable adding a blank line before new heading/item in =org-mode=.
   - Adjust =pdf-view-mode= settings.
   - Use =gnus-summary-next-group-on-exit= default value of =t=.
+  - Truncate long lines in =sql-interactive-mode=.
 
 *** Removed:
   - Do not enable =display-time-mode=.

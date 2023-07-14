@@ -78,3 +78,10 @@
 
   (add-hook 'web-mode-hook 'yet-web-mode))
 
+
+;;; SQL
+
+(defun yet-sql-interactive-mode ()
+  (toggle-truncate-lines 1))
+
+(add-hook 'sql-interactive-mode-hook 'yet-sql-interactive-mode)
