@@ -5,8 +5,10 @@
 ;; do `M-x disable-theme <old-theme>'.
 (load-theme 'misterioso t)
 
-(let ((class '((class color) (min-colors 4096))))
-
+(let ((class '((class color) (min-colors 4096)))
+      (modeline-font (concat "Monospace-"
+                             (if (boundp 'yet-font-size)
+                                 yet-font-size "17"))))
   (custom-theme-set-faces
    'misterioso
    `(cursor ((,class (:background "#fff"))))
@@ -14,13 +16,13 @@
      ((,class (:foreground "SlateGray3" :background "#354555"))))
    `(mode-line
      ((,class
-       (:foreground "SkyBlue2" :background "#455565" :font "Monospace"))))
+       (:foreground "SkyBlue2" :background "#455565" :font ,modeline-font))))
    `(mode-line-buffer-id
      ((,class (:weight bold :slant italic))))
    `(mode-line-highlight ((,class (:foreground "SkyBlue3"))))
    `(mode-line-inactive
      ((,class
-       (:foreground "SkyBlue4" :background "#304050" :font "Monospace"))))
+       (:foreground "SkyBlue4" :background "#304050" :font ,modeline-font))))
    `(mode-line-emphasis ((,class (:foreground "#74af68"))))
 
    `(diff-file-header ((,class (:background "#455565"))))

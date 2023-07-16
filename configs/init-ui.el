@@ -1,5 +1,38 @@
 ;;; init-ui.el --- Configure user interface   -*- lexical-binding: t -*-
 
+;; Initial (first) frame configuration.
+;; Uses 0.0 to 1.0 ratio.
+(setq initial-frame-alist
+      `((top . 0.0)
+        (left . 0.0)
+        (width . 0.52)
+        (height . 1.0)))
+
+;; New frames configuration.
+;; Uses 0.0 to 1.0 ratio.
+(setq default-frame-alist
+      `((top . 0.0)
+        (left . 1.0)
+        (width . 0.48)
+        (height . 1.0)))
+
+(defvar-local yet-frames-font
+  (let ((font (cond
+               ((boundp 'yet-font) yet-font)
+               ((eq system-type 'darwin) "Monaco")
+               ((memq system-type '(ms-dos windows-nt)) "Consolas")
+               (t "DejaVu Sans Mono")))
+        (size (if (boundp 'yet-font-size) yet-font-size "17")))
+    (concat font "-" size)))
+
+(add-to-list 'initial-frame-alist `(font . ,yet-frames-font))
+(add-to-list 'default-frame-alist `(font . ,yet-frames-font))
+
+;; Disable UI elements.
+(when (display-graphic-p)
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1))
+
 (setq inhibit-startup-message t         ; Do not display startup message.
       initial-scratch-message nil)      ; Start with empty *scratch* buffer.
 

@@ -117,6 +117,17 @@ For more details, see `rmail-output'.")
   "Configure variable 'mail-personal-alias-file'.
 Package 'Mailabbrev' expands aliases defined in this file to email addresses.")
 
+;;; init-theme
+;;; init-ui
+(defconst yet-font-size "17"
+  "Font size to use by all frames.
+If not set, value of 17 is used.")
+
+(defconst yet-font "Monaco"
+  "Font to use by all frames.
+If not set, the value is operating system dependent: Monaco on macOS,
+Consolas on Windows, otherwise DejaVu Sans Mono.")
+
 
 ;;;; Working with a third-party package source.
 ;;; Beware of the compiled ('.elc') and natively compiled files ('eln-cache/').

@@ -20,6 +20,7 @@
   - Local configuration =yet-mail-personal-alias-file=.
   - Enable ~shell~ evaluation in =org-mode= buffers.
   - Package =imenu-list=. Toggle =imenu-list-minor-mode= with =C-c i s=.
+  - New optional constants ~yet-font~ and ~yet-font-size~.
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~.
@@ -32,6 +33,7 @@
   - Adjust =pdf-view-mode= settings.
   - Use =gnus-summary-next-group-on-exit= default value of =t=.
   - Truncate long lines in =sql-interactive-mode=.
+  - Move most of the UI settings from ~early-init.el~ to ~configs/init-ui.el~.
 
 *** Removed:
   - Do not enable =display-time-mode=.
@@ -48,7 +50,7 @@ Usability improvements of the existing functionality, with an emphasis on:
   - Hint how to complete email addresses.
   - Package =web-mode=.
   - Keybinding =M-s M-s= for ~M-x isearch-forward-thing-at-point~.
-  - More abbrevs to ~init-abbrevs.el~
+  - More abbrevs to ~configs/init-abbrevs.el~
   - Keybinding =f= to open =xref= definition in the same window.
   - Enable =recentf-mode=. Call with ~M-x recent-open*~.
   - Keybinding =C-c t s= to start terminal emulator.
