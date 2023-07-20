@@ -39,6 +39,9 @@
   (kbd "f")
   'yet-xref-goto-xref-same-window)
 
+;; For uniformity with 'xref' goto command (see above).
+(define-key occur-mode-map (kbd "f") #'occur-mode-goto-occurrence)
+
 
 (require 'pulse)
 

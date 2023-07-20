@@ -21,6 +21,7 @@
   - Enable ~shell~ evaluation in =org-mode= buffers.
   - Package =imenu-list=. Toggle =imenu-list-minor-mode= with =C-c i s=.
   - New optional constants ~yet-font~ and ~yet-font-size~.
+  - Keybinding =f= to call =occur-mode-goto-occurrence=.
 
 *** Changed:
   - Keybinding =C-c l s= now calls ~M-x eglot~.
