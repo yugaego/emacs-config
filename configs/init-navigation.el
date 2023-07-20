@@ -62,5 +62,5 @@
 (global-set-key (kbd "C-c i s") #'imenu-list-smart-toggle)
 
 (setq imenu-list-focus-after-activation t
-      imenu-list-idle-update-delay-time 0.1
+      imenu-list-idle-update-delay 0.1
       imenu-list-position 'below)
