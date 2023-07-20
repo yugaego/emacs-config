@@ -36,6 +36,7 @@
   - Truncate long lines in =sql-interactive-mode=.
   - Move most of the UI settings from ~early-init.el~ to ~configs/init-ui.el~.
   - Prefer user labels on =org-mode= export.
+  - Use existing entry ID on ~M-x org-store-link~ call.
 
 *** Removed:
   - Do not enable =display-time-mode=.

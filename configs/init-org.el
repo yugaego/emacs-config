@@ -32,6 +32,10 @@
   (when (boundp 'org-html-prefer-user-labels)
     (setq org-html-prefer-user-labels t)))
 
+(with-eval-after-load 'org-id
+  (when (boundp 'org-id-link-to-org-use-id)
+    (setq org-id-link-to-org-use-id 'use-existing)))
+
 
 ;;; Indentation
 
