@@ -39,8 +39,17 @@
   (kbd "f")
   'yet-xref-goto-xref-same-window)
 
+
 ;; For uniformity with 'xref' goto command (see above).
-(define-key occur-mode-map (kbd "f") #'occur-mode-goto-occurrence)
+(defun yet-occur-mode-goto-occurrence-same-window ()
+  "Open occurrence in the current window."
+  (interactive)
+  (same-window-prefix)
+  (occur-mode-goto-occurrence))
+
+(define-key occur-mode-map
+  (kbd "f")
+  'yet-occur-mode-goto-occurrence-same-window)
 
 
 (require 'pulse)
