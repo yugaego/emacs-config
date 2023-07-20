@@ -24,10 +24,13 @@
 
 (add-hook 'org-mode-hook 'yet-org-mode)
 
+(with-eval-after-load 'ox
+  (when (boundp 'org-export-with-broken-links)
+    (setq org-export-with-broken-links 'mark)))
 
-(require 'ox)
-
-(setq org-export-with-broken-links 'mark)
+(with-eval-after-load 'ox-html
+  (when (boundp 'org-html-prefer-user-labels)
+    (setq org-html-prefer-user-labels t)))
 
 
 ;;; Indentation
