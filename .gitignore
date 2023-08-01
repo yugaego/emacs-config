@@ -1,13 +1,39 @@
+# Try to type ‘TAB’ at "#outline: /path/to/dir/" line.
+
+#outline: ./
 /*
-!init.el
-!early-init.el
-!custom.el
-!.dir-locals.el
-!/configs
-!install-packages.el
-!README.org
-!.gitignore
-!LICENSE
-!CHANGELOG.org
-!/images
-!/examples
+!/.dir-locals.el
+!/.gitignore
+!/CHANGELOG.org
+!/LICENSE
+!/README.org
+!/configs/
+!/custom.el
+!/early-init.el
+!/examples/
+!/images/
+!/init.el
+!/install-packages.el
+
+#outline: ./configs/
+# E.g.,
+#   /configs/*
+#   !/configs/include-this-file
+
+# Typing at the last headline will hide the following varibales, see
+# <https://github.com/shynur/.emacs.d/blob/fb1c8f2c7fedfdd140d61846d4908af877b10104/.dir-locals.el#L125C6-L125C6>
+# for how to prevent this behavior.
+
+# Local Variables:
+# outline-regexp: "^#+outline:\\(?1:[[:blank:]]+\\(?:[._[:alnum:]-]+/\\)+\\)?"
+# outline-heading-end-regexp: "/\n"
+# outline-level: (lambda ()
+#                  (let ((slash-amount 0))
+#                    (seq-doseq (character (match-string-no-properties 1))
+#                      (when (char-equal character ?/)
+#                        (cl-incf slash-amount)))
+#                    slash-amount))
+# outline-minor-mode-cycle: t
+# outline-minor-mode-prefix: [nil]
+# eval: (outline-minor-mode)
+# End:
