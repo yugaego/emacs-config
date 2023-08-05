@@ -1,6 +1,16 @@
 * Changelog
 
-** Unreleased
+** v2.2.0 - 2023-08-05
+
+This release wraps up further improvements made for *Emacs 28.2*. Future commits
+are planned to be *Emacs 29* -oriented (ideally, preserving backward
+compatibility).
+
+The main highlights of this release are as follows:
+- Better keybindings for =rust-mode=, =php-mode=, =eglot=.
+- Local configuration (~yet-~ constants related) improvements.
+- =web-mode= usability improvements.
+- New packages: =fish-mode=, =imenu-list=.
 
 *** Added:
   - =rust-mode= abbreviations (templates). See ~M-x list-abbrevs~.
