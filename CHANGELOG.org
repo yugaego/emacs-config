@@ -1,5 +1,11 @@
 * Changelog
 
+** Unreleased
+
+*** Changed:
+- Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.
+
+
 ** v2.2.0 - 2023-08-05
 
 This release wraps up further improvements made for *Emacs 28.2*. Future commits
