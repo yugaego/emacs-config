@@ -167,6 +167,7 @@ cheat sheet]].
 * Contributing
 
 I hope you find this repository helpful. If you see a way to improve it, feel
-free to submit changes or ideas.
+free to submit changes or ideas. This project attempts to follow [[https://en.wikipedia.org/wiki/KISS_principle][the KISS
+principle]], so reporting any unclarity is welcome too.
 
 Happy Emacsing!
