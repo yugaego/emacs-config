@@ -88,3 +88,5 @@
 ;; Mnemonics `b' Buffer, `l' Lock Line and scroLL.
 (global-set-key (kbd "C-c b l") #'scroll-lock-mode)
 
+(when (boundp 'pixel-scroll-precision-mode) ; Since Emacs 29.1
+  (pixel-scroll-precision-mode 1))
