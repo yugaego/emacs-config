@@ -120,8 +120,16 @@ there's a region, all lines that region covers will be duplicated."
         (setq end (point)))
       (goto-char (+ origin (* (length region) arg) arg)))))
 
-;; A shorter key binding that might be removed in future.
-(global-set-key (kbd "C-c d") 'yet-duplicate-current-line-or-region)
+(require 'misc)
+
+(when (boundp 'duplicate-line-final-position)
+  (setq duplicate-line-final-position 1))
+
+(defvar-local yet-duplicate-fun (if (fboundp 'duplicate-dwim)
+                                    'duplicate-dwim
+                                  'yet-duplicate-current-line-or-region))
+
+(global-set-key (kbd "C-c d") yet-duplicate-fun)
 
 
 ;;; Marked region (selection).
