@@ -122,11 +122,11 @@ there's a region, all lines that region covers will be duplicated."
 
 (require 'misc)
 
-(when (boundp 'duplicate-line-final-position)
+(when (boundp 'duplicate-line-final-position) ; Since Emacs 29.1
   (setq duplicate-line-final-position 1))
 
 (defvar-local yet-duplicate-fun (if (fboundp 'duplicate-dwim)
-                                    'duplicate-dwim
+                                    'duplicate-dwim ; Since Emacs 29.1
                                   'yet-duplicate-current-line-or-region))
 
 (global-set-key (kbd "C-c d") yet-duplicate-fun)

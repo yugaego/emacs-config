@@ -6,6 +6,8 @@
         (company-dabbrev-other-buffers . nil)
         (eval . (load (expand-file-name "yet-publish.el") t t t))))
 
+(when (fboundp 'rename-visited-file)    ; Since Emacs 29.1
+  (keymap-global-set "C-c f r" #'rename-visited-file))
 
 ;;; Backups
 

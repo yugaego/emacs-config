@@ -54,7 +54,7 @@ inspiration to configure your own /Emacs/.
   ~configs/init-*.el~ files load.
 - CHANGELOG.org :: Lists notable changes.
 
-*** Custom Keybindings (global only)
+*** Global Custom Keybindings
 
 - C-x C-b :: =M-x ibuffer-other-window=
 - C-c b k :: =M-x kill-some-buffers=
@@ -69,6 +69,7 @@ inspiration to configure your own /Emacs/.
 - C-c b w :: =M-x whitespaces-mode= (toggle)
 - C-c d :: =M-x yet-duplicate-current-line-or-region= (calls function
   =duplicate-dwim= since Emacs 29.1)
+- C-c f r :: =M-x rename-visited-file= (since Emacs 29.1)
 - C-c s-f :: =M-x yet-mac-open-finder-current-file=
 - C-c s-d :: =M-x yet-mac-open-dictionary-current-word=
 - C-c s-g :: =M-x yet-browse-grammarly=
