@@ -4,11 +4,12 @@
 Introduces *Emacs 29.1* features support.
 
 *** Added:
-  - Global keybinding =C-c f r= to call =M-x rename-visited-file= (Emacs 29.1).
+  - Global keybinding =C-c f r= to call ~M-x rename-visited-file~ (Emacs 29.1).
   - Enable =pixel-scroll-precision-mode= (since Emacs 29.1).
 
 *** Changed:
   - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.
+  - Rename =yet-kill-emacs-reset-desktop-state= to =yet-kill-emacs-reset-desktop=.
 
 
 ** v2.2.0 - 2023-08-05

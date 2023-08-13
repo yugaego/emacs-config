@@ -39,7 +39,12 @@ If *scratch* buffer is empty, returns true without prompting."
 ;; Save state without asking.
 (setq desktop-save t)
 
-(defun yet-kill-emacs-reset-desktop-state (&optional arg)
+(define-obsolete-function-alias
+  'yet-kill-emacs-reset-desktop-state
+  'yet-kill-emacs-reset-desktop
+  "3.0.0")
+
+(defun yet-kill-emacs-reset-desktop (&optional arg)
   "Save buffers and kill Emacs without saving the state to the desktop file.
 With prefix ARG, saves all file-visiting buffers without asking."
   (interactive "P")
