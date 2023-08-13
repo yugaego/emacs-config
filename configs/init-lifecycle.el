@@ -62,3 +62,8 @@ With prefix ARG, saves all file-visiting buffers without asking."
 
 (add-hook 'desktop-no-desktop-file-hook 'yet-open-files)
 
+
+(when (fboundp 'restart-emacs)          ; Since Emacs 29.1
+  (keymap-global-set "C-c e r" #'restart-emacs))
+
+(global-set-key (kbd "C-c e q") 'yet-kill-emacs-reset-desktop)
