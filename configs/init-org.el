@@ -25,8 +25,22 @@
 (add-hook 'org-mode-hook 'yet-org-mode)
 
 (with-eval-after-load 'ox
+
   (when (boundp 'org-export-with-broken-links)
-    (setq org-export-with-broken-links 'mark)))
+    (setq org-export-with-broken-links 'mark))
+
+  (defun yet-org-export-output-file-name
+      (orig-fun extension &optional subtreep pub-dir)
+    "A piece of advice for function `org-export-output-file-name'.
+Sets PUB-DIR to a temporary directory by default."
+    (unless pub-dir
+      (setq pub-dir (temporary-file-directory)))
+    (apply orig-fun extension subtreep pub-dir nil))
+
+  (advice-add
+   'org-export-output-file-name
+   :around
+   'yet-org-export-output-file-name))
 
 (with-eval-after-load 'ox-html
   (when (boundp 'org-html-prefer-user-labels)
