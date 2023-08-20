@@ -73,7 +73,7 @@
           web-mode-enable-comment-annotation t
           web-mode-enable-auto-expanding t
           web-mode-enable-current-element-highlight t
-          ;; web-mode-enable-current-column-highlight nil
+          web-mode-enable-current-column-highlight t
           web-mode-enable-sql-detection t))
 
   (add-hook 'web-mode-hook 'yet-web-mode))
