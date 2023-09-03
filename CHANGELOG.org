@@ -12,10 +12,12 @@ Introduces *Emacs 29.1* features support.
     default.
   - Enable =web-mode-enable-current-column-highlight= to highlight matching pair
     of tags.
+  - New optional constant ~yet-org-noob~.
 
 *** Changed:
   - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.
   - Rename ~yet-kill-emacs-reset-desktop-state~ to ~yet-kill-emacs-reset-desktop~.
+  - Disable confusing =org-mode= keybindings only if ~yet-org-noob~ is enabled.
 
 *** Removed:
   - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).

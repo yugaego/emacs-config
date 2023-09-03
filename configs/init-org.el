@@ -84,7 +84,8 @@ Sets PUB-DIR to a temporary directory by default."
 
 ;;; Disable confusing org-mode keybindings
 
-(define-key org-mode-map (kbd "M-<left>") #'left-word)
-(define-key org-mode-map (kbd "M-<right>") #'right-word)
-(define-key org-mode-map (kbd "M-<up>") nil)
-(define-key org-mode-map (kbd "M-<down>") nil)
+(when (and (boundp 'yet-org-noob) yet-org-noob)
+  (define-key org-mode-map (kbd "M-<left>") #'left-word)
+  (define-key org-mode-map (kbd "M-<right>") #'right-word)
+  (define-key org-mode-map (kbd "M-<up>") nil)
+  (define-key org-mode-map (kbd "M-<down>") nil))

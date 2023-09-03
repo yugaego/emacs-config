@@ -56,6 +56,15 @@ commands as `help-view-source' or `xref-find-definition'.")
 (defconst yet-eglot-rust-server '("rust-analyzer")
   "Set value of `eglot-server-programs' in rust-mode buffers.")
 
+;;; init-org
+(defconst yet-org-noob nil
+  "Disable potentially confusing `org-mode' keybindings.
+
+When enabled,
+- `M-<left>' is bound to the function `left-word'.
+- `M-<right>' is bound to the function `right-word'.
+- `M-<up>', `M-<down>' are disabled.")
+
 
 ;;; init-pdf
 ;; May require additional OS packages installation,
