@@ -14,6 +14,7 @@ Introduces *Emacs 29.1* features support.
 - New optional constant ~yet-org-noob~.
 - =org-mode-map= keybinding =C-c o l= to call =org-store-link=.
 - Function to unfill elements ~M-x yet-org-unfill~ (=C-M-q=).
+- Function ~M-x yet-org-export-output-file-name-toggle~ (=C-c o e=).
 
 *** Changed
 - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.

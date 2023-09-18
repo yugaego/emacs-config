@@ -40,10 +40,32 @@ Sets PUB-DIR to a directory for temporary files."
       (setq pub-dir (temporary-file-directory)))
     (apply orig-fun extension subtreep pub-dir nil))
 
-  (advice-add
-   'org-export-output-file-name
-   :around
-   'yet-org-export-to-tmp-dir))
+  (defun yet-org-export-output-file-name-toggle (&optional arg)
+    "Toggles advice `yet-org-export-to-tmp-dir'.
+When added, `org-export-output-file-name' uses directory for temporary files.
+With prefix ARG, the advice is always enabled."
+    (interactive "P")
+    (if (or arg (not (advice-member-p
+                      'yet-org-export-to-tmp-dir
+                      'org-export-output-file-name)))
+        (progn
+          (message "Advice `yet-org-export-to-tmp-dir' enabled.")
+          (advice-add
+           'org-export-output-file-name
+           :around
+           'yet-org-export-to-tmp-dir))
+      (progn
+        (message "Advice `yet-org-export-to-tmp-dir' disabled.")
+        (advice-remove
+         'org-export-output-file-name
+         'yet-org-export-to-tmp-dir))))
+
+  (yet-org-export-output-file-name-toggle 1)
+
+  (define-key org-mode-map
+              (kbd "C-c o e")
+              'yet-org-export-output-file-name-toggle))
+
 
 (with-eval-after-load 'ox-html
   (when (boundp 'org-html-prefer-user-labels)
