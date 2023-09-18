@@ -90,6 +90,23 @@ Sets PUB-DIR to a directory for temporary files."
                                     (plain-list-item . nil))))
 
 
+(defun yet-org-unfill (&optional region)
+  "Unfill element at point or elements of active region.
+
+This function only applies to comment blocks, comments, example blocks and
+paragraphs.
+
+The REGION argument is non-nil, unfill each of the elements in the active
+region.
+
+For more details, see function `org-fill-paragraph'."
+  (interactive (progn (barf-if-buffer-read-only) '(t)))
+  (let ((fill-column (point-max)))
+    (org-fill-paragraph nil region)))
+
+(define-key global-map (kbd "C-M-q") 'yet-org-unfill)
+
+
 ;;; Disable confusing org-mode keybindings
 
 (when (and (boundp 'yet-org-noob) yet-org-noob)
