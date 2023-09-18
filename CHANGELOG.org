@@ -8,15 +8,18 @@ Introduces *Emacs 29.1* features support.
 - Enable =pixel-scroll-precision-mode= (since Emacs 29.1).
 - Global keybinding =C-c e r= to call ~M-x restart-emacs~ (Emacs 29.1).
 - Global keybinding =C-c e q= to call ~M-x yet-kill-emacs-reset-desktop~.
-- Advice ~yet-org-export-output-file-name~ uses temporary directory by default.
+- Advice ~yet-org-export-to-tmp-dir~ uses temporary directory by default.
 - Enable =web-mode-enable-current-column-highlight= to highlight matching pair
   of tags.
 - New optional constant ~yet-org-noob~.
+- =org-mode-map= keybinding =C-c o l= to call =org-store-link=.
 
 *** Changed
 - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.
 - Rename ~yet-kill-emacs-reset-desktop-state~ to ~yet-kill-emacs-reset-desktop~.
 - Disable confusing =org-mode= keybindings only if ~yet-org-noob~ is enabled.
+- Set user option =org-export-headline-levels= value to 5.
+- Disable =org-html-validation-link=.
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).

@@ -25,14 +25,17 @@
 (add-hook 'org-mode-hook 'yet-org-mode)
 
 (with-eval-after-load 'ox
-
   (when (boundp 'org-export-with-broken-links)
     (setq org-export-with-broken-links 'mark))
 
-  (defun yet-org-export-output-file-name
+  (when (boundp 'org-export-headline-levels)
+    ;; org-html-toplevel-hlevel is 2 by default.
+    (setq org-export-headline-levels 5))
+
+  (defun yet-org-export-to-tmp-dir
       (orig-fun extension &optional subtreep pub-dir)
     "A piece of advice for function `org-export-output-file-name'.
-Sets PUB-DIR to a temporary directory by default."
+Sets PUB-DIR to a directory for temporary files."
     (unless pub-dir
       (setq pub-dir (temporary-file-directory)))
     (apply orig-fun extension subtreep pub-dir nil))
@@ -40,15 +43,20 @@ Sets PUB-DIR to a temporary directory by default."
   (advice-add
    'org-export-output-file-name
    :around
-   'yet-org-export-output-file-name))
+   'yet-org-export-to-tmp-dir))
 
 (with-eval-after-load 'ox-html
   (when (boundp 'org-html-prefer-user-labels)
-    (setq org-html-prefer-user-labels t)))
+    (setq org-html-prefer-user-labels t))
+
+  (when (boundp 'org-html-validation-link)
+    (setq org-html-validation-link nil)))
 
 (with-eval-after-load 'org-id
   (when (boundp 'org-id-link-to-org-use-id)
-    (setq org-id-link-to-org-use-id 'use-existing)))
+    (setq org-id-link-to-org-use-id 'use-existing))
+
+  (define-key org-mode-map (kbd "C-c o l") #'org-store-link))
 
 
 ;;; Indentation
