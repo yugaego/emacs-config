@@ -3,24 +3,23 @@
 ** Unreleased
 Introduces *Emacs 29.1* features support.
 
-*** Added:
-  - Global keybinding =C-c f r= to call ~M-x rename-visited-file~ (Emacs 29.1).
-  - Enable =pixel-scroll-precision-mode= (since Emacs 29.1).
-  - Global keybinding =C-c e r= to call ~M-x restart-emacs~ (Emacs 29.1).
-  - Global keybinding =C-c e q= to call ~M-x yet-kill-emacs-reset-desktop~.
-  - Advice ~yet-org-export-output-file-name~ uses temporary directory by
-    default.
-  - Enable =web-mode-enable-current-column-highlight= to highlight matching pair
-    of tags.
-  - New optional constant ~yet-org-noob~.
+*** Added
+- Global keybinding =C-c f r= to call ~M-x rename-visited-file~ (Emacs 29.1).
+- Enable =pixel-scroll-precision-mode= (since Emacs 29.1).
+- Global keybinding =C-c e r= to call ~M-x restart-emacs~ (Emacs 29.1).
+- Global keybinding =C-c e q= to call ~M-x yet-kill-emacs-reset-desktop~.
+- Advice ~yet-org-export-output-file-name~ uses temporary directory by default.
+- Enable =web-mode-enable-current-column-highlight= to highlight matching pair
+  of tags.
+- New optional constant ~yet-org-noob~.
 
-*** Changed:
-  - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.
-  - Rename ~yet-kill-emacs-reset-desktop-state~ to ~yet-kill-emacs-reset-desktop~.
-  - Disable confusing =org-mode= keybindings only if ~yet-org-noob~ is enabled.
+*** Changed
+- Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.
+- Rename ~yet-kill-emacs-reset-desktop-state~ to ~yet-kill-emacs-reset-desktop~.
+- Disable confusing =org-mode= keybindings only if ~yet-org-noob~ is enabled.
 
-*** Removed:
-  - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).
+*** Removed
+- Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).
 
 
 ** v2.2.0 - 2023-08-05
@@ -35,44 +34,44 @@ The main highlights of this release are as follows:
 - =web-mode= usability improvements.
 - New packages: =fish-mode=, =imenu-list=.
 
-*** Added:
-  - =rust-mode= abbreviations (templates). See ~M-x list-abbrevs~.
-  - =rust-mode-map= keybindings:
-    - =C-c C-l= for ~M-x rust-run-clippy~.
-    - =C-c C-h= for ~M-x yet-rustup-doc~.
-    - =C-c t m= for ~M-x rust-toggle-mutability~.
-  - =php-mode-map= keybinding =C-c C-h= to call ~M-x php-search-documentation~.
-  - Disable =eglot-inlay-hints-mode= by default.
-  - Keybinding =C-c l i= to toggle =eglot-inlay-hints-mode=.
-  - Package =fish-mode= for ~fish~ shell scripts editing.
-  - Local configuration =yet-source-directory=.
-  - Experimental: utilize =company-tooltip-annotation-padding=.
-  - Local configuration =yet-explicit-shell-file-name=.
-  - Docstrings to ~yet-~ namespaced constants in ~/examples/local-pre-init.el~.
-  - Local configuration =yet-auth-sources=.
-  - Local configuration =yet-mail-personal-alias-file=.
-  - Enable ~shell~ evaluation in =org-mode= buffers.
-  - Package =imenu-list=. Toggle =imenu-list-minor-mode= with =C-c i s=.
-  - New optional constants ~yet-font~ and ~yet-font-size~.
-  - =occur-mode= keybinding =f= to open occurrence in the same window.
+*** Added
+- =rust-mode= abbreviations (templates). See ~M-x list-abbrevs~.
+- =rust-mode-map= keybindings:
+  - =C-c C-l= for ~M-x rust-run-clippy~.
+  - =C-c C-h= for ~M-x yet-rustup-doc~.
+  - =C-c t m= for ~M-x rust-toggle-mutability~.
+- =php-mode-map= keybinding =C-c C-h= to call ~M-x php-search-documentation~.
+- Disable =eglot-inlay-hints-mode= by default.
+- Keybinding =C-c l i= to toggle =eglot-inlay-hints-mode=.
+- Package =fish-mode= for ~fish~ shell scripts editing.
+- Local configuration =yet-source-directory=.
+- Experimental: utilize =company-tooltip-annotation-padding=.
+- Local configuration =yet-explicit-shell-file-name=.
+- Docstrings to ~yet-~ namespaced constants in ~/examples/local-pre-init.el~.
+- Local configuration =yet-auth-sources=.
+- Local configuration =yet-mail-personal-alias-file=.
+- Enable ~shell~ evaluation in =org-mode= buffers.
+- Package =imenu-list=. Toggle =imenu-list-minor-mode= with =C-c i s=.
+- New optional constants ~yet-font~ and ~yet-font-size~.
+- =occur-mode= keybinding =f= to open occurrence in the same window.
 
-*** Changed:
-  - Keybinding =C-c l s= now calls ~M-x eglot~.
-  - Keybinding =C-c l d= calls ~M-x eglot-shutdown~.
-  - =rust-mode-map= keybinding =C-c C-d= to =C-c t d=.
-  - Improve =web-mode= usability.
-  - Improve description of emails sending via =SMTP= server.
-  - Improve description of emails retrieval from =IMAP= server with =Rmail=.
-  - Disable adding a blank line before new heading/item in =org-mode=.
-  - Adjust =pdf-view-mode= settings.
-  - Use =gnus-summary-next-group-on-exit= default value of =t=.
-  - Truncate long lines in =sql-interactive-mode=.
-  - Move most of the UI settings from ~early-init.el~ to ~configs/init-ui.el~.
-  - Prefer user labels on =org-mode= export.
-  - Use existing entry ID on ~M-x org-store-link~ call.
+*** Changed
+- Keybinding =C-c l s= now calls ~M-x eglot~.
+- Keybinding =C-c l d= calls ~M-x eglot-shutdown~.
+- =rust-mode-map= keybinding =C-c C-d= to =C-c t d=.
+- Improve =web-mode= usability.
+- Improve description of emails sending via =SMTP= server.
+- Improve description of emails retrieval from =IMAP= server with =Rmail=.
+- Disable adding a blank line before new heading/item in =org-mode=.
+- Adjust =pdf-view-mode= settings.
+- Use =gnus-summary-next-group-on-exit= default value of =t=.
+- Truncate long lines in =sql-interactive-mode=.
+- Move most of the UI settings from ~early-init.el~ to ~configs/init-ui.el~.
+- Prefer user labels on =org-mode= export.
+- Use existing entry ID on ~M-x org-store-link~ call.
 
-*** Removed:
-  - Do not enable =display-time-mode=.
+*** Removed
+- Do not enable =display-time-mode=.
 
 
 ** v2.1.0 - 2022-11-27
@@ -82,33 +81,33 @@ Usability improvements of the existing functionality, with an emphasis on:
 - terminal emulator usage,
 - org-mode text writing.
 
-*** Added:
-  - Hint how to complete email addresses.
-  - Package =web-mode=.
-  - Keybinding =M-s M-s= for ~M-x isearch-forward-thing-at-point~.
-  - More abbrevs to ~configs/init-abbrevs.el~
-  - Keybinding =f= to open =xref= definition in the same window.
-  - Enable =recentf-mode=. Call with ~M-x recent-open*~.
-  - Keybinding =C-c t s= to start terminal emulator.
-  - Keybinding =C-c b w= to toggle =whitespace-mode=.
-  - Keybinding =C-c l a= to call ~M-x eglot-code-actions~.
-  - Configure ~diff-whitespace-style~ (since Emacs 29).
-  - Add =racket-mode= package for [[https://racket-lang.org][Racket language]].
+*** Added
+- Hint how to complete email addresses.
+- Package =web-mode=.
+- Keybinding =M-s M-s= for ~M-x isearch-forward-thing-at-point~.
+- More abbrevs to ~configs/init-abbrevs.el~
+- Keybinding =f= to open =xref= definition in the same window.
+- Enable =recentf-mode=. Call with ~M-x recent-open*~.
+- Keybinding =C-c t s= to start terminal emulator.
+- Keybinding =C-c b w= to toggle =whitespace-mode=.
+- Keybinding =C-c l a= to call ~M-x eglot-code-actions~.
+- Configure ~diff-whitespace-style~ (since Emacs 29).
+- Add =racket-mode= package for [[https://racket-lang.org][Racket language]].
 
-*** Changed:
-  - Improve =rust-mode= usability.
-  - Improve =php-mode= usability.
-  - Improve editing and search usability.
-  - Configure =xref= to use =ripgrep= when it's available.
-  - Better =term-mode= usability.
-  - Replace =global-goto-address-mode= by local enabling.
-  - Swap =org-mode= default keybindings =RET= and =C-j=.
-  - Improve =diff-mode= usability.
+*** Changed
+- Improve =rust-mode= usability.
+- Improve =php-mode= usability.
+- Improve editing and search usability.
+- Configure =xref= to use =ripgrep= when it's available.
+- Better =term-mode= usability.
+- Replace =global-goto-address-mode= by local enabling.
+- Swap =org-mode= default keybindings =RET= and =C-j=.
+- Improve =diff-mode= usability.
 
-*** Removed:
-  - Fallback =tab-always-indent= to its default value of =t=.
-  - Disable =org-mode= bindings =M-<left>=, =M-<right>=, =M-<up>=, =M-<down>=.
-  - Keybinding =C-c e d= in favor of more concise =C-c d=.
+*** Removed
+- Fallback =tab-always-indent= to its default value of =t=.
+- Disable =org-mode= bindings =M-<left>=, =M-<right>=, =M-<up>=, =M-<down>=.
+- Keybinding =C-c e d= in favor of more concise =C-c d=.
 
 
 ** v2.0.0 - 2022-04-07
@@ -120,62 +119,62 @@ regard to:
 - text writing and reading.
 - Emacs UI and lifecycle.
 
-*** Added:
-  - Additional =PDF= tools.
-  - Configure several =PHP= abbreviations (templates).
-  - /Language Server Protocol/ (LSP) client =eglot=.
-  - Enable =company-mode= completions.
-  - =ELisp= configuration file.
-  - Auto-mode for =XML= and =YAML=.
-  - =diff-hl= package to mark changed hunks (under =git=) on the fringe.
-  - ~examples/local-pre-init.el~ file.
-  - Open configured files on Emacs load without =desktop-save-mode= state.
-  - Command to exit =Emacs= and reset =desktop-save-mode= state.
-  - Confirm before killing non-empty =*scratch*= buffer.
-  - Keybinding to toggle =scroll-lock-mode=.
-  - Auto-insert closing /parenthesis/.
-  - Configure =Gnus= as a mailing lists reader.
-  - Enable =GNU-devel ELPA= packages repository.
-  - Query =GnuPG Pinentry= passphrase through the Emacs minibuffer.
-  - Install =debbugs= package.
-  - Mac OS: files removed by =Finder=, hence with "Put Back" feature enabled.
-  - Enable =Rmail= email client.
-  - Load OS specific /font/.
-  - Configured to use four spaces for /indentation/.
-  - Show column number in the /mode line/.
-  - Advanced whitespaces visualization.
-  - Support /optional local file/ loaded in the end of the initialization.
-  - Highlight =Rust= and =PHP= programming languages syntax.
-  - Add =rust-mode= key bindings.
-  - Add =rainbow-mode= package for color names colorization.
-  - =lisp-mode=: on =TAB= hit show possible completions (or indent line).
+*** Added
+- Additional =PDF= tools.
+- Configure several =PHP= abbreviations (templates).
+- /Language Server Protocol/ (LSP) client =eglot=.
+- Enable =company-mode= completions.
+- =ELisp= configuration file.
+- Auto-mode for =XML= and =YAML=.
+- =diff-hl= package to mark changed hunks (under =git=) on the fringe.
+- ~examples/local-pre-init.el~ file.
+- Open configured files on Emacs load without =desktop-save-mode= state.
+- Command to exit =Emacs= and reset =desktop-save-mode= state.
+- Confirm before killing non-empty =*scratch*= buffer.
+- Keybinding to toggle =scroll-lock-mode=.
+- Auto-insert closing /parenthesis/.
+- Configure =Gnus= as a mailing lists reader.
+- Enable =GNU-devel ELPA= packages repository.
+- Query =GnuPG Pinentry= passphrase through the Emacs minibuffer.
+- Install =debbugs= package.
+- Mac OS: files removed by =Finder=, hence with "Put Back" feature enabled.
+- Enable =Rmail= email client.
+- Load OS specific /font/.
+- Configured to use four spaces for /indentation/.
+- Show column number in the /mode line/.
+- Advanced whitespaces visualization.
+- Support /optional local file/ loaded in the end of the initialization.
+- Highlight =Rust= and =PHP= programming languages syntax.
+- Add =rust-mode= key bindings.
+- Add =rainbow-mode= package for color names colorization.
+- =lisp-mode=: on =TAB= hit show possible completions (or indent line).
 
-*** Changed:
-  - Start using custom bindings prefixes.
-  - Remove =C-<tab>= in favor of =windmove= bindings.
-  - Improved =Org-mode= settings.
-  - Move =Markdown= settings to =init-markup.el=
-  - Binding for buffers rotation changed from =s-r= to =C-c r=.
-  - Switch from public domain to =AGPL= license.
-  - Switch from the namespace =yet/= to =yet-=.
-  - Move =desktop-save-mode= settings to ~init-lifecycle.el~.
-  - Improve /search/ experience.
-  - Increase default /font size/.
-  - Disable beginner-friendly /scrolling/ settings.
-  - /Frames/ default width slightly balanced.
-  - Use package =exec-path-from-shell= to load user's shell environment variables.
-  - =markdown-mode=: use ~multimarkdown~ parser (if available).
-  - Rename ~private-init.el~ to ~local-pre-init.el~ to reflect order of loading.
-  - Improve =minibuffer= usability.
-  - Improve =misterioso-theme= colors for better usability.
+*** Changed
+- Start using custom bindings prefixes.
+- Remove =C-<tab>= in favor of =windmove= bindings.
+- Improved =Org-mode= settings.
+- Move =Markdown= settings to =init-markup.el=
+- Binding for buffers rotation changed from =s-r= to =C-c r=.
+- Switch from public domain to =AGPL= license.
+- Switch from the namespace =yet/= to =yet-=.
+- Move =desktop-save-mode= settings to ~init-lifecycle.el~.
+- Improve /search/ experience.
+- Increase default /font size/.
+- Disable beginner-friendly /scrolling/ settings.
+- /Frames/ default width slightly balanced.
+- Use package =exec-path-from-shell= to load user's shell environment variables.
+- =markdown-mode=: use ~multimarkdown~ parser (if available).
+- Rename ~private-init.el~ to ~local-pre-init.el~ to reflect order of loading.
+- Improve =minibuffer= usability.
+- Improve =misterioso-theme= colors for better usability.
 
-*** Removed:
-  - Dependency on =exec-path-from-shell= package.
-  - Dependency on =osx-trash= package.
-  - Example configuration of =mu4e= email client.
+*** Removed
+- Dependency on =exec-path-from-shell= package.
+- Dependency on =osx-trash= package.
+- Example configuration of =mu4e= email client.
 
-*** Fixed:
-  - Minor modes enabling.
+*** Fixed
+- Minor modes enabling.
 
 
 ** v1.0.0 - 2021-02-21
@@ -187,49 +186,49 @@ Compatible with Emacs 27.
 Tested on Mac OS X only, so may need minor changes on other OSes.
 (Known issue: early-init.el sets Mac OS specific font).
 
-*** Added:
-  - Script to auto-install required packages.
-  - More documentation and comments.
-  - private-init.el support.
-  - Improved integration with Mac OS X:
-    - Fixed deletion of files to Trash.
-    - Added functions/key binding to open Finder.
-  - Markdown-mode.
-  - Better Org-mode preview.
-  - Editing convenience tools.
-  - Spell checking support.
-    - On request and on-the-fly spell checking.
-    - Command to facilitate Grammarly website opening.
-  - Example basic configurations of different mail clients.
-  - Command to rotate windows buffers of an active frame.
-  - Enable built-in minibuffer completion (ido-mode, fido-mode).
-  - Enable a better built-in package to manage open buffers: ibuffer.
+*** Added
+- Script to auto-install required packages.
+- More documentation and comments.
+- private-init.el support.
+- Improved integration with Mac OS X:
+  - Fixed deletion of files to Trash.
+  - Added functions/key binding to open Finder.
+- Markdown-mode.
+- Better Org-mode preview.
+- Editing convenience tools.
+- Spell checking support.
+  - On request and on-the-fly spell checking.
+  - Command to facilitate Grammarly website opening.
+- Example basic configurations of different mail clients.
+- Command to rotate windows buffers of an active frame.
+- Enable built-in minibuffer completion (ido-mode, fido-mode).
+- Enable a better built-in package to manage open buffers: ibuffer.
 
-*** Changed:
-  - Split configuration into separate files.
-  - By default use theme 'misterioso, instead of 'tango-dark.
-  - Use ratio to set frames size, instead of pixels.
+*** Changed
+- Split configuration into separate files.
+- By default use theme 'misterioso, instead of 'tango-dark.
+- Use ratio to set frames size, instead of pixels.
 
-*** Removed:
-  - Emacs 26 compatibility.
-  - Line by line scrolling.
-  - Racket files syntax auto-highlighting.
+*** Removed
+- Emacs 26 compatibility.
+- Line by line scrolling.
+- Racket files syntax auto-highlighting.
 
-*** Fixed:
-  - Improved Mac OS Dictionary integration.
+*** Fixed
+- Improved Mac OS Dictionary integration.
 
 
 ** bare-bones - 2020-10-14
 
 Basic configuration written while reading Emacs 26 manual.
 
-*** Main features:
-  - Improved interface.
-  - Configured auto-backups and auto-saving.
-  - Configured to auto-save Emacs sessions.
-  - Configured to auto-revert (keep up-to-date) files and buffers.
-  - Minibuffer minor improvements.
-  - Line by line scrolling (easier for a newbie).
-  - Added function/hot keys to open Mac Dictionary for a word.
-  - Enabled syntax highlighting for Racket files.
+*** Main features
+- Improved interface.
+- Configured auto-backups and auto-saving.
+- Configured to auto-save Emacs sessions.
+- Configured to auto-revert (keep up-to-date) files and buffers.
+- Minibuffer minor improvements.
+- Line by line scrolling (easier for a newbie).
+- Added function/hot keys to open Mac Dictionary for a word.
+- Enabled syntax highlighting for Racket files.
 
