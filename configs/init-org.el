@@ -24,13 +24,14 @@
 
 (add-hook 'org-mode-hook 'yet-org-mode)
 
-(with-eval-after-load 'ox
-  (when (boundp 'org-export-with-broken-links)
-    (setq org-export-with-broken-links 'mark))
 
-  (when (boundp 'org-export-headline-levels)
-    ;; org-html-toplevel-hlevel is 2 by default.
-    (setq org-export-headline-levels 5))
+;;; Export settings (common)
+
+(require 'ox)
+
+(setq org-export-allow-bind-keywords t  ; Enables #+BIND
+      org-export-with-broken-links 'mark
+      org-export-headline-levels 5)     ; See `org-html-toplevel-hlevel'
 
   (defun yet-org-export-to-tmp-dir
       (orig-fun extension &optional subtreep pub-dir)
@@ -49,13 +50,13 @@ With prefix ARG, the advice is always enabled."
                       'yet-org-export-to-tmp-dir
                       'org-export-output-file-name)))
         (progn
-          (message "Advice `yet-org-export-to-tmp-dir' enabled.")
+          (message "Org export to tmp dir is enabled.")
           (advice-add
            'org-export-output-file-name
            :around
            'yet-org-export-to-tmp-dir))
       (progn
-        (message "Advice `yet-org-export-to-tmp-dir' disabled.")
+        (message "Org export to tmp dir is disabled.")
         (advice-remove
          'org-export-output-file-name
          'yet-org-export-to-tmp-dir))))
@@ -64,15 +65,23 @@ With prefix ARG, the advice is always enabled."
 
   (define-key org-mode-map
               (kbd "C-c o e")
-              'yet-org-export-output-file-name-toggle))
+              'yet-org-export-output-file-name-toggle)
 
 
-(with-eval-after-load 'ox-html
-  (when (boundp 'org-html-prefer-user-labels)
-    (setq org-html-prefer-user-labels t))
+;;; Export settings for HTML backend
 
-  (when (boundp 'org-html-validation-link)
-    (setq org-html-validation-link nil)))
+(require 'ox-html)
+
+(setq org-html-doctype "html5"
+      org-html-html5-fancy t
+      ;; org-html-self-link-headlines t
+      org-html-prefer-user-labels t)
+
+(when (boundp 'org-html-validation-link)
+  (setq org-html-validation-link nil))
+
+
+;;; Links handling
 
 (with-eval-after-load 'org-id
   (when (boundp 'org-id-link-to-org-use-id)
