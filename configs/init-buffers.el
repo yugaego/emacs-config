@@ -20,16 +20,15 @@
 
 (customize-set-variable
  'display-buffer-alist
- '(("\\*Ido Completions\\*"
+ '(("\\*Ido Completions\\*\\|\\*vc-git"
     (display-buffer-reuse-window display-buffer-at-bottom)
     (window-height . fit-window-to-buffer))
-   ("\\*Help\\|eldoc\\*"
+   ("\\*Help\\*\\|\\*eldoc\\*"
     (display-buffer-reuse-window display-buffer-below-selected)
     (window-height . fit-window-to-buffer))
    ("\\*vc-dir\\*"
     (display-buffer-same-window))))
 
-(require 'comp)
 
 (with-eval-after-load 'comp
   (when (boundp 'native-comp-async-report-warnings-errors)
