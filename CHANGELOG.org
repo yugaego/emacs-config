@@ -22,6 +22,8 @@ Introduces *Emacs 29.1* features support.
 - Disable confusing =org-mode= keybindings only if ~yet-org-noob~ is enabled.
 - Set user option =org-export-headline-levels= value to 5.
 - Disable =org-html-validation-link=.
+- =dired-mode= keybinding =n= now calls ~yet-dired-display-next~.
+- =dired-mode= keybinding =p= now calls ~yet-dired-display-previous~.
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).

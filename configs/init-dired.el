@@ -16,3 +16,20 @@
 (when (boundp 'dired-switches-in-mode-line)
   (setq dired-switches-in-mode-line 'as-is))
 
+
+(defun yet-dired-display-next (&optional arg)
+  "Move down lines and display the file or directory in another window.
+Optional prefix ARG says how many lines to move; default is one line."
+  (interactive "p")
+  (dired-next-line (or arg 1))
+  (dired-display-file))
+
+(defun yet-dired-display-previous (&optional arg)
+  "Move up lines and display the file or directory in another window.
+Optional prefix ARG says how many lines to move; default is one line."
+  (interactive "p")
+  (dired-previous-line (or arg 1))
+  (dired-display-file))
+
+(define-key dired-mode-map (kbd "n") 'yet-dired-display-next)
+(define-key dired-mode-map (kbd "p") 'yet-dired-display-previous)
