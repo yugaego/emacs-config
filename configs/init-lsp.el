@@ -14,6 +14,9 @@
   (when (boundp 'eldoc-echo-area-display-truncation-message)
     (setq eldoc-echo-area-display-truncation-message nil))
 
+  (when (boundp 'eglot-report-progress)
+    (setq eglot-report-progress nil))
+
   (setq eglot-stay-out-of '(company)
         eglot-send-changes-idle-time 0.5)
 

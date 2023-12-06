@@ -27,7 +27,7 @@ Introduces *Emacs 29.1* features support.
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).
-
+- Disable =eglot-report-progress= to reduce clutter in the echo area.
 
 ** v2.2.0 - 2023-08-05
 
