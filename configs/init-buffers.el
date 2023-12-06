@@ -21,12 +21,36 @@
 (customize-set-variable
  'display-buffer-alist
  '(("\\*Ido Completions\\*\\|\\*vc-git"
-    (display-buffer-reuse-window display-buffer-at-bottom)
-    (window-height . fit-window-to-buffer))
-   ("\\*Help\\*\\|\\*eldoc\\*"
-    (display-buffer-reuse-window display-buffer-below-selected)
-    (window-height . fit-window-to-buffer))
-   ("\\*vc-dir\\*"
+    (display-buffer-reuse-window
+     display-buffer-in-previous-window
+     display-buffer-at-bottom)
+    (window-height . fit-window-to-buffer)
+    (reusable-frames . 0))
+   ("\\*vc-log\\*"
+    (display-buffer-at-bottom)
+    (window-height . 10)
+    (inhibit-same-window . t)
+    (reusable-frames . 0))
+   ("\\*Help\\*\\|\\*eldoc\\*\\|\\*info\\*"
+    (display-buffer-reuse-window
+     display-buffer-in-previous-window
+     display-buffer-below-selected
+     display-buffer-at-bottom)
+    ;; (window-height . fit-window-to-buffer)
+    (reusable-frames . 0))
+   ("\\*ansi-term"
+    (display-buffer-reuse-window
+     display-buffer-in-previous-window
+     display-buffer-below-selected
+     display-buffer-at-bottom)
+    (inhibit-same-window . t))
+   ("\\*compilation\\*\\|\\*xref\\*"
+    (display-buffer-in-previous-window)
+     ;; display-buffer-use-some-frame)
+     ;; display-buffer-pop-up-frame)
+    (inhibit-same-window . t)
+    (reusable-frames . 0))
+   ("\\*vc-dir\\*\\|\\*vc-diff\\*"
     (display-buffer-same-window))))
 
 

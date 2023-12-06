@@ -36,9 +36,10 @@
   "Start terminal emulator with pre-defined user shell.
 Creates new buffer on each call."
   (interactive)
-  (ansi-term (or explicit-shell-file-name
-				 (getenv "ESHELL")
-				 shell-file-name)))
+  (let ((switch-to-buffer-obey-display-actions t))
+    (ansi-term (or explicit-shell-file-name
+				   (getenv "ESHELL")
+				   shell-file-name))))
 
 (defun yet-term-mode ()
   ;; https://github.com/fish-shell/fish-shell/issues/1411#issuecomment-40859080

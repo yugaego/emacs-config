@@ -27,6 +27,7 @@ Introduces *Emacs 29.1* features support.
 - =dired-mode= keybinding =p= now calls ~yet-dired-display-previous~.
 - =rust-mode= ~yet-rustup-doc~ now bound to =C-c o d= (was =C-c C-h=).
 - =php-mode= ~php-search-documentation~ bound to =C-c o d= (was =C-c C-h=).
+- Customize windows for buffers display with ~display-buffer-alist~.
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).
