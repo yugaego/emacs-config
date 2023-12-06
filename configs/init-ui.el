@@ -16,6 +16,8 @@
         (width . 0.48)
         (height . 1.0)))
 
+(undelete-frame-mode 1)
+
 (defvar-local yet-frames-font
   (let ((font (cond
                ((boundp 'yet-font) yet-font)
