@@ -48,7 +48,8 @@
 
 ;; (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
 
-(define-key php-mode-map (kbd "C-c C-h") #'php-search-documentation)
+;; Mnemonics: `o' Open, ` Documentation.
+(define-key php-mode-map (kbd "C-c o d") #'php-search-documentation)
 
 (defun yet-php-mode ()
   (subword-mode 1)

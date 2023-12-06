@@ -24,6 +24,8 @@ Introduces *Emacs 29.1* features support.
 - Disable =org-html-validation-link=.
 - =dired-mode= keybinding =n= now calls ~yet-dired-display-next~.
 - =dired-mode= keybinding =p= now calls ~yet-dired-display-previous~.
+- =rust-mode= ~yet-rustup-doc~ now bound to =C-c o d= (was =C-c C-h=).
+- =php-mode= ~php-search-documentation~ bound to =C-c o d= (was =C-c C-h=).
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).
