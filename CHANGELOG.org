@@ -18,6 +18,7 @@ Includes usability adjustments.
 - Function to unfill elements ~M-x yet-org-unfill~ (=C-M-q=).
 - Function ~M-x yet-org-export-output-file-name-toggle~ (=C-c o e=).
 - Enable =undelete-frame-mode= that provides function ~M-x undelete-frame~.
+- Enable =winner-mode= that records changes in window configuration.
 
 *** Changed
 - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.

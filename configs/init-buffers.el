@@ -1,5 +1,7 @@
 ;;; init-buffers.el --- Configure Emacs buffers/windows   -*- lexical-binding: t -*-
 
+(winner-mode 1)
+
 ;;; Ibuffer
 ;;; List and operate on buffers.
 
