@@ -3,6 +3,8 @@
 ** Unreleased
 Introduces *Emacs 29.1* features support.
 
+Includes usability adjustments.
+
 *** Added
 - Global keybinding =C-c f r= to call ~M-x rename-visited-file~ (Emacs 29.1).
 - Enable =pixel-scroll-precision-mode= (since Emacs 29.1).
@@ -28,6 +30,7 @@ Introduces *Emacs 29.1* features support.
 - =rust-mode= ~yet-rustup-doc~ now bound to =C-c o d= (was =C-c C-h=).
 - =php-mode= ~php-search-documentation~ bound to =C-c o d= (was =C-c C-h=).
 - Customize windows for buffers display with ~display-buffer-alist~.
+- Display =Ediff= control panel in the same frame.
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).

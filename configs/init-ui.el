@@ -46,8 +46,11 @@
 (setq uniquify-buffer-name-style 'forward
       uniquify-min-dir-content 2)
 
+(require 'ediff)
 ;; Place diff windows side by side.
 (setq ediff-split-window-function 'split-window-horizontally)
+;; Set Ediff control panel in same frame.
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
 ;; Show column number in the mode line.
 (column-number-mode 1)
