@@ -3,6 +3,8 @@
 (require 'gptel)
 
 (with-eval-after-load 'gptel
+  (add-hook 'gptel-post-response-functions 'gptel-end-of-response)
+  (add-hook 'gptel-post-stream-hook 'gptel-auto-scroll)
   (setq-default gptel-default-mode 'org-mode
                 gptel-max-tokens 500
                 gptel-directives
