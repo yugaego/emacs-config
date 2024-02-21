@@ -38,6 +38,7 @@ Adds package =gptel= -- a LLM chat client.
 - Display =Ediff= control panel in the same frame.
 - Do not highlight region in non-selected window.
 - Enable =web-mode= for HTML files.
+- Configure =org-clock= behavior.
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).

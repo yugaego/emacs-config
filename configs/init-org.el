@@ -147,3 +147,20 @@ For more details, see function `org-fill-paragraph'."
   (define-key org-mode-map (kbd "M-<right>") #'right-word)
   (define-key org-mode-map (kbd "M-<up>") nil)
   (define-key org-mode-map (kbd "M-<down>") nil))
+
+
+;;; Org-mode time tracking
+
+(require 'org-clock)
+
+(setq org-clock-idle-time 15
+      org-clock-clocktable-default-properties '(:maxlevel 4)
+      org-clock-total-time-cell-format "*%s*")
+
+;; Save the running clock when Emacs is closed.
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+
+(require 'org-duration)
+(setq org-duration-format 'h:mm)
+
