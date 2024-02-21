@@ -33,6 +33,7 @@ Includes usability adjustments.
 - =php-mode= ~php-search-documentation~ bound to =C-c o d= (was =C-c C-h=).
 - Customize windows for buffers display with ~display-buffer-alist~.
 - Display =Ediff= control panel in the same frame.
+- Do not highlight region in non-selected window.
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).

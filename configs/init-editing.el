@@ -133,7 +133,7 @@ there's a region, all lines that region covers will be duplicated."
 
 
 ;;; Marked region (selection).
-(setq highlight-nonselected-windows t   ; Always highlight selection.
+(setq highlight-nonselected-windows nil
       mark-even-if-inactive nil) ; Do not perform actions on inactive regions.
 
 (delete-selection-mode 1)                 ; Delete marked region on typing.
