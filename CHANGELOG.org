@@ -22,6 +22,7 @@ Adds package =gptel= -- a LLM chat client.
 - Enable =winner-mode= that records changes in window configuration.
 - Package =gptel=: a Large Language Model (e.g., ChatGPT) chat client.
 - Function ~M-x yet-toggle-window-split~ (bound to =C-c b s=).
+- In =org-mode= buffers, open a link by hitting =RET=.
 
 *** Changed
 - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.

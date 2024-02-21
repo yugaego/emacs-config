@@ -89,6 +89,8 @@ With prefix ARG, the advice is always enabled."
 
   (define-key org-mode-map (kbd "C-c o l") #'org-store-link))
 
+(setq org-return-follows-link t)
+
 
 ;;; Indentation
 
