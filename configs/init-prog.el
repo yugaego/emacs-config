@@ -64,8 +64,12 @@
 
 (with-eval-after-load 'web-mode
 
-  ;; (add-to-list 'auto-mode-alist
-  ;;              '("/\\(views\\|html\\|templates\\)/.*\\.php\\'" . web-mode))
+  ;; (add-to-list
+  ;;  'auto-mode-alist
+  ;;  '("/\\(?:views\\|html\\|templates\\)/\\..*\\.php\\'"
+  ;;    . web-mode))
+
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
   (defun yet-web-mode ()
     (subword-mode 1)
