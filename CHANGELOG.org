@@ -3,7 +3,8 @@
 ** Unreleased
 Introduces *Emacs 29.1* features support.
 
-Includes usability adjustments.
+Includes numerous usability adjustments.
+Adds package =gptel= -- a LLM chat client.
 
 *** Added
 - Global keybinding =C-c f r= to call ~M-x rename-visited-file~ (Emacs 29.1).
@@ -20,6 +21,7 @@ Includes usability adjustments.
 - Enable =undelete-frame-mode= that provides function ~M-x undelete-frame~.
 - Enable =winner-mode= that records changes in window configuration.
 - Package =gptel=: a Large Language Model (e.g., ChatGPT) chat client.
+- Function ~M-x yet-toggle-window-split~ (bound to =C-c b s=).
 
 *** Changed
 - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.
