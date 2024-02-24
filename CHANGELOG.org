@@ -21,7 +21,8 @@ Adds package =gptel= -- a LLM chat client.
 - Enable =undelete-frame-mode= that provides function ~M-x undelete-frame~.
 - Enable =winner-mode= that records changes in window configuration.
 - Package =gptel=: a Large Language Model (e.g., ChatGPT) chat client.
-- Function ~M-x yet-toggle-window-split~ (bound to =C-c b s=).
+- Function ~M-x yet-toggle-window-split~.
+- Global keybinding =C-c b s= to call ~M-x yet-toggle-window-split~.
 - In =org-mode= buffers, open a link by hitting =RET=.
 - Package =org-contrib=: enable add-on =ox-extra= to ignore headlines.
 

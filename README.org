@@ -78,6 +78,9 @@ inspiration to configure your own /Emacs/.
 - C-c t s :: =M-x yet-start-term=
 - C-c b i :: =M-x display-fill-column-indicator-mode=
 - C-c b l :: =M-x scroll-lock-mode=
+- C-c b s :: =M-x yet-toggle-window-split= (toggle)
+- C-c e r :: =M-x restart-emacs=
+- C-c e q :: =M-x M-x yet-kill-emacs-reset-desktop=
 
 * Getting Started with Emacs on Mac OS
 
