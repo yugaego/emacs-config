@@ -81,6 +81,11 @@ With prefix ARG, the advice is always enabled."
   (setq org-html-validation-link nil))
 
 
+;;; Enable ox-extra add-on provided by the org-contrib package.
+
+(require 'ox-extra)
+(ox-extras-activate '(ignore-headlines))
+
 ;;; Links handling
 
 (with-eval-after-load 'org-id
