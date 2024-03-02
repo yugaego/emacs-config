@@ -52,7 +52,7 @@
      ;; display-buffer-pop-up-frame)
     (inhibit-same-window . t)
     (reusable-frames . 0))
-   ("\\*vc-dir\\*\\|\\*vc-diff\\*"
+   ("\\*vc-dir\\*\\|\\*vc-diff\\*\\|\\*vc-change-log\\*"
     (display-buffer-same-window))))
 
 
