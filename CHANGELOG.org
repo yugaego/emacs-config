@@ -7,22 +7,21 @@ Includes numerous usability adjustments.
 Adds package =gptel= -- a LLM chat client.
 
 *** Added
-- Global keybinding =C-c f r= to call ~M-x rename-visited-file~ (Emacs 29.1).
+- Global keybinding =C-c f r= to call ~rename-visited-file~ (Emacs 29.1).
 - Enable =pixel-scroll-precision-mode= (since Emacs 29.1).
-- Global keybinding =C-c e r= to call ~M-x restart-emacs~ (Emacs 29.1).
-- Global keybinding =C-c e q= to call ~M-x yet-kill-emacs-reset-desktop~.
+- Global keybinding =C-c e r= to call ~restart-emacs~ (Emacs 29.1).
+- Global keybinding =C-c e q= to call ~yet-kill-emacs-reset-desktop~.
 - Advice ~yet-org-export-to-tmp-dir~ uses temporary directory by default.
 - Enable =web-mode-enable-current-column-highlight= to highlight matching pair
   of tags.
 - New optional constant ~yet-org-noob~.
 - =org-mode-map= keybinding =C-c o l= to call =org-store-link=.
-- Function to unfill elements ~M-x yet-org-unfill~ (=C-M-q=).
-- Function ~M-x yet-org-export-output-file-name-toggle~ (=C-c o e=).
-- Enable =undelete-frame-mode= that provides function ~M-x undelete-frame~.
+- Function ~yet-org-unfill~ to unfill elements, bound to =C-M-q=.
+- Function ~yet-org-export-output-file-name-toggle~ (=C-c o e= in =org-mode=).
+- Enable =undelete-frame-mode= that provides function ~undelete-frame~.
 - Enable =winner-mode= that records changes in window configuration.
 - Package =gptel=: a Large Language Model (e.g., ChatGPT) chat client.
-- Function ~M-x yet-toggle-window-split~.
-- Global keybinding =C-c b s= to call ~M-x yet-toggle-window-split~.
+- Function ~yet-toggle-window-split~, globally bound to =C-c b s=.
 - In =org-mode= buffers, open a link by hitting =RET=.
 - Package =org-contrib=: enable add-on =ox-extra= to ignore headlines.
 - Function ~yet-vc-print-root-log-latest~ bound to =C-c v L= in =vc-dir-mode=.
@@ -60,12 +59,12 @@ The main highlights of this release are as follows:
 - New packages: =fish-mode=, =imenu-list=.
 
 *** Added
-- =rust-mode= abbreviations (templates). See ~M-x list-abbrevs~.
+- =rust-mode= abbreviations (templates). See function ~list-abbrevs~.
 - =rust-mode-map= keybindings:
-  - =C-c C-l= for ~M-x rust-run-clippy~.
-  - =C-c C-h= for ~M-x yet-rustup-doc~.
-  - =C-c t m= for ~M-x rust-toggle-mutability~.
-- =php-mode-map= keybinding =C-c C-h= to call ~M-x php-search-documentation~.
+  - =C-c C-l= for function ~rust-run-clippy~.
+  - =C-c C-h= for function ~yet-rustup-doc~.
+  - =C-c t m= for function ~rust-toggle-mutability~.
+- Bound =C-c C-h= in =php-mode-map= to function ~php-search-documentation~.
 - Disable =eglot-inlay-hints-mode= by default.
 - Keybinding =C-c l i= to toggle =eglot-inlay-hints-mode=.
 - Package =fish-mode= for ~fish~ shell scripts editing.
