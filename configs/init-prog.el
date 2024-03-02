@@ -76,6 +76,7 @@
     (abbrev-mode -1)
     (setq web-mode-enable-comment-interpolation t
           web-mode-enable-comment-annotation t
+          web-mode-enable-auto-indentation nil
           web-mode-enable-auto-expanding t
           web-mode-enable-current-element-highlight t
           web-mode-enable-current-column-highlight t
