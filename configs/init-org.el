@@ -12,6 +12,7 @@
    '((emacs-lisp . t)
      (js . t)
      (latex . t)
+     (python .t)
      (shell . t))))
 
 ;; Enlarge LaTeX preview.
