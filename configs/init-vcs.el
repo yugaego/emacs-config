@@ -39,13 +39,13 @@
   (interactive)
   (when (fboundp 'diff-hunk-next)
     (diff-hunk-next)
-    (recenter 0 t)))
+    (recenter 1 t)))
 
 (defun yet-diff-hunk-prev ()
   (interactive)
   (when (fboundp 'diff-hunk-prev)
     (diff-hunk-prev)
-    (recenter 0 t)))
+    (recenter 1 t)))
 
 (defun yet-diff-file-next ()
   (interactive)
