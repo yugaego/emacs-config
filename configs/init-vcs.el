@@ -8,6 +8,18 @@
 (setq vc-revert-show-diff 'kill)
 
 
+;;; Keybinding to show the latest revision diffs.
+
+(require 'vc-dir)
+
+(defun yet-vc-print-root-log-latest ()
+  "Show the latest VC revision diffs."
+  (interactive)
+  (vc-print-root-log 1 "-1"))
+
+(define-key vc-dir-mode-map (kbd "C-c v L") 'yet-vc-print-root-log-latest)
+
+
 ;; With vc-git, we write a commit message
 ;; in *vc-log* buffer.
 (defun yet-log-edit-mode ()

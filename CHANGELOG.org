@@ -25,6 +25,7 @@ Adds package =gptel= -- a LLM chat client.
 - Global keybinding =C-c b s= to call ~M-x yet-toggle-window-split~.
 - In =org-mode= buffers, open a link by hitting =RET=.
 - Package =org-contrib=: enable add-on =ox-extra= to ignore headlines.
+- Function ~yet-vc-print-root-log-latest~ bound to =C-c v L= in =vc-dir-mode=.
 
 *** Changed
 - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.
