@@ -41,7 +41,7 @@ Adds package =gptel= -- a LLM chat client.
 - Do not highlight region in non-selected window.
 - Enable =web-mode= for HTML files.
 - Configure =org-clock= behavior.
-- Disable auto-indentation in =web-
+- Disable auto-indentation in =web-mode=.
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).
