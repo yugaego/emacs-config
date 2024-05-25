@@ -54,7 +54,7 @@
 
 (require 'pulse)
 
-(setq pulse-iterations 12
+(setq pulse-iterations 20
       pulse-delay 0.1)
 
 
