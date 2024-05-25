@@ -22,13 +22,41 @@
                   "\"; exit();")
      yet-abbrev-cursor)
     ("td" ,(concat "// TODO::" yet-abbrev-user-name " "))
-    ("p" ,(concat "echo \"<pre>\";print_r("
+    ("p" ,(concat "echo \"<pre>\";print_r($"
                   yet-abbrev-cursor-marker
                   ");echo \"</pre>\";exit();")
      yet-abbrev-cursor)
-    ("v" ,(concat "echo \"<pre>\";var_dump("
-                   yet-abbrev-cursor-marker
-                   ");echo \"</pre>\";exit();")
+    ("v" ,(concat "echo \"<pre>\";var_dump($"
+                  yet-abbrev-cursor-marker
+                  ");echo \"</pre>\";exit();")
+     yet-abbrev-cursor)
+    ("if" ,(concat
+            "if ($" yet-abbrev-cursor-marker ") {
+        }")
+     yet-abbrev-cursor)
+    ("ife" ,(concat
+             "if ($" yet-abbrev-cursor-marker ") {
+        } else {
+        }")
+     yet-abbrev-cursor)
+    ("for" ,(concat
+             "for ($" yet-abbrev-cursor-marker ") {
+        }")
+     yet-abbrev-cursor)
+    ("fore" ,(concat
+              "foreach ($" yet-abbrev-cursor-marker ") {
+        }")
+     yet-abbrev-cursor)
+    ("sw" ,(concat
+            "switch ($"
+            yet-abbrev-cursor-marker
+            ") {
+            case label1:
+                // code block;
+                break;
+            default:
+                // code block;
+        }")
      yet-abbrev-cursor)))
 
 ;; Expand with `C-x a e'.

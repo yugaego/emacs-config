@@ -1,7 +1,7 @@
 * Changelog
 
 ** Unreleased
-Introduces *Emacs 29.1* features support.
+Introduces *Emacs 29* features support.
 
 Includes numerous usability adjustments.
 Adds package =gptel= -- a LLM chat client.
@@ -42,6 +42,7 @@ Adds package =gptel= -- a LLM chat client.
 - Enable =web-mode= for HTML files.
 - Configure =org-clock= behavior.
 - Disable auto-indentation in =web-mode=.
+- Adjust and add more of =php-mode= abbreviations (templates).
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).
