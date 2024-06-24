@@ -11,6 +11,8 @@
         eldoc-echo-area-prefer-doc-buffer 'maybe
         eldoc-echo-area-use-multiline-p nil)
 
+  (setq eglot-confirm-server-initiated-edits nil)
+
   (when (boundp 'eldoc-echo-area-display-truncation-message)
     (setq eldoc-echo-area-display-truncation-message nil))
 
