@@ -1,9 +1,19 @@
 ;;; init-prog.el --- Programming languages   -*- lexical-binding: t -*-
 
+(require 'hideshow)
+
 (defun yet-prog-mode ()
-  (goto-address-prog-mode 1))
+  (goto-address-prog-mode 1)
+  (hs-minor-mode 1))
 
 (add-hook 'prog-mode-hook 'yet-prog-mode)
+
+(defun ttn-hs-hide-level-1 ()
+  (when (hs-looking-at-block-start-p)
+    (hs-hide-level 1))
+  (forward-sexp 1))
+
+(setq hs-hide-all-non-comment-function 'ttn-hs-hide-level-1)
 
 
 (require 'flymake)
@@ -56,6 +66,8 @@
   (abbrev-mode -1))
 
 (add-hook 'php-mode-hook 'yet-php-mode)
+
+(add-to-list 'hs-special-modes-alist '(php-mode "{" "}" "/[*/]" nil nil))
 
 
 ;;; Web Mode
