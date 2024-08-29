@@ -13,7 +13,7 @@
 
     (defun yet-pdf-view-mode ()
       (setq-local display-line-numbers nil)
-      ;; (pdf-view-midnight-minor-mode 1)
+      (pdf-view-midnight-minor-mode 1)
       (setq-default pdf-view-display-size 'fit-height
                     ;; pdf-view-max-image-width 4800
                     pdf-view-resize-factor 1.05
