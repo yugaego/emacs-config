@@ -1,20 +1,6 @@
 ;;; init-prog.el --- Programming languages   -*- lexical-binding: t -*-
 
-(require 'hideshow)
-
-(defun yet-prog-mode ()
-  (goto-address-prog-mode 1)
-  (hs-minor-mode 1))
-
-(add-hook 'prog-mode-hook 'yet-prog-mode)
-
-(defun ttn-hs-hide-level-1 ()
-  (when (hs-looking-at-block-start-p)
-    (hs-hide-level 1))
-  (forward-sexp 1))
-
-(setq hs-hide-all-non-comment-function 'ttn-hs-hide-level-1)
-
+;;; Flymake: syntax checker
 
 (require 'flymake)
 
@@ -42,6 +28,53 @@
 
 (define-key flymake-mode-map (kbd "M-n") 'yet-flymake-goto-next-error)
 (define-key flymake-mode-map (kbd "M-p") 'yet-flymake-goto-prev-error)
+
+
+;;; Hideshow: blocks folding
+
+(require 'hideshow)
+
+(defun ttn-hs-hide-level-1 ()
+  (when (hs-looking-at-block-start-p)
+    (hs-hide-level 1))
+  (forward-sexp 1))
+
+(defun yet-hs-hide-level-1-and-comments ()
+  "Hide all comments and the second-level blocks.
+For more details, see command `hs-hide-all'."
+  (interactive)
+  (setq hs-allow-nesting t)
+  ;; Fold all comments first.
+  (setq hs-hide-all-non-comment-function #'ignore)
+  (hs-hide-all)
+  ;; Fold the second-level blocks.
+  (setq hs-hide-all-non-comment-function 'ttn-hs-hide-level-1)
+  (hs-hide-all))
+
+(defun yet-hs-hide-comments ()
+  "Hide all comments."
+  (interactive)
+  (setq hs-allow-nesting nil)
+  ;; Fold all comments.
+  (setq hs-hide-all-non-comment-function #'ignore)
+  (hs-hide-all))
+
+(defun yet-prog-mode ()
+  (goto-address-prog-mode 1)
+  (hs-minor-mode 1)
+  (yet-hs-hide-comments))
+
+(add-hook 'prog-mode-hook 'yet-prog-mode)
+
+;; Mnemonics: `f' fold, `c' comments.
+(define-key hs-minor-mode-map (kbd "C-c f c") 'yet-hs-hide-comments)
+;; Mnemonics: `f' fold, `s' start.
+(define-key hs-minor-mode-map (kbd "C-c f s")
+            'yet-hs-hide-level-1-and-comments)
+;; Mnemonics: `f' fold, `d' disable.
+(define-key hs-minor-mode-map (kbd "C-c f d") #'hs-show-all)
+;; Mnemonics: `f' fold, `t' toggle the current block or level.
+(define-key hs-minor-mode-map (kbd "C-c f t") #'hs-toggle-hiding)
 
 
 ;;; Makefile
