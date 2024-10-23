@@ -13,3 +13,11 @@
 (when initial-window-system
   (scroll-bar-mode -1)
   (tool-bar-mode -1))
+
+;; Fix native compilation on MacOS.
+;; https://lists.gnu.org/archive/html/help-gnu-emacs/2021-10/msg00419.html
+(setenv "LIBRARY_PATH"
+         (concat
+          "/opt/local/lib/gcc14:"
+          "/opt/local/lib/libgcc:"
+          "/opt/local/lib/gcc14/gcc/aarch64-apple-darwin24/14.2.0:"))
