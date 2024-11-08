@@ -14,7 +14,7 @@
                   yet-abbrev-cursor-marker
                   "}\");")
      yet-abbrev-cursor)
-    ("wip" "#![allow(unused_variables,dead_code)]")
+    ("wip" "#![allow(unused_variables, dead_code, unused_imports)]")
     ("td" ,(concat "// TODO::" yet-abbrev-user-name " "))))
 
 (defconst yet-php-abbrevs
