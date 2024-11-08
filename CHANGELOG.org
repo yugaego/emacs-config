@@ -26,6 +26,7 @@ Adds package =gptel= -- a LLM chat client.
 - Package =org-contrib=: enable add-on =ox-extra= to ignore headlines.
 - Function ~yet-vc-print-root-log-latest~ bound to =C-c v L= in =vc-dir-mode=.
 - Enable =hs-minor-mode= in programming modes for blocks folding.
+- Add ~wip~ abbreviation to =rust-mode= for disabling WIP code warnings.
 
 *** Changed
 - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.
