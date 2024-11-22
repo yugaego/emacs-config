@@ -52,6 +52,7 @@ Adds package =gptel= -- a LLM chat client.
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).
 - Disable =eglot-report-progress= to reduce clutter in the echo area.
 - Disable =eglot-confirm-server-initiated-edits=.
+- Disable default MacOS =s-t= binding to =menu-set-font=.
 
 
 ** v2.2.0 - 2023-08-05

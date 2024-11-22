@@ -95,3 +95,6 @@
 
 (when (boundp 'pixel-scroll-precision-mode) ; Since Emacs 29.1
   (pixel-scroll-precision-mode 1))
+
+;;; Disable menu-set-font default MacOS binding.
+(global-unset-key (kbd "s-t"))
