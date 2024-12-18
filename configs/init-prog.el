@@ -132,6 +132,14 @@ For more details, see command `hs-hide-all'."
 
 ;;; SQL
 
+;; See https://truongtx.me/2014/08/23/setup-emacs-as-an-sql-database-client
+
+(setq sql-postgres-login-params
+      '((user :default "postgres")
+        (database :default "postgres")
+        (server :default "localhost")
+        (port :default 5432)))
+
 (defun yet-sql-interactive-mode ()
   (toggle-truncate-lines 1))
 
