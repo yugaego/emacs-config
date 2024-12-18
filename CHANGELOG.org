@@ -47,6 +47,7 @@ Adds package =gptel= -- a LLM chat client.
 - Adjust and add more of =php-mode= abbreviations (templates).
 - Increase value of ~pulse-iterations~.
 - Enable =pdf-view-midnight-minor-mode= by default.
+- Disable =auto-fill-mode= in =markdown-mode= files.
 
 *** Removed
 - Package =org-preview-html= in favor of =C-c C-e h o= (~org-export-dispatch~).
