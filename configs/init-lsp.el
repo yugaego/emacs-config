@@ -6,6 +6,7 @@
 
 (with-eval-after-load 'eglot
 
+  ;; Display eldoc-doc-buffer with display-local-help (bound to `C-h .').
   (setq eldoc-idle-delay 1
         eldoc-documentation-strategy #'eldoc-documentation-default
         eldoc-echo-area-prefer-doc-buffer 'maybe
