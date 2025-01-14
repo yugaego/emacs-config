@@ -6,10 +6,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; init
-(defconst yet-exec-path '("/usr/local/bin" "~/.cargo/bin")
-  "A list of paths to add to variable `exec-path'.
-This makes OS installed executables available to Emacs.")
-
 (defconst yet-source-directory "~/Sources/emacs"
   "Point explicitly to the directory with Emacs source code.
 Sets variable `source-directory'.  This is expected to be needed only for

@@ -13,11 +13,6 @@
   (when (file-exists-p local-pre-init)
     (load local-pre-init)))
 
-;; Make OS installed executables available to Emacs.
-(when (boundp 'yet-exec-path)
-  (dolist (path yet-exec-path)
-    (add-to-list 'exec-path path)))
-
 (when (boundp 'yet-source-directory)
   (setq source-directory yet-source-directory))
 

@@ -28,6 +28,7 @@ Adds package =gptel= -- a LLM chat client.
 - Enable =hs-minor-mode= in programming modes for blocks folding.
 - Add ~wip~ abbreviation to =rust-mode= for disabling WIP code warnings.
 - Set default PostgreSQL settings with =sql-postgres-login-params=.
+- Use package =exec-path-from-shell= instead of ~yet-exec-path~.
 
 *** Changed
 - Configure more of GUI elements in ~early-init.el~ for Emacs startup stage.
@@ -55,6 +56,7 @@ Adds package =gptel= -- a LLM chat client.
 - Disable =eglot-report-progress= to reduce clutter in the echo area.
 - Disable =eglot-confirm-server-initiated-edits=.
 - Disable default MacOS =s-t= binding to =menu-set-font=.
+- Remove ~yet-exec-path~ usage in favor of package =exec-path-from-shell=.
 
 
 ** v2.2.0 - 2023-08-05

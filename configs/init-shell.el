@@ -18,7 +18,8 @@
 (require 'shell)
 
 (when (boundp 'yet-explicit-shell-file-name)
-  (setq explicit-shell-file-name yet-explicit-shell-file-name))
+  (setq explicit-shell-file-name yet-explicit-shell-file-name)
+  (setq shell-file-name yet-explicit-shell-file-name))
 
 
 (require 'term)
@@ -59,3 +60,7 @@ Creates new buffer on each call."
 (define-key shell-mode-map "\M-?"
   'term-dynamic-list-filename-completions)
 
+(require 'exec-path-from-shell)
+
+(when (display-graphic-p)
+  (exec-path-from-shell-initialize))
