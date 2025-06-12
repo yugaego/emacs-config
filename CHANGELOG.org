@@ -1,6 +1,17 @@
 * Changelog
 
 ** Unreleased
+Targets *Emacs 30*.
+
+*** Added
+- Package =vterm=: for better experience over Emacs native terminals.
+
+*** Changed
+- Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.
+
+*** Removed
+- Workarounds related to native Emacs shell and term modes.
+
 
 ** v2.3.0 2025-06-12
 

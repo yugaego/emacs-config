@@ -94,8 +94,7 @@ For more details, see function `rmail-output'.")
 
 
 ;;; init-shell
-(defconst yet-explicit-shell-file-name
-  (when (executable-find "fish") "fish")
+(defconst yet-explicit-shell-file-name "/opt/local/bin/fish"
   "Configure variable `explicit-shell-file-name'.")
 
 
