@@ -1,6 +1,9 @@
 * Changelog
 
 ** Unreleased
+
+** v2.3.0 2025-06-12
+
 Introduces *Emacs 29* features support.
 
 Includes numerous usability adjustments.
