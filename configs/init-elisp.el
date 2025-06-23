@@ -12,6 +12,9 @@
 
 (add-hook 'emacs-lisp-mode-hook 'yet-emacs-lisp-mode)
 
+(when (boundp 'help-fns-describe-function-functions)
+  (add-hook 'help-fns-describe-function-functions
+            #'shortdoc-help-fns-examples-function))
 
 (require 'rainbow-mode)
 
