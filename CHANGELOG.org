@@ -5,6 +5,7 @@ Targets *Emacs 30*.
 
 *** Added
 - Package =vterm=: for better experience over Emacs native terminals.
+- Enable =which-key-mode= with some customazations.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.
