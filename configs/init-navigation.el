@@ -54,8 +54,7 @@
 
 (require 'pulse)
 
-(setq pulse-iterations 20
-      pulse-delay 0.1)
+(setq pulse-flag nil)
 
 
 (require 'recentf)
