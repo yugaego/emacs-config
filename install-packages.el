@@ -37,7 +37,7 @@
 ;;; Homebrew
 ;;
 ;; - jansson
-;;      - Pre-install to use faster json parser.
+;;      - Only needed before Emacs 30.1 (no builtin JSON parser).
 ;; - aspell
 ;;      - Spell-checker called by ispell and flyspell.
 ;; - multimarkdown

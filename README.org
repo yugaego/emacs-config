@@ -116,11 +116,13 @@ Download from [[https://emacsformacosx.com][EmacsForMacOSX]], install as any oth
 - ~$ sudo port install emacs-app~
   - Installs /Emacs.app/ to =/Applications/MacPorts/=
   - Current default variants =+nativecomp= and =+rsvg= are fine choice.
+    - Native compilation is on by default since /Emacs 30.1/.
   - Pre-install ~mailutils +gnutls~ if you plan to retrieve e-mails in /Emacs/.
 
 - ~$ sudo port install emacs~
   - Installs =/opt/local/bin/emacs=
   - Current default variant =+nativecomp= is a fine choice.
+    - Native compilation is on by default since /Emacs 30.1/.
 
 
 [[https://www.emacswiki.org/emacs/EmacsForMacOS][More on Mac OS installers]].
@@ -142,7 +144,8 @@ Compiling from source is simple enough.
   - On this step the ~configure~ script and some related files are generated.
 - ~$ ./configure~
   - For example, with additional options:
-    - ~$ ./configure -C --with-json --with-native-compilation --with-mailutils --with-imagemagick~.
+    - ~$ ./configure -C --with-mailutils --with-imagemagick~.
+    - ~$ ./configure -C --with-json --with-native-compilation --with-mailutils --with-imagemagick~ [Before /Emacs 30.1/].
   - ~$ ./configure --help~ lists all the available options.
 - ~$ make~
   - Compiles emacs into =YOUR-DIR/src/=.
