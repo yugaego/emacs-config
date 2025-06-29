@@ -5,4 +5,5 @@
          (indent-tabs-mode . nil)
          (sentence-end-double-space . nil)
          (fill-column . 80)))
+ (org-mode . ((tab-width . 8)))
  (emacs-lisp-mode . ((emacs-lisp-docstring-fill-column . 75))))
