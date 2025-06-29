@@ -145,6 +145,8 @@ For more details, see command `hs-hide-all'."
 
 (add-hook 'sql-interactive-mode-hook 'yet-sql-interactive-mode)
 
+;;; Dockerfile
+
 ;; A temporary workaround to provide a recipe for the Dockerfile grammar
 ;; installation with the function `treesit-install-language-grammar'.
 ;; By the next Emacs release (30.2 or 31.1) the variable
