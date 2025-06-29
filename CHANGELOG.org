@@ -7,6 +7,7 @@ Targets *Emacs 30*.
 - Package =vterm=: for better experience over Emacs native terminals.
 - Enable =which-key-mode= with some customazations.
 - Display examples of functions with =shortdoc-help-fns-examples-function=.
+- =Dockerfile= recipe for ~treesit-install-language-grammar~.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.
