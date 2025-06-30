@@ -1,4 +1,6 @@
-;;; init-markup.el --- Markup languages initialization   -*- lexical-binding: t -*-
+;;; init-markup.el --- Human-readable text formats   -*- lexical-binding: t -*-
+
+;;; XML
 
 (require 'sgml-mode)
 
@@ -7,8 +9,12 @@
   (define-key sgml-mode-map (kbd "C-M-\\") #'sgml-pretty-print))
 
 
-(add-to-list 'auto-mode-alist '("\\.yml\\'" . conf-mode))
+;;; YAML
 
+(add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . conf-mode))
+
+
+;;; Markdown
 
 (require 'markdown-mode)
 
@@ -23,6 +29,8 @@
 (add-hook 'markdown-mode-hook 'yet-markdown-mode)
 
 
+;;; Texinfo
+
 (require 'texinfo)
 
 (defun yet-texinfo-mode ()
@@ -32,4 +40,3 @@
   (display-fill-column-indicator-mode 1))
 
 (add-hook 'texinfo-mode-hook 'yet-texinfo-mode)
-
