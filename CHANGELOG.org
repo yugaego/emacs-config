@@ -8,7 +8,7 @@ Targets *Emacs 30*.
 - Enable =which-key-mode= with some customazations.
 - Display examples of functions with =shortdoc-help-fns-examples-function=.
 - =Dockerfile= recipe for ~treesit-install-language-grammar~.
-- Local configuration =yet-enable-theme=.
+- Package =auto-dark= and local configuration =yet-auto-dark-themes=.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.

@@ -121,9 +121,9 @@ For more details, see function `rmail-output'.")
   "Configure variable `mail-personal-alias-file'.
 Package `Mailabbrev' expands aliases defined in this file to email addresses.")
 
-;;; init-
-(defconst yet-enable-theme 'misterioso
-  "A theme to load and enable.")
+;;; init-theme
+(defconst yet-auto-dark-themes '((misterioso) (adwaita))
+  "Configure variable `auto-dark-themes'.")
 
 ;;; init-ui
 (defconst yet-font-size "17"
