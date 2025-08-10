@@ -9,9 +9,14 @@ Targets *Emacs 30*.
 - Display examples of functions with =shortdoc-help-fns-examples-function=.
 - =Dockerfile= recipe for ~treesit-install-language-grammar~.
 - Package =auto-dark= and local configuration =yet-auto-dark-themes=.
+- New optional constant ~yet-gptel-backend~.
+- New optional constant ~yet-gptel-model~.
+- New optional constant ~yet-gptel-remove-citations~.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.
+- =gptel= post-response behavior.
+- Set =gptel-log-level= to =info=.
 
 *** Removed
 - Workarounds related to native Emacs shell and term modes.

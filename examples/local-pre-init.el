@@ -17,6 +17,20 @@ commands as `help-view-source' or `xref-find-definition'.")
   "Configure variable `auth-sources'.")
 
 
+;;; init-ai
+(defconst yet-gptel-backend (gptel-make-perplexity "Perplexity"
+                              :key 'gptel-api-key)
+  "Configure variable `gptel-backend'.")
+
+(defconst yet-gptel-model 'sonar
+  "Configure variable `gptel-model'.")
+
+(defconst yet-gptel-remove-citations t
+  "Enable to remove 'Citations:' block from response.
+
+This may be useful when communicating with Perplexity.")
+
+
 ;;; init-file
 (defconst yet-backup-directory-alist '(("." . "~/.emacs.d/.backups"))
   "Configure variable `backup-directory-alist'.")
