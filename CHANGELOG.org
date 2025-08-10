@@ -20,7 +20,7 @@ Targets *Emacs 30*.
 
 *** Removed
 - Workarounds related to native Emacs shell and term modes.
-- Disable =pulse= highlight color change: =pulse-flag= is =nil= now.
+
 
 ** v2.3.0 2025-06-12
 
