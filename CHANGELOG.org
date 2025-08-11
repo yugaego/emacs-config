@@ -12,6 +12,7 @@ Targets *Emacs 30*.
 - New optional constant ~yet-gptel-backend~.
 - New optional constant ~yet-gptel-model~.
 - New optional constant ~yet-gptel-remove-citations~.
+- New optional constant ~yet-gptel-default-directive~.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.

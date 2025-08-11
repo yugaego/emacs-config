@@ -25,6 +25,9 @@ commands as `help-view-source' or `xref-find-definition'.")
 (defconst yet-gptel-model 'sonar
   "Configure variable `gptel-model'.")
 
+(defconst yet-gptel-default-directive 'programming
+  "Directive to use by default as a system message (prompt).")
+
 (defconst yet-gptel-remove-citations t
   "Enable to remove 'Citations:' block from response.
 

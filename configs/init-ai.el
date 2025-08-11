@@ -3,6 +3,15 @@
 (require 'gptel)
 
 (with-eval-after-load 'gptel
+  (setq-default
+   gptel-log-level 'info
+   gptel-default-mode 'org-mode
+   gptel-max-tokens 500
+   gptel-directives
+   '((default . "You are a helpful assistant. Provide clear and thorough answers. Be concise! Let's work this out in a step by step way to be sure we have the right answer.")
+     (programming . "You are a careful programmer who writes performant, robust, idiomatic, beautiful code. You provide clear, thorough answers. You answer as concisely as possible. You prefer writing code without any comments and notes, unless explicitly asked so.")
+     (writing . "You are a helpful assistant for editing, proofreading, writing, and translating texts. Provide clear and thorough answers but be concise. Let's work this out in a step by step way to be sure we have the right answer.")
+     (chat . "You are a conversation partner. Provide clear and thorough answers but be concise.")))
 
   (when (and (boundp 'yet-gptel-backend) yet-gptel-backend)
     (setq gptel-backend yet-gptel-backend))
@@ -10,12 +19,20 @@
   (when (and (boundp 'yet-gptel-model) yet-gptel-model)
     (setq gptel-model yet-gptel-model))
 
+
+  (when-let* ((directive (and (boundp 'yet-gptel-default-directive)
+                              yet-gptel-default-directive))
+              (message (alist-get directive gptel-directives)))
+    (setq gptel--system-message message))
+
+
   (defun yet-gptel-response-recenter (beg end)
     "Position the answer at the top of the window."
     (goto-char beg)
     (recenter 0))
 
   (add-hook 'gptel-post-response-functions 'yet-gptel-response-recenter)
+
 
   (when (and (boundp 'yet-gptel-remove-citations) yet-gptel-remove-citations)
     (defun yet-gptel-response-remove-citations (beg end)
@@ -31,13 +48,4 @@
 
     (add-hook
      'gptel-post-response-functions
-     'yet-gptel-response-remove-citations))
-
-  (setq-default gptel-log-level 'info
-                gptel-default-mode 'org-mode
-                gptel-max-tokens 500
-                gptel-directives
-                '((default . "You are a helpful assistant. Provide clear and thorough answers. Be concise! Let's work this out in a step by step way to be sure we have the right answer.")
-                  (programming . "You are a helpful assistant and careful programmer. Provide clear and thorough answers. Be concise! Let's work this out in a step by step way to be sure we have the right answer. Prefer writing code without any comments and notes, unless explicitly asked so.")
-                  (writing . "You are a helpful assistant for editing, proofreading, writing, and translating texts. Provide clear and thorough answers but be concise. Let's work this out in a step by step way to be sure we have the right answer.")
-                  (chat . "You are a conversation partner. Provide clear and thorough answers but be concise."))))
+     'yet-gptel-response-remove-citations)))
