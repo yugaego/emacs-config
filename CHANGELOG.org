@@ -19,6 +19,7 @@ Targets *Emacs 30*.
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.
 - =gptel= post-response behavior.
 - Set =gptel-log-level= to =info=.
+- Enable =pdf-view-midnight-minor-mode= only if enabled theme is dark.
 
 *** Removed
 - Workarounds related to native Emacs shell and term modes.
