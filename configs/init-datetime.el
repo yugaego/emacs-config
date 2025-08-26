@@ -8,7 +8,8 @@
       display-time-24hr-format t
       display-time-default-load-average nil)
 
-;; (display-time-mode 1)
+(when (and (boundp 'yet-display-time) yet-display-time)
+  (display-time-mode 1))
 
 (when (boundp 'world-clock-list)
   (setq world-clock-list '(("Asia/Bangkok" "Bangkok")

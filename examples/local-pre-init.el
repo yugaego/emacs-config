@@ -34,6 +34,12 @@ commands as `help-view-source' or `xref-find-definition'.")
 This may be useful when communicating with Perplexity.")
 
 
+;;; init-datetime
+
+(defconst yet-display-time t
+  "Enable global minor mode `display-time-mode', which see.")
+
+
 ;;; init-file
 (defconst yet-backup-directory-alist '(("." . "~/.emacs.d/.backups"))
   "Configure variable `backup-directory-alist'.")
