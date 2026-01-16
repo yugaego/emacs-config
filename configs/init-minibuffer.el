@@ -26,6 +26,7 @@
 
 ;; Save minibuffer history between sessions.
 (savehist-mode 1)
+(add-to-list 'savehist-additional-variables 'log-edit-comment-ring)
 
 ;; File and buffer name completion.
 ;; Switch to default M-x find-file and M-x switch-buffer with C-f and C-b.

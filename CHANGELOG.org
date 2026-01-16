@@ -14,6 +14,7 @@ Targets *Emacs 30*.
 - New optional constant ~yet-gptel-remove-citations~.
 - New optional constant ~yet-gptel-default-directive~.
 - New optional constant ~yet-display-time~.
+- Preserve ~log-edit-comment-ring~ across Emacs sessions.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.
