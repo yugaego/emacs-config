@@ -27,6 +27,22 @@
 
 (add-hook 'markdown-mode-hook 'yet-markdown-mode)
 
+(defun yet-markdown-to-org ()
+  "Export current Markdown file to new .org file via pandoc."
+  (interactive)
+  (unless buffer-file-name
+    (user-error "Buffer is not visiting a file"))
+  (unless (executable-find "pandoc")
+    (user-error "Executable `pandoc' not found"))
+  (let* ((input buffer-file-name)
+         (output (concat (file-name-sans-extension input) ".org"))
+         (cmd (format
+               "pandoc -f markdown -t org --wrap=preserve -o %s %s"
+               (shell-quote-argument output)
+               (shell-quote-argument input))))
+    (shell-command cmd)
+    (message "Created %s" output)
+    (find-file output)))
 
 ;;; Texinfo
 
