@@ -31,7 +31,7 @@
 ;; - aspell aspell-dict-<LANG>
 ;; - auto-installed if pdf-tools enabled
 ;;   - pkgconfig poppler autoconf automake libpng
-;; - pandoc (or multimarkdown)
+;; - pandoc or multimarkdown
 ;;
 ;;
 ;;; Homebrew

@@ -18,13 +18,12 @@
 
 (require 'markdown-mode)
 
-(with-eval-after-load 'markdown-mode
-  (when (executable-find "multimarkdown")
-    (setq markdown-command "multimarkdown")))
-
 (defun yet-markdown-mode ()
   (goto-address-mode 1)
-  (auto-fill-mode -1))
+  (auto-fill-mode -1)
+  (let ((commands '("markdown" "multimarkdown" "pandoc")))
+    (when-let* ((executable (seq-some #'executable-find commands)))
+      (setq markdown-command executable))))
 
 (add-hook 'markdown-mode-hook 'yet-markdown-mode)
 

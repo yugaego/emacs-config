@@ -21,6 +21,7 @@ Targets *Emacs 30*.
 - =gptel= post-response behavior.
 - Set =gptel-log-level= to =info=.
 - Enable =pdf-view-midnight-minor-mode= only if enabled theme is dark.
+- =markdown-mode=: auto-detect markdown processor.
 
 *** Removed
 - Workarounds related to native Emacs shell and term modes.
