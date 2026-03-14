@@ -12,7 +12,7 @@
    '((emacs-lisp . t)
      (js . t)
      (latex . t)
-     (python .t)
+     (python . t)
      (shell . t))))
 
 ;; Enlarge LaTeX preview.
@@ -81,6 +81,12 @@ With prefix ARG, the advice is always enabled."
 (when (boundp 'org-html-validation-link)
   (setq org-html-validation-link nil))
 
+
+(require 'htmlize)
+
+(with-eval-after-load 'htmlize
+  (setq htmlize-html-charset "utf-8")
+  (setq htmlize-convert-nonascii-to-entities nil))
 
 ;;; Enable ox-extra add-on provided by the org-contrib package.
 

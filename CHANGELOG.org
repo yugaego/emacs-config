@@ -24,6 +24,8 @@ Targets *Emacs 30*.
 - Set =gptel-log-level= to =info=.
 - Enable =pdf-view-midnight-minor-mode= only if enabled theme is dark.
 - =markdown-mode=: auto-detect markdown processor.
+- Set =htmlize-html-charset= to "utf-8".
+- Set =htmlize-convert-nonascii-to-entities= to nil (do not encode Cyrillic).
 
 *** Removed
 - Workarounds related to native Emacs shell and term modes.
