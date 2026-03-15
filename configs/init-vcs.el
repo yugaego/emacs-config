@@ -20,13 +20,27 @@
 (define-key vc-dir-mode-map (kbd "C-c v L") 'yet-vc-print-root-log-latest)
 
 
-;; With vc-git, we write a commit message
-;; in *vc-log* buffer.
+;; With vc-git, we write a commit message in *vc-log* buffer.
 (defun yet-log-edit-mode ()
   (setq-local fill-column 72)
   (auto-fill-mode 1))
 
 (add-hook 'log-edit-mode-hook 'yet-log-edit-mode)
+
+
+(defun yet-vc-git--pushpull-quit-window (orig command prompt extra-args)
+  (let ((proc (funcall orig command prompt extra-args)))
+    (when (processp proc)
+      (add-function
+       :after (process-sentinel proc)
+       (lambda (p e)
+         (when (and (eq (process-status p) 'exit)
+                    (zerop (process-exit-status p)))
+           (when-let ((buf (process-buffer p)))
+             (quit-windows-on buf t))))))
+    proc))
+
+(advice-add 'vc-git--pushpull :around #'yet-vc-git--pushpull-quit-window)
 
 
 ;;; diff-mode
