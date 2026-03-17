@@ -101,10 +101,10 @@
 
 ;;; Display available keybindings in popup.
 (when (fboundp 'which-key-mode)    ; Since Emacs 30.1
-  (setopt which-key-idle-delay 4.0
+  (setopt which-key-idle-delay 10000.0
           which-key-idle-secondary-delay 0.05
-          which-key-show-early-on-C-h t)
-  (which-key-mode 1)
-  (setopt which-key-max-description-length nil
-          which-key-show-docstrings t))
+          which-key-show-early-on-C-h t
+          which-key-sort-order #'which-key-description-order
+          which-key-max-description-length nil)
+  (which-key-mode 1))
 
