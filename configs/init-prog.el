@@ -32,7 +32,8 @@
 
 ;;; Hideshow: blocks folding
 
-(require 'hideshow)
+(with-eval-after-load 'hideshow
+  (setopt hs-isearch-open t))
 
 (defun ttn-hs-hide-level-1 ()
   (when (hs-looking-at-block-start-p)
@@ -43,28 +44,36 @@
   "Hide all comments and the second-level blocks.
 For more details, see command `hs-hide-all'."
   (interactive)
-  (setq hs-allow-nesting t)
-  ;; Fold all comments first.
-  (setq hs-hide-all-non-comment-function #'ignore)
-  (hs-hide-all)
-  ;; Fold the second-level blocks.
-  (setq hs-hide-all-non-comment-function 'ttn-hs-hide-level-1)
-  (hs-hide-all))
+  (let ((hs-allow-nesting t))
+    ;; Fold all comments first.
+    (let ((hs-hide-all-non-comment-function #'ignore))
+      (hs-hide-all))
+    ;; Fold the second-level blocks.
+    (let ((hs-hide-all-non-comment-function #'ttn-hs-hide-level-1))
+      (hs-hide-all))))
 
 (defun yet-hs-hide-comments ()
   "Hide all comments."
   (interactive)
-  (setq hs-allow-nesting nil)
-  ;; Fold all comments.
-  (setq hs-hide-all-non-comment-function #'ignore)
-  (hs-hide-all))
+  (let ((hs-allow-nesting nil)
+        (hs-hide-all-non-comment-function #'ignore))
+    (hs-hide-all)))
 
 (defun yet-prog-mode ()
   (goto-address-prog-mode 1)
   (hs-minor-mode 1)
   (yet-hs-hide-comments))
 
-(add-hook 'prog-mode-hook 'yet-prog-mode)
+(add-hook 'prog-mode-hook #'yet-prog-mode)
+
+(defun yet-hs-silence-messages (orig-fn &rest args)
+  (let ((inhibit-message t)
+        (message-log-max nil))
+    (apply orig-fn args)))
+
+(advice-add 'hs-show-all :around #'yet-hs-silence-messages)
+(advice-add 'hs-hide-all :around #'yet-hs-silence-messages)
+
 
 ;; Mnemonics: `f' fold, `c' comments.
 (define-key hs-minor-mode-map (kbd "C-c f c") 'yet-hs-hide-comments)
