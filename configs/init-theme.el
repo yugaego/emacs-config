@@ -1,17 +1,17 @@
 ;;; init-theme.el --- Configure a theme   -*- lexical-binding: t -*-
 
-(require 'auto-dark)
+;;; Load and enable default theme
 
-(auto-dark-mode 1)
+(defvar yet-theme-default-dark (if (boundp 'yet-auto-dark-themes)
+                             (caar yet-auto-dark-themes)
+                             'misterioso))
 
-(setq auto-dark-allow-osascript t
-      auto-dark-themes (or (and
-                            (boundp 'yet-auto-dark-themes)
-                            yet-auto-dark-themes)
-                         '((misterioso) (adwaita))))
+(defvar yet-theme-default-light 'adwaita)
 
-(defun yet-auto-dark-dark-mode ()
-  ;; Customize dark theme 'misterioso.
+(load-theme yet-theme-default-dark t nil)
+
+(defun yet-theme-customize-misterioso ()
+  "Customize dark theme 'misterioso if it is enabled"
   (when (eq (car custom-enabled-themes) 'misterioso)
     (let ((class '((class color) (min-colors 4096)))
           (modeline-font (concat "Monospace-"
@@ -77,8 +77,21 @@
 
       (enable-theme 'misterioso))))
 
+(yet-theme-customize-misterioso)
 
-(add-hook 'auto-dark-dark-mode-hook 'yet-auto-dark-dark-mode)
+
+;;; Auto-switch a theme to system's mode
+
+(require 'auto-dark)
+
+(setq auto-dark-allow-osascript (eq system-type 'darwin)
+      auto-dark-themes (or (and (boundp 'yet-auto-dark-themes)
+                                yet-auto-dark-themes)
+                           `((,yet-theme-default-dark)
+                             (,yet-theme-default-light))))
+(auto-dark-mode 1)
+
+(add-hook 'auto-dark-dark-mode-hook 'yet-theme-customize-misterioso)
 
 
 
