@@ -93,6 +93,18 @@
 
 (add-hook 'auto-dark-dark-mode-hook 'yet-theme-customize-misterioso)
 
+;; Reset auto-dark state after desktop-save restores theme.
+;; auto-dark-mode initializes first and records
+;; the system's current appearance state.
+;; desktop-save-mode then restores the stale theme
+;; from the previous session.
+;; Since the recorded state already matches
+;; the system's state, auto-dark-mode skips toggling
+;; to the correct theme on subsequent polls.
+(add-hook 'desktop-after-read-hook
+          (lambda ()
+            (setq auto-dark--last-dark-mode-state 'unknown)
+            (auto-dark--check-and-set-dark-mode)))
 
 
 ;;; *Palette*
