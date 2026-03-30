@@ -27,6 +27,7 @@ Targets *Emacs 30*.
 - Set =gptel-log-level= to =info=.
 - Enable =pdf-view-midnight-minor-mode= only if enabled theme is dark.
 - =markdown-mode=: auto-detect markdown processor.
+- Package =rainbow-mode= for colors preview replaced by =colorful-mode=.
 
 *** Removed
 - Workarounds related to native Emacs shell and term modes.

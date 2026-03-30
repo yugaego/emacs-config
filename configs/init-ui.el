@@ -108,3 +108,25 @@
           which-key-max-description-length nil)
   (which-key-mode 1))
 
+
+;;; Colorize HEX colors, color names, etc.
+
+(use-package colorful-mode
+  :custom
+  (colorful-highlight-in-comments t)
+  (colorful-use-prefix t)
+  (colorful-prefix-string "██ ")
+
+  :config
+  (setopt css-fontify-colors nil)
+
+  (with-eval-after-load 'web-mode
+    (setopt web-mode-enable-css-colorization nil))
+
+  (add-to-list 'global-colorful-modes 'web-mode)
+  (setq global-colorful-modes
+        (remove 'help-mode global-colorful-modes))
+
+  (add-to-list 'desktop-minor-mode-table '(colorful-mode nil))
+
+  (global-colorful-mode 1))
