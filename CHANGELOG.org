@@ -20,6 +20,7 @@ Targets *Emacs 30*.
 - Set =htmlize-html-charset= to "utf-8".
 - Set =htmlize-convert-nonascii-to-entities= to nil (do not encode Cyrillic).
 - Quit =*vc-git : %s*= window after successful ~vc-git--pushpull~ run.
+- Function ~yet-list-colors-display~ to display MacPorts Emacs defined colors.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.

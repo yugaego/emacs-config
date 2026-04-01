@@ -130,3 +130,19 @@
   (add-to-list 'desktop-minor-mode-table '(colorful-mode nil))
 
   (global-colorful-mode 1))
+
+
+;;; Display all colors
+
+(defun yet-list-colors-display ()
+  "Display all defined colors in MacPorts Emacs.
+
+In the MacPorts Emacs, the function `defined-colors' returns only AppKit
+NSColor system names. The variable `color-name-rgb-alist' holds additional
+X11 color names that are available to the GUI.
+
+This function displays the combined list of colors from both sources."
+  (interactive)
+  (list-colors-display (append (defined-colors)
+                               (mapcar #'car color-name-rgb-alist))
+                       "*All Colors*"))
