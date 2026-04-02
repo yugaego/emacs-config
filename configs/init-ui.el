@@ -141,8 +141,6 @@ names on macOS."
 (use-package colorful-mode
   :custom
   (colorful-highlight-in-comments t)
-  (colorful-use-prefix t)
-  (colorful-prefix-string "██ ")
   (colorful-extra-color-keyword-functions
    '(colorful-add-hex-colors
      (emacs-lisp-mode . yet--colorful-add-color-names)
@@ -153,6 +151,10 @@ names on macOS."
        colorful-add-oklab-oklch-colors
        yet--colorful-add-color-names))
      (latex-mode . colorful-add-latex-colors)))
+
+  :custom-face
+  (colorful-base ((t (:weight normal :box
+                              (:line-width -1 :color "transparent")))))
 
   :config
   (setopt css-fontify-colors nil)
