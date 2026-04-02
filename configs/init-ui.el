@@ -169,17 +169,16 @@ names on macOS."
   (global-colorful-mode 1))
 
 
-;;; Display all colors
-
 (defun yet-list-colors-display ()
-  "Display all defined colors in MacPorts Emacs.
+  "Display all defined colors.
 
-In the MacPorts Emacs, the function `defined-colors' returns only AppKit
-NSColor system names. The variable `color-name-rgb-alist' holds additional
-X11 color names that are available to the GUI.
-
-This function displays the combined list of colors from both sources."
+In the macOS Emacs (MacPorts), the function `defined-colors' returns only
+AppKit NSColor system names. The variable `color-name-rgb-alist' holds
+additional X11 color names that are available to the GUI. When the case is
+detected, this function displays the combined list of colors from both
+sources. Otherwise, it falls back to the default `list-colors-display'
+behavior."
   (interactive)
-  (list-colors-display (append (defined-colors)
-                               (mapcar #'car color-name-rgb-alist))
-                       "*All Colors*"))
+  (if-let* ((x11-colors (yet--ns-missing-x11-colors)))
+      (list-colors-display (append (defined-colors) x11-colors))
+    (list-colors-display)))
