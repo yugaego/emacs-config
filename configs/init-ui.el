@@ -96,7 +96,7 @@
 (when (boundp 'pixel-scroll-precision-mode) ; Since Emacs 29.1
   (pixel-scroll-precision-mode 1))
 
-;;; Disable menu-set-font default MacOS binding.
+;;; Disable menu-set-font default macOS binding.
 (global-unset-key (kbd "s-t"))
 
 ;;; Display available keybindings in popup.
@@ -109,13 +109,50 @@
   (which-key-mode 1))
 
 
-;;; Colorize HEX colors, color names, etc.
+;;; Color names and codes output and highlighting
+
+(defun yet--ns-missing-x11-colors ()
+  "Conditionally return X11 color names.
+
+Return X11 color names only if they are not returned by the function
+`defined-colors' on macOS."
+  (when (and (eq window-system 'ns)
+             (< (length (defined-colors))
+                (length color-name-rgb-alist)))
+    (mapcar #'car color-name-rgb-alist)))
+
+(defun yet--colorful-add-color-names ()
+  "Enable color name highlighting.
+
+This includes CSS and Emacs color names similar to the function
+`colorful-add-color-names', but additionally enables missing X11 color
+names on macOS."
+  (cl-pushnew
+   `(,(regexp-opt
+       (append
+        (mapcar #'car colorful-html-colors-alist)
+        (defined-colors)
+        (yet--ns-missing-x11-colors))
+       'symbols)
+     color-name 0 t)
+   colorful-color-keywords
+   :test #'equal))
 
 (use-package colorful-mode
   :custom
   (colorful-highlight-in-comments t)
   (colorful-use-prefix t)
   (colorful-prefix-string "██ ")
+  (colorful-extra-color-keyword-functions
+   '(colorful-add-hex-colors
+     (emacs-lisp-mode . yet--colorful-add-color-names)
+     ((html-mode css-mode web-mode) .
+      (colorful-add-css-variables-colors
+       colorful-add-rgb-colors
+       colorful-add-hsl-colors
+       colorful-add-oklab-oklch-colors
+       yet--colorful-add-color-names))
+     (latex-mode . colorful-add-latex-colors)))
 
   :config
   (setopt css-fontify-colors nil)
