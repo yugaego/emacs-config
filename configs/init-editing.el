@@ -48,6 +48,10 @@
 ;; Alternative to M-d.
 (global-set-key (kbd "M-<delete>") 'kill-word)
 
+;; Optimize redisplay.
+(when (boundp 'yet-bidi-display)
+  (setq-default bidi-display-reordering yet-bidi-display
+                bidi-paragraph-direction yet-bidi-display))
 
 ;;; Search
 

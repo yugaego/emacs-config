@@ -39,6 +39,16 @@ This may be useful when communicating with Perplexity.")
 (defconst yet-display-time t
   "Enable global minor mode `display-time-mode', which see.")
 
+;;; init-editing
+
+(defconst yet-bidi-display 'left-to-right
+  "Configure text directionality to optimize redisplay.
+
+Use 'left-to-right' or 'right-to-left' to speed up redisplay when
+bidirectional text support is unnecessary.
+
+This value configures the variables 'bidi-display-reordering' and
+'bidi-paragraph-direction'.")
 
 ;;; init-file
 (defconst yet-backup-directory-alist '(("." . "~/.emacs.d/.backups"))

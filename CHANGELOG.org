@@ -21,6 +21,7 @@ Targets *Emacs 30*.
 - Set =htmlize-convert-nonascii-to-entities= to nil (do not encode Cyrillic).
 - Quit =*vc-git : %s*= window after successful ~vc-git--pushpull~ run.
 - Function ~yet-list-colors-display~ to fix display of defined colors on macOS.
+- New optional constant ~yet-bidi-display~.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.
