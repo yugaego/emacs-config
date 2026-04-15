@@ -5,20 +5,16 @@ Targets *Emacs 30*.
 
 *** Added
 - Package =vterm=: for better experience over Emacs native terminals.
-- Enable =which-key-mode= with some customazations.
+- Enable =which-key-mode= with some customizations.
 - Display examples of functions with =shortdoc-help-fns-examples-function=.
 - =Dockerfile= recipe for ~treesit-install-language-grammar~.
 - Package =auto-dark= and local configuration =yet-auto-dark-themes=.
-- New optional constant ~yet-gptel-backend~.
-- New optional constant ~yet-gptel-model~.
-- New optional constant ~yet-gptel-remove-citations~.
-- New optional constant ~yet-gptel-default-directive~.
-- New optional constant ~yet-display-time~.
+- New optional constants: ~yet-gptel-backend~, ~yet-gptel-model~,
+  ~yet-gptel-remove-citations~, ~yet-gptel-default-directive~,
+  ~yet-display-time~.
 - Preserve ~log-edit-comment-ring~ across Emacs sessions.
 - ~pandoc~-based ~yet-markdown-to-org~ export command.
 - Package =nix-mode=: a major mode for editing Nix expressions.
-- Set =htmlize-html-charset= to "utf-8".
-- Set =htmlize-convert-nonascii-to-entities= to nil (do not encode Cyrillic).
 - Quit =*vc-git : %s*= window after successful ~vc-git--pushpull~ run.
 - Function ~yet-list-colors-display~ to fix display of defined colors on macOS.
 - New optional constant ~yet-bidi-display~.
@@ -30,6 +26,9 @@ Targets *Emacs 30*.
 - Set =gptel-log-level= to =info=.
 - Enable =pdf-view-midnight-minor-mode= only if enabled theme is dark.
 - =markdown-mode=: auto-detect markdown processor.
+- Explicitly set =htmlize-html-charset= to "utf-8".
+- Disable =htmlize-convert-nonascii-to-entities= (e.g., do not encode Cyrillic
+  characters).
 - Package =rainbow-mode= for colors preview replaced by =colorful-mode=.
 - Restructure =ibuffer= settings.
 - Performance related adjustments.
