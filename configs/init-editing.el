@@ -13,6 +13,10 @@
 ;; and for new buffers created with C-x b.
 (setq-default major-mode 'text-mode)
 
+;; Performance tweaks.
+(setopt redisplay-skip-fontification-on-input t
+        fast-but-imprecise-scrolling t)
+
 ;; Auto-refresh file-visiting buffers contents.
 (require 'autorevert)
 (global-auto-revert-mode 1)
