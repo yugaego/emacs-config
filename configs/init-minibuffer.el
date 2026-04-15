@@ -40,6 +40,9 @@
       ido-ignore-buffers '("\\` " "\\`*EGLOT")
       ido-auto-merge-delay-time 3)      ; Seconds before looking in other paths.
 
+;; Do not ping network when looking for a file at point.
+(setq ffap-machine-p-known 'reject)
+
 ;; M-x command name completion.
 (fido-mode 1)
 
