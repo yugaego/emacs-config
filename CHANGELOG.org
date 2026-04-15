@@ -22,6 +22,7 @@ Targets *Emacs 30*.
 - Quit =*vc-git : %s*= window after successful ~vc-git--pushpull~ run.
 - Function ~yet-list-colors-display~ to fix display of defined colors on macOS.
 - New optional constant ~yet-bidi-display~.
+- Package =ibuffer-vc= to group buffers by VCS.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.
@@ -30,6 +31,7 @@ Targets *Emacs 30*.
 - Enable =pdf-view-midnight-minor-mode= only if enabled theme is dark.
 - =markdown-mode=: auto-detect markdown processor.
 - Package =rainbow-mode= for colors preview replaced by =colorful-mode=.
+- Restructure =ibuffer= settings.
 
 *** Removed
 - Workarounds related to native Emacs shell and term modes.

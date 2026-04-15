@@ -5,13 +5,25 @@
 ;;; Ibuffer
 ;;; List and operate on buffers.
 
-(require 'ibuffer)
+(use-package ibuffer
+  :bind ("C-x C-b" . ibuffer)
+  :custom
+  (ibuffer-expert t)
+  (ibuffer-formats
+   '((mark modified read-only vc-status-mini " "
+           (name 32 32 :left :elide)
+           " "
+           (mode 16 16 :right)
+           " "
+           (size 9 -1 :right)))))
 
-;; Rebind to ibuffer instead of using older list-buffers command.
-(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+(use-package ibuffer-vc
+  :hook (ibuffer
+         . (lambda ()
+             (ibuffer-vc-set-filter-groups-by-vc-root)
+             (unless (eq ibuffer-sorting-mode 'alphabetic)
+               (ibuffer-do-sort-by-alphabetic)))))
 
-(setq ibuffer-default-shrink-to-minimum-size t
-      ibuffer-expert t)
 
 ;;; Help
 
