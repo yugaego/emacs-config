@@ -6,6 +6,9 @@
 ;; Save external clipboard text before replacing it.
 (setq save-interprogram-paste-before-kill t)
 
+;; Avoid duplicate entries in the kill-ring.
+(setq kill-do-not-save-duplicates t)
+
 ;; Set default width to 80 columns.
 (setq-default fill-column 80)
 
