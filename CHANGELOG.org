@@ -3,6 +3,8 @@
 ** Unreleased
 Targets *Emacs 30*.
 
+Includes numerous performance and usability improvements.
+
 *** Added
 - Package =vterm=: for better experience over Emacs native terminals.
 - Enable =which-key-mode= with some customizations.
