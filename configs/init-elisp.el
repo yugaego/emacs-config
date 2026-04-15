@@ -15,3 +15,6 @@
 (when (boundp 'help-fns-describe-function-functions)
   (add-hook 'help-fns-describe-function-functions
             #'shortdoc-help-fns-examples-function))
+
+;; Simplify syntax escaping in 're-builder'.
+(setq reb-re-syntax 'string)
