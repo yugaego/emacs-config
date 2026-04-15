@@ -3,6 +3,9 @@
 ;; Kill newline character at the end of line.
 (setq kill-whole-line t)
 
+;; Save external clipboard text before replacing it.
+(setq save-interprogram-paste-before-kill t)
+
 ;; Set default width to 80 columns.
 (setq-default fill-column 80)
 
