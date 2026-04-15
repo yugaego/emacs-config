@@ -37,7 +37,8 @@
 ;; <1 means blink forever.
 (setq blink-cursor-blinks 2)
 
-(setq-default cursor-type 'bar)
+(setq-default cursor-type 'bar
+              cursor-in-non-selected-windows nil)
 
 ;; Identify sentences ended by one of [.?!]
 ;; with the following *one* space.
