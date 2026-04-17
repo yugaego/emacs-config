@@ -29,6 +29,16 @@
 (setopt savehist-additional-variables
         '(log-edit-comment-ring kill-ring))
 
+(defun yet-savehist-save-hook ()
+  "Sanitize 'kill-ring' before saving."
+  (setq kill-ring (mapcan (lambda (item)
+                            (when (and (stringp item)
+                                       (< (length item) 100000))
+                              (list (substring-no-properties item))))
+                          kill-ring)))
+
+(add-hook 'savehist-save-hook 'yet-savehist-save-hook)
+
 ;; File and buffer name completion.
 ;; Switch to default M-x find-file and M-x switch-buffer with C-f and C-b.
 (require 'ido)
