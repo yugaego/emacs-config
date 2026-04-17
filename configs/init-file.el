@@ -8,6 +8,8 @@
 (when (fboundp 'rename-visited-file)    ; Since Emacs 29.1
   (keymap-global-set "C-c f r" #'rename-visited-file))
 
+(setopt project-kill-buffers-display-buffer-list t)
+
 ;;; Backups
 
 ;; Emacs saves only one backup by default,

@@ -34,6 +34,7 @@ Includes numerous performance and usability improvements.
 - Package =rainbow-mode= for colors preview replaced by =colorful-mode=.
 - Restructure =ibuffer= settings.
 - Performance related adjustments.
+- Display list of buffers to kill before killing project buffers.
 
 *** Removed
 - Workarounds related to native Emacs shell and term modes.
