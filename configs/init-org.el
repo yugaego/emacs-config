@@ -34,39 +34,39 @@
       org-export-with-broken-links 'mark
       org-export-headline-levels 5)     ; See `org-html-toplevel-hlevel'
 
-  (defun yet-org-export-to-tmp-dir
-      (orig-fun extension &optional subtreep pub-dir)
-    "A piece of advice for function `org-export-output-file-name'.
+(defun yet-org-export-to-tmp-dir
+    (orig-fun extension &optional subtreep pub-dir)
+  "A piece of advice for function `org-export-output-file-name'.
 Sets PUB-DIR to a directory for temporary files."
-    (unless pub-dir
-      (setq pub-dir (temporary-file-directory)))
-    (apply orig-fun extension subtreep pub-dir nil))
+  (unless pub-dir
+    (setq pub-dir (temporary-file-directory)))
+  (apply orig-fun extension subtreep pub-dir nil))
 
-  (defun yet-org-export-output-file-name-toggle (&optional arg)
-    "Toggles advice `yet-org-export-to-tmp-dir'.
-When added, `org-export-output-file-name' uses directory for temporary files.
-With prefix ARG, the advice is always enabled."
-    (interactive "P")
-    (if (or arg (not (advice-member-p
-                      'yet-org-export-to-tmp-dir
-                      'org-export-output-file-name)))
-        (progn
-          (message "Org export to tmp dir is enabled.")
-          (advice-add
-           'org-export-output-file-name
-           :around
-           'yet-org-export-to-tmp-dir))
+(defun yet-org-export-output-file-name-toggle (&optional arg)
+  "Toggles advice `yet-org-export-to-tmp-dir'.
+When added, `org-export-output-file-name' uses directory for temporary
+files. With prefix ARG, the advice is always enabled."
+  (interactive "P")
+  (if (or arg (not (advice-member-p
+                    'yet-org-export-to-tmp-dir
+                    'org-export-output-file-name)))
       (progn
-        (message "Org export to tmp dir is disabled.")
-        (advice-remove
+        (message "Org export to tmp dir is enabled.")
+        (advice-add
          'org-export-output-file-name
-         'yet-org-export-to-tmp-dir))))
+         :around
+         'yet-org-export-to-tmp-dir))
+    (progn
+      (message "Org export to tmp dir is disabled.")
+      (advice-remove
+       'org-export-output-file-name
+       'yet-org-export-to-tmp-dir))))
 
-  (yet-org-export-output-file-name-toggle 1)
+(yet-org-export-output-file-name-toggle 1)
 
-  (define-key org-mode-map
-              (kbd "C-c o e")
-              'yet-org-export-output-file-name-toggle)
+(define-key org-mode-map
+            (kbd "C-c o e")
+            'yet-org-export-output-file-name-toggle)
 
 
 ;;; Export settings for HTML backend
