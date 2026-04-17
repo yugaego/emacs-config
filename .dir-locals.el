@@ -6,5 +6,4 @@
          (sentence-end-double-space . nil)
          (fill-column . 80)
          (eval . (hs-minor-mode 0))))
- (org-mode . ((tab-width . 8)))
- (emacs-lisp-mode . ((emacs-lisp-docstring-fill-column . 75))))
+ (org-mode . ((tab-width . 8))))
