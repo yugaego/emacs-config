@@ -21,6 +21,7 @@ Includes numerous performance and usability improvements.
 - Function ~yet-list-colors-display~ to fix display of defined colors on macOS.
 - New optional constant ~yet-bidi-display~.
 - Package =ibuffer-vc= to group buffers by VCS.
+- Preserve ~kill-ring~ between Emacs sessions.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.
