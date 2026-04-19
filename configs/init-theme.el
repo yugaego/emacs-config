@@ -77,7 +77,29 @@
 
       (enable-theme 'misterioso))))
 
+(defun yet-theme-customize-adwaita ()
+  "Customize light theme 'adwaita if it is enabled"
+  (when (eq (car custom-enabled-themes) 'adwaita)
+    (let ((class '((class color) (min-colors 4096))))
+      (custom-theme-set-faces
+       'adwaita
+       `(diff-added
+         ((,class
+           (:bold t :foreground "#4E9A06" :background "#D9E9CC"))))
+       `(diff-removed
+         ((,class
+           (:bold t :foreground "#F5666D" :background "#FBE5E8"))))
+       `(diff-refine-added
+         ((,class
+           (:bold t :foreground "#4E9A06" :background "#BBD8A7"))))
+       `(diff-refine-removed
+         ((,class
+           (:bold t :foreground "#F5666D" :background "#F6CCD2")))))
+
+      (enable-theme 'adwaita))))
+
 (yet-theme-customize-misterioso)
+(yet-theme-customize-adwaita)
 
 
 ;;; Auto-switch a theme to system's mode
@@ -92,6 +114,7 @@
 (auto-dark-mode 1)
 
 (add-hook 'auto-dark-dark-mode-hook 'yet-theme-customize-misterioso)
+(add-hook 'auto-dark-light-mode-hook 'yet-theme-customize-adwaita)
 
 ;; Reset auto-dark state after desktop-save restores theme.
 ;; auto-dark-mode initializes first and records
