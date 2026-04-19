@@ -104,6 +104,36 @@ files. With prefix ARG, the advice is always enabled."
 (setq org-return-follows-link t)
 
 
+;;; Per-project publishing settings loader
+
+(when (boundp 'yet-publishing-projects)
+
+  (defun yet-load-publishing-config (feature filename)
+    "Load FEATURE for publishing setup from FILENAME."
+    (unless (featurep feature)
+      (when (file-exists-p filename)
+        (load filename))))
+
+  (dolist (project yet-publishing-projects)
+    (let* ((name (car project))
+           (feature (intern (format "yet-publish-%s" name)))
+           (project-dir (file-name-as-directory
+                 (expand-file-name (cdr project))))
+           (filename (expand-file-name
+                    (format "%s.el" feature) project-dir)))
+
+      (dir-locals-set-class-variables
+       feature
+       `((nil . ((eval . (yet-load-publishing-config
+                          ',feature ,filename))))))
+
+      (dir-locals-set-directory-class project-dir feature)
+
+      (add-to-list 'safe-local-eval-forms
+                   `(yet-load-publishing-config
+                     ',feature ,filename)))))
+
+
 ;;; Indentation
 
 ;; Do not indent after headlines.

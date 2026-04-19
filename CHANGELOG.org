@@ -23,6 +23,8 @@ Includes numerous performance and usability improvements.
 - Package =ibuffer-vc= to group buffers by VCS.
 - Preserve ~kill-ring~ between Emacs sessions.
 - New optional constant ~yet-safe-local-variable-values~.
+- New optional constant ~yet-publishing-projects~ to automate loading
+  project-specific org-mode publishing settings.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.

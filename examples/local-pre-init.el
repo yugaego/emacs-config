@@ -110,6 +110,15 @@ When enabled,
 - `M-<right>' is bound to the function `right-word'.
 - `M-<up>', `M-<down>' are disabled.")
 
+(defconst yet-publishing-projects
+  '(("blog" . "~/Sites/ego.localhost/blog/org/")
+    ("cg"   . "~/Sites/ego.localhost/cg/org/"))
+  "Alist of publishing projects and their root directories.
+
+Each entry is (NAME . DIR). This setup automates the loading of
+project-specific org-mode publishing settings by looking for a config file
+'yet-publish-NAME.el' in DIR.")
+
 
 ;;; init-pdf
 
