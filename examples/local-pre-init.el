@@ -51,6 +51,13 @@ This value configures the variables 'bidi-display-reordering' and
 'bidi-paragraph-direction'.")
 
 ;;; init-file
+
+(defconst yet-safe-local-variable-values
+  '((project-vc-merge-submodules . nil)
+    (auto-fill-mode . 1)
+    (company-dabbrev-other-buffers . nil))
+  "Configure variable 'safe-local-variable-values'.")
+
 (defconst yet-backup-directory-alist '(("." . "~/.emacs.d/.backups"))
   "Configure variable `backup-directory-alist'.")
 

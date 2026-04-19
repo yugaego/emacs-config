@@ -1,9 +1,8 @@
 ;;; init-file.el --- Configure files handling   -*- lexical-binding: t -*-
 
-(setq safe-local-variable-values
-      '((project-vc-merge-submodules . nil)
-        (auto-fill-mode . 1)
-        (company-dabbrev-other-buffers . nil)))
+(when (boundp 'yet-safe-local-variable-values)
+  (dolist (val yet-safe-local-variable-values)
+    (add-to-list 'safe-local-variable-values val)))
 
 (when (fboundp 'rename-visited-file)    ; Since Emacs 29.1
   (keymap-global-set "C-c f r" #'rename-visited-file))

@@ -22,6 +22,7 @@ Includes numerous performance and usability improvements.
 - New optional constant ~yet-bidi-display~.
 - Package =ibuffer-vc= to group buffers by VCS.
 - Preserve ~kill-ring~ between Emacs sessions.
+- New optional constant ~yet-safe-local-variable-values~.
 
 *** Changed
 - Keybinding =C-c t s= now starts =vterm= instead of =ansi-term=.
@@ -36,6 +37,7 @@ Includes numerous performance and usability improvements.
 - Restructure =ibuffer= settings.
 - Performance related adjustments.
 - Display list of buffers to kill before killing project buffers.
+- Use ~yet-safe-local-variable-values~ to set ~safe-local-variable-values~.
 
 *** Removed
 - Workarounds related to native Emacs shell and term modes.
