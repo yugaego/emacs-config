@@ -6,6 +6,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; init
+
 (defconst yet-source-directory "~/Sources/emacs"
   "Point explicitly to the directory with Emacs source code.
 Sets variable `source-directory'.  This is expected to be needed only for
@@ -18,6 +19,7 @@ commands as `help-view-source' or `xref-find-definition'.")
 
 
 ;;; init-ai
+
 (defconst yet-gptel-backend (gptel-make-perplexity "Perplexity"
                               :key 'gptel-api-key)
   "Configure variable `gptel-backend'.")
@@ -39,6 +41,7 @@ This may be useful when communicating with Perplexity.")
 (defconst yet-display-time t
   "Enable global minor mode `display-time-mode', which see.")
 
+
 ;;; init-editing
 
 (defconst yet-bidi-display 'left-to-right
@@ -49,6 +52,7 @@ bidirectional text support is unnecessary.
 
 This value configures the variables 'bidi-display-reordering' and
 'bidi-paragraph-direction'.")
+
 
 ;;; init-file
 
@@ -66,11 +70,13 @@ This value configures the variables 'bidi-display-reordering' and
 
 
 ;;; init-grammar
+
 (defconst yet-browse-grammarly-doc-id "11111111"
   "Enable command `yet-browse-grammarly', which see.")
 
 
 ;;; init-lifecycle
+
 (defconst yet-open-files-list
   '("~/path/to/file.org"
     "~/path/to/file.el")
@@ -78,6 +84,7 @@ This value configures the variables 'bidi-display-reordering' and
 
 
 ;;; init-lsp
+
 ;; Legacy option: `Phpactor' is supported natively now.
 (defconst yet-eglot-php-server
   '("php"
@@ -92,7 +99,9 @@ This value configures the variables 'bidi-display-reordering' and
 (defconst yet-eglot-rust-server '("rust-analyzer")
   "Set value of `eglot-server-programs' in rust-mode buffers.")
 
+
 ;;; init-org
+
 (defconst yet-org-noob nil
   "Disable potentially confusing `org-mode' keybindings.
 
@@ -103,6 +112,7 @@ When enabled,
 
 
 ;;; init-pdf
+
 ;; May require additional OS packages installation,
 ;; which will be automated in common scenarios.
 ;; See https://github.com/vedang/pdf-tools.
@@ -111,6 +121,7 @@ When enabled,
 
 
 ;;; init-rmail
+
 (defconst yet-rmail-file-name "~/Mail/Rmail/YourFile"
   "Configure variable `rmail-file-name'.
 Rmail stores retrieved emails to this file.")
@@ -134,11 +145,13 @@ For more details, see function `rmail-output'.")
 
 
 ;;; init-shell
+
 (defconst yet-explicit-shell-file-name "/opt/local/bin/fish"
   "Configure variable `explicit-shell-file-name'.")
 
 
 ;;; init-smtp
+
 (defconst yet-smtpmail-smtp-server "smtp.xmpl.tld"
   "Configure variable `smtpmail-smtp-server'.")
 
@@ -161,11 +174,15 @@ For more details, see function `rmail-output'.")
   "Configure variable `mail-personal-alias-file'.
 Package `Mailabbrev' expands aliases defined in this file to email addresses.")
 
+
 ;;; init-theme
+
 (defconst yet-auto-dark-themes '((misterioso) (adwaita))
   "Configure variable `auto-dark-themes'.")
 
+
 ;;; init-ui
+
 (defconst yet-font-size "17"
   "Font size to use by all frames.
 If not set, value of 17 is used.")
