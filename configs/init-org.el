@@ -18,6 +18,8 @@
 ;; Enlarge LaTeX preview.
 (plist-put org-format-latex-options :scale 1.5)
 
+(setopt org-highlight-latex-and-related '(latex))
+
 (defun yet-org-mode ()
   (electric-indent-local-mode -1)
   (goto-address-mode 1)

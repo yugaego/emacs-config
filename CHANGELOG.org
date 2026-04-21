@@ -40,6 +40,7 @@ Includes numerous performance and usability improvements.
 - Performance related adjustments.
 - Display list of buffers to kill before killing project buffers.
 - Use ~yet-safe-local-variable-values~ to set ~safe-local-variable-values~.
+- Enable ~org-highlight-latex-and-related~.
 
 *** Removed
 - Workarounds related to native Emacs shell and term modes.
