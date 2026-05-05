@@ -6,15 +6,18 @@
                              (caar yet-auto-dark-themes)
                              'misterioso))
 
-(defvar yet-theme-default-light 'adwaita)
+(defvar yet-theme-default-light (if (boundp 'yet-auto-dark-themes)
+                             (caadr yet-auto-dark-themes)
+                             'adwaita))
 
-(load-theme yet-theme-default-dark t nil)
+(load-theme yet-theme-default-dark t t)
+(load-theme yet-theme-default-light t t)
 
 (defun yet-theme-customize-misterioso ()
-  "Customize dark theme 'misterioso if it is enabled"
+  "Customize dark theme 'misterioso if it is enabled."
   (when (eq (car custom-enabled-themes) 'misterioso)
     (let ((class '((class color) (min-colors 4096)))
-          (modeline-font (concat "Monospace-"
+          (modeline-font (format "Monospace-%s"
                                  (if (boundp 'yet-font-size)
                                      yet-font-size "17"))))
       (custom-theme-set-faces
@@ -73,12 +76,10 @@
         (custom-theme-set-faces
          'misterioso
          `(eglot-highlight-symbol-face
-           ((,class (:background "#405060"))))))
-
-      (enable-theme 'misterioso))))
+           ((,class (:background "#405060")))))))))
 
 (defun yet-theme-customize-adwaita ()
-  "Customize light theme 'adwaita if it is enabled"
+  "Customize light theme 'adwaita if it is enabled."
   (when (eq (car custom-enabled-themes) 'adwaita)
     (let ((class '((class color) (min-colors 4096))))
       (custom-theme-set-faces
@@ -94,12 +95,7 @@
            (:bold t :foreground "#4E9A06" :background "#BBD8A7"))))
        `(diff-refine-removed
          ((,class
-           (:bold t :foreground "#F5666D" :background "#F6CCD2")))))
-
-      (enable-theme 'adwaita))))
-
-(yet-theme-customize-misterioso)
-(yet-theme-customize-adwaita)
+           (:bold t :foreground "#F5666D" :background "#F6CCD2"))))))))
 
 
 ;;; Auto-switch a theme to system's mode
