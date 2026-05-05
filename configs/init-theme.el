@@ -76,7 +76,9 @@
         (custom-theme-set-faces
          'misterioso
          `(eglot-highlight-symbol-face
-           ((,class (:background "#405060")))))))))
+           ((,class (:background "#405060"))))))
+
+      (enable-theme 'misterioso))))
 
 (defun yet-theme-customize-adwaita ()
   "Customize light theme 'adwaita if it is enabled."
@@ -95,7 +97,9 @@
            (:bold t :foreground "#4E9A06" :background "#BBD8A7"))))
        `(diff-refine-removed
          ((,class
-           (:bold t :foreground "#F5666D" :background "#F6CCD2"))))))))
+           (:bold t :foreground "#F5666D" :background "#F6CCD2")))))
+
+      (enable-theme 'adwaita))))
 
 
 ;;; Auto-switch a theme to system's mode
@@ -159,4 +163,3 @@
 ;; #008b8b #23d7d7 #00ede1 #34cae2
 
 ;;; See also `$emacsSourceDir/etc/themes/misterioso-theme.el'.
-
