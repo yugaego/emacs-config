@@ -120,20 +120,21 @@ files. With prefix ARG, the advice is always enabled."
     (let* ((name (car project))
            (feature (intern (format "yet-publish-%s" name)))
            (project-dir (file-name-as-directory
-                 (expand-file-name (cdr project))))
+                         (expand-file-name (cdr project))))
            (filename (expand-file-name
-                    (format "%s.el" feature) project-dir)))
+                      (format "%s.el" feature) project-dir)))
 
       (dir-locals-set-class-variables
        feature
        `((nil . ((eval . (yet-load-publishing-config
-                          ',feature ,filename))))))
+                          ',feature ,filename))
+                 (org-publish-timestamp-directory
+                  . ,(expand-file-name ".org-timestamps/"
+                                       project-dir))))))
 
       (dir-locals-set-directory-class project-dir feature)
 
-      (add-to-list 'safe-local-eval-forms
-                   `(yet-load-publishing-config
-                     ',feature ,filename)))))
+      (add-to-list 'safe-local-variable-directories project-dir))))
 
 
 ;;; Indentation
