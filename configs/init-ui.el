@@ -140,6 +140,7 @@ names on macOS."
 
 (use-package colorful-mode
   :custom
+  (colorful-allow-mouse-clicks nil)
   (colorful-highlight-in-comments t)
   (colorful-extra-color-keyword-functions
    '(colorful-add-hex-colors
