@@ -154,8 +154,10 @@ names on macOS."
      (latex-mode . colorful-add-latex-colors)))
 
   :custom-face
-  (colorful-base ((t (:weight normal :box
-                              (:line-width -1 :color "transparent")))))
+  (colorful-base
+   ((t (:weight normal :box
+                (:line-width -1 :color
+                             ,(face-attribute 'shadow :foreground))))))
 
   :config
   (setopt css-fontify-colors nil)
